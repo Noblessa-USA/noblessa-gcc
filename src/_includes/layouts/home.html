@@ -9,7 +9,6 @@
     <script defer src="/assets/js/transformgallery.js"></script>
     <script defer src="/assets/js/collections-gallery.js"></script>
     <script defer src="/assets/js/responsive-video.js"></script>
-    <script defer src="/assets/js/newsletter-popup.js"></script>
     <script defer src="/assets/js/video-carousel.js"></script>
 
     <!-- If we're in production, defer the rest of the home page styles. In development, always load it. Otherwise the site will break when hot-reload is used. -->
@@ -27,7 +26,7 @@
     {% endif %}
 
     <!-- Preload video - JavaScript will update to optimal size if needed -->
-    <link rel="preload" as="video" type="video/mp4" href="/assets/videos/noblessagccheader.mp4"/>
+    <link rel="preload" as="video" type="video/webm" href="/assets/videos/noblessagccheader.webm"/>
     
     <!-- Preconnect to external domains if any -->
     <link rel="dns-prefetch" href="//fonts.googleapis.com">
@@ -55,7 +54,7 @@
         <!-- Background Video - JavaScript will load the optimal size -->
         <video class="cs-video" autoplay muted playsinline loop preload="metadata" aria-hidden=true>
             <!-- Single source - responsive-video.js determines optimal resolution -->
-            <source src="/assets/videos/noblessagccheader.mp4" type="video/mp4">
+            <source src="/assets/videos/noblessagccheader.webm" type="video/webm">
         </video>
     </section>
 
@@ -75,7 +74,7 @@
                     <p class="cs-text">
                         {{ philosophy_text }}
                     </p>
-                    <a href="{{ '/contact/' | locale_url }}" class="cs-button-nodeco">
+                    <a href="{{ '/' | locale_url }}" class="cs-button-nodeco">
                         <span class="cs-hover-underline"> {{ philosophy_cta }} </span>
                         <img src="/assets/svgs/horizontal-arrow.svg" alt="arrow" width="30" height="10">
                     </a>
@@ -237,7 +236,7 @@
                 <p class="cs-text sl-fade-in-left">
                     {{ legacy_text2 }}
                 </p>
-                <a href="{{ '/explore' | locale_url }}" class="cs-button-nodeco sl-fade-in-left">
+                <a href="{{ '/' | locale_url }}" class="cs-button-nodeco sl-fade-in-left">
                     <span class="cs-hover-underline"> {{ legacy_cta }} </span>
                     <img src="/assets/svgs/horizontal-arrow.svg" alt="arrow" width="30" height="10">
                 </a>
@@ -319,5 +318,7 @@
             </div>
         </div>
     </section>
+
+    {% include 'sections/cta.html' %}
                                     
 {% endblock %}

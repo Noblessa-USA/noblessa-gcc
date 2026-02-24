@@ -7,6 +7,7 @@
         "kitchen": "kitchen",
         "living": "living",
         "bath": "bath",
+        "events": "events",
         "blog": "blog",
         "contact": "contact"
     },
@@ -18,6 +19,7 @@
         "kitchen": "المطبخ",
         "living": "المعيشة",
         "bath": "الحمام",
+        "events": "الأحداث",
         "blog": "المدونة",
         "contact": "اتصل"
     }

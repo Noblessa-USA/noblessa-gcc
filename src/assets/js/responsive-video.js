@@ -50,20 +50,20 @@ class ResponsiveVideoLoader {
         // Define video sources with breakpoints
         const videoSources = {
             mobile: {
-                webm: null,
-                mp4: '/assets/videos/noblessagccheader.mp4',
+                webm: '/assets/videos/noblessagccheader.webm',
+                mp4: null,
                 maxWidth: 768,
                 description: 'Mobile optimized'
             },
             tablet: {
-                webm: null,
-                mp4: '/assets/videos/noblessagccheader.mp4',
+                webm: '/assets/videos/noblessagccheader.webm',
+                mp4: null,
                 maxWidth: 1200,
                 description: 'Tablet/Small desktop'
             },
             desktop: {
-                webm: null,
-                mp4: '/assets/videos/noblessagccheader.mp4',
+                webm: '/assets/videos/noblessagccheader.webm',
+                mp4: null,
                 maxWidth: Infinity,
                 description: 'Large desktop'
             }

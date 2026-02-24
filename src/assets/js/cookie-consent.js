@@ -4,8 +4,38 @@ class CookieConsent {
         this.consentKey = 'noblessa-cookie-consent';
         this.consentData = this.getStoredConsent();
         this.hasGPC = this.detectGPC();
+        this.lang = this.detectLanguage();
+        this.translations = this.getTranslations();
         
         this.init();
+    }
+
+    detectLanguage() {
+        const path = window.location.pathname;
+        if (path.startsWith('/ar/') || path === '/ar') {
+            return 'ar';
+        }
+        return 'en';
+    }
+
+    getTranslations() {
+        const translations = {
+            en: {
+                cookie_title: 'Cookie Settings',
+                cookie_text: 'We use cookies to enhance your browsing experience and analyze our traffic. By clicking "Accept All", you consent to our use of cookies.',
+                cookie_text_gpc: 'We use cookies to enhance your browsing experience and analyze our traffic. We detected your Global Privacy Control signal and will respect your privacy preferences.',
+                cookie_btn_manage: 'Manage',
+                cookie_btn_accept: 'Accept'
+            },
+            ar: {
+                cookie_title: 'إعدادات ملفات تعريف الارتباط',
+                cookie_text: 'نستخدم ملفات تعريف الارتباط لتحسين تجربة التصفح وتحليل حركة المرور. بالنقر على "قبول الكل"، فإنك توافق على استخدامنا لملفات تعريف الارتباط.',
+                cookie_text_gpc: 'نستخدم ملفات تعريف الارتباط لتحسين تجربة التصفح وتحليل حركة المرور. لقد اكتشفنا إشارة التحكم في الخصوصية العالمية الخاصة بك وسنحترم تفضيلات الخصوصية الخاصة بك.',
+                cookie_btn_manage: 'إدارة',
+                cookie_btn_accept: 'قبول'
+            }
+        };
+        return translations[this.lang] || translations.en;
     }
 
     init() {
@@ -65,15 +95,15 @@ class CookieConsent {
         banner.innerHTML = `
             <div class="cookie-banner-content">
                 <div class="cookie-banner-text">
-                    <h3>Cookie Settings</h3>
-                    <p>We use cookies to enhance your browsing experience and analyze our traffic. ${this.hasGPC ? 'We detected your Global Privacy Control signal and will respect your privacy preferences.' : 'By clicking "Accept All", you consent to our use of cookies.'}</p>
+                    <h3>${this.translations.cookie_title}</h3>
+                    <p>${this.hasGPC ? this.translations.cookie_text_gpc : this.translations.cookie_text}</p>
                 </div>
                 <div class="cookie-banner-actions">
                     <button type="button" class="cookie-btn cookie-btn-manage" id="manage-cookies">
-                        Manage
+                        ${this.translations.cookie_btn_manage}
                     </button>
                     <button type="button" class="cookie-btn cookie-btn-accept" id="accept-cookies">
-                        Accept
+                        ${this.translations.cookie_btn_accept}
                     </button>
                 </div>
             </div>

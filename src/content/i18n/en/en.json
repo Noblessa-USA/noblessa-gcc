@@ -1,3 +1,11 @@
 {
-    "lang": "en"
+    "lang": "en",
+    "cta_title": "Let's Explore Your Ideas Together",
+    "cta_text": "When you meet with a noblessa designer, you'll receive a personalized consultation, a complimentary project estimate, and curated referrals to trusted contractors. Every kitchen, bath, and living space we create is uniquely designed to reflect your vision, expertly crafted to bring your dream home to life with unmatched elegance and precision.",
+    "cta_button": "Live The Beautiful Life",
+    "cookie_title": "Cookie Settings",
+    "cookie_text": "We use cookies to enhance your browsing experience and analyze our traffic. By clicking \"Accept All\", you consent to our use of cookies.",
+    "cookie_text_gpc": "We use cookies to enhance your browsing experience and analyze our traffic. We detected your Global Privacy Control signal and will respect your privacy preferences.",
+    "cookie_btn_manage": "Manage",
+    "cookie_btn_accept": "Accept"
 }
