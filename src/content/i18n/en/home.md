@@ -31,4 +31,7 @@ legacy_cta: "Explore Noblessa"
 video_topper: "Video Gallery"
 video_title: "experience noblessa in motion"
 video_text: "Discover how noblessa transforms living spaces through our curated video collection. From design inspiration to installation insights, see the artistry and precision that defines every project."
+video_slide1_title: "Part 1: Modern Woodland Home"
+video_slide2_title: "Part 2: Modern Mountain Home"
+video_slide3_title: "Part 3: Blossom Modern Home"
 ---
