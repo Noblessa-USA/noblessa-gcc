@@ -1,0 +1,47 @@
+{% extends "layouts/base.html" %}
+
+{% block head %}
+    <link rel="preload" as="image" href="{% getUrl "/assets/images/livingrooms/livingroomstaircase.webp" | resize({ width: 640, height: 600 }) | avif %}"/>
+    <link rel="stylesheet" href="/assets/css/blog.css">
+    <script src="/assets/js/blog.js" defer></script>
+{% endblock %}
+
+{% block body %}
+    <!-- Banner -->
+    <div id="banner-photo">
+        <div class="cs-container">
+            <div class="cs-text-wrapper">
+                <h1 class="cs-int-title sl-fade-in-right">{{ banner_title }}</h1>
+                <p class="cs-text sl-fade-in-right">{{ banner_text }}</p>
+            </div>
+            <div class="cs-breadcrumbs">
+                <a href="{{ '/' | locale_url }}" class="cs-link"><span class="cs-link-text">{{ breadcrumb_home }}</span></a>
+                <a href="{{ '/blog/' | locale_url }}" class="cs-link cs-active"><span class="cs-link-text">{{ breadcrumb_blog }}</span></a>
+            </div>
+        </div>
+        <div class="cs-banner-bg">
+            <div class="cs-bg">
+                <img src="/assets/images/livingrooms/livingroomstaircase.webp" alt="Living room with staircase" loading="eager">
+            </div>
+        </div>
+    </div>
+
+    <!-- Blog Listings -->
+    <div id="blog-listing">
+        <div class="cs-container">
+            <div class="cs-controls">
+                <div class="cs-search-wrapper">
+                    <input type="text" id="blog-search" class="cs-search-input" placeholder="{{ search_placeholder }}" aria-label="Search blog posts">
+                    <svg class="cs-search-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M9 17C13.4183 17 17 13.4183 17 9C17 4.58172 13.4183 1 9 1C4.58172 1 1 4.58172 1 9C1 13.4183 4.58172 17 9 17Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M19 19L14.65 14.65" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+            </div>
+            <div class="cs-blog-grid" id="blog-grid"></div>
+            <div id="no-results" class="cs-no-results" style="display: none;">
+                <p>{{ no_results_text }}</p>
+            </div>
+        </div>
+    </div>
+{% endblock %}

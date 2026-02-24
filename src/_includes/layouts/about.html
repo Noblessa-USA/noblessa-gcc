@@ -1,0 +1,169 @@
+{% extends "layouts/base.html" %}
+
+{% block head %}
+    <link rel="stylesheet" href="/assets/css/about.css">
+    <script src="/assets/js/about.js" defer></script>
+    <script src="/assets/js/flipbook.js" defer></script>
+{% endblock %}
+
+{% block body %}
+    <!-- Banner Slideshow -->
+    <div id="banner-slideshow-2285">
+        <div class="cs-container">
+            <div class="cs-text-wrapper">
+                <h1 class="cs-int-title sl-fade-in-right">{{ banner_title }}</h1>
+                <p class="cs-text sl-fade-in-right">{{ banner_text }}</p>
+            </div>
+            <div class="cs-breadcrumbs">
+                <a href="{{ '/' | locale_url }}" class="cs-link">{{ breadcrumb_home }}</a>
+                <a href="{{ '/about/' | locale_url }}" class="cs-link cs-active">{{ breadcrumb_about }}</a>
+            </div>
+        </div>
+        <div class="cs-banner-slideshow">
+            <div class="cs-slide"><img src="/assets/images/collections/tempo/tempo1.webp" alt="Noblessa Tempo Kitchen" loading="eager"></div>
+            <div class="cs-slide"><img src="/assets/images/collections/grace/grace1.webp" alt="Noblessa Grace Kitchen" loading="lazy"></div>
+            <div class="cs-slide"><img src="/assets/images/collections/divine/divine1.webp" alt="Noblessa Divine Kitchen" loading="lazy"></div>
+            <div class="cs-slide"><img src="/assets/images/bathrooms/bath2.webp" alt="Noblessa bathroom design" loading="lazy"></div>
+        </div>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const slides = document.querySelectorAll('.cs-slide');
+            let currentSlide = 0;
+            const slideInterval = 5000;
+            function showSlide(index) {
+                slides.forEach((slide, i) => { slide.classList.remove('active'); });
+                requestAnimationFrame(() => { slides[index].classList.add('active'); });
+            }
+            function nextSlide() {
+                currentSlide = (currentSlide + 1) % slides.length;
+                showSlide(currentSlide);
+            }
+            setInterval(nextSlide, slideInterval);
+            setTimeout(() => { showSlide(currentSlide); }, 100);
+        });
+    </script>
+
+    <!-- Our Story -->
+    <section id="about-story">
+        <div class="cs-container">
+            <div class="cs-content">
+                <span class="cs-topper">{{ story_topper }}</span>
+                <h2 class="cs-title">{{ story_title }}</h2>
+                <p class="cs-text">{{ story_text1 }}</p>
+                <p class="cs-text">{{ story_text2 }}</p>
+            </div>
+            <div class="cs-image-group">
+                <picture class="cs-picture">
+                    <source media="(max-width: 600px)" srcset="/assets/images/livingrooms/livingroomstaircase.webp">
+                    <source media="(min-width: 601px)" srcset="/assets/images/livingrooms/livingroomstaircase.webp">
+                    <img loading="lazy" decoding="async" src="/assets/images/livingrooms/livingroomstaircase.webp" alt="German craftsmanship" width="630" height="425">
+                </picture>
+            </div>
+        </div>
+    </section>
+
+    <!-- Awards -->
+    <section id="about-awards">
+        <div class="cs-container">
+            <div class="cs-content">
+                <span class="cs-topper sl-fade-in-down">{{ awards_topper }}</span>
+                <h2 class="cs-title sl-fade-in-down">{{ awards_title }}</h2>
+                <p class="cs-text sl-fade-in-up">{{ awards_text }}</p>
+            </div>
+            <div class="cs-carousel-wrapper">
+                <div class="cs-carousel" id="awards-carousel">
+                    <div class="cs-award-card">
+                        <div class="cs-award-image"><img src="/assets/images/awards/blueangleseal.webp" alt="Blue Angel Environmental Seal" width="80" height="80"></div>
+                        <h3 class="cs-award-title">{{ award1_title }}</h3>
+                        <p class="cs-award-text">{{ award1_text }}</p>
+                    </div>
+                    <div class="cs-award-card">
+                        <div class="cs-award-image"><img src="/assets/images/awards/gs_seal.webp" alt="GS Certification" width="80" height="80"></div>
+                        <h3 class="cs-award-title">{{ award2_title }}</h3>
+                        <p class="cs-award-text">{{ award2_text }}</p>
+                    </div>
+                    <div class="cs-award-card">
+                        <div class="cs-award-image"><img src="/assets/images/awards/PEFC_logo.webp" alt="PEFC Certification" width="80" height="80"></div>
+                        <h3 class="cs-award-title">{{ award3_title }}</h3>
+                        <p class="cs-award-text">{{ award3_text }}</p>
+                    </div>
+                    <div class="cs-award-card">
+                        <div class="cs-award-image"><img src="/assets/images/awards/goldenm.webp" alt="Golden M Award" width="80" height="80"></div>
+                        <h3 class="cs-award-title">{{ award4_title }}</h3>
+                        <p class="cs-award-text">{{ award4_text }}</p>
+                    </div>
+                    <div class="cs-award-card">
+                        <div class="cs-award-image"><img src="/assets/images/awards/ISO-14001.webp" alt="ISO 14001 Certification" width="80" height="80"></div>
+                        <h3 class="cs-award-title">{{ award5_title }}</h3>
+                        <p class="cs-award-text">{{ award5_text }}</p>
+                    </div>
+                    <div class="cs-award-card">
+                        <div class="cs-award-image"><img src="/assets/images/awards/ISO-9001.webp" alt="ISO 9001 Certification" width="80" height="80"></div>
+                        <h3 class="cs-award-title">{{ award6_title }}</h3>
+                        <p class="cs-award-text">{{ award6_text }}</p>
+                    </div>
+                    <div class="cs-award-card">
+                        <div class="cs-award-image"><img src="/assets/images/awards/ISO-50001.webp" alt="ISO 50001 Certification" width="80" height="80"></div>
+                        <h3 class="cs-award-title">{{ award7_title }}</h3>
+                        <p class="cs-award-text">{{ award7_text }}</p>
+                    </div>
+                    {% for i in range(7) %}
+                    <div class="cs-award-card">
+                        <div class="cs-award-image"><img src="/assets/images/awards/{{ ['blueangleseal.webp', 'gs_seal.webp', 'PEFC_logo.webp', 'goldenm.webp', 'ISO-14001.webp', 'ISO-9001.webp', 'ISO-50001.webp'][loop.index0] }}" alt="Award" width="80" height="80"></div>
+                        <h3 class="cs-award-title">{{ ['award1_title', 'award2_title', 'award3_title', 'award4_title', 'award5_title', 'award6_title', 'award7_title'][loop.index0] }}</h3>
+                        <p class="cs-award-text">{{ ['award1_text', 'award2_text', 'award3_text', 'award4_text', 'award5_text', 'award6_text', 'award7_text'][loop.index0] }}</p>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Recognition -->
+    <section id="about-recognition">
+        <div class="cs-container">
+            <div class="cs-content">
+                <span class="cs-topper">{{ recognition_topper }}</span>
+                <h2 class="cs-title">{{ recognition_title }}</h2>
+                <p class="cs-text">{{ recognition_text }}</p>
+            </div>
+            <div class="cs-stats-group">
+                <div class="cs-stat"><span class="cs-number">30<span class="cs-accent">+</span></span><span class="cs-desc">{{ stat1_desc }}</span></div>
+                <div class="cs-stat"><span class="cs-number">5K<span class="cs-accent">+</span></span><span class="cs-desc">{{ stat2_desc }}</span></div>
+                <div class="cs-stat"><span class="cs-number">20<span class="cs-accent">+</span></span><span class="cs-desc">{{ stat3_desc }}</span></div>
+                <div class="cs-stat"><span class="cs-number">1<span class="cs-accent">st</span></span><span class="cs-desc">{{ stat4_desc }}</span></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Catalog Flipbook -->
+    <section id="about-flipbook">
+        <div class="cs-container">
+            <div class="cs-content">
+                <span class="cs-topper">{{ catalog_topper }}</span>
+                <h2 class="cs-title">{{ catalog_title }}</h2>
+                <p class="cs-text">{{ catalog_text }}</p>
+            </div>
+            <div class="cs-flipbook-wrapper">
+                <div class="cs-flipbook-container">
+                    <div class="cs-flipbook-viewer"><img class="cs-flipbook-page" src="" alt="Catalog page" loading="lazy"></div>
+                    <div class="cs-flipbook-nav-wrapper">
+                        <button class="cs-flipbook-nav cs-flipbook-prev" aria-label="Previous page">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M15 18L9 12L15 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        </button>
+                        <button class="cs-flipbook-nav cs-flipbook-next" aria-label="Next page">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M9 18L15 12L9 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        </button>
+                    </div>
+                </div>
+                <div class="cs-flipbook-controls">
+                    <span class="cs-page-counter"><span class="cs-current-page">1</span> / <span class="cs-total-pages">0</span></span>
+                    <a href="/assets/pdf/Noblessa A Beautiful Life_2026.pdf" class="cs-download-link" target="_blank" rel="noopener">{{ catalog_download }}<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M8 1V11M8 11L11 8M8 11L5 8M1 15H15" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    {% include 'sections/cta.html' %}
+{% endblock %}

@@ -1,0 +1,295 @@
+{% extends "layouts/base.html" %}
+
+{% block head %}
+    <link rel="stylesheet" href="/assets/css/collections.css">
+    <script defer src="/assets/js/collections.js"></script>
+{% endblock %}
+
+{% block body %}
+
+    <!-- ============================================ -->
+    <!--                   Banner                     -->
+    <!-- ============================================ -->
+
+    <section id="banner">
+        <div class="cs-container">
+            <h1 class="cs-title">{{ banner_title }}</h1>
+            <p class="cs-text">{{ banner_text }}</p>
+        </div>
+        <picture class="cs-background">
+            <source media="(max-width: 600px)" srcset="{% getUrl '/assets/images/collections/sentido/sentidoblacknoir.webp' | resize({ width: 640 }) | avif %}" type="image/avif">
+            <source media="(max-width: 600px)" srcset="{% getUrl '/assets/images/collections/sentido/sentidoblacknoir.webp' | resize({ width: 640 }) | webp %}" type="image/webp">
+            <source media="(min-width: 601px)" srcset="{% getUrl '/assets/images/collections/sentido/sentidoblacknoir.webp' | resize({ width: 1920 }) | avif %}" type="image/avif">
+            <source media="(min-width: 601px)" srcset="{% getUrl '/assets/images/collections/sentido/sentidoblacknoir.webp' | resize({ width: 1920 }) | webp %}" type="image/webp">
+            <img src="{% getUrl '/assets/images/collections/sentido/sentidoblacknoir.webp' | resize({ width: 1920 }) | webp %}" alt="Collections Banner" width="1920" height="1080" loading="eager">
+        </picture>
+    </section>
+
+    <!-- ============================================ -->
+    <!--            Collections Navigation            -->
+    <!-- ============================================ -->
+
+    <section id="collections-nav">
+        <div class="cs-container">
+            <nav class="cs-nav">
+                <a href="#sentido" class="cs-nav-link active">{{ nav_sentido }}</a>
+                <a href="#ivory" class="cs-nav-link">{{ nav_ivory }}</a>
+                <a href="#noir" class="cs-nav-link">{{ nav_noir }}</a>
+                <a href="#walnut-milano" class="cs-nav-link">{{ nav_walnut }}</a>
+            </nav>
+        </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!--           Collections Sections               -->
+    <!-- ============================================ -->
+
+    <section id="collections-content">
+        <div class="cs-container">
+            <div class="cs-wrapper">
+                <div class="cs-sidebar">
+                    <nav class="cs-sidebar-nav">
+                        <a href="#sentido" class="cs-sidebar-link active">{{ nav_sentido }}</a>
+                        <a href="#ivory" class="cs-sidebar-link">{{ nav_ivory }}</a>
+                        <a href="#noir" class="cs-sidebar-link">{{ nav_noir }}</a>
+                        <a href="#walnut-milano" class="cs-sidebar-link">{{ nav_walnut }}</a>
+                    </nav>
+                </div>
+                
+                <div class="cs-main">
+                    <div class="cs-section" id="sentido">
+                        <h2 class="cs-section-title">{{ sentido_title }}</h2>
+                        <p class="cs-section-text">{{ sentido_text }}</p>
+                        <div class="cs-grid">
+                            <div class="cs-item">
+                                <div class="cs-picture">
+                                    <img class="cs-image" src="../../assets/images/collections/sentido/sentido1.webp" alt="{{ sentido_item1_alt }}" loading="lazy" decoding="async">
+                                </div>
+                                <div class="cs-item-content">
+                                    <h3 class="cs-item-title">{{ sentido_item1_title }}</h3>
+                                </div>
+                            </div>
+                            <div class="cs-item">
+                                <div class="cs-picture">
+                                    <img class="cs-image" src="../../assets/images/collections/sentido/sentido1.webp" alt="{{ sentido_item2_alt }}" loading="lazy" decoding="async">
+                                </div>
+                                <div class="cs-item-content">
+                                    <h3 class="cs-item-title">{{ sentido_item2_title }}</h3>
+                                </div>
+                            </div>
+                            <div class="cs-item">
+                                <div class="cs-picture">
+                                    <img class="cs-image" src="../../assets/images/collections/sentido/sentidoblacknoir.webp" alt="{{ sentido_item3_alt }}" loading="lazy" decoding="async">
+                                </div>
+                                <div class="cs-item-content">
+                                    <h3 class="cs-item-title">{{ sentido_item3_title }}</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="cs-section" id="ivory">
+                        <h2 class="cs-section-title">{{ ivory_title }}</h2>
+                        <p class="cs-section-text">{{ ivory_text }}</p>
+                        <div class="cs-grid">
+                            <div class="cs-item">
+                                <div class="cs-picture">
+                                    <img class="cs-image" src="../../assets/images/collections/sentido/sentidoolive.webp" alt="{{ ivory_item1_alt }}" loading="lazy" decoding="async">
+                                </div>
+                                <div class="cs-item-content">
+                                    <h3 class="cs-item-title">{{ ivory_item1_title }}</h3>
+                                    <p class="cs-item-text">{{ ivory_item1_text }}</p>
+                                </div>
+                            </div>
+                            <div class="cs-item">
+                                <div class="cs-picture">
+                                    <img class="cs-image" src="../../assets/images/collections/sentido/sentidosky.webp" alt="{{ ivory_item2_alt }}" loading="lazy" decoding="async">
+                                </div>
+                                <div class="cs-item-content">
+                                    <h3 class="cs-item-title">{{ ivory_item2_title }}</h3>
+                                    <p class="cs-item-text">{{ ivory_item2_text }}</p>
+                                </div>
+                            </div>
+                            <div class="cs-item">
+                                <div class="cs-picture">
+                                    <img class="cs-image" src="../../assets/images/collections/serenity/serenityalpinewhite.webp" alt="{{ ivory_item3_alt }}" loading="lazy" decoding="async">
+                                </div>
+                                <div class="cs-item-content">
+                                    <h3 class="cs-item-title">{{ ivory_item3_title }}</h3>
+                                    <p class="cs-item-text">{{ ivory_item3_text }}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="cs-section" id="noir">
+                        <h2 class="cs-section-title">{{ noir_title }}</h2>
+                        <p class="cs-section-text">{{ noir_text }}</p>
+                        <div class="cs-grid">
+                            <div class="cs-item">
+                                <div class="cs-picture">
+                                    <img class="cs-image" src="../../assets/images/collections/serenity/serenityivory.webp" alt="{{ noir_item1_alt }}" loading="lazy" decoding="async">
+                                </div>
+                                <div class="cs-item-content">
+                                    <h3 class="cs-item-title">{{ noir_item1_title }}</h3>
+                                    <p class="cs-item-text">{{ noir_item1_text }}</p>
+                                </div>
+                            </div>
+                            <div class="cs-item">
+                                <div class="cs-picture">
+                                    <img class="cs-image" src="../../assets/images/collections/serenity/serenityalpinewhite2.webp" alt="{{ noir_item2_alt }}" loading="lazy" decoding="async">
+                                </div>
+                                <div class="cs-item-content">
+                                    <h3 class="cs-item-title">{{ noir_item2_title }}</h3>
+                                    <p class="cs-item-text">{{ noir_item2_text }}</p>
+                                </div>
+                            </div>
+                            <div class="cs-item">
+                                <div class="cs-picture">
+                                    <img class="cs-image" src="../../assets/images/collections/spirit/spirit1.webp" alt="{{ noir_item3_alt }}" loading="lazy" decoding="async">
+                                </div>
+                                <div class="cs-item-content">
+                                    <h3 class="cs-item-title">{{ noir_item3_title }}</h3>
+                                    <p class="cs-item-text">{{ noir_item3_text }}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="cs-section" id="walnut-milano">
+                        <h2 class="cs-section-title">{{ walnut_title }}</h2>
+                        <p class="cs-section-text">{{ walnut_text }}</p>
+                        <div class="cs-grid">
+                            <div class="cs-item">
+                                <div class="cs-picture">
+                                    <img class="cs-image" src="../../assets/images/collections/serenity/serenityalpinewhite3.webp" alt="{{ walnut_item1_alt }}" loading="lazy" decoding="async">
+                                </div>
+                                <div class="cs-item-content">
+                                    <h3 class="cs-item-title">{{ walnut_item1_title }}</h3>
+                                    <p class="cs-item-text">{{ walnut_item1_text }}</p>
+                                </div>
+                            </div>
+                            <div class="cs-item">
+                                <div class="cs-picture">
+                                    <img class="cs-image" src="../../assets/images/collections/tempo/tempo1.webp" alt="{{ walnut_item2_alt }}" loading="lazy" decoding="async">
+                                </div>
+                                <div class="cs-item-content">
+                                    <h3 class="cs-item-title">{{ walnut_item2_title }}</h3>
+                                    <p class="cs-item-text">{{ walnut_item2_text }}</p>
+                                </div>
+                            </div>
+                            <div class="cs-item">
+                                <div class="cs-picture">
+                                    <img class="cs-image" src="../../assets/images/collections/divine/divine1.webp" alt="{{ walnut_item3_alt }}" loading="lazy" decoding="async">
+                                </div>
+                                <div class="cs-item-content">
+                                    <h3 class="cs-item-title">{{ walnut_item3_title }}</h3>
+                                    <p class="cs-item-text">{{ walnut_item3_text }}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!--          View Our Collections                -->
+    <!-- ============================================ -->
+
+    <section id="view-collections">
+        <div class="cs-container">
+            <div class="cs-content">
+                <span class="cs-topper">{{ view_topper }}</span>
+                <h2 class="cs-title">{{ view_title }}</h2>
+            </div>
+            <div class="cs-gallery">
+                <div class="cs-gallery-item">
+                    <picture>
+                        <source media="(max-width: 600px)" srcset="{% getUrl '/assets/images/collections/sentido/sentidoblacknoir.webp' | resize({ width: 640, height: 900 }) | avif %}" type="image/avif">
+                        <source media="(max-width: 600px)" srcset="{% getUrl '/assets/images/collections/sentido/sentidoblacknoir.webp' | resize({ width: 640, height: 900 }) | webp %}" type="image/webp">
+                        <source media="(min-width: 601px)" srcset="{% getUrl '/assets/images/collections/sentido/sentidoblacknoir.webp' | resize({ width: 1024, height: 768 }) | avif %}" type="image/avif">
+                        <source media="(min-width: 601px)" srcset="{% getUrl '/assets/images/collections/sentido/sentidoblacknoir.webp' | resize({ width: 1024, height: 768 }) | webp %}" type="image/webp">
+                        <img src="{% getUrl '/assets/images/collections/sentido/sentidoblacknoir.webp' | resize({ width: 1024, height: 768 }) | webp %}" alt="Sentido Black Noir Collection" width="1024" height="768" loading="lazy" decoding="async">
+                    </picture>
+                </div>
+                <div class="cs-gallery-item">
+                    <picture>
+                        <source media="(max-width: 600px)" srcset="{% getUrl '/assets/images/collections/serenity/serenityivory.webp' | resize({ width: 640, height: 900 }) | avif %}" type="image/avif">
+                        <source media="(max-width: 600px)" srcset="{% getUrl '/assets/images/collections/serenity/serenityivory.webp' | resize({ width: 640, height: 900 }) | webp %}" type="image/webp">
+                        <source media="(min-width: 601px)" srcset="{% getUrl '/assets/images/collections/serenity/serenityivory.webp' | resize({ width: 1024, height: 768 }) | avif %}" type="image/avif">
+                        <source media="(min-width: 601px)" srcset="{% getUrl '/assets/images/collections/serenity/serenityivory.webp' | resize({ width: 1024, height: 768 }) | webp %}" type="image/webp">
+                        <img src="{% getUrl '/assets/images/collections/serenity/serenityivory.webp' | resize({ width: 1024, height: 768 }) | webp %}" alt="Serenity Ivory Collection" width="1024" height="768" loading="lazy" decoding="async">
+                    </picture>
+                </div>
+                <div class="cs-gallery-item">
+                    <picture>
+                        <source media="(max-width: 600px)" srcset="{% getUrl '/assets/images/livingrooms/whitelivingroom.webp' | resize({ width: 640, height: 900 }) | avif %}" type="image/avif">
+                        <source media="(max-width: 600px)" srcset="{% getUrl '/assets/images/livingrooms/whitelivingroom.webp' | resize({ width: 640, height: 900 }) | webp %}" type="image/webp">
+                        <source media="(min-width: 601px)" srcset="{% getUrl '/assets/images/livingrooms/whitelivingroom.webp' | resize({ width: 1024, height: 768 }) | avif %}" type="image/avif">
+                        <source media="(min-width: 601px)" srcset="{% getUrl '/assets/images/livingrooms/whitelivingroom.webp' | resize({ width: 1024, height: 768 }) | webp %}" type="image/webp">
+                        <img src="{% getUrl '/assets/images/livingrooms/whitelivingroom.webp' | resize({ width: 1024, height: 768 }) | webp %}" alt="White Living Room" width="1024" height="768" loading="lazy" decoding="async">
+                    </picture>
+                </div>
+                <div class="cs-gallery-item">
+                    <picture>
+                        <source media="(max-width: 600px)" srcset="{% getUrl '/assets/images/bathrooms/bath1.webp' | resize({ width: 640, height: 900 }) | avif %}" type="image/avif">
+                        <source media="(max-width: 600px)" srcset="{% getUrl '/assets/images/bathrooms/bath1.webp' | resize({ width: 640, height: 900 }) | webp %}" type="image/webp">
+                        <source media="(min-width: 601px)" srcset="{% getUrl '/assets/images/bathrooms/bath1.webp' | resize({ width: 1024, height: 768 }) | avif %}" type="image/avif">
+                        <source media="(min-width: 601px)" srcset="{% getUrl '/assets/images/bathrooms/bath1.webp' | resize({ width: 1024, height: 768 }) | webp %}" type="image/webp">
+                        <img src="{% getUrl '/assets/images/bathrooms/bath1.webp' | resize({ width: 1024, height: 768 }) | webp %}" alt="Bathroom Design 1" width="1024" height="768" loading="lazy" decoding="async">
+                    </picture>
+                </div>
+                <div class="cs-gallery-item">
+                    <picture>
+                        <source media="(max-width: 600px)" srcset="{% getUrl '/assets/images/collections/surf/surf1.webp' | resize({ width: 640, height: 900 }) | avif %}" type="image/avif">
+                        <source media="(max-width: 600px)" srcset="{% getUrl '/assets/images/collections/surf/surf1.webp' | resize({ width: 640, height: 900 }) | webp %}" type="image/webp">
+                        <source media="(min-width: 601px)" srcset="{% getUrl '/assets/images/collections/surf/surf1.webp' | resize({ width: 1024, height: 768 }) | avif %}" type="image/avif">
+                        <source media="(min-width: 601px)" srcset="{% getUrl '/assets/images/collections/surf/surf1.webp' | resize({ width: 1024, height: 768 }) | webp %}" type="image/webp">
+                        <img src="{% getUrl '/assets/images/collections/surf/surf1.webp' | resize({ width: 1024, height: 768 }) | webp %}" alt="Surf Collection" width="1024" height="768" loading="lazy" decoding="async">
+                    </picture>
+                </div>
+                <div class="cs-gallery-item">
+                    <picture>
+                        <source media="(max-width: 600px)" srcset="{% getUrl '/assets/images/collections/serenity/serenityalpinewhite3.webp' | resize({ width: 640, height: 900 }) | avif %}" type="image/avif">
+                        <source media="(max-width: 600px)" srcset="{% getUrl '/assets/images/collections/serenity/serenityalpinewhite3.webp' | resize({ width: 640, height: 900 }) | webp %}" type="image/webp">
+                        <source media="(min-width: 601px)" srcset="{% getUrl '/assets/images/collections/serenity/serenityalpinewhite3.webp' | resize({ width: 1024, height: 768 }) | avif %}" type="image/avif">
+                        <source media="(min-width: 601px)" srcset="{% getUrl '/assets/images/collections/serenity/serenityalpinewhite3.webp' | resize({ width: 1024, height: 768 }) | webp %}" type="image/webp">
+                        <img src="{% getUrl '/assets/images/collections/serenity/serenityalpinewhite3.webp' | resize({ width: 1024, height: 768 }) | webp %}" alt="Serenity Alpine White Collection" width="1024" height="768" loading="lazy" decoding="async">
+                    </picture>
+                </div>
+                <div class="cs-gallery-item">
+                    <picture>
+                        <source media="(max-width: 600px)" srcset="{% getUrl '/assets/images/collections/unsorted/unsorted2.webp' | resize({ width: 640, height: 900 }) | avif %}" type="image/avif">
+                        <source media="(max-width: 600px)" srcset="{% getUrl '/assets/images/collections/unsorted/unsorted2.webp' | resize({ width: 640, height: 900 }) | webp %}" type="image/webp">
+                        <source media="(min-width: 601px)" srcset="{% getUrl '/assets/images/collections/unsorted/unsorted2.webp' | resize({ width: 1024, height: 768 }) | avif %}" type="image/avif">
+                        <source media="(min-width: 601px)" srcset="{% getUrl '/assets/images/collections/unsorted/unsorted2.webp' | resize({ width: 1024, height: 768 }) | webp %}" type="image/webp">
+                        <img src="{% getUrl '/assets/images/collections/unsorted/unsorted2.webp' | resize({ width: 1024, height: 768 }) | webp %}" alt="Collection Image" width="1024" height="768" loading="lazy" decoding="async">
+                    </picture>
+                </div>
+                <div class="cs-gallery-item">
+                    <picture>
+                        <source media="(max-width: 600px)" srcset="{% getUrl '/assets/images/bathrooms/bath2.webp' | resize({ width: 640, height: 900 }) | avif %}" type="image/avif">
+                        <source media="(max-width: 600px)" srcset="{% getUrl '/assets/images/bathrooms/bath2.webp' | resize({ width: 640, height: 900 }) | webp %}" type="image/webp">
+                        <source media="(min-width: 601px)" srcset="{% getUrl '/assets/images/bathrooms/bath2.webp' | resize({ width: 1024, height: 768 }) | avif %}" type="image/avif">
+                        <source media="(min-width: 601px)" srcset="{% getUrl '/assets/images/bathrooms/bath2.webp' | resize({ width: 1024, height: 768 }) | webp %}" type="image/webp">
+                        <img src="{% getUrl '/assets/images/bathrooms/bath2.webp' | resize({ width: 1024, height: 768 }) | webp %}" alt="Bathroom Design 2" width="1024" height="768" loading="lazy" decoding="async">
+                    </picture>
+                </div>
+                <div class="cs-gallery-item">
+                    <picture>
+                        <source media="(max-width: 600px)" srcset="{% getUrl '/assets/images/collections/unsorted/unsorted1.webp' | resize({ width: 640, height: 900 }) | avif %}" type="image/avif">
+                        <source media="(max-width: 600px)" srcset="{% getUrl '/assets/images/collections/unsorted/unsorted1.webp' | resize({ width: 640, height: 900 }) | webp %}" type="image/webp">
+                        <source media="(min-width: 601px)" srcset="{% getUrl '/assets/images/collections/unsorted/unsorted1.webp' | resize({ width: 1024, height: 768 }) | avif %}" type="image/avif">
+                        <source media="(min-width: 601px)" srcset="{% getUrl '/assets/images/collections/unsorted/unsorted1.webp' | resize({ width: 1024, height: 768 }) | webp %}" type="image/webp">
+                        <img src="{% getUrl '/assets/images/collections/unsorted/unsorted1.webp' | resize({ width: 1024, height: 768 }) | webp %}" alt="Collection Image" width="1024" height="768" loading="lazy" decoding="async">
+                    </picture>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    {% include 'sections/cta.html' %}
+
+{% endblock %}

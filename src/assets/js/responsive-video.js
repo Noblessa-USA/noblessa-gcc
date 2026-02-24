@@ -50,22 +50,22 @@ class ResponsiveVideoLoader {
         // Define video sources with breakpoints
         const videoSources = {
             mobile: {
-                webm: '/assets/videos/optimizations/youngers/youngers720.webm',
-                mp4: '/assets/videos/optimizations/youngers/youngers720.mp4',
+                webm: null,
+                mp4: '/assets/videos/noblessagccheader.mp4',
                 maxWidth: 768,
-                description: 'Mobile optimized (720x1280)'
+                description: 'Mobile optimized'
             },
             tablet: {
-                webm: '/assets/videos/optimizations/youngers/youngers1080.webm',
-                mp4: '/assets/videos/optimizations/youngers/youngers1080.mp4',
+                webm: null,
+                mp4: '/assets/videos/noblessagccheader.mp4',
                 maxWidth: 1200,
-                description: 'Tablet/Small desktop (1080x1920)'
+                description: 'Tablet/Small desktop'
             },
             desktop: {
-                webm: '/assets/videos/optimizations/youngers/youngers1440.webm',
-                mp4: '/assets/videos/optimizations/youngers/youngers1440.mp4',
+                webm: null,
+                mp4: '/assets/videos/noblessagccheader.mp4',
                 maxWidth: Infinity,
-                description: 'Large desktop (1440x2560)'
+                description: 'Large desktop'
             }
         };
 

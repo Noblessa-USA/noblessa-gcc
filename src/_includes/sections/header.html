@@ -5,7 +5,7 @@
 <header id="cs-navigation">
     <div class="cs-container">
         <!--Nav Logo-->
-        <a href="/" class="cs-logo" aria-label="back to home">
+        <a href="{{ '/' | locale_url }}" class="cs-logo" aria-label="back to home">
             noblessa
         </a>
         <!--Navigation List-->
@@ -21,73 +21,59 @@
             <!-- We need a wrapper div so we can set a fixed height on the cs-ul in case the nav list gets too long from too many dropdowns being opened and needs to have an overflow scroll. This wrapper acts as the background so it can go the full height of the screen and not cut off any overflowing nav items while the cs-ul stops short of the bottom of the screen, which keeps all nav items in view no matter how mnay there are-->
             <div class="cs-ul-wrapper">
                 <ul id="cs-expanded" class="cs-ul">
-                    {% set navPages = collections.all | eleventyNavigation %}
-
-                    {# Loop through all pages with a eleventyNavigation in the frontmatter #}
-                    {% for entry in navPages %}
-
-                        {# Define a hasChild variable to make it easier to test what navigation items are have child dropdown pages #}
-                        {% set hasChild = entry.children.length %}
-
-                        {# Check the frontmatter for hideOnMobile/hideOnDesktop. Form a list of classes to be joined when the item is rendered #}
-                        {% set hideClasses = [] %}
-                        {% if entry.hideOnMobile %}
-                            {% set hideClasses = (hideClasses.push("cs-hide-on-mobile"), hideClasses) %}
-                        {% endif %}
-                        {% if entry.hideOnDesktop %}
-                            {% set hideClasses = (hideClasses.push("cs-hide-on-desktop"), hideClasses) %}
-                        {% endif %}
-                        {% if entry.hideOnEverywhere %}
-                            {% set hideClasses = (hideClasses.push("cs-hide-on-everywhere"), hideClasses) %}
-                        {% endif %}
-
-                        {# If this page is a dropdown, give it the appropriate classes, icons and accessibility attributes #}
-                        <li class="cs-li {% if hasChild %} cs-dropdown {% endif %} {{ hideClasses | join(" ") }}">
-
-                            {# If the page has child dropdown pages, render it as a <button> tag with the appropriate dropdown HTML #}
-                            {% if hasChild %}
-
-                                {# Check to see if the user's current page is one of the child pages. If so, apply the cs-active class to the dropdown parent #}
-                                {% set activeClass = "" %}
-                                {% for child in entry.children %}
-                                    {% if child.url == page.url %}
-                                        {% set activeClass = "cs-active" %}
-                                    {% endif %}
-                                {% endfor %}
-
-                                {# Render the <button> with the active class, dropdown icon and child links #}
-                                <button 
-                                    type="button"
-                                    class="cs-li-link {{ activeClass }}"
-                                    aria-expanded="false"
-                                    aria-controls="dropdown-{{ entry.key }}"
-                                    aria-haspopup="true"
-                                    aria-label="Open {{ entry.key }} submenu"
-                                >
-                                    {{ entry.key }}
-                                    <svg class="cs-drop-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-                                        <path d="M9 18L15 12L9 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-                                    </svg>
-                                </button>
-
-                                {# Dropdowns have another ul/li set up within the parent li, which gets rendered in the same way as a normal link #}
-                                <ul class="cs-drop-ul" id="dropdown-{{ entry.key }}" role="menu" aria-hidden="true">
-                                    {% for child in entry.children %}
-                                    {# Replace href="{{ child.url }}" #}
-                                        <li class="cs-drop-li" role="none">
-                                            <a href="{{ child.url }}" class="cs-li-link cs-drop-link" role="menuitem">{{ child.key }}</a>
-                                        </li>
-                                    {% endfor %}
-                                </ul>
-                            {% else %}
-                                {# Normal pages are rendered as <a> tags, in the normal way you'd expect #}
-                                    {# Replace href="{{ entry.url }}" #}
-                                <a href="{{ entry.url }}" class="cs-li-link {% if entry.url == page.url %} cs-active {% endif %}" {% if entry.url == page.url %} aria-current="page" {% endif %}>
-                                    {{ entry.key }}
-                                </a>
-                            {% endif %}
-                        </li>
-                    {% endfor %}
+                    <!-- Home -->
+                    <li class="cs-li">
+                        <a href="{{ '/' | locale_url }}" class="cs-li-link">{{ header[lang].home }}</a>
+                    </li>
+                    
+                    <!-- About -->
+                    <li class="cs-li">
+                        <a href="{{ '/about/' | locale_url }}" class="cs-li-link">{{ header[lang].about }}</a>
+                    </li>
+                    
+                    <!-- Collections (Dropdown) -->
+                    <li class="cs-li cs-dropdown">
+                        <button 
+                            type="button"
+                            class="cs-li-link"
+                            aria-expanded="false"
+                            aria-controls="dropdown-collections"
+                            aria-haspopup="true"
+                            aria-label="Open {{ header[lang].collections }} submenu"
+                        >
+                            {{ header[lang].collections }}
+                            <svg class="cs-drop-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                                <path d="M9 18L15 12L9 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                            </svg>
+                        </button>
+                        <ul class="cs-drop-ul" id="dropdown-collections" role="menu" aria-hidden="true">
+                            <li class="cs-drop-li" role="none">
+                                <a href="/collections/kitchen/" class="cs-li-link cs-drop-link" role="menuitem">{{ header[lang].kitchen }}</a>
+                            </li>
+                            <li class="cs-drop-li" role="none">
+                                <a href="/collections/living/" class="cs-li-link cs-drop-link" role="menuitem">{{ header[lang].living }}</a>
+                            </li>
+                            <li class="cs-drop-li" role="none">
+                                <a href="/collections/bath/" class="cs-li-link cs-drop-link" role="menuitem">{{ header[lang].bath }}</a>
+                            </li>
+                        </ul>
+                    </li>
+                    
+                    <!-- Showrooms -->
+                    <li class="cs-li">
+                        <a href="{{ '/showrooms/' | locale_url }}" class="cs-li-link">{{ header[lang].showrooms }}</a>
+                    </li>
+                    
+                    <!-- Blog -->
+                    <li class="cs-li">
+                        <a href="{{ '/blog/' | locale_url }}" class="cs-li-link">{{ header[lang].blog }}</a>
+                    </li>
+                    
+                    <!-- Contact -->
+                    <li class="cs-li">
+                        <a href="{{ '/contact/' | locale_url }}" class="cs-li-link">{{ header[lang].contact }}</a>
+                    </li>
+                    
                     <!-- User Authentication Area -->
                     <li id="user-info" class="cs-user-info">
                         <a href="/login/" class="cs-button-solid cs-hidden">Login</a>

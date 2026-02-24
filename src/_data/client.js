@@ -1,6 +1,6 @@
 module.exports = {
     name: "noblessa",
-    email: "info@noblessa-usa.com",
+    email: "info@noblessa-gcc.com",
     phoneForTel: "123-456-7890",
     phoneFormatted: "(123) 456-7890",
     address: {

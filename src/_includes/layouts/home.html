@@ -1,0 +1,323 @@
+{% extends "layouts/base.html" %}
+
+{% block head %}
+    <!-- Preload and immediately apply critical hero CSS -->
+    <link rel="preload" href="/assets/css/critical.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="/assets/css/critical.css"></noscript>
+
+    <!-- Defer non-critical scripts and use async where possible -->
+    <script defer src="/assets/js/transformgallery.js"></script>
+    <script defer src="/assets/js/collections-gallery.js"></script>
+    <script defer src="/assets/js/responsive-video.js"></script>
+    <script defer src="/assets/js/newsletter-popup.js"></script>
+    <script defer src="/assets/js/video-carousel.js"></script>
+
+    <!-- If we're in production, defer the rest of the home page styles. In development, always load it. Otherwise the site will break when hot-reload is used. -->
+    {% if client.isProduction %}
+        <script>
+            console.log("Production detected: deferring non-critical CSS");
+        </script>
+        <link rel="preload" href="/assets/css/local.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript>
+            <link rel="stylesheet" href="/assets/css/local.css">
+        </noscript>
+
+    {% else %}
+        <link rel="stylesheet" href="/assets/css/local.css"/>
+    {% endif %}
+
+    <!-- Preload video - JavaScript will update to optimal size if needed -->
+    <link rel="preload" as="video" type="video/mp4" href="/assets/videos/noblessagccheader.mp4"/>
+    
+    <!-- Preconnect to external domains if any -->
+    <link rel="dns-prefetch" href="//fonts.googleapis.com">
+    
+    <!-- Preload critical images -->
+    <link rel="preload" as="image" href="{% getUrl '/assets/images/collections/sentido/sentidoblacknoir.webp' | resize({ width: 1920, height: 1080 }) | avif %}">
+
+    <!-- To ensure proper validation, prevent errors, and encourage developers to check, schema's are an opt-in feature. They're very bespoke and requires some customising  -->
+    <!-- Uncomment the code below to enable Structured Data, and test it when you deploy to Netlify - https://developers.google.com/search/docs/appearance/structured-data -->
+    <!-- {% include "components/home-schema.html" %} -->
+{% endblock %}
+
+{% block body %}
+
+    <!-- ============================================ -->
+    <!--                    Hero                      -->
+    <!-- ============================================ -->
+
+    <section id="hero-143">
+        <div class="cs-container">
+            <div class="cs-rigo"></div>
+            <h1 class="cs-title">{{ hero_title | safe }}</h1>
+        </div>
+
+        <!-- Background Video - JavaScript will load the optimal size -->
+        <video class="cs-video" autoplay muted playsinline loop preload="metadata" aria-hidden=true>
+            <!-- Single source - responsive-video.js determines optimal resolution -->
+            <source src="/assets/videos/noblessagccheader.mp4" type="video/mp4">
+        </video>
+    </section>
+
+    <!-- ============================================ -->
+    <!--             Transform Gallery                -->
+    <!-- ============================================ -->
+
+    <section id="transform-gallery">
+        <div class="cs-container">
+            <div class="cs-section-header">
+                <div class="cs-left-column">
+                    <span class="cs-topper sl-fade-in-down">{{ philosophy_topper }}</span>
+                    <h2 class="cs-title sl-fade-in-up">{{ philosophy_title | safe }}</h2>
+                </div>
+                <span class="cs-divider"></span>
+                <div class="cs-right-column sl-fade-in-left">
+                    <p class="cs-text">
+                        {{ philosophy_text }}
+                    </p>
+                    <a href="{{ '/contact/' | locale_url }}" class="cs-button-nodeco">
+                        <span class="cs-hover-underline"> {{ philosophy_cta }} </span>
+                        <img src="/assets/svgs/horizontal-arrow.svg" alt="arrow" width="30" height="10">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!--            Collections Gallery               -->
+    <!-- ============================================ -->
+
+    <section id="collections-gallery">
+        <div class="cg-container">
+            <div class="cg-text-overlay">
+                <span class="cs-topper sl-fade-in-down">{{ collections_topper }}</span>
+                <h2 class="cs-title sl-fade-in-down">{{ collections_title }}</h2>
+                <span class="cs-divider"></span>
+                <p class="cs-text sl-fade-in-up">
+                    {{ collections_text }}
+                </p>
+                <div class="cg-navigation sl-fade-in-up">
+                    <button class="cg-prev" aria-label="Previous slide">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M15 18L9 12L15 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                    <button class="cg-next" aria-label="Next slide">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M9 18L15 12L9 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            <div class="cg-slider">
+                <div class="cg-slide active">
+                    <picture>
+                        <source media="(max-width: 600px)" srcset="{% getUrl '/assets/images/collections/sentido/sentidoblacknoir.webp' | resize({ width: 640, height: 900 }) | avif %}" type="image/avif">
+                        <source media="(max-width: 600px)" srcset="{% getUrl '/assets/images/collections/sentido/sentidoblacknoir.webp' | resize({ width: 640, height: 900 }) | webp %}" type="image/webp">
+                        <source media="(max-width: 1024px)" srcset="{% getUrl '/assets/images/collections/sentido/sentidoblacknoir.webp' | resize({ width: 1024, height: 768 }) | avif %}" type="image/avif">
+                        <source media="(max-width: 1024px)" srcset="{% getUrl '/assets/images/collections/sentido/sentidoblacknoir.webp' | resize({ width: 1024, height: 768 }) | webp %}" type="image/webp">
+                        <source media="(min-width: 1025px)" srcset="{% getUrl '/assets/images/collections/sentido/sentidoblacknoir.webp' | resize({ width: 1920, height: 1080 }) | avif %}" type="image/avif">
+                        <source media="(min-width: 1025px)" srcset="{% getUrl '/assets/images/collections/sentido/sentidoblacknoir.webp' | resize({ width: 2560, height: 1440 }) | webp %}" type="image/webp">
+                        <img src="{% getUrl '/assets/images/collections/sentido/sentidoblacknoir.webp' | resize({ width: 2560, height: 1440 }) | webp %}" alt="Sentido Black Noir Collection" width="1920" height="1080" loading="eager" decoding="async">
+                    </picture>
+                </div>
+                <div class="cg-slide">
+                    <picture>
+                        <source media="(max-width: 600px)" srcset="{% getUrl '/assets/images/collections/serenity/serenityivory.webp' | resize({ width: 640, height: 900 }) | avif %}" type="image/avif">
+                        <source media="(max-width: 600px)" srcset="{% getUrl '/assets/images/collections/serenity/serenityivory.webp' | resize({ width: 640, height: 900 }) | webp %}" type="image/webp">
+                        <source media="(max-width: 1024px)" srcset="{% getUrl '/assets/images/collections/serenity/serenityivory.webp' | resize({ width: 1024, height: 768 }) | avif %}" type="image/avif">
+                        <source media="(max-width: 1024px)" srcset="{% getUrl '/assets/images/collections/serenity/serenityivory.webp' | resize({ width: 1024, height: 768 }) | webp %}" type="image/webp">
+                        <source media="(min-width: 1025px)" srcset="{% getUrl '/assets/images/collections/serenity/serenityivory.webp' | resize({ width: 1920, height: 1080 }) | avif %}" type="image/avif">
+                        <source media="(min-width: 1025px)" srcset="{% getUrl '/assets/images/collections/serenity/serenityivory.webp' | resize({ width: 2560, height: 1440 }) | webp %}" type="image/webp">
+                        <img src="{% getUrl '/assets/images/collections/serenity/serenityivory.webp' | resize({ width: 2560, height: 1440 }) | webp %}" alt="Serenity Ivory Collection" width="1920" height="1080" loading="lazy" decoding="async">
+                    </picture>
+                </div>
+                <div class="cg-slide">
+                    <picture>
+                        <source media="(max-width: 600px)" srcset="{% getUrl '/assets/images/livingrooms/whitelivingroom.webp' | resize({ width: 640, height: 900 }) | avif %}" type="image/avif">
+                        <source media="(max-width: 600px)" srcset="{% getUrl '/assets/images/livingrooms/whitelivingroom.webp' | resize({ width: 640, height: 900 }) | webp %}" type="image/webp">
+                        <source media="(max-width: 1024px)" srcset="{% getUrl '/assets/images/livingrooms/whitelivingroom.webp' | resize({ width: 1024, height: 768 }) | avif %}" type="image/avif">
+                        <source media="(max-width: 1024px)" srcset="{% getUrl '/assets/images/livingrooms/whitelivingroom.webp' | resize({ width: 1024, height: 768 }) | webp %}" type="image/webp">
+                        <source media="(min-width: 1025px)" srcset="{% getUrl '/assets/images/livingrooms/whitelivingroom.webp' | resize({ width: 1920, height: 1080 }) | avif %}" type="image/avif">
+                        <source media="(min-width: 1025px)" srcset="{% getUrl '/assets/images/livingrooms/whitelivingroom.webp' | resize({ width: 2560, height: 1440 }) | webp %}" type="image/webp">
+                        <img src="{% getUrl '/assets/images/livingrooms/whitelivingroom.webp' | resize({ width: 2560, height: 1440 }) | webp %}" alt="White Living Room" width="1920" height="1080" loading="lazy" decoding="async">
+                    </picture>
+                </div>
+                <div class="cg-slide">
+                    <picture>
+                        <source media="(max-width: 600px)" srcset="{% getUrl '/assets/images/bathrooms/bath1.webp' | resize({ width: 640, height: 900 }) | avif %}" type="image/avif">
+                        <source media="(max-width: 600px)" srcset="{% getUrl '/assets/images/bathrooms/bath1.webp' | resize({ width: 640, height: 900 }) | webp %}" type="image/webp">
+                        <source media="(max-width: 1024px)" srcset="{% getUrl '/assets/images/bathrooms/bath1.webp' | resize({ width: 1024, height: 768 }) | avif %}" type="image/avif">
+                        <source media="(max-width: 1024px)" srcset="{% getUrl '/assets/images/bathrooms/bath1.webp' | resize({ width: 1024, height: 768 }) | webp %}" type="image/webp">
+                        <source media="(min-width: 1025px)" srcset="{% getUrl '/assets/images/bathrooms/bath1.webp' | resize({ width: 1920, height: 1080 }) | avif %}" type="image/avif">
+                        <source media="(min-width: 1025px)" srcset="{% getUrl '/assets/images/bathrooms/bath1.webp' | resize({ width: 2560, height: 1440 }) | webp %}" type="image/webp">
+                        <img src="{% getUrl '/assets/images/bathrooms/bath1.webp' | resize({ width: 2560, height: 1440 }) | webp %}" alt="Bathroom Design 1" width="1920" height="1080" loading="lazy" decoding="async">
+                    </picture>
+                </div>
+                <div class="cg-slide">
+                    <picture>
+                        <source media="(max-width: 600px)" srcset="{% getUrl '/assets/images/collections/surf/surf1.webp' | resize({ width: 640, height: 900 }) | avif %}" type="image/avif">
+                        <source media="(max-width: 600px)" srcset="{% getUrl '/assets/images/collections/surf/surf1.webp' | resize({ width: 640, height: 900 }) | webp %}" type="image/webp">
+                        <source media="(max-width: 1024px)" srcset="{% getUrl '/assets/images/collections/surf/surf1.webp' | resize({ width: 1024, height: 768 }) | avif %}" type="image/avif">
+                        <source media="(max-width: 1024px)" srcset="{% getUrl '/assets/images/collections/surf/surf1.webp' | resize({ width: 1024, height: 768 }) | webp %}" type="image/webp">
+                        <source media="(min-width: 1025px)" srcset="{% getUrl '/assets/images/collections/surf/surf1.webp' | resize({ width: 1920, height: 1080 }) | avif %}" type="image/avif">
+                        <source media="(min-width: 1025px)" srcset="{% getUrl '/assets/images/collections/surf/surf1.webp' | resize({ width: 2560, height: 1440 }) | webp %}" type="image/webp">
+                        <img src="{% getUrl '/assets/images/collections/surf/surf1.webp' | resize({ width: 2560, height: 1440 }) | webp %}" alt="Surf Collection" width="1920" height="1080" loading="lazy" decoding="async">
+                    </picture>
+                </div>
+                <div class="cg-slide">
+                    <picture>
+                        <source media="(max-width: 600px)" srcset="{% getUrl '/assets/images/collections/serenity/serenityalpinewhite3.webp' | resize({ width: 640, height: 900 }) | avif %}" type="image/avif">
+                        <source media="(max-width: 600px)" srcset="{% getUrl '/assets/images/collections/serenity/serenityalpinewhite3.webp' | resize({ width: 640, height: 900 }) | webp %}" type="image/webp">
+                        <source media="(max-width: 1024px)" srcset="{% getUrl '/assets/images/collections/serenity/serenityalpinewhite3.webp' | resize({ width: 1024, height: 768 }) | avif %}" type="image/avif">
+                        <source media="(max-width: 1024px)" srcset="{% getUrl '/assets/images/collections/serenity/serenityalpinewhite3.webp' | resize({ width: 1024, height: 768 }) | webp %}" type="image/webp">
+                        <source media="(min-width: 1025px)" srcset="{% getUrl '/assets/images/collections/serenity/serenityalpinewhite3.webp' | resize({ width: 1920, height: 1080 }) | avif %}" type="image/avif">
+                        <source media="(min-width: 1025px)" srcset="{% getUrl '/assets/images/collections/serenity/serenityalpinewhite3.webp' | resize({ width: 2560, height: 1440 }) | webp %}" type="image/webp">
+                        <img src="{% getUrl '/assets/images/collections/serenity/serenityalpinewhite3.webp' | resize({ width: 2560, height: 1440 }) | webp %}" alt="Serenity Alpine White Collection" width="1920" height="1080" loading="lazy" decoding="async">
+                    </picture>
+                </div>
+                <div class="cg-slide">
+                    <picture>
+                        <source media="(max-width: 600px)" srcset="{% getUrl '/assets/images/collections/unsorted/unsorted2.webp' | resize({ width: 640, height: 900 }) | avif %}" type="image/avif">
+                        <source media="(max-width: 600px)" srcset="{% getUrl '/assets/images/collections/unsorted/unsorted2.webp' | resize({ width: 640, height: 900 }) | webp %}" type="image/webp">
+                        <source media="(max-width: 1024px)" srcset="{% getUrl '/assets/images/collections/unsorted/unsorted2.webp' | resize({ width: 1024, height: 768 }) | avif %}" type="image/avif">
+                        <source media="(max-width: 1024px)" srcset="{% getUrl '/assets/images/collections/unsorted/unsorted2.webp' | resize({ width: 1024, height: 768 }) | webp %}" type="image/webp">
+                        <source media="(min-width: 1025px)" srcset="{% getUrl '/assets/images/collections/unsorted/unsorted2.webp' | resize({ width: 1920, height: 1080 }) | avif %}" type="image/avif">
+                        <source media="(min-width: 1025px)" srcset="{% getUrl '/assets/images/collections/unsorted/unsorted2.webp' | resize({ width: 2560, height: 1440 }) | webp %}" type="image/webp">
+                        <img src="{% getUrl '/assets/images/collections/unsorted/unsorted2.webp' | resize({ width: 2560, height: 1440 }) | webp %}" alt="Sentido Sky Collection" width="1920" height="1080" loading="lazy" decoding="async">
+                    </picture>
+                </div>
+                <div class="cg-slide">
+                    <picture>
+                        <source media="(max-width: 600px)" srcset="{% getUrl '/assets/images/bathrooms/bath2.webp' | resize({ width: 640, height: 900 }) | avif %}" type="image/avif">
+                        <source media="(max-width: 600px)" srcset="{% getUrl '/assets/images/bathrooms/bath2.webp' | resize({ width: 640, height: 900 }) | webp %}" type="image/webp">
+                        <source media="(max-width: 1024px)" srcset="{% getUrl '/assets/images/bathrooms/bath2.webp' | resize({ width: 1024, height: 768 }) | avif %}" type="image/avif">
+                        <source media="(max-width: 1024px)" srcset="{% getUrl '/assets/images/bathrooms/bath2.webp' | resize({ width: 1024, height: 768 }) | webp %}" type="image/webp">
+                        <source media="(min-width: 1025px)" srcset="{% getUrl '/assets/images/bathrooms/bath2.webp' | resize({ width: 1920, height: 1080 }) | avif %}" type="image/avif">
+                        <source media="(min-width: 1025px)" srcset="{% getUrl '/assets/images/bathrooms/bath2.webp' | resize({ width: 2560, height: 1440 }) | webp %}" type="image/webp">
+                        <img src="{% getUrl '/assets/images/bathrooms/bath2.webp' | resize({ width: 2560, height: 1440 }) | webp %}" alt="Bathroom Design 2" width="1920" height="1080" loading="lazy" decoding="async">
+                    </picture>
+                </div>
+                <div class="cg-slide">
+                    <picture>
+                        <source media="(max-width: 600px)" srcset="{% getUrl '/assets/images/collections/unsorted/unsorted1.webp' | resize({ width: 640, height: 900 }) | avif %}" type="image/avif">
+                        <source media="(max-width: 600px)" srcset="{% getUrl '/assets/images/collections/unsorted/unsorted1.webp' | resize({ width: 640, height: 900 }) | webp %}" type="image/webp">
+                        <source media="(max-width: 1024px)" srcset="{% getUrl '/assets/images/collections/unsorted/unsorted1.webp' | resize({ width: 1024, height: 768 }) | avif %}" type="image/avif">
+                        <source media="(max-width: 1024px)" srcset="{% getUrl '/assets/images/collections/unsorted/unsorted1.webp' | resize({ width: 1024, height: 768 }) | webp %}" type="image/webp">
+                        <source media="(min-width: 1025px)" srcset="{% getUrl '/assets/images/collections/unsorted/unsorted1.webp' | resize({ width: 1920, height: 1080 }) | avif %}" type="image/avif">
+                        <source media="(min-width: 1025px)" srcset="{% getUrl '/assets/images/collections/unsorted/unsorted1.webp' | resize({ width: 2560, height: 1440 }) | webp %}" type="image/webp">
+                        <img src="{% getUrl '/assets/images/collections/unsorted/unsorted1.webp' | resize({ width: 2560, height: 1440 }) | webp %}" alt="Sentido Olive Collection" width="1920" height="1080" loading="lazy" decoding="async">
+                    </picture>
+                </div>
+            </div>
+        </div>
+    </section>
+                 
+    <!-- ============================================ -->
+    <!--                 Our Legacy                   -->
+    <!-- ============================================ -->
+
+    <section id="our-legacy">
+        <div class="cs-container">
+            <div class="cs-image-group">
+                <!--Main Image-->
+                <div class="cs-picture">
+                    <img class="cs-bg-img" loading="lazy" decoding="async" src="/assets/images/walnutkitchen.webp" alt="Walnut kitchen background" width="700" height="600">
+                    <img class="cs-fg-img" loading="lazy" decoding="async" src="/assets/images/whitekitchen.webp" alt="White kitchen foreground" width="700" height="600">
+                </div>
+            </div>
+            <div class="cs-content">
+                <span class="cs-topper sl-fade-in-down">{{ legacy_topper }}</span>
+                <h2 class="cs-title sl-fade-in-down">{{ legacy_title }}</h2>
+                <span class="cs-divider"></span>
+                <p class="cs-text sl-fade-in-left">
+                    {{ legacy_text1 }}
+                </p>
+                <p class="cs-text sl-fade-in-left">
+                    {{ legacy_text2 }}
+                </p>
+                <a href="{{ '/explore' | locale_url }}" class="cs-button-nodeco sl-fade-in-left">
+                    <span class="cs-hover-underline"> {{ legacy_cta }} </span>
+                    <img src="/assets/svgs/horizontal-arrow.svg" alt="arrow" width="30" height="10">
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!--              Video Showcase                  -->
+    <!-- ============================================ -->
+
+    <section id="video-showcase">
+        <div class="cs-container">
+            <div class="cs-content">
+                <span class="cs-topper sl-fade-in-down">{{ video_topper }}</span>
+                <h2 class="cs-title sl-fade-in-down">{{ video_title }}</h2>
+                <span class="cs-divider"></span>
+                <p class="cs-text sl-fade-in-up">
+                    {{ video_text }}
+                </p>
+            </div>
+            <div class="cs-carousel-wrapper sl-fade-in-up">
+                <div class="cs-video-carousel">
+                    <div class="cs-video-slide active" data-video-id="X6XhAaVzUlI">
+                        <h3 class="cs-video-title">Part 1: Modern Woodland Home</h3>
+                        <div class="cs-video-container">
+                            <div class="cs-video-placeholder">
+                                <img src="https://img.youtube.com/vi/X6XhAaVzUlI/maxresdefault.jpg" alt="Video thumbnail" loading="lazy">
+                                <button class="cs-play-button" aria-label="Play video">
+                                    <svg width="68" height="48" viewBox="0 0 68 48" fill="none">
+                                        <path d="M66.52,7.74c-0.78-2.93-2.49-5.41-5.42-6.19C55.79,.13,34,0,34,0S12.21,.13,6.9,1.55 C3.97,2.33,2.27,4.81,1.48,7.74C0.06,13.05,0,24,0,24s0.06,10.95,1.48,16.26c0.78,2.93,2.49,5.41,5.42,6.19 C12.21,47.87,34,48,34,48s21.79-0.13,27.1-1.55c2.93-0.78,4.64-3.26,5.42-6.19C67.94,34.95,68,24,68,24S67.94,13.05,66.52,7.74z" fill="#f00"></path>
+                                        <path d="M 45,24 27,14 27,34" fill="#fff"></path>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cs-video-slide" data-video-id="NSxvDYY1Eu4">
+                        <h3 class="cs-video-title">Part 2: Modern Mountain Home</h3>
+                        <div class="cs-video-container">
+                            <div class="cs-video-placeholder">
+                                <img src="https://img.youtube.com/vi/NSxvDYY1Eu4/maxresdefault.jpg" alt="Video thumbnail" loading="lazy">
+                                <button class="cs-play-button" aria-label="Play video">
+                                    <svg width="68" height="48" viewBox="0 0 68 48" fill="none">
+                                        <path d="M66.52,7.74c-0.78-2.93-2.49-5.41-5.42-6.19C55.79,.13,34,0,34,0S12.21,.13,6.9,1.55 C3.97,2.33,2.27,4.81,1.48,7.74C0.06,13.05,0,24,0,24s0.06,10.95,1.48,16.26c0.78,2.93,2.49,5.41,5.42,6.19 C12.21,47.87,34,48,34,48s21.79-0.13,27.1-1.55c2.93-0.78,4.64-3.26,5.42-6.19C67.94,34.95,68,24,68,24S67.94,13.05,66.52,7.74z" fill="#f00"></path>
+                                        <path d="M 45,24 27,14 27,34" fill="#fff"></path>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cs-video-slide" data-video-id="biGJjncs2To">
+                        <h3 class="cs-video-title">Part 3: Blossom Modern Home</h3>
+                        <div class="cs-video-container">
+                            <div class="cs-video-placeholder">
+                                <img src="https://img.youtube.com/vi/biGJjncs2To/maxresdefault.jpg" alt="Video thumbnail" loading="lazy">
+                                <button class="cs-play-button" aria-label="Play video">
+                                    <svg width="68" height="48" viewBox="0 0 68 48" fill="none">
+                                        <path d="M66.52,7.74c-0.78-2.93-2.49-5.41-5.42-6.19C55.79,.13,34,0,34,0S12.21,.13,6.9,1.55 C3.97,2.33,2.27,4.81,1.48,7.74C0.06,13.05,0,24,0,24s0.06,10.95,1.48,16.26c0.78,2.93,2.49,5.41,5.42,6.19 C12.21,47.87,34,48,34,48s21.79-0.13,27.1-1.55c2.93-0.78,4.64-3.26,5.42-6.19C67.94,34.95,68,24,68,24S67.94,13.05,66.52,7.74z" fill="#f00"></path>
+                                        <path d="M 45,24 27,14 27,34" fill="#fff"></path>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="cs-carousel-controls">
+                    <button class="cs-carousel-prev" aria-label="Previous video">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path d="M15 18L9 12L15 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                    <button class="cs-carousel-next" aria-label="Next video">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path d="M9 18L15 12L9 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+                                    
+{% endblock %}

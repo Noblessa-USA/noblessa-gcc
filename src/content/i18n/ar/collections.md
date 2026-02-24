@@ -1,0 +1,63 @@
+---
+layout: layouts/collections.html
+permalink: "/{{ lang }}/collections/"
+lang: ar
+title: "مجموعات نوبليسا | تصاميم مطابخ وحمامات ألمانية"
+description: "استكشف مجموعاتنا المنسقة من المطابخ والحمامات ومساحات المعيشة المصممة بالهندسة الألمانية. ابحث عن أسلوبك المثالي من التصاميم الحديثة إلى الكلاسيكية."
+
+banner_title: "مجموعاتنا"
+banner_text: "اكتشف المزيج المثالي من الهندسة الألمانية والتصميم الخالد"
+
+nav_sentido: "سنتيدو"
+nav_ivory: "عاجي"
+nav_noir: "نوار"
+nav_walnut: "جوز ميلانو"
+
+sentido_title: "سنتيدو"
+sentido_text: "اختبر قمة الفخامة الحديثة مع مجموعة سنتيدو، التي تتميز بخطوط أنيقة ومواد ممتازة."
+sentido_item1_title: "مجموعة السبا"
+sentido_item1_alt: "حمام حديث"
+sentido_item2_title: "حمام معاصر"
+sentido_item2_alt: "تصميم حمام حديث"
+sentido_item3_title: "جناح فاخر"
+sentido_item3_alt: "حمام فاخر"
+
+ivory_title: "عاجي"
+ivory_text: "عزز مناطق المعيشة الخاصة بك بالوحدات المدمجة المخصصة ومراكز الترفيه وحلول التخزين."
+ivory_item1_title: "الحلول المدمجة"
+ivory_item1_text: "وحدات مدمجة مخصصة تعظم المساحة وتعزز الوظائف."
+ivory_item1_alt: "وحدات غرفة المعيشة المدمجة"
+ivory_item2_title: "مراكز الترفيه"
+ivory_item2_text: "تخزين وسائط متطورة مع إدارة كابلات متكاملة."
+ivory_item2_alt: "مركز الترفيه"
+ivory_item3_title: "المكتب المنزلي"
+ivory_item3_text: "حلول مساحات العمل المهنية بتصميم أنيق."
+ivory_item3_alt: "المكتب المنزلي"
+
+noir_title: "نوار"
+noir_text: "أكمل تصميمك بمجموعاتنا المتميزة من الأجهزة والإضاءة والإكسسوارات."
+noir_item1_title: "أجهزة ممتازة"
+noir_item1_text: "مقابض وسحابات ومعدات فاخرة بتشطيبات مختلفة."
+noir_item1_alt: "أجهزة الخزانات"
+noir_item2_title: "حلول الإضاءة"
+noir_item2_text: "أنظمة إضاءة متكاملة لتعزيز الوظائف والأجواء."
+noir_item2_alt: "حلول الإضاءة"
+noir_item3_title: "ملحقات التخزين"
+noir_item3_text: "عظم التنظيم مع حلول التخزين المتميزة لدينا."
+noir_item3_alt: "ملحقات التخزين"
+
+walnut_title: "جوز ميلانو"
+walnut_text: "اختر من مجموعتنا الواسعة من المواد المتميزة والتشطيبات لإنشاء مساحتك المثالية."
+walnut_item1_title: "تشطيبات الخشب"
+walnut_item1_text: "خيارات خشب طبيعي ومصبوغة في أنواع وأنماط مختلفة."
+walnut_item1_alt: "تشطيبات الخشب"
+walnut_item2_title: "تشطيبات مدهونة"
+walnut_item2_text: "ألوان طلاء مخصصة وتشطيبات خاصة للمظاهر الفريدة."
+walnut_item2_alt: "تشطيبات مدهونة"
+walnut_item3_title: "مواد خاصة"
+walnut_item3_text: "مواد الزجاج والمعدن والمركبات لتصاميم معاصرة."
+walnut_item3_alt: "مواد خاصة"
+
+view_topper: "مجموعاتنا"
+view_title: "عرض مجموعاتنا"
+---

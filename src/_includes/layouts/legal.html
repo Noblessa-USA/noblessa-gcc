@@ -1,0 +1,168 @@
+{% extends "layouts/base.html" %}
+
+{% block head %}
+    <link rel="stylesheet" href="/assets/css/legal.css">
+    <script defer src="/assets/js/legal.js"></script>
+{% endblock %}
+
+{% block body %}
+
+    <!-- ============================================ -->
+    <!--                   Banner                     -->
+    <!-- ============================================ -->
+
+    <section id="banner">
+        <div class="cs-container">
+            <span class="cs-topper">{{ banner_topper }}</span>
+            <h1 class="cs-title">{{ banner_title }}</h1>
+            <nav aria-label="breadcrumb">
+                <ol class="cs-breadcrumb">
+                    <li><a href="/">{{ breadcrumb_home }}</a></li>
+                    <li>{{ breadcrumb_current }}</li>
+                </ol>
+            </nav>
+        </div>
+        <picture class="cs-background">
+            <source media="(max-width: 600px)" srcset="{% getUrl '/assets/images/collections/serenity/serenityalpinewhite.webp' | resize({ width: 640 }) | avif %}" type="image/avif">
+            <source media="(max-width: 600px)" srcset="{% getUrl '/assets/images/collections/serenity/serenityalpinewhite.webp' | resize({ width: 640 }) | webp %}" type="image/webp">
+            <source media="(min-width: 601px)" srcset="{% getUrl '/assets/images/collections/serenity/serenityalpinewhite.webp' | resize({ width: 1920 }) | avif %}" type="image/avif">
+            <source media="(min-width: 601px)" srcset="{% getUrl '/assets/images/collections/serenity/serenityalpinewhite.webp' | resize({ width: 1920 }) | webp %}" type="image/webp">
+            <img src="{% getUrl '/assets/images/collections/serenity/serenityalpinewhite.webp' | resize({ width: 1920 }) | webp %}" alt="Legal Background" width="1920" height="1080" loading="eager">
+        </picture>
+    </section>
+
+    <!-- ============================================ -->
+    <!--                Legal Content                 -->
+    <!-- ============================================ -->
+
+    <section id="legal-content">
+        <div class="cs-container">
+            <div class="cs-tabs">
+                <div class="cs-tab-nav">
+                    <button class="cs-tab-button active" data-tab="privacy">{{ tab_privacy }}</button>
+                    <button class="cs-tab-button" data-tab="terms">{{ tab_terms }}</button>
+                    <button class="cs-tab-button" data-tab="cookies">{{ tab_cookies }}</button>
+                </div>
+                
+                <div class="cs-tab-content">
+                    <!-- Privacy Policy Tab -->
+                    <div class="cs-tab-pane active" id="privacy">
+                        <h2 class="cs-section-title">{{ privacy_title }}</h2>
+                        <p class="cs-update-date">{{ privacy_updated }}</p>
+                        
+                        <div class="cs-content-block">
+                            <h3>{{ privacy_section1_title }}</h3>
+                            <p>{{ privacy_section1_text }}</p>
+                        </div>
+                        
+                        <div class="cs-content-block">
+                            <h3>{{ privacy_section2_title }}</h3>
+                            <p>{{ privacy_section2_text }}</p>
+                            <ul class="cs-list">
+                                <li>{{ privacy_section2_item1 }}</li>
+                                <li>{{ privacy_section2_item2 }}</li>
+                                <li>{{ privacy_section2_item3 }}</li>
+                                <li>{{ privacy_section2_item4 }}</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="cs-content-block">
+                            <h3>{{ privacy_section3_title }}</h3>
+                            <p>{{ privacy_section3_text }}</p>
+                        </div>
+                        
+                        <div class="cs-content-block">
+                            <h3>{{ privacy_section4_title }}</h3>
+                            <p>{{ privacy_section4_text }}</p>
+                        </div>
+                        
+                        <div class="cs-content-block">
+                            <h3>{{ privacy_section5_title }}</h3>
+                            <p>{{ privacy_section5_text }}</p>
+                        </div>
+                        
+                        <div class="cs-content-block">
+                            <h3>{{ privacy_section6_title }}</h3>
+                            <p>{{ privacy_section6_text }}</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Terms of Service Tab -->
+                    <div class="cs-tab-pane" id="terms">
+                        <h2 class="cs-section-title">{{ terms_title }}</h2>
+                        <p class="cs-update-date">{{ terms_updated }}</p>
+                        
+                        <div class="cs-content-block">
+                            <h3>{{ terms_section1_title }}</h3>
+                            <p>{{ terms_section1_text }}</p>
+                        </div>
+                        
+                        <div class="cs-content-block">
+                            <h3>{{ terms_section2_title }}</h3>
+                            <p>{{ terms_section2_text }}</p>
+                        </div>
+                        
+                        <div class="cs-content-block">
+                            <h3>{{ terms_section3_title }}</h3>
+                            <p>{{ terms_section3_text }}</p>
+                        </div>
+                        
+                        <div class="cs-content-block">
+                            <h3>{{ terms_section4_title }}</h3>
+                            <p>{{ terms_section4_text }}</p>
+                        </div>
+                        
+                        <div class="cs-content-block">
+                            <h3>{{ terms_section5_title }}</h3>
+                            <p>{{ terms_section5_text }}</p>
+                        </div>
+                        
+                        <div class="cs-content-block">
+                            <h3>{{ terms_section6_title }}</h3>
+                            <p>{{ terms_section6_text }}</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Cookie Policy Tab -->
+                    <div class="cs-tab-pane" id="cookies">
+                        <h2 class="cs-section-title">{{ cookies_title }}</h2>
+                        <p class="cs-update-date">{{ cookies_updated }}</p>
+                        
+                        <div class="cs-content-block">
+                            <h3>{{ cookies_section1_title }}</h3>
+                            <p>{{ cookies_section1_text }}</p>
+                        </div>
+                        
+                        <div class="cs-content-block">
+                            <h3>{{ cookies_section2_title }}</h3>
+                            <p>{{ cookies_section2_text }}</p>
+                            <ul class="cs-list">
+                                <li><strong>{{ cookies_section2_item1_name }}:</strong> {{ cookies_section2_item1_text }}</li>
+                                <li><strong>{{ cookies_section2_item2_name }}:</strong> {{ cookies_section2_item2_text }}</li>
+                                <li><strong>{{ cookies_section2_item3_name }}:</strong> {{ cookies_section2_item3_text }}</li>
+                                <li><strong>{{ cookies_section2_item4_name }}:</strong> {{ cookies_section2_item4_text }}</li>
+                            </ul>
+                        </div>
+                        
+                        <div class="cs-content-block">
+                            <h3>{{ cookies_section3_title }}</h3>
+                            <p>{{ cookies_section3_text }}</p>
+                        </div>
+                        
+                        <div class="cs-content-block">
+                            <h3>{{ cookies_section4_title }}</h3>
+                            <p>{{ cookies_section4_text }}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="cs-contact-section">
+                <h2>{{ contact_title }}</h2>
+                <p>{{ contact_text }}</p>
+                <a href="mailto:info@noblessa.com" class="cs-email">info@noblessa.com</a>
+            </div>
+        </div>
+    </section>
+
+{% endblock %}

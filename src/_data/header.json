@@ -1,0 +1,24 @@
+{
+    "en": {
+        "home": "home",
+        "about": "about",
+        "collections": "collections",
+        "showrooms": "showrooms",
+        "kitchen": "kitchen",
+        "living": "living",
+        "bath": "bath",
+        "blog": "blog",
+        "contact": "contact"
+    },
+    "ar": {
+        "home": "الرئيسية",
+        "about": "عن",
+        "collections": "المجموعات",
+        "showrooms": "صالات العرض",
+        "kitchen": "المطبخ",
+        "living": "المعيشة",
+        "bath": "الحمام",
+        "blog": "المدونة",
+        "contact": "اتصل"
+    }
+}

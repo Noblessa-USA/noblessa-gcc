@@ -1,0 +1,63 @@
+{
+  "logo": "noblessa",
+  "contact": {
+    "email": "info@noblessa-usa.com",
+    "phone": "(123) 456-7890",
+    "address": "First Address Line, Second Address Line, City Name, STATE 12345"
+  },
+  "social": [
+    {
+      "name": "facebook",
+      "url": "https://www.facebook.com/noblessakitchens/",
+      "icon": "/assets/svgs/facebook.svg"
+    },
+    {
+      "name": "instagram",
+      "url": "https://www.instagram.com/noblessa.usa/",
+      "icon": "/assets/svgs/instagram.svg"
+    },
+    {
+      "name": "linkedin",
+      "url": "https://www.linkedin.com/company/noblessa-usa/",
+      "icon": "/assets/svgs/linkedin.svg"
+    },
+    {
+      "name": "pinterest",
+      "url": "https://www.pinterest.com/noblessausa/",
+      "icon": "/assets/svgs/pinterest.svg"
+    },
+    {
+      "name": "houzz",
+      "url": "https://www.houzz.com/pro/noblessausa/__public",
+      "icon": "/assets/svgs/houzz.svg"
+    }
+  ],
+  "developers": [
+    {
+      "name": "Diginuiti",
+      "url": "https://diginuiti.com"
+    },
+    {
+      "name": "Callowhill Web Designs",
+      "url": "https://callowhillwebdesigns.com"
+    }
+  ],
+  "labels": {
+    "en": {
+      "contact": "Contact",
+      "privacy": "Privacy Policy",
+      "terms": "Terms of Use",
+      "cookies": "Cookies Policy",
+      "copyright": "© 2026 noblessa GCC. All rights reserved.",
+      "developed_by": "Developed by"
+    },
+    "ar": {
+      "contact": "اتصل",
+      "privacy": "سياسة الخصوصية",
+      "terms": "شروط الاستخدام",
+      "cookies": "سياسة الكوكيز",
+      "copyright": "© 2026 نوبليسا GCC. جميع الحقوق محفوظة.",
+      "developed_by": "تم التطوير بواسطة"
+    }
+  }
+}

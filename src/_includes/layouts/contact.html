@@ -1,0 +1,64 @@
+{% extends "layouts/base.html" %}
+
+{% block head %}
+    <link rel="stylesheet" href="/assets/css/contact.css">
+    <link rel="preload" as="image" href="{% getUrl '/assets/videos/showroomsfirstframe.webp' | resize({ width: 1920, height: 1080 }) | webp %}">
+{% endblock %}
+
+{% block body %}
+    <!-- Banner -->
+    <div id="banner-2285">
+        <div class="cs-container">
+            <span class="cs-int-title sl-fade-in-right">{{ banner_title }}</span>
+            <p class="cs-text sl-fade-in-right"></p>
+            <div class="cs-breadcrumbs">
+                <a href="{{ '/' | locale_url }}" class="cs-link"></a>
+                <a href="{{ '/contact/' | locale_url }}" class="cs-link cs-active"></a>
+            </div>
+        </div>
+        <video class="cs-video" autoplay muted playsinline loop preload="metadata" poster="{% getUrl '/assets/videos/showroomsfirstframe.webp' | resize({ width: 1920, height: 1080 }) | webp %}" aria-hidden=true>
+            <source src="/assets/videos/showrooms1080x1920.webm" type="video/webm">
+        </video>
+    </div>
+
+    <!-- Contact Form -->
+    <section id="cs-contact-265">
+        <div class="cs-container">
+            <div class="cs-left-section">
+                <div class="cs-content">
+                    <h1 class="cs-topper sl-fade-in-down">{{ banner_topper }}</h1>
+                    <h2 class="cs-title sl-fade-in-down">{{ form_title }}</h2>
+                    <span class="cs-divider"></span>
+                    <p class="cs-text sl-fade-in-up">{{ form_text }}</p>
+                </div>
+                <form id="cs-form-265" name="Main Contact Form" method="POST" data-netlify="true" netlify-honeypot="select" data-netlify-recaptcha="true">
+                    <label class="sl-fade-in-up">{{ form_name_label }}<input required type="text" id="name-265" name="name" placeholder="{{ form_name_placeholder }}"></label>
+                    <label class="sl-fade-in-up">{{ form_email_label }}<input required type="text" id="email-265" name="email" placeholder="{{ form_email_placeholder }}"></label>
+                    <label class="sl-fade-in-up">{{ form_phone_label }}<input type="text" id="phone-265" name="phone" placeholder="{{ form_phone_placeholder }}"></label>
+                    <label class="sl-fade-in-up">{{ form_zip_label }}<input required type="text" id="zip-265" name="zip" placeholder="{{ form_zip_placeholder }}"><input class="cs-select" name="select" type="text" placeholder="Select"></label>
+                    <label class="cs-label-message sl-fade-in-up">{{ form_message_label }}<textarea required name="message" id="message-265" placeholder="{{ form_message_placeholder }}"></textarea></label>
+                    <div data-netlify-recaptcha="true"></div>
+                    <button class="cs-button-nodeco cs-submit sl-fade-in-up" type="submit">
+                        <span class="cs-hover-underline">{{ form_submit }}</span>
+                        <img src="../../assets/svgs/horizontal-arrow.svg" alt="arrow" width="30" height="10">
+                    </button>
+                </form>
+            </div>
+            <div class="cs-right-section">
+                <span class="cs-header">{{ contact_email_label }}</span>
+                <a class="cs-link" href="mailto:{{ contact_email }}">{{ contact_email }}</a>
+                <span class="cs-header">{{ contact_phone_label }}</span>
+                <a class="cs-link" href="tel:{{ contact_phone }}">{{ contact_phone }}</a>
+                <span class="cs-header">{{ contact_address_label }}</span>
+                <a class="cs-link" href="https://maps.app.goo.gl/TEdS5KoLC9ZcULuQ6">
+                    {{ contact_address | safe }}
+                </a>
+                <picture class="cs-bg-picture">
+                    <source media="(max-width: 600px)" srcset="/assets/images/showrooms/showroom-chicago.webp">
+                    <source media="(min-width: 601px)" srcset="/assets/images/showrooms/showroom-chicago.webp">
+                    <img loading="lazy" decoding="async" src="/assets/images/showrooms/showroom-chicago.webp" alt="contact" width="521" height="400">
+                </picture>
+            </div>
+        </div>
+    </section>
+{% endblock %}

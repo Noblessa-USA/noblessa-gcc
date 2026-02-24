@@ -1,0 +1,63 @@
+---
+layout: layouts/collections.html
+permalink: "/{{ lang }}/collections/"
+lang: en
+title: "Noblessa Collections | German Kitchen & Bath Designs"
+description: "Explore our curated collections of German-engineered kitchens, bathrooms, and living spaces. Find your perfect style from modern to classic designs."
+
+banner_title: "Our Collections"
+banner_text: "Discover the perfect blend of German engineering and timeless design"
+
+nav_sentido: "Sentido"
+nav_ivory: "Ivory"
+nav_noir: "Noir"
+nav_walnut: "Walnut Milano"
+
+sentido_title: "Sentido"
+sentido_text: "Experience the epitome of modern luxury with our Sentido collection, featuring sleek lines and premium materials."
+sentido_item1_title: "Spa Collection"
+sentido_item1_alt: "Modern Bathroom"
+sentido_item2_title: "Contemporary Bath"
+sentido_item2_alt: "Modern Bathroom Design"
+sentido_item3_title: "Luxury Suite"
+sentido_item3_alt: "Luxury Bathroom"
+
+ivory_title: "Ivory"
+ivory_text: "Enhance your living areas with custom built-ins, entertainment centers, and storage solutions."
+ivory_item1_title: "Built-in Solutions"
+ivory_item1_text: "Custom built-ins that maximize space and enhance functionality."
+ivory_item1_alt: "Living Room Built-ins"
+ivory_item2_title: "Entertainment Centers"
+ivory_item2_text: "Sophisticated media storage with integrated cable management."
+ivory_item2_alt: "Entertainment Center"
+ivory_item3_title: "Home Office"
+ivory_item3_text: "Professional workspace solutions with elegant design."
+ivory_item3_alt: "Home Office"
+
+noir_title: "Noir"
+noir_text: "Complete your design with our premium hardware, lighting, and accessory collections."
+noir_item1_title: "Premium Hardware"
+noir_item1_text: "Luxury handles, knobs, and hardware in various finishes."
+noir_item1_alt: "Cabinet Hardware"
+noir_item2_title: "Lighting Solutions"
+noir_item2_text: "Integrated lighting systems to enhance functionality and ambiance."
+noir_item2_alt: "Lighting Solutions"
+noir_item3_title: "Storage Accessories"
+noir_item3_text: "Maximize organization with our premium storage solutions."
+noir_item3_alt: "Storage Accessories"
+
+walnut_title: "Walnut Milano"
+walnut_text: "Choose from our extensive selection of premium materials and finishes to create your perfect space."
+walnut_item1_title: "Wood Finishes"
+walnut_item1_text: "Natural and stained wood options in various species and grains."
+walnut_item1_alt: "Wood Finishes"
+walnut_item2_title: "Painted Finishes"
+walnut_item2_text: "Custom paint colors and specialty finishes for unique looks."
+walnut_item2_alt: "Painted Finishes"
+walnut_item3_title: "Specialty Materials"
+walnut_item3_text: "Glass, metal, and composite materials for contemporary designs."
+walnut_item3_alt: "Specialty Materials"
+
+view_topper: "Our Collections"
+view_title: "View Our Collections"
+---

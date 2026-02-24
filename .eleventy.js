@@ -11,11 +11,11 @@ const pluginMinifier = require("@codestitchofficial/eleventy-plugin-minify");
 const pluginSitemap = require("@quasibit/eleventy-plugin-sitemap");
 const pluginLLMs = require('eleventy-plugin-llms-txt');
 
-
 // ⚙️ Configuration Files
 const configSitemap = require("./src/config/plugins/sitemap");
 const configImages = require("./src/config/plugins/images");
 const configLLMs = require("./src/config/plugins/llms");
+const configI18n = require("./src/config/plugins/i18n");
 
 // 🔧 Processing Functions
 const less = require("./src/config/processors/less");
@@ -27,7 +27,10 @@ const filterIsoDate = require("./src/config/filters/isoDate");
 const filterGetCurrentDate = require("./src/config/filters/getCurrentDate");
 const isProduction = process.env.ELEVENTY_ENV === "PROD";
 
-module.exports = function (eleventyConfig) {
+module.exports = async function (eleventyConfig) {
+    // Import the I18n plugin
+    const { I18nPlugin } = await import("@11ty/eleventy");
+
     // ═════════════════════════════════════════════════════════════════════════
     // LANGUAGES
     // Using Eleventy's build events to process non-template languages
@@ -55,6 +58,13 @@ module.exports = function (eleventyConfig) {
      *  https://github.com/11ty/eleventy-navigation
      */
     eleventyConfig.addPlugin(pluginEleventyNavigation);
+
+    /*
+     * 🌍 Internationalization (i18n)
+     * Enables multilingual support with locale-aware URLs and filters
+     * Documentation: https://www.11ty.dev/docs/plugins/i18n/
+     */
+    eleventyConfig.addPlugin(I18nPlugin, configI18n);
 
     /*
      * 🖼️ Image Optimization
