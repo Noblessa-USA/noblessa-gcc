@@ -1944,3 +1944,86 @@ img {
         }
     }
 }
+
+@media only screen and (min-width: 64rem) {
+    html[dir="rtl"] {
+        #transform-gallery {
+            .cs-right-column {
+                text-align: right;
+                justify-items: end;
+                align-items: flex-end;
+            }
+
+            .cs-topper,
+            .cs-title,
+            .cs-text {
+                text-align: right;
+            }
+
+            .cs-button-nodeco {
+                align-self: flex-end;
+            }
+        }
+
+        #collections-gallery {
+            .cg-text-overlay {
+                align-items: flex-end;
+            }
+
+            .cs-topper {
+                align-self: flex-end;
+                width: 100%;
+            }
+
+            .cs-topper,
+            .cs-title,
+            .cs-text {
+                text-align: right;
+            }
+        }
+
+        #our-legacy {
+            .cs-content {
+                align-items: flex-end;
+                padding-right: 0;
+                padding-left: (32/16rem);
+            }
+
+            .cs-topper {
+                align-self: flex-end;
+                margin-left: auto;
+                margin-right: 0;
+            }
+
+            .cs-topper,
+            .cs-title,
+            .cs-text {
+                text-align: right;
+            }
+
+            .cs-text {
+                padding: 0px 0px 0px 10px;
+            }
+
+            .cs-button-nodeco {
+                align-self: flex-end;
+                margin-left: auto;
+                margin-right: 0;
+            }
+        }
+
+        #video-showcase {
+            .cs-content {
+                align-items: flex-end;
+                text-align: right;
+            }
+
+            .cs-topper,
+            .cs-title,
+            .cs-text,
+            .cs-video-title {
+                text-align: right;
+            }
+        }
+    }
+}

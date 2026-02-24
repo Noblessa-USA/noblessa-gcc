@@ -2969,3 +2969,82 @@ html {
         border: 2px solid #fff;
     }
 }
+
+/* Arabic RTL support */
+html[dir="rtl"],
+html[dir="rtl"] body {
+    direction: rtl;
+}
+
+html[dir="rtl"] {
+    #cs-navigation,
+    #cs-footer-1390,
+    #hero-143 {
+        direction: ltr;
+    }
+
+    .cg-navigation,
+    .cs-carousel-controls {
+        direction: ltr;
+    }
+
+    main .cs-topper,
+    main .cs-title,
+    main .cs-int-title,
+    main .cs-text,
+    main .cs-link,
+    main p,
+    main li,
+    main label,
+    main input,
+    main textarea,
+    main select {
+        text-align: right;
+    }
+
+    main ul,
+    main ol {
+        padding-right: 1.25rem;
+        padding-left: 0;
+    }
+
+    main input,
+    main textarea,
+    main select {
+        direction: rtl;
+    }
+
+    main .cs-breadcrumbs {
+        flex-direction: row-reverse;
+    }
+
+    main .cs-breadcrumbs .cs-link:after {
+        margin: 0 1rem;
+    }
+
+    main .cs-button-nodeco,
+    main .cs-button-nodeco-white {
+        direction: rtl;
+        display: inline-flex;
+        align-items: center;
+    }
+
+    main .cs-button-nodeco .cs-hover-underline,
+    main .cs-button-nodeco-white .cs-hover-underline-white {
+        padding-right: 0;
+        padding-left: 15px;
+        letter-spacing: normal;
+        text-transform: none;
+    }
+
+    main .cs-button-nodeco .cs-hover-underline:before,
+    main .cs-button-nodeco-white .cs-hover-underline-white:before {
+        left: auto;
+        right: 0;
+    }
+
+    main .cs-button-nodeco img,
+    main .cs-button-nodeco-white img {
+        transform: scaleX(-1);
+    }
+}
