@@ -5,8 +5,8 @@ document.addEventListener('DOMContentLoaded', function() {
     // Initialize the map
     var map = L.map('showroom-map', {
         attributionControl: false,
-        center: [36.7783, -119.4179], // Center of California
-        zoom: 6,
+        center: [25.0, 47.0], // Center of GCC region
+        zoom: 5,
         zoomControl: true,
         scrollWheelZoom: true
     });
@@ -32,52 +32,100 @@ document.addEventListener('DOMContentLoaded', function() {
     // Showroom data
     var showrooms = [
         {
-            name: 'Jupiter',
-            address: '1405 FL A1AAlt #107, Jupiter, FL 33469',
-            lat: 26.9342,
-            lng: -80.0942,
-            phone: '(561) 401-9866',
-            hours: 'Mon-Fri: 10AM-5PM',
-            mapUrl: 'https://maps.app.goo.gl/6GesrFPCpfVostMm6',
-            image: '../../assets/images/showrooms/jupiteropt2.webp',
+            name: 'Dubai',
+            address: 'Sheikh Zayed Road – Al Safa, Dubai, UAE',
+            lat: 25.2048,
+            lng: 55.2708,
+            phone: '',
+            hours: 'Contact for hours',
+            mapUrl: 'https://noblessa.me/dubai/',
+            image: 'https://noblessa.me/wp-content/uploads/2023/02/noblessa_dubai_interior-1024x461.jpeg',
             features: [
-                'Coastal Luxury Designs',
-                'Outdoor Kitchen Solutions', 
-                'Custom Design Services'
+                'Luxury Kitchen Displays',
+                'Premium German Design',
+                'Expert Consultation'
             ],
-            location: 'jupiter'
+            location: 'dubai'
         },
         {
-            name: 'San Jose',
-            address: '3109 Stevens Creek Blvd, San Jose, CA 95117',
-            lat: 37.3382,
-            lng: -121.8863,
-            phone: '(408) 674-6493',
-            hours: 'Mon-Fri: 9AM-5PM',
-            mapUrl: 'https://maps.app.goo.gl/5NzkytGaHXwjnJjQ8',
-            image: '../../assets/images/showrooms/sanjoseopt2.webp',
+            name: 'Riyadh',
+            address: 'Prince Mohammed Bin Abdulaziz Rd, Tahlia Street – Olaya, Riyadh, KSA',
+            lat: 24.7136,
+            lng: 46.6753,
+            phone: '',
+            hours: 'Contact for hours',
+            mapUrl: 'https://noblessa.me/riyadh/',
+            image: 'https://noblessa.me/wp-content/uploads/2023/02/noblessa_riyadh-1024x768.jpeg',
             features: [
                 'Modern Design Collections',
-                'Interactive Material Library',
-                '3D Design Visualization'
+                'Custom Kitchen Solutions',
+                'Professional Design Services'
             ],
-            location: 'sanjose'
+            location: 'riyadh'
         },
         {
-            name: 'Pasadena',
-            address: '474 S Arroyo Pkwy, Pasadena, CA 91105',
-            lat: 34.1478,
-            lng: -118.1445,
-            phone: '(626) 314-2994',
-            hours: 'Mon-Sat: 10AM-5PM',
-            mapUrl: 'https://maps.app.goo.gl/pTndTscfTQnXUz2F8',
-            image: '../../assets/images/showrooms/pasadenaopt1.webp',
+            name: 'Jeddah',
+            address: 'Sari Br Rd, As Salamah, Jeddah, KSA',
+            lat: 21.5433,
+            lng: 39.1728,
+            phone: '',
+            hours: 'Contact for hours',
+            mapUrl: 'https://noblessa.me/jeddah/',
+            image: 'https://noblessa.me/wp-content/uploads/2023/02/noblessa_djeddah-1024x768.jpeg',
             features: [
-                'Premium Designer Selections',
-                'Full Kitchen & Bath Displays',
+                'Contemporary Kitchen Designs',
+                'High-End Materials',
+                'Design Consultation'
+            ],
+            location: 'jeddah'
+        },
+        {
+            name: 'Al Ahsa',
+            address: 'Al Salam 2nd, Al Mubarraz, Al Ahsa, KSA',
+            lat: 25.3616,
+            lng: 49.5966,
+            phone: '',
+            hours: 'Contact for hours',
+            mapUrl: 'https://noblessa.me/al-ahsa/',
+            image: 'https://noblessa.me/wp-content/uploads/2023/09/Noblessa-PAU-60-scaled-1-1024x683.jpg',
+            features: [
+                'Premium Kitchen Collections',
+                'German Engineering',
+                'Custom Design Services'
+            ],
+            location: 'alahsa'
+        },
+        {
+            name: 'Al Qassim',
+            address: 'Umar ibn Al khatab Rd, Ar Rayan, Al Qassim, KSA',
+            lat: 26.3273,
+            lng: 43.9750,
+            phone: '',
+            hours: 'Contact for hours',
+            mapUrl: 'https://noblessa.me/al-qassim/',
+            image: 'https://noblessa.me/wp-content/uploads/2023/09/Noblessa-BEZIERS-78-scaled-1-1024x683.jpg',
+            features: [
+                'Luxury Kitchen Displays',
+                'Finest German Kitchens',
                 'Expert Design Consultation'
             ],
-            location: 'pasadena'
+            location: 'alqassim'
+        },
+        {
+            name: 'Kuwait City',
+            address: '28 St, Shuwaikh Industrial 70030, Kuwait',
+            lat: 29.3759,
+            lng: 47.9774,
+            phone: '',
+            hours: 'Contact for hours',
+            mapUrl: 'https://noblessa.me/alkuwait/',
+            image: 'https://noblessa.me/wp-content/uploads/2023/01/Grace_881_M_R1-1024x717.jpg',
+            features: [
+                'Modern Kitchen Solutions',
+                'Premium Materials',
+                'Professional Design Services'
+            ],
+            location: 'kuwait'
         }
     ];
 

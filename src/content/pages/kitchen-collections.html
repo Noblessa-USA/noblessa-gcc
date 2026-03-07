@@ -1,0 +1,263 @@
+---
+title: "Kitchen Collections | Noblessa USA"
+description: "Explore our exquisite kitchen collections featuring German-crafted cabinetry. From modern minimalism to timeless tradition, discover the perfect kitchen design for your home."
+permalink: "/kitchen-collections/"
+eleventyNavigation:
+    key: Kitchen Collections
+    order: 350
+---
+
+{% extends "layouts/base.html" %}
+
+{% block head %}
+    <link rel="stylesheet" href="/assets/css/kitchen-collections.css">
+    <script src="/assets/js/kitchen-collections.js" defer></script>
+{% endblock %}
+
+{% block body %}
+    <!-- ============================================ -->
+    <!--              Banner Slideshow                -->
+    <!-- ============================================ -->
+    <div id="banner-slideshow-2285">
+        <div class="cs-container">
+            <div class="cs-text-wrapper">
+                <h1 class="cs-int-title sl-fade-in-right">Kitchen Collections</h1>
+                <p class="cs-text sl-fade-in-right">
+                    Discover our exquisite range of kitchen collections, each crafted with precision and elegance to transform your culinary space into a masterpiece of German engineering.
+                </p>
+            </div>
+            <div class="cs-breadcrumbs">
+                <a href="/" class="cs-link">home</a>
+                <a href="/kitchen-collections/" class="cs-link cs-active">kitchen collections</a>
+            </div>
+        </div>
+        <div class="cs-banner-slideshow">
+            <div class="cs-slide"><img src="/assets/images/collections/tempo/tempo1.webp" alt="Noblessa Tempo Kitchen" loading="eager"></div>
+            <div class="cs-slide"><img src="/assets/images/collections/grace/grace1.webp" alt="Noblessa Grace Kitchen" loading="lazy"></div>
+            <div class="cs-slide"><img src="/assets/images/collections/divine/divine1.webp" alt="Noblessa Divine Kitchen" loading="lazy"></div>
+            <div class="cs-slide"><img src="/assets/images/bathrooms/bath2.webp" alt="Noblessa bathroom design" loading="lazy"></div>
+        </div>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const slides = document.querySelectorAll('.cs-slide');
+            let currentSlide = 0;
+            const slideInterval = 5000;
+            function showSlide(index) {
+                slides.forEach((slide, i) => { slide.classList.remove('active'); });
+                requestAnimationFrame(() => { slides[index].classList.add('active'); });
+            }
+            function nextSlide() {
+                currentSlide = (currentSlide + 1) % slides.length;
+                showSlide(currentSlide);
+            }
+            setInterval(nextSlide, slideInterval);
+            setTimeout(() => { showSlide(currentSlide); }, 100);
+        });
+    </script>
+
+    <!-- ============================================ -->
+    <!--            Kitchen Collections               -->
+    <!-- ============================================ -->
+
+    <section id="kitchen-collections-gallery">
+        <div class="cs-container">
+            <div class="cs-content">
+                <span class="cs-topper">German Craftsmanship</span>
+                <h2 class="cs-title">Our Kitchen Collections</h2>
+                <p class="cs-text">
+                    Each collection embodies the perfect fusion of innovative design and traditional German craftsmanship. 
+                    From contemporary aesthetics to timeless classics, find the kitchen that reflects your unique style and elevates your home.
+                </p>
+            </div>
+
+            <div class="cs-gallery">
+                <!-- Attitude Collection -->
+                <div class="cs-collection-card">
+                    <div class="cs-image-wrapper">
+                        <img src="/assets/images/kitchen/Collections Grid/Attitude/K_30823_21_Attitude_786_M.jpg" alt="Attitude Kitchen Collection" loading="lazy" decoding="async">
+                    </div>
+                    <div class="cs-card-content">
+                        <h3 class="cs-collection-name">Attitude</h3>
+                        <p class="cs-collection-description">Bold and contemporary design with clean lines and striking finishes. Perfect for modern living spaces.</p>
+                        <a href="#attitude-details" class="cs-learn-more">Explore Collection</a>
+                    </div>
+                </div>
+
+                <!-- Chance Collection -->
+                <div class="cs-collection-card">
+                    <div class="cs-image-wrapper">
+                        <img src="/assets/images/kitchen/Collections Grid/Chance/K_9344_20_Chance402.jpg" alt="Chance Kitchen Collection" loading="lazy" decoding="async">
+                    </div>
+                    <div class="cs-card-content">
+                        <h3 class="cs-collection-name">Chance</h3>
+                        <p class="cs-collection-description">Natural wood finishes combined with modern functionality. Warmth meets sophistication.</p>
+                        <a href="#chance-details" class="cs-learn-more">Explore Collection</a>
+                    </div>
+                </div>
+
+                <!-- Crystal Collection -->
+                <div class="cs-collection-card">
+                    <div class="cs-image-wrapper">
+                        <img src="/assets/images/kitchen/Collections Grid/Crystal/K_30384_21_Cristal_938_M.jpg" alt="Crystal Kitchen Collection" loading="lazy" decoding="async">
+                    </div>
+                    <div class="cs-card-content">
+                        <h3 class="cs-collection-name">Crystal</h3>
+                        <p class="cs-collection-description">Sleek glass-effect surfaces with a luxurious metallic sheen. Contemporary elegance at its finest.</p>
+                        <a href="#crystal-details" class="cs-learn-more">Explore Collection</a>
+                    </div>
+                </div>
+
+                <!-- Divine Collection -->
+                <div class="cs-collection-card">
+                    <div class="cs-image-wrapper">
+                        <img src="/assets/images/kitchen/Collections Grid/Divine/K_30656_21_Divine_966_M.jpg" alt="Divine Kitchen Collection" loading="lazy" decoding="async">
+                    </div>
+                    <div class="cs-card-content">
+                        <h3 class="cs-collection-name">Divine</h3>
+                        <p class="cs-collection-description">Rich lacquered finishes in vibrant colors. Express your personality with bold hues and ultra-matt surfaces.</p>
+                        <a href="#divine-details" class="cs-learn-more">Explore Collection</a>
+                    </div>
+                </div>
+
+                <!-- Espirit Collection -->
+                <div class="cs-collection-card">
+                    <div class="cs-image-wrapper">
+                        <img src="/assets/images/kitchen/Collections Grid/Espirit/K_30684_21_Esprit_455_M_B704169.jpg" alt="Espirit Kitchen Collection" loading="lazy" decoding="async">
+                    </div>
+                    <div class="cs-card-content">
+                        <h3 class="cs-collection-name">Espirit</h3>
+                        <p class="cs-collection-description">Sophisticated simplicity with refined details. Timeless design that never goes out of style.</p>
+                        <a href="#espirit-details" class="cs-learn-more">Explore Collection</a>
+                    </div>
+                </div>
+
+                <!-- Grace Collection -->
+                <div class="cs-collection-card">
+                    <div class="cs-image-wrapper">
+                        <img src="/assets/images/kitchen/Collections Grid/Grace/K_01_21_31153_22_Grace_881_M.jpg" alt="Grace Kitchen Collection" loading="lazy" decoding="async">
+                    </div>
+                    <div class="cs-card-content">
+                        <h3 class="cs-collection-name">Grace</h3>
+                        <p class="cs-collection-description">Elegant and refined with delicate proportions. The epitome of understated luxury.</p>
+                        <a href="#grace-details" class="cs-learn-more">Explore Collection</a>
+                    </div>
+                </div>
+
+                <!-- Iconic Collection -->
+                <div class="cs-collection-card">
+                    <div class="cs-image-wrapper">
+                        <img src="/assets/images/kitchen/Collections Grid/Iconic/Noblessa 216 (1).jpg" alt="Iconic Kitchen Collection" loading="lazy" decoding="async">
+                    </div>
+                    <div class="cs-card-content">
+                        <h3 class="cs-collection-name">Iconic</h3>
+                        <p class="cs-collection-description">A design statement that stands the test of time. Bold architectural elements meet functional excellence.</p>
+                        <a href="#iconic-details" class="cs-learn-more">Explore Collection</a>
+                    </div>
+                </div>
+
+                <!-- Metro Collection -->
+                <div class="cs-collection-card">
+                    <div class="cs-image-wrapper">
+                        <img src="/assets/images/kitchen/Collections Grid/Metro/K_01_16_31145_22_Metro_901_M.jpg" alt="Metro Kitchen Collection" loading="lazy" decoding="async">
+                    </div>
+                    <div class="cs-card-content">
+                        <h3 class="cs-collection-name">Metro</h3>
+                        <p class="cs-collection-description">Urban sophistication with clean geometric lines. Modern living redefined.</p>
+                        <a href="#metro-details" class="cs-learn-more">Explore Collection</a>
+                    </div>
+                </div>
+
+                <!-- Passion Collection -->
+                <div class="cs-collection-card">
+                    <div class="cs-image-wrapper">
+                        <img src="/assets/images/kitchen/Collections Grid/Passion/K_02_04_31027_22_Passion_814_M.jpg" alt="Passion Kitchen Collection" loading="lazy" decoding="async">
+                    </div>
+                    <div class="cs-card-content">
+                        <h3 class="cs-collection-name">Passion</h3>
+                        <p class="cs-collection-description">Expressive design with rich textures and dynamic forms. For those who dare to be different.</p>
+                        <a href="#passion-details" class="cs-learn-more">Explore Collection</a>
+                    </div>
+                </div>
+
+                <!-- Shape Collection -->
+                <div class="cs-collection-card">
+                    <div class="cs-image-wrapper">
+                        <img src="/assets/images/kitchen/Collections Grid/Shape/K_01_15_31283_22_Shape_778_M.jpg" alt="Shape Kitchen Collection" loading="lazy" decoding="async">
+                    </div>
+                    <div class="cs-card-content">
+                        <h3 class="cs-collection-name">Shape</h3>
+                        <p class="cs-collection-description">Sculptural forms and innovative materials. Where artistry meets functionality.</p>
+                        <a href="#shape-details" class="cs-learn-more">Explore Collection</a>
+                    </div>
+                </div>
+
+                <!-- Tempo Collection -->
+                <div class="cs-collection-card">
+                    <div class="cs-image-wrapper">
+                        <img src="/assets/images/kitchen/Collections Grid/Tempo/K_30614_21_Tempo_851_M_B704177.jpg" alt="Tempo Kitchen Collection" loading="lazy" decoding="async">
+                    </div>
+                    <div class="cs-card-content">
+                        <h3 class="cs-collection-name">Tempo</h3>
+                        <p class="cs-collection-description">Rhythmic design with balanced proportions. Contemporary style that flows with your lifestyle.</p>
+                        <a href="#tempo-details" class="cs-learn-more">Explore Collection</a>
+                    </div>
+                </div>
+
+                <!-- Tradition Collection -->
+                <div class="cs-collection-card">
+                    <div class="cs-image-wrapper">
+                        <img src="/assets/images/kitchen/Collections Grid/Tradition/K_02_05_31033_22_Tradition_224_M.jpg" alt="Tradition Kitchen Collection" loading="lazy" decoding="async">
+                    </div>
+                    <div class="cs-card-content">
+                        <h3 class="cs-collection-name">Tradition</h3>
+                        <p class="cs-collection-description">Classic elegance with meticulous attention to detail. Timeless beauty rooted in heritage.</p>
+                        <a href="#tradition-details" class="cs-learn-more">Explore Collection</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    {% include 'sections/cta.html' %}
+
+    <!-- ============================================ -->
+    <!--             Gallery Modal Popup              -->
+    <!-- ============================================ -->
+    <div id="collection-gallery-modal" class="cs-modal">
+        <div class="cs-modal-overlay"></div>
+        <div class="cs-modal-content">
+            <button class="cs-modal-close" aria-label="Close gallery">&times;</button>
+            
+            <div class="cs-collection-title-wrapper">
+                <h3 class="cs-modal-collection-name"></h3>
+            </div>
+            
+            <button class="cs-gallery-nav cs-prev" aria-label="Previous image">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polyline points="15 18 9 12 15 6"></polyline>
+                </svg>
+            </button>
+            
+            <div class="cs-gallery-container">
+                <div class="cs-main-image-wrapper">
+                    <img class="cs-main-image" src="" alt="">
+                    <div class="cs-image-counter">
+                        <span class="cs-current-number">1</span> / <span class="cs-total-number">1</span>
+                    </div>
+                </div>
+            </div>
+            
+            <button class="cs-gallery-nav cs-next" aria-label="Next image">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polyline points="9 18 15 12 9 6"></polyline>
+                </svg>
+            </button>
+            
+            <div class="cs-thumbnails-wrapper">
+                <div class="cs-thumbnails"></div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

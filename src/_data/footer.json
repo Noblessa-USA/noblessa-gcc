@@ -1,7 +1,7 @@
 {
   "logo": "noblessa",
   "contact": {
-    "email": "info@noblessa-usa.com",
+    "email": "info@noblessa-gcc.com",
     "phone": "(123) 456-7890",
     "address": "First Address Line, Second Address Line, City Name, STATE 12345"
   },
@@ -56,7 +56,7 @@
       "privacy": "سياسة الخصوصية",
       "terms": "شروط الاستخدام",
       "cookies": "سياسة الكوكيز",
-      "copyright": "© 2026 نوبليسا GCC. جميع الحقوق محفوظة.",
+      "copyright": "© 2026 noblessa GCC. جميع الحقوق محفوظة.",
       "developed_by": "تم التطوير بواسطة"
     }
   }
