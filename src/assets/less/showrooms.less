@@ -388,6 +388,7 @@
         border-radius: (8/16rem);
         overflow: hidden;
         box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        direction: ltr;
     }
 
     // Custom marker styles
@@ -570,6 +571,23 @@
 
     .cs-map-container {
         flex: 1;
+    }
+
+    // RTL Support for Arabic
+    html[dir="rtl"] #map-section {
+        .cs-content {
+            text-align: right;
+            align-items: flex-end;
+        }
+
+        .cs-title,
+        .cs-text {
+            text-align: right;
+        }
+
+        .cs-button-nodeco {
+            align-self: flex-end;
+        }
     }
 }
 

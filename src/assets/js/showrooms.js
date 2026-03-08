@@ -2,6 +2,83 @@
 import L from 'leaflet';
 
 document.addEventListener('DOMContentLoaded', function() {
+    // Get translations from data attributes
+    const translationsEl = document.getElementById('showroom-translations');
+    const t = {
+        showroomSuffix: translationsEl?.dataset.showroomSuffix || 'Showroom',
+        addressLabel: translationsEl?.dataset.addressLabel || 'Address',
+        phoneLabel: translationsEl?.dataset.phoneLabel || 'Phone',
+        viewGoogleBtn: translationsEl?.dataset.viewGoogleBtn || 'View on Google',
+        contactBtn: translationsEl?.dataset.contactBtn || 'Contact',
+        getDirectionsBtn: translationsEl?.dataset.getDirectionsBtn || 'Get Directions',
+        callNowBtn: translationsEl?.dataset.callNowBtn || 'Call Now',
+        locations: {
+            dubai: {
+                name: translationsEl?.dataset.dubaiName || 'Dubai',
+                city: translationsEl?.dataset.dubaiCity || 'Dubai',
+                country: translationsEl?.dataset.dubaiCountry || 'UAE',
+                address: translationsEl?.dataset.dubaiAddress || 'Indigo Central 2, Sheikh Zayed Rd, Al Safa 2, Dubai, United Arab Emirates'
+            },
+            riyadh: {
+                name: translationsEl?.dataset.riyadhName || 'Riyadh',
+                city: translationsEl?.dataset.riyadhCity || 'Riyadh',
+                country: translationsEl?.dataset.riyadhCountry || 'Saudi Arabia',
+                address: translationsEl?.dataset.riyadhAddress || '2945 7817 Prince Muhammad Ibn Abd Al Aziz, Al Olaya, Riyadh 12313, Saudi Arabia'
+            },
+            jeddah: {
+                name: translationsEl?.dataset.jeddahName || 'Jeddah',
+                city: translationsEl?.dataset.jeddahCity || 'Jeddah',
+                country: translationsEl?.dataset.jeddahCountry || 'Saudi Arabia',
+                address: translationsEl?.dataset.jeddahAddress || 'Sari Br Rd, As Salamah, Jeddah 23436, Saudi Arabia'
+            },
+            alahsa: {
+                name: translationsEl?.dataset.alahsaName || 'Al Ahsa',
+                city: translationsEl?.dataset.alahsaCity || 'Al Ahsa',
+                country: translationsEl?.dataset.alahsaCountry || 'Saudi Arabia',
+                address: translationsEl?.dataset.alahsaAddress || 'طريق عين نجم, Al Salam 2nd, Al Mubarraz 36422, Saudi Arabia'
+            },
+            alqassim: {
+                name: translationsEl?.dataset.alqassimName || 'Al Qassim',
+                city: translationsEl?.dataset.alqassimCity || 'Buraydah',
+                country: translationsEl?.dataset.alqassimCountry || 'Saudi Arabia',
+                address: translationsEl?.dataset.alqassimAddress || '7993 Umar Ibn Al Khatab Rd, Ar Rayan, Buraydah 52388, Saudi Arabia'
+            },
+            kuwait: {
+                name: translationsEl?.dataset.kuwaitName || 'Kuwait City',
+                city: translationsEl?.dataset.kuwaitCity || 'Kuwait City',
+                country: translationsEl?.dataset.kuwaitCountry || 'Kuwait',
+                address: translationsEl?.dataset.kuwaitAddress || '90 28 St, Shuwaikh Industrial 70030, Kuwait'
+            },
+            muscat: {
+                name: translationsEl?.dataset.muscatName || 'Muscat',
+                city: translationsEl?.dataset.muscatCity || 'Muscat',
+                country: translationsEl?.dataset.muscatCountry || 'Oman',
+                address: translationsEl?.dataset.muscatAddress || '18th November Street, Muscat, Oman'
+            }
+        },
+        features: {
+            luxuryDisplays: translationsEl?.dataset.featureLuxuryDisplays || 'Luxury Kitchen Displays',
+            premiumDesign: translationsEl?.dataset.featurePremiumDesign || 'Premium German Design',
+            expertConsultation: translationsEl?.dataset.featureExpertConsultation || 'Expert Consultation',
+            modernCollections: translationsEl?.dataset.featureModernCollections || 'Modern Design Collections',
+            customSolutions: translationsEl?.dataset.featureCustomSolutions || 'Custom Kitchen Solutions',
+            designServices: translationsEl?.dataset.featureDesignServices || 'Professional Design Services',
+            contemporaryDesigns: translationsEl?.dataset.featureContemporaryDesigns || 'Contemporary Kitchen Designs',
+            highEndMaterials: translationsEl?.dataset.featureHighEndMaterials || 'High-End Materials',
+            designConsultation: translationsEl?.dataset.featureDesignConsultation || 'Design Consultation',
+            premiumCollections: translationsEl?.dataset.featurePremiumCollections || 'Premium Kitchen Collections',
+            germanEngineering: translationsEl?.dataset.featureGermanEngineering || 'German Engineering',
+            customDesignServices: translationsEl?.dataset.featureCustomDesignServices || 'Custom Design Services',
+            finestKitchens: translationsEl?.dataset.featureFinestKitchens || 'Finest German Kitchens',
+            expertDesign: translationsEl?.dataset.featureExpertDesign || 'Expert Design Consultation',
+            modernSolutions: translationsEl?.dataset.featureModernSolutions || 'Modern Kitchen Solutions',
+            premiumMaterials: translationsEl?.dataset.featurePremiumMaterials || 'Premium Materials',
+            premiumQuality: translationsEl?.dataset.featurePremiumQuality || 'Premium German Quality',
+            elegantCollections: translationsEl?.dataset.featureElegantCollections || 'Elegant Design Collections',
+            expertServices: translationsEl?.dataset.featureExpertServices || 'Expert Consultation Services'
+        }
+    };
+
     // Initialize the map
     var map = L.map('showroom-map', {
         attributionControl: false,
@@ -32,100 +109,123 @@ document.addEventListener('DOMContentLoaded', function() {
     // Showroom data
     var showrooms = [
         {
-            name: 'Dubai',
-            address: 'Al Safa, Dubai, UAE',
+            name: t.locations.dubai.name,
+            city: t.locations.dubai.city,
+            country: t.locations.dubai.country,
+            address: t.locations.dubai.address,
             lat: 25.2048,
             lng: 55.2708,
-            phone: '',
-            hours: 'Contact for hours',
-            mapUrl: 'https://noblessa.me/dubai/',
-            image: 'https://noblessa.me/wp-content/uploads/2023/02/noblessa_dubai_interior-1024x461.jpeg',
+            phone: '+971 58 143 0055',
+            mapUrl: 'https://maps.app.goo.gl/BazgBe1w6Uy3rwZV9',
+            image: '/assets/images/showrooms/dubai.jpeg',
             features: [
-                'Luxury Kitchen Displays',
-                'Premium German Design',
-                'Expert Consultation'
+                t.features.luxuryDisplays,
+                t.features.premiumDesign,
+                t.features.expertConsultation
             ],
             location: 'dubai'
         },
         {
-            name: 'Riyadh',
-            address: 'Olaya, Riyadh, KSA',
+            name: t.locations.riyadh.name,
+            city: t.locations.riyadh.city,
+            country: t.locations.riyadh.country,
+            address: t.locations.riyadh.address,
             lat: 24.7136,
             lng: 46.6753,
-            phone: '',
-            hours: 'Contact for hours',
-            mapUrl: 'https://noblessa.me/riyadh/',
-            image: 'https://noblessa.me/wp-content/uploads/2023/02/noblessa_riyadh-1024x768.jpeg',
+            phone: '+966 11 416 9157',
+            mapUrl: 'https://maps.app.goo.gl/Lht16DJC9RdJzceR6',
+            image: '/assets/images/showrooms/riyadh.jpeg',
             features: [
-                'Modern Design Collections',
-                'Custom Kitchen Solutions',
-                'Professional Design Services'
+                t.features.modernCollections,
+                t.features.customSolutions,
+                t.features.designServices
             ],
             location: 'riyadh'
         },
         {
-            name: 'Jeddah',
-            address: 'Jeddah, KSA',
+            name: t.locations.jeddah.name,
+            city: t.locations.jeddah.city,
+            country: t.locations.jeddah.country,
+            address: t.locations.jeddah.address,
             lat: 21.5433,
             lng: 39.1728,
-            phone: '',
-            hours: 'Contact for hours',
-            mapUrl: 'https://noblessa.me/jeddah/',
-            image: 'https://noblessa.me/wp-content/uploads/2023/02/noblessa_djeddah-1024x768.jpeg',
+            phone: '+966 9200 11502',
+            mapUrl: 'https://maps.app.goo.gl/Dx1ZKDCthGMWRRKs6',
+            image: '/assets/images/showrooms/jeddah.jpeg',
             features: [
-                'Contemporary Kitchen Designs',
-                'High-End Materials',
-                'Design Consultation'
+                t.features.contemporaryDesigns,
+                t.features.highEndMaterials,
+                t.features.designConsultation
             ],
             location: 'jeddah'
         },
         {
-            name: 'Al Ahsa',
-            address: 'Al Ahsa, KSA',
+            name: t.locations.alahsa.name,
+            city: t.locations.alahsa.city,
+            country: t.locations.alahsa.country,
+            address: t.locations.alahsa.address,
             lat: 25.3616,
             lng: 49.5966,
-            phone: '',
-            hours: 'Contact for hours',
-            mapUrl: 'https://noblessa.me/al-ahsa/',
-            image: 'https://noblessa.me/wp-content/uploads/2023/09/Noblessa-PAU-60-scaled-1-1024x683.jpg',
+            phone: '+966 11 416 9157',
+            mapUrl: 'https://maps.app.goo.gl/khn1nKu7Axx1oZpJ9',
+            image: '/assets/images/showrooms/alahsa.jpg',
             features: [
-                'Premium Kitchen Collections',
-                'German Engineering',
-                'Custom Design Services'
+                t.features.premiumCollections,
+                t.features.germanEngineering,
+                t.features.customDesignServices
             ],
             location: 'alahsa'
         },
         {
-            name: 'Al Qassim',
-            address: 'Al Qassim, KSA',
+            name: t.locations.alqassim.name,
+            city: t.locations.alqassim.city,
+            country: t.locations.alqassim.country,
+            address: t.locations.alqassim.address,
             lat: 26.3273,
             lng: 43.9750,
-            phone: '',
-            hours: 'Contact for hours',
-            mapUrl: 'https://noblessa.me/al-qassim/',
-            image: 'https://noblessa.me/wp-content/uploads/2023/09/Noblessa-BEZIERS-78-scaled-1-1024x683.jpg',
+            phone: '+966 55 166 5836',
+            mapUrl: 'https://maps.app.goo.gl/fFAtaFcuS2Wv6Sxq8',
+            image: '/assets/images/showrooms/alqassim.jpg',
             features: [
-                'Luxury Kitchen Displays',
-                'Finest German Kitchens',
-                'Expert Design Consultation'
+                t.features.luxuryDisplays,
+                t.features.finestKitchens,
+                t.features.expertDesign
             ],
             location: 'alqassim'
         },
         {
-            name: 'Kuwait City',
-            address: 'Kuwait City, Kuwait',
+            name: t.locations.kuwait.name,
+            city: t.locations.kuwait.city,
+            country: t.locations.kuwait.country,
+            address: t.locations.kuwait.address,
             lat: 29.3759,
             lng: 47.9774,
-            phone: '',
-            hours: 'Contact for hours',
-            mapUrl: 'https://noblessa.me/alkuwait/',
-            image: 'https://noblessa.me/wp-content/uploads/2023/01/Grace_881_M_R1-1024x717.jpg',
+            phone: '+965 2207 3305',
+            mapUrl: 'https://maps.app.goo.gl/oGgTGvaowYbL2Kc38',
+            image: '/assets/images/showrooms/kuwait.jpg',
             features: [
-                'Modern Kitchen Solutions',
-                'Premium Materials',
-                'Professional Design Services'
+                t.features.modernSolutions,
+                t.features.premiumMaterials,
+                t.features.designServices
             ],
             location: 'kuwait'
+        },
+        {
+            name: t.locations.muscat.name,
+            city: t.locations.muscat.city,
+            country: t.locations.muscat.country,
+            address: t.locations.muscat.address,
+            lat: 23.5880,
+            lng: 58.3829,
+            phone: '+968 24 138191',
+            mapUrl: 'https://maps.app.goo.gl/zByTD8VXCAsw99r19',
+            image: '/assets/images/showrooms/muscat.webp',
+            features: [
+                t.features.premiumQuality,
+                t.features.elegantCollections,
+                t.features.expertServices
+            ],
+            location: 'muscat'
         }
     ];
 
@@ -137,16 +237,16 @@ document.addEventListener('DOMContentLoaded', function() {
             const cardHTML = `
                 <div class="cs-showroom-card" data-location="${showroom.location}">
                     <div class="cs-card-header">
-                        <h3 class="cs-card-title">${showroom.name} Showroom</h3>
+                        <h3 class="cs-card-title">${showroom.name} ${t.showroomSuffix}</h3>
                         <div class="cs-card-location">
                             <svg viewBox="0 0 24 24" fill="currentColor">
                                 <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
                             </svg>
-                            ${showroom.address}
+                            ${showroom.city}, ${showroom.country}
                         </div>
                     </div>
                     <div class="cs-card-image">
-                        <img src="${showroom.image}" alt="${showroom.name} Showroom" loading="lazy">
+                        <img src="${showroom.image}" alt="${showroom.name} ${t.showroomSuffix}" loading="lazy">
                     </div>
                     <div class="cs-card-body">
                         <div class="cs-card-info">
@@ -161,20 +261,20 @@ document.addEventListener('DOMContentLoaded', function() {
                         </div>
                         <div class="cs-card-contact">
                             <div class="cs-card-contact-item">
-                                <span class="cs-contact-label">Phone:</span>
-                                <a href="tel:${showroom.phone}" class="cs-contact-value">${showroom.phone}</a>
+                                <span class="cs-contact-label">${t.addressLabel}:</span>
+                                <span class="cs-contact-value">${showroom.address}</span>
                             </div>
                             <div class="cs-card-contact-item">
-                                <span class="cs-contact-label">Hours:</span>
-                                <span class="cs-contact-value">${showroom.hours}</span>
+                                <span class="cs-contact-label">${t.phoneLabel}:</span>
+                                <a href="tel:${showroom.phone}" class="cs-contact-value">${showroom.phone}</a>
                             </div>
                         </div>
                         <div class="cs-card-actions">
                             <a href="${showroom.mapUrl}" target="_blank" class="cs-action-btn cs-secondary">
-                                View on Google
+                                ${t.viewGoogleBtn}
                             </a>
-                            <button class="cs-action-btn cs-primary contact-modal-btn" data-showroom="${showroom.name}" data-phone="${showroom.phone}">
-                                Contact
+                            <button class="cs-action-btn cs-primary contact-modal-btn" data-showroom="${showroom.name}">
+                                ${t.contactBtn}
                             </button>
                         </div>
                     </div>
@@ -199,12 +299,11 @@ document.addEventListener('DOMContentLoaded', function() {
             <div class="showroom-popup">
                 <h3 class="popup-title">${showroom.name}</h3>
                 <div class="popup-content">
-                    <p class="popup-address"><strong>Address:</strong><br>${showroom.address}</p>
-                    <p class="popup-phone"><strong>Phone:</strong><br>${showroom.phone}</p>
-                    <p class="popup-hours"><strong>🕒 Hours:</strong><br>${showroom.hours}</p>
+                    <p class="popup-address"><strong>${t.addressLabel}:</strong><br>${showroom.address}</p>
+                    <p class="popup-phone"><strong>📞 ${t.phoneLabel}:</strong><br><a href="tel:${showroom.phone}">${showroom.phone}</a></p>
                     <div class="popup-buttons">
-                        <a href="${showroom.mapUrl}" target="_blank" class="popup-btn">Get Directions</a>
-                        <a href="tel:${showroom.phone}" class="popup-btn popup-btn-secondary">Call Now</a>
+                        <a href="${showroom.mapUrl}" target="_blank" class="popup-btn">${t.getDirectionsBtn}</a>
+                        <a href="tel:${showroom.phone}" class="popup-btn popup-btn-secondary">${t.callNowBtn}</a>
                     </div>
                 </div>
             </div>
@@ -241,7 +340,7 @@ document.addEventListener('DOMContentLoaded', function() {
             const showroom = showrooms.find(s => s.name === showroomName);
             if (showroom) {
                 modalShowroomImage.src = showroom.image;
-                modalShowroomImage.alt = `${showroom.name} Showroom`;
+                modalShowroomImage.alt = `${showroom.name} ${t.showroomSuffix}`;
             }
             
             modal.style.display = 'flex';

@@ -10,6 +10,64 @@
 
 {% block body %}
 
+    <!-- Translation data for JavaScript -->
+    <div id="showroom-translations" style="display: none;"
+         data-showroom-suffix="{{ showroom_suffix or 'Showroom' }}"
+         data-address-label="{{ address_label or 'Address' }}"
+         data-phone-label="{{ phone_label or 'Phone' }}"
+         data-view-google-btn="{{ view_on_google_btn or 'View on Google' }}"
+         data-contact-btn="{{ contact_btn or 'Contact' }}"
+         data-get-directions-btn="{{ get_directions_btn or 'Get Directions' }}"
+         data-call-now-btn="{{ call_now_btn or 'Call Now' }}"
+         data-dubai-name="{{ showroom_dubai_name or 'Dubai' }}"
+         data-dubai-city="{{ showroom_dubai_city or 'Dubai' }}"
+         data-dubai-country="{{ showroom_dubai_country or 'UAE' }}"
+         data-dubai-address="{{ showroom_dubai_address or 'Indigo Central 2, Sheikh Zayed Rd, Al Safa 2, Dubai, United Arab Emirates' }}"
+         data-riyadh-name="{{ showroom_riyadh_name or 'Riyadh' }}"
+         data-riyadh-city="{{ showroom_riyadh_city or 'Riyadh' }}"
+         data-riyadh-country="{{ showroom_riyadh_country or 'Saudi Arabia' }}"
+         data-riyadh-address="{{ showroom_riyadh_address or '2945 7817 Prince Muhammad Ibn Abd Al Aziz, Al Olaya, Riyadh 12313, Saudi Arabia' }}"
+         data-jeddah-name="{{ showroom_jeddah_name or 'Jeddah' }}"
+         data-jeddah-city="{{ showroom_jeddah_city or 'Jeddah' }}"
+         data-jeddah-country="{{ showroom_jeddah_country or 'Saudi Arabia' }}"
+         data-jeddah-address="{{ showroom_jeddah_address or 'Sari Br Rd, As Salamah, Jeddah 23436, Saudi Arabia' }}"
+         data-alahsa-name="{{ showroom_alahsa_name or 'Al Ahsa' }}"
+         data-alahsa-city="{{ showroom_alahsa_city or 'Al Ahsa' }}"
+         data-alahsa-country="{{ showroom_alahsa_country or 'Saudi Arabia' }}"
+         data-alahsa-address="{{ showroom_alahsa_address or 'طريق عين نجم, Al Salam 2nd, Al Mubarraz 36422, Saudi Arabia' }}"
+         data-alqassim-name="{{ showroom_alqassim_name or 'Al Qassim' }}"
+         data-alqassim-city="{{ showroom_alqassim_city or 'Buraydah' }}"
+         data-alqassim-country="{{ showroom_alqassim_country or 'Saudi Arabia' }}"
+         data-alqassim-address="{{ showroom_alqassim_address or '7993 Umar Ibn Al Khatab Rd, Ar Rayan, Buraydah 52388, Saudi Arabia' }}"
+         data-kuwait-name="{{ showroom_kuwait_name or 'Kuwait City' }}"
+         data-kuwait-city="{{ showroom_kuwait_city or 'Kuwait City' }}"
+         data-kuwait-country="{{ showroom_kuwait_country or 'Kuwait' }}"
+         data-kuwait-address="{{ showroom_kuwait_address or '90 28 St, Shuwaikh Industrial 70030, Kuwait' }}"
+         data-muscat-name="{{ showroom_muscat_name or 'Muscat' }}"
+         data-muscat-city="{{ showroom_muscat_city or 'Muscat' }}"
+         data-muscat-country="{{ showroom_muscat_country or 'Oman' }}"
+         data-muscat-address="{{ showroom_muscat_address or '18th November Street, Muscat, Oman' }}"
+         data-feature-luxury-displays="{{ feature_luxury_displays or 'Luxury Kitchen Displays' }}"
+         data-feature-premium-design="{{ feature_premium_design or 'Premium German Design' }}"
+         data-feature-expert-consultation="{{ feature_expert_consultation or 'Expert Consultation' }}"
+         data-feature-modern-collections="{{ feature_modern_collections or 'Modern Design Collections' }}"
+         data-feature-custom-solutions="{{ feature_custom_solutions or 'Custom Kitchen Solutions' }}"
+         data-feature-design-services="{{ feature_design_services or 'Professional Design Services' }}"
+         data-feature-contemporary-designs="{{ feature_contemporary_designs or 'Contemporary Kitchen Designs' }}"
+         data-feature-high-end-materials="{{ feature_high_end_materials or 'High-End Materials' }}"
+         data-feature-design-consultation="{{ feature_design_consultation or 'Design Consultation' }}"
+         data-feature-premium-collections="{{ feature_premium_collections or 'Premium Kitchen Collections' }}"
+         data-feature-german-engineering="{{ feature_german_engineering or 'German Engineering' }}"
+         data-feature-custom-design-services="{{ feature_custom_design_services or 'Custom Design Services' }}"
+         data-feature-finest-kitchens="{{ feature_finest_kitchens or 'Finest German Kitchens' }}"
+         data-feature-expert-design="{{ feature_expert_design or 'Expert Design Consultation' }}"
+         data-feature-modern-solutions="{{ feature_modern_solutions or 'Modern Kitchen Solutions' }}"
+         data-feature-premium-materials="{{ feature_premium_materials or 'Premium Materials' }}"
+         data-feature-premium-quality="{{ feature_premium_quality or 'Premium German Quality' }}"
+         data-feature-elegant-collections="{{ feature_elegant_collections or 'Elegant Design Collections' }}"
+         data-feature-expert-services="{{ feature_expert_services or 'Expert Consultation Services' }}">
+    </div>
+
     <!-- ============================================ -->
     <!--                   Banner                     -->
     <!-- ============================================ -->
@@ -90,34 +148,38 @@
                 <form id="contact-form" class="contact-form" name="Showrooms Form" method="POST" data-netlify="true" netlify-honeypot="select" data-netlify-recaptcha="true">
                     <div class="form-row">
                         <div class="form-group">
-                            <label for="fullname">{{ form_name_label }}</label>
-                            <input type="text" id="fullname" name="fullname" placeholder="{{ form_name_placeholder }}" required>
+                            <label for="fullname">{{ form_name_label or 'Name' }}</label>
+                            <input type="text" id="fullname" name="fullname" placeholder="{{ form_name_placeholder or 'Your Name' }}" required>
                         </div>
                         <div class="form-group">
-                            <label for="email">{{ form_email_label }}</label>
-                            <input type="email" id="email" name="email" placeholder="{{ form_email_placeholder }}" required>
+                            <label for="email">{{ form_email_label or 'Email' }}</label>
+                            <input type="email" id="email" name="email" placeholder="{{ form_email_placeholder or 'your@email.com' }}" required>
                         </div>
                     </div>
                     <div class="form-row">
                         <div class="form-group">
-                            <label for="phone">{{ form_phone_label }}</label>
-                            <input type="tel" id="phone" name="phone" placeholder="{{ form_phone_placeholder }}" required>
+                            <label for="country">{{ form_country_label or 'Country' }}</label>
+                            <input type="text" id="country" name="country" placeholder="{{ form_country_placeholder or 'Your Country' }}" required>
                         </div>
                         <div class="form-group">
-                            <label for="zipcode">{{ form_zip_label }}</label>
-                            <input type="text" id="zipcode" name="zipcode" placeholder="{{ form_zip_placeholder }}" required>
-                            <input class="cs-select" name="select" type="text" placeholder="Select">
+                            <label for="city">{{ form_city_label or 'City' }}</label>
+                            <input type="text" id="city" name="city" placeholder="{{ form_city_placeholder or 'Your City' }}" required>
                         </div>
                     </div>
                     <div class="form-group">
-                        <label for="message">{{ form_message_label }}</label>
-                        <textarea id="message" name="message" rows="4" placeholder="{{ form_message_placeholder }}"></textarea>
+                        <label for="phone">{{ form_phone_label or 'Phone Number' }}</label>
+                        <input type="tel" id="phone" name="phone" placeholder="{{ form_phone_placeholder or '+123 456 7890' }}" required>
+                        <input class="cs-select" name="select" type="text" placeholder="Select">
+                    </div>
+                    <div class="form-group">
+                        <label for="message">{{ form_message_label or 'Message' }}</label>
+                        <textarea id="message" name="message" rows="4" placeholder="{{ form_message_placeholder or 'Your message...' }}"></textarea>
                     </div>
                     <input class="cs-hidden" type="hidden" id="showroom" name="showroom">
                     <div class="form-actions">
                         <div class="cs-recaptcha" data-netlify-recaptcha="true"></div>
                         <button id="submit-contact-form" type="submit" class="cs-button-nodeco">
-                            <span class="cs-hover-underline">{{ form_submit }}</span>
+                            <span class="cs-hover-underline">{{ form_submit or 'Submit' }}</span>
                             <img src="/assets/svgs/horizontal-arrow.svg" alt="arrow" width="30" height="10">
                         </button>
                     </div>
