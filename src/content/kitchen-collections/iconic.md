@@ -1,7 +1,7 @@
 ---
 title: "Iconic"
 url: "iconic"
-description: "A design statement that stands the test of time. Bold architectural elements meet functional excellence."
+description: "A bold mix of materials that create texture and visual interest as you move throughout the space and enhance the industrial style. It features the Highline Shelving system – a noblessa exclusive design that you can’t find anywhere else – that provides plenty of storage space. The combination of an island and breakfast bar creates all the counter space you need to prep or cook as well as relax and gather with others."
 metaDescription: "Explore the Iconic kitchen collection by Noblessa - a bold design statement featuring striking architectural elements, innovative styling, and functional excellence that stands the test of time."
 headerImage: "/assets/images/kitchen/Collections Grid/Iconic/Noblessa 216 (1).webp"
 headerImageAlt: "Iconic kitchen collection featuring bold architectural design and striking contemporary elements"
@@ -9,9 +9,8 @@ cardImage: "/assets/images/kitchen/Collections Grid/Iconic/Noblessa 216 (1).webp
 cardImageAlt: "Iconic Kitchen Collection thumbnail"
 cardImageSecondary: "/assets/images/kitchen/Collections Grid/Iconic/Noblessa 216 (2).webp"
 cardImageSecondaryAlt: "Iconic Kitchen Collection secondary view with bold architectural elements"
+featuredTitle: "Make Your Statement"
 featuredDescription: |
-  ## Make Your Statement
-  
   The Iconic collection lives up to its name with bold architectural elements and distinctive design features that create truly memorable kitchens. This is a collection for those who see their kitchen as more than just a functional space—it's a design statement that reflects their personality and style.
   
   ### Distinctive Elements

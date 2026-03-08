@@ -9,9 +9,8 @@ cardImage: "/assets/images/kitchen/Collections Grid/Passion/K_02_04_31027_22_Pas
 cardImageAlt: "Passion Kitchen Collection thumbnail"
 cardImageSecondary: "/assets/images/kitchen/Collections Grid/Passion/K_02_04_31026_22_Passion_814_M.webp"
 cardImageSecondaryAlt: "Passion Kitchen Collection secondary view with rich textures"
+featuredTitle: "Express Your Passion"
 featuredDescription: |
-  ## Express Your Passion
-  
   The Passion collection is for those who see their kitchen as an expression of personality and creativity. With rich textures, dynamic forms, and bold design choices, Passion creates spaces that are uniquely yours. This collection celebrates individuality and encourages you to create a kitchen that truly reflects who you are.
   
   ### Expressive Features

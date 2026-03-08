@@ -9,9 +9,8 @@ cardImage: "/assets/images/kitchen/Collections Grid/Metro/K_01_16_31145_22_Metro
 cardImageAlt: "Metro Kitchen Collection thumbnail"
 cardImageSecondary: "/assets/images/kitchen/Collections Grid/Metro/K_01_16_31144_22_Metro_901_M.webp"
 cardImageSecondaryAlt: "Metro Kitchen Collection secondary view with geometric lines"
+featuredTitle: "Urban Sophistication"
 featuredDescription: |
-  ## Urban Sophistication
-  
   The Metro collection captures the essence of contemporary urban living with its clean geometric lines, sophisticated finishes, and metropolitan aesthetic. Designed for modern lifestyles, Metro brings cosmopolitan style and functionality to your home, creating kitchens that are both beautiful and incredibly practical.
   
   ### Collection Features

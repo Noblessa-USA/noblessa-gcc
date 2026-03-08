@@ -9,9 +9,8 @@ cardImage: "/assets/images/kitchen/Collections Grid/Attitude/K_30823_21_Attitude
 cardImageAlt: "Attitude Kitchen Collection thumbnail"
 cardImageSecondary: "/assets/images/kitchen/Collections Grid/Attitude/K_30689_21_Attitude_786_M_B704183.webp"
 cardImageSecondaryAlt: "Attitude Kitchen Collection secondary view with slate grey finish"
+featuredTitle: "Bold Contemporary Living"
 featuredDescription: |
-  ## Bold Contemporary Living
-  
   The Attitude collection makes a powerful statement with its bold, contemporary design language. Characterized by clean lines, striking finishes, and a confident aesthetic, Attitude is perfect for those who embrace modern living without compromise.
   
   ### Distinctive Characteristics

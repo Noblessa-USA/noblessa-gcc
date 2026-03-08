@@ -9,9 +9,8 @@ cardImage: "/assets/images/kitchen/Collections Grid/Chance/K_9344_20_Chance402.w
 cardImageAlt: "Chance Kitchen Collection thumbnail"
 cardImageSecondary: "/assets/images/kitchen/Collections Grid/Chance/K_02_12_31313_22_Chance_402_M.webp"
 cardImageSecondaryAlt: "Chance Kitchen Collection secondary view with natural wood finish"
+featuredTitle: "Natural Elegance Meets Modern Design"
 featuredDescription: |
-  ## Natural Elegance Meets Modern Design
-  
   The Chance collection celebrates the beauty of natural wood with contemporary styling. Featuring authentic wood finishes like Como Oak and Milano Walnut, Chance brings warmth and organic texture to modern kitchen design while maintaining the precision and functionality expected from German engineering.
   
   ### Signature Features

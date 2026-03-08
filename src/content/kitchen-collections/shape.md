@@ -9,9 +9,8 @@ cardImage: "/assets/images/kitchen/Collections Grid/Shape/K_01_15_31283_22_Shape
 cardImageAlt: "Shape Kitchen Collection thumbnail"
 cardImageSecondary: "/assets/images/kitchen/Collections Grid/Shape/K_01_15_31282_22_Shape_778_M.webp"
 cardImageSecondaryAlt: "Shape Kitchen Collection secondary view with sculptural forms"
+featuredTitle: "Sculptural Design Excellence"
 featuredDescription: |
-  ## Sculptural Design Excellence
-  
   The Shape collection represents the perfect union of artistry and functionality. With sculptural forms, innovative materials, and design elements that challenge conventional thinking, Shape creates kitchens that are both stunning to look at and exceptionally practical to use. This is where German engineering meets artistic expression.
   
   ### Defining Characteristics

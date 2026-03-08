@@ -60,27 +60,32 @@
 /* Mobile - 360px */
 @media only screen and (min-width: 0rem) {
     #collection-featured {
-        padding: var(--sectionPadding);
+        padding: 60px 0 0 0;
+        overflow: hidden;
+        position: relative;
+        z-index: 1;
         background-color: #fff;
         
         .cs-container {
             width: 100%;
-            max-width: (1280/16rem);
-            margin: auto;
             display: flex;
             flex-direction: column;
             align-items: center;
+            gap: 60px;
         }
 
-        .cs-content-wrapper {
+        .cs-content {
+            text-align: center;
             width: 100%;
+            max-width: (694/16rem);
             display: flex;
             flex-direction: column;
-            gap: (48/16rem);
+            align-items: center;
+            z-index: 10;
         }
 
-        .cs-text-group {
-            width: 100%;
+        .cs-button-nodeco {
+            align-self: center;
         }
 
         .cs-topper {
@@ -90,27 +95,53 @@
             letter-spacing: .1em;
             font-weight: 700;
             color: var(--primary);
-            margin-bottom: (16/16rem);
+            text-align: center;
+            margin: auto;
+        }
+
+        .cs-title {
+            font-size: clamp(2.5rem, 5vw, 3rem);
+            font-weight: 900;
+            line-height: 1.2em;
+            text-align: center;
+            max-width: 20ch;
+            margin: auto;
+            color: var(--headerColor);
+            position: relative;
+            z-index: 1;
+        }
+
+        .cs-divider {
+            width: 100%;
+            height: 1px;
+            background: #D2D8DF;
+            opacity: 1;
             display: block;
         }
 
         .cs-description {
+            padding-top: 30px;
+            padding: 0px 10px;
+            margin-bottom: 30px;
+            text-align: center;
+            width: 100%;
             font-size: (16/16rem);
             line-height: 1.8em;
             color: var(--bodyTextColor);
             
             h2, h3, h4 {
                 color: var(--headerColor);
-                margin-top: (32/16rem);
-                margin-bottom: (16/16rem);
             }
             
             h2 {
                 font-size: clamp(1.75rem, 4vw, 2.5rem);
+                margin-bottom: (16/16rem);
             }
             
             h3 {
                 font-size: clamp(1.5rem, 3vw, 2rem);
+                margin-top: (32/16rem);
+                margin-bottom: (16/16rem);
             }
             
             p {
@@ -128,15 +159,43 @@
         }
 
         .cs-image-group {
+            font-size:~"min(2.8vw, .75rem)";
             width: 100%;
+            height: 60vh;
+            display: block;
+            order: 2;
+            position: relative;
+            z-index: 1;
+
+            &:hover .cs-fg-img {
+                opacity: 0;
+            }
         }
 
-        .cs-featured-image {
+        .cs-picture {
             width: 100%;
-            height: auto;
-            border-radius: (8/16rem);
-            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+            height: 100%;
             display: block;
+            position: relative;
+        }
+
+        .cs-bg-img, .cs-fg-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        .cs-bg-img {
+            z-index: 1;
+        }
+
+        .cs-fg-img {
+            z-index: 2;
+            opacity: 1;
+            transition: opacity 0.8s ease;
         }
     }
 }
@@ -144,22 +203,91 @@
 /* Tablet - 768px */
 @media only screen and (min-width: 48rem) {
     #collection-featured {
-        .cs-content-wrapper {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: (64/16rem);
-            align-items: start;
-        }
+        padding: 60px 0 0 0;
     }
 }
 
 /* Desktop - 1024px */
 @media only screen and (min-width: 64rem) {
     #collection-featured {
-        padding: (100/16rem) 0;
-        
-        .cs-content-wrapper {
-            gap: (80/16rem);
+        padding: 120px 0 120px 0;
+
+        .cs-container {
+            width: 100%;
+            flex-direction: row;
+            justify-content: stretch;
+            align-items: center;
+            position: relative;
+            z-index: 1;
+            gap: 120px;
+        }
+
+        .cs-content {
+            width: 50%;
+            align-items: flex-start;
+            overflow: visible;
+            padding-right: (32/16rem);
+        }
+
+        .cs-topper, .cs-title {
+            text-align: left;
+            margin: 0;
+        }
+
+        .cs-description {
+            margin-bottom: 30px;
+            padding-top: 0px;
+            padding: 0px 10px 0px 0px;
+            text-align: left;
+        }
+
+        .cs-title {
+            max-width: 40ch;
+        }
+
+        .cs-divider {
+            width: 100%;
+            height: 1px;
+            background: #D2D8DF;
+            opacity: 1;
+            display: block;
+        }
+
+        .cs-image-group {
+            width: 50%;
+            order: -1;
+            overflow: hidden;
+            position: relative;
+
+            &:hover .cs-fg-img {
+                opacity: 0;
+            }
+        }
+
+        .cs-picture {
+            width: 100%;
+            height: 100%;
+            display: block;
+            position: relative;
+        }
+
+        .cs-bg-img, .cs-fg-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        .cs-bg-img {
+            z-index: 1;
+        }
+
+        .cs-fg-img {
+            z-index: 2;
+            opacity: 1;
+            transition: opacity 0.8s ease;
         }
     }
 }
@@ -176,11 +304,13 @@
         
         .cs-container {
             width: 100%;
-            max-width: (1280/16rem);
+            max-width: (1600/16rem);
             margin: auto;
             display: flex;
             flex-direction: column;
             align-items: center;
+            gap: (48/16rem);
+            padding: 0 (16/16rem);
         }
 
         .cs-content {
@@ -189,9 +319,7 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            gap: (16/16rem);
-            max-width: (800/16rem);
-            margin-bottom: (48/16rem);
+            max-width: (640/16rem);
         }
 
         .cs-topper {
@@ -202,18 +330,27 @@
             letter-spacing: .1em;
             font-weight: 700;
             color: var(--primary);
-            margin-bottom: (8/16rem);
             display: block;
         }
 
         .cs-title {
-            font-size: clamp(2rem, 5vw, 3rem);
+            font-size: clamp(2.5rem, 5vw, 3rem);
             font-weight: 900;
             line-height: 1.2em;
             text-align: center;
-            max-width: (700/16rem);
-            margin: 0 0 (16/16rem) 0;
+            max-width: 20ch;
+            margin: 0;
             color: var(--headerColor);
+            position: relative;
+        }
+
+        .cs-divider {
+            width: 100%;
+            height: 1px;
+            background: #D2D8DF;
+            margin: (20/16rem) 0;
+            opacity: 1;
+            display: block;
         }
 
         .cs-text {
@@ -221,9 +358,38 @@
             line-height: 1.6em;
             text-align: center;
             width: 100%;
-            max-width: (650/16rem);
             margin: 0;
             color: var(--bodyTextColor);
+        }
+
+        .cs-hint {
+            font-size: (14/16rem);
+            line-height: 1.5em;
+            text-align: center;
+            width: 100%;
+            margin-top: (16/16rem);
+            color: var(--primary);
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: (8/16rem);
+            animation: pulse 2s ease-in-out infinite;
+            
+            svg {
+                width: (20/16rem);
+                height: (20/16rem);
+                flex-shrink: 0;
+            }
+        }
+
+        @keyframes pulse {
+            0%, 100% {
+                opacity: 1;
+            }
+            50% {
+                opacity: 0.6;
+            }
         }
 
         .cs-image-gallery {
@@ -231,6 +397,7 @@
             display: grid;
             grid-template-columns: 1fr;
             gap: (24/16rem);
+            margin-top: (48/16rem);
         }
 
         .cs-gallery-item {
@@ -272,6 +439,12 @@
 /* Tablet - 768px */
 @media only screen and (min-width: 48rem) {
     #collection-gallery-section {
+        .cs-hint {
+            font-size: (13/16rem);
+            opacity: 0.8;
+            animation: none;
+        }
+        
         .cs-image-gallery {
             grid-template-columns: repeat(2, 1fr);
             gap: (32/16rem);
@@ -283,10 +456,15 @@
 @media only screen and (min-width: 64rem) {
     #collection-gallery-section {
         padding: (100/16rem) 0;
+
+        .cs-container {
+            padding: 0 (32/16rem);
+        }
         
         .cs-image-gallery {
             grid-template-columns: repeat(3, 1fr);
             gap: (40/16rem);
+            margin-top: (64/16rem);
         }
     }
 }
@@ -303,11 +481,13 @@
         
         .cs-container {
             width: 100%;
-            max-width: (1280/16rem);
+            max-width: (1600/16rem);
             margin: auto;
             display: flex;
             flex-direction: column;
             align-items: center;
+            gap: (48/16rem);
+            padding: 0 (16/16rem);
         }
 
         .cs-content {
@@ -316,65 +496,203 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            gap: (16/16rem);
+            max-width: (640/16rem);
         }
 
         .cs-topper {
             font-size: (16/16rem);
             line-height: 1.2em;
             text-transform: uppercase;
+            text-align: center;
             letter-spacing: .1em;
             font-weight: 700;
             color: var(--primary);
-            margin-bottom: (8/16rem);
             display: block;
         }
 
         .cs-title {
-            font-size: clamp(2rem, 5vw, 3rem);
+            font-size: clamp(2.5rem, 5vw, 3rem);
             font-weight: 900;
             line-height: 1.2em;
-            margin: 0 0 (24/16rem) 0;
+            text-align: center;
+            max-width: 20ch;
+            margin: 0;
             color: var(--headerColor);
+            position: relative;
         }
 
-        .cs-button-solid {
+        .cs-divider {
+            width: 100%;
+            height: 1px;
+            background: #D2D8DF;
+            margin: (20/16rem) 0;
+            opacity: 1;
+            display: block;
+        }
+
+        .cs-text {
             font-size: (16/16rem);
-            line-height: (56/16rem);
-            font-weight: 700;
+            line-height: 1.6em;
             text-align: center;
-            text-decoration: none;
-            min-width: (200/16rem);
+            width: 100%;
             margin: 0;
-            color: #fff;
-            padding: 0 (48/16rem);
-            background-color: var(--primary);
-            border-radius: (4/16rem);
-            display: inline-block;
+            color: var(--bodyTextColor);
+        }
+
+        .cs-gallery {
+            width: 100%;
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: (32/16rem);
+            margin-top: (48/16rem);
+        }
+
+        .cs-collection-card {
+            width: 100%;
+            height: (500/16rem);
             position: relative;
-            z-index: 1;
-            transition: color 0.3s;
+            overflow: hidden;
+            border-radius: (8/16rem);
+            cursor: pointer;
+            isolation: isolate;
             
-            &:before {
+            &::after {
                 content: '';
                 position: absolute;
-                display: block;
-                height: 100%;
-                width: 0%;
-                background: #000;
-                opacity: 1;
-                top: 0;
+                bottom: 0;
                 left: 0;
-                z-index: -1;
-                border-radius: (4/16rem);
-                transition: width 0.3s;
+                width: 100%;
+                height: 50%;
+                background: linear-gradient(to top, rgba(0, 0, 0, 0.7) 0%, transparent 100%);
+                z-index: 3;
+                pointer-events: none;
             }
             
             &:hover {
-                &:before {
-                    width: 100%;
+                .cs-card-image-secondary {
+                    opacity: 1;
+                }
+
+                .cs-collection-name {
+                    transform: translateY(-12px) scale(1.2);
                 }
             }
+        }
+
+        .cs-card-image-primary,
+        .cs-card-image-secondary {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        .cs-card-image-primary {
+            z-index: 1;
+        }
+
+        .cs-card-image-secondary {
+            z-index: 2;
+            opacity: 0;
+            transition: opacity 0.6s ease;
+        }
+
+        .cs-card-overlay {
+            position: absolute;
+            bottom: (32/16rem);
+            left: (32/16rem);
+            z-index: 4;
+            display: flex;
+            flex-direction: column;
+            gap: (16/16rem);
+            align-items: flex-start;        
+        }
+
+        .cs-collection-name {
+            font-size: clamp(3rem, 5vw, 3.5rem);
+            font-family: var(--headerFont);
+            font-weight: 700;
+            line-height: 1.1em;
+            margin: 0;
+            color: #fff;
+            text-transform: lowercase;
+            transition: transform 0.5s ease;
+            transform-origin: left bottom;
+        }
+
+        .cs-button-nodeco-white {
+            display: flex;
+            align-items: center;
+            gap: (8/16rem);
+            
+            img {
+                filter: brightness(0) invert(1);
+            }
+        }
+
+        .cs-hover-underline-white {
+            color: #fff;
+            text-decoration: none;
+            position: relative;
+            
+            &::after {
+                content: '';
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 0;
+                height: 2px;
+                background-color: #fff;
+                transition: width 0.3s ease;
+            }
+            
+            &:hover::after {
+                width: 100%;
+            }
+        }
+
+        .cs-view-all {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            margin-top: (32/16rem);
+        }
+
+        .cs-button-nodeco {
+            display: flex;
+            align-items: center;
+            gap: (8/16rem);
+            border: none;
+            background: none;
+            cursor: pointer;
+            color: #000;
+            text-decoration: none;
+            
+            img {
+                transition: transform 0.3s ease;
+            }
+            
+            &:hover {
+                img {
+                    transform: translateX(5px);
+                }
+            }
+        }
+    }
+}
+
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+    #related-collections {
+        .cs-gallery {
+            grid-template-columns: repeat(2, 1fr);
+            gap: (32/16rem);
+        }
+
+        .cs-collection-card {
+            height: (350/16rem);
         }
     }
 }
@@ -383,6 +701,44 @@
 @media only screen and (min-width: 64rem) {
     #related-collections {
         padding: (100/16rem) 0;
+
+        .cs-container {
+            padding: 0 (32/16rem);
+        }
+
+        .cs-gallery {
+            grid-template-columns: repeat(3, 1fr);
+            gap: (32/16rem);
+            margin-top: (64/16rem);
+        }
+
+        .cs-collection-card {
+            height: (500/16rem);
+        }
+
+        .cs-card-overlay {
+            bottom: (48/16rem);
+            left: (48/16rem);
+            gap: (20/16rem);
+        }
+    }
+}
+
+/* Large Desktop - 1440px */
+@media only screen and (min-width: 90rem) {
+    #related-collections {
+        .cs-gallery {
+            gap: (32/16rem);
+        }
+
+        .cs-collection-card {
+            height: (650/16rem);
+        }
+
+        .cs-card-overlay {
+            bottom: (56/16rem);
+            left: (56/16rem);
+        }
     }
 }
 

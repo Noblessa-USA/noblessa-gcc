@@ -9,9 +9,8 @@ cardImage: "/assets/images/kitchen/Collections Grid/Crystal/K_30384_21_Cristal_9
 cardImageAlt: "Crystal Kitchen Collection thumbnail"
 cardImageSecondary: "/assets/images/kitchen/Collections Grid/Crystal/K_01_03_31185_22_Cristal_938_M.webp"
 cardImageSecondaryAlt: "Crystal Kitchen Collection secondary view with glass-effect surfaces"
+featuredTitle: "Glass-Effect Luxury"
 featuredDescription: |
-  ## Glass-Effect Luxury
-  
   The Crystal collection (Cristal) redefines modern luxury with its distinctive glass-appearance surfaces that capture and reflect light beautifully. The signature Titanio Matt finish creates a sophisticated metallic sheen that adds depth and dimension to your kitchen space, making it truly distinctive.
   
   ### Defining Features

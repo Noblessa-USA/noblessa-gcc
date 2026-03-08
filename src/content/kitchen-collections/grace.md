@@ -9,9 +9,8 @@ cardImage: "/assets/images/kitchen/Collections Grid/Grace/K_01_21_31153_22_Grace
 cardImageAlt: "Grace Kitchen Collection thumbnail"
 cardImageSecondary: "/assets/images/kitchen/Collections Grid/Grace/K_01_21_31154_22_Grace_881_M.webp"
 cardImageSecondaryAlt: "Grace Kitchen Collection secondary view with elegant proportions"
+featuredTitle: "Elegance Redefined"
 featuredDescription: |
-  ## Elegance Redefined
-  
   The Grace collection is the embodiment of timeless elegance and sophisticated design. With its delicate proportions and refined details, Grace transforms your kitchen into a space of understated luxury that never goes out of style.
   
   ### Distinctive Features

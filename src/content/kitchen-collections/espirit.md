@@ -9,9 +9,8 @@ cardImage: "/assets/images/kitchen/Collections Grid/Espirit/K_30684_21_Esprit_45
 cardImageAlt: "Espirit Kitchen Collection thumbnail"
 cardImageSecondary: "/assets/images/kitchen/Collections Grid/Espirit/K_02_16_31107_22_Esprit_455_M.webp"
 cardImageSecondaryAlt: "Espirit Kitchen Collection secondary view with refined details"
+featuredTitle: "Sophisticated Simplicity"
 featuredDescription: |
-  ## Sophisticated Simplicity
-  
   The Espirit collection embodies the philosophy that true elegance lies in simplicity. With refined details, balanced proportions, and a timeless aesthetic, Espirit creates kitchens that remain beautiful and relevant for decades. This collection is perfect for those who appreciate understated sophistication.
   
   ### Collection Highlights

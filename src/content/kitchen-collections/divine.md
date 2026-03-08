@@ -9,9 +9,8 @@ cardImage: "/assets/images/kitchen/Collections Grid/Divine/K_30656_21_Divine_966
 cardImageAlt: "Divine Kitchen Collection thumbnail"
 cardImageSecondary: "/assets/images/kitchen/Collections Grid/Divine/K_30544_22_Divine_961_M.webp"
 cardImageSecondaryAlt: "Divine Kitchen Collection secondary view with graphite black finish"
+featuredTitle: "Bold Colors, Exceptional Design"
 featuredDescription: |
-  ## Bold Colors, Exceptional Design
-  
   The Divine collection is for those who aren't afraid to make a statement. With its rich, vibrant lacquered finishes and ultra-matt surfaces, Divine brings personality and drama to your kitchen space. Choose from an inspiring palette of bold colors including Fjord Blue, Mineral Green, Rust Red, and Graphite Black.
 featuredImage: "/assets/images/kitchen/Collections Grid/Divine/K_30527_21_Divine_966_M_R1.webp"
 featuredImageAlt: "Divine kitchen in Fjord blue showcasing ultra-matt finish and contemporary design"

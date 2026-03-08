@@ -9,9 +9,8 @@ cardImage: "/assets/images/kitchen/Collections Grid/Tradition/K_02_05_31033_22_T
 cardImageAlt: "Tradition Kitchen Collection thumbnail"
 cardImageSecondary: "/assets/images/kitchen/Collections Grid/Tradition/K_02_05_31032_22_Tradition_224_M.webp"
 cardImageSecondaryAlt: "Tradition Kitchen Collection secondary view with classic details"
+featuredTitle: "Timeless Heritage Design"
 featuredDescription: |
-  ## Timeless Heritage Design
-  
   The Tradition collection honors the rich heritage of classic kitchen design while incorporating modern functionality and German engineering excellence. With meticulous attention to detail, traditional design elements, and timeless elegance, Tradition creates kitchens that feel both comfortable and refined—spaces that honor the past while serving present-day needs.
   
   ### Classic Features

@@ -1,32 +1,22 @@
 ---
 title: "Tempo"
 url: "tempo"
-description: "Rhythmic design with balanced proportions. Contemporary style that flows with your lifestyle."
-metaDescription: "Discover the Tempo kitchen collection by Noblessa - featuring rhythmic design, balanced proportions, and contemporary style that seamlessly flows with your modern lifestyle."
+description: "Blending urban and rural design, Tempo fits perfectly into any home with matt black fronts, studio-style doors, and customizable finishes."
+metaDescription: "Discover the Tempo kitchen collection by Noblessa - blending urban and rural style with matt black fronts, studio-style doors with satin glass inlays, and customizable features. Create your à la carte kitchen."
 headerImage: "/assets/images/kitchen/Collections Grid/Tempo/K_30614_21_Tempo_851_M_B704177.webp"
 headerImageAlt: "Tempo kitchen collection featuring contemporary cabinetry with sleek lines and sophisticated finishes"
 cardImage: "/assets/images/kitchen/Collections Grid/Tempo/K_30614_21_Tempo_851_M_B704177.webp"
 cardImageAlt: "Tempo Kitchen Collection thumbnail"
 cardImageSecondary: "/assets/images/kitchen/Collections Grid/Tempo/K_14780_17_Tempo_851_R2_B704129.webp"
 cardImageSecondaryAlt: "Tempo Kitchen Collection secondary view with contemporary styling"
+featuredTitle: "Urban Meets Rural Elegance"
 featuredDescription: |
-  ## The Perfect Balance of Form and Function
-  
-  The Tempo collection embodies the essence of contemporary kitchen design with its clean lines and harmonious proportions. This collection is designed for those who appreciate the beauty of minimalism without compromising on functionality.
-  
-  ### Key Features
-  
-  - **Sleek Lacquer Finishes**: Available in a stunning range of colors including honed black, creating a refined and sophisticated aesthetic
-  - **Integrated Handle-less Design**: The push-to-open mechanism provides a seamless, uninterrupted surface
-  - **Premium Materials**: Constructed with the highest quality materials and German engineering precision
-  - **Versatile Configurations**: Adaptable to various kitchen layouts, from compact urban spaces to expansive open-plan designs
-  - **Smart Storage Solutions**: Thoughtfully designed interior fittings maximize space efficiency
-  
-  ### Design Philosophy
-  
-  Tempo represents the rhythm of modern living - a perfect tempo between work, life, and relaxation. The collection's balanced proportions create visual harmony while maintaining practical functionality. Each element is carefully considered to create a kitchen that's both beautiful and highly functional.
-  
-  The color palette ranges from bold, dramatic blacks to softer, more neutral tones, allowing you to customize the collection to match your personal style and existing décor.
+  Designed in a style that blends the urban and the rural, the Tempo kitchen fits perfectly into any home. Its beautifully made, matt black fronts are equipped with black handles as well as studio-style doors with satin matt glass inlays to fit seamlessly into your decor.
+
+  Black is omnipresent, warmed by the wooden worktops. The details of an industrial kitchen are strengthened and enhanced. High gloss or matt, solid or glazed door fronts, storage features - it's up to you to create your own à la carte kitchen.
+
+  You can even choose a different colour such as alpine white or ivory to create a more country chic style.
+
 featuredImage: "/assets/images/kitchen/Collections Grid/Tempo/L_01_20_31150_22_Tempo_851_M.webp"
 featuredImageAlt: "Detailed view of Tempo kitchen showing premium finishes and innovative design elements"
 galleryImages:
