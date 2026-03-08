@@ -111,6 +111,13 @@
             flex-shrink: 0;
         }
     }
+
+    // RTL Support for Arabic
+    html[dir="rtl"] #about-story {
+        .cs-content {
+            text-align: right;
+        }
+    }
 }
 
 /* Desktop - 1024px */
@@ -126,6 +133,13 @@
 
         .cs-picture {
             height: (500/16rem);
+        }
+    }
+
+    // RTL Support for Arabic
+    html[dir="rtl"] #about-story {
+        .cs-content {
+            text-align: right;
         }
     }
 }

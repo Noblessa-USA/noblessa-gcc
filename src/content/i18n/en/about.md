@@ -5,6 +5,11 @@ lang: en
 title: "About Noblessa | German Kitchen Excellence Since 1996"
 description: "Discover how Noblessa brings 30+ years of German craftsmanship to create elegant kitchen solutions with award-winning quality and precision."
 
+banner_title: "Crafted with Precision, Designed for Life"
+banner_text: "Discover the art of German engineering and timeless design excellence."
+breadcrumb_home: "home"
+breadcrumb_about: "about"
+
 banner_slide1_image: "/assets/images/collections/sentido/sentidoblacknoir.webp"
 banner_slide1_alt: "Luxury German Kitchen Display"
 banner_slide2_image: "/assets/images/collections/serenity/serenityivory.webp"

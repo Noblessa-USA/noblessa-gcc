@@ -5,6 +5,11 @@ lang: ar
 title: "عن نوبليسا | التميز الألماني في المطابخ منذ عام 1996"
 description: "اكتشف كيف تقدم نوبليسا أكثر من 30 عاماً من الحرفية الألمانية لإنشاء حلول مطابخ أنيقة بجودة وحرفية حاصلة على جوائز عالمية."
 
+banner_title: "مصنوعة بدقة، مصممة للحياة"
+banner_text: "اكتشف فن الهندسة الألمانية والتميز في التصميم الخالد."
+breadcrumb_home: "الرئيسية"
+breadcrumb_about: "عن نوبليسا"
+
 banner_slide1_image: "/assets/images/collections/sentido/sentidoblacknoir.webp"
 banner_slide1_alt: "مطبخ ألماني فاخر"
 banner_slide2_image: "/assets/images/collections/serenity/serenityivory.webp"
