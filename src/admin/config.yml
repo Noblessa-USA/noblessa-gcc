@@ -55,3 +55,37 @@ collections:
           - { label: "Featured Image", name: "image", widget: "image", hint: 'This image will be used as the cover image for the blog post. Recommended Minimum dimensions: 1200x630 pixels.' }
           - { label: "Image Caption", name: "imageAlt", widget: "string", hint: 'Provide a descriptive caption for the featured image for SEO & accessibility purposes.' }
           - { label: "Body", name: "body", widget: "markdown" }
+    
+    - name: "kitchen-collections"
+      label: "Kitchen Collections"
+      label_singular: "Kitchen Collection"
+      folder: "src/content/kitchen-collections"
+      create: true
+      slug: "{{slug}}"
+      media_folder: "/src/assets/images/kitchen/{{slug}}"
+      public_folder: "/assets/images/kitchen/{{slug}}"
+      fields:
+          - { label: "Collection Name", name: "title", widget: "string", hint: 'Name of the kitchen collection (e.g., "Tempo", "Grace", "Divine")' }
+          - {
+                label: "URL Slug",
+                name: "url",
+                widget: "string",
+                hint: 'Specify where the page will be written to. If you use "tempo", the collection will be accessible from "kitchen-collections/tempo"',
+            }
+          - { label: "Short Description", name: "description", widget: "text", hint: 'Brief description shown on the main collections page. Keep it concise (1-2 sentences).' }
+          - { label: "Meta Description", name: "metaDescription", widget: "string", hint: 'SEO meta description for search engines.' }
+          - { label: "Header Image", name: "headerImage", widget: "image", hint: 'Primary hero image for the collection page header. Recommended: High-quality, landscape orientation.' }
+          - { label: "Header Image Alt Text", name: "headerImageAlt", widget: "string", hint: 'Describe the header image for accessibility and SEO.' }
+          - { label: "Card Image", name: "cardImage", widget: "image", hint: 'Thumbnail image shown on the main collections page.' }
+          - { label: "Card Image Alt Text", name: "cardImageAlt", widget: "string", hint: 'Describe the card image for accessibility.' }
+          - { label: "Card Image Secondary", name: "cardImageSecondary", widget: "image", hint: 'Secondary thumbnail image for the collection card (alternative view).' }
+          - { label: "Card Image Secondary Alt Text", name: "cardImageSecondaryAlt", widget: "string", hint: 'Describe the secondary card image for accessibility.' }
+          - { label: "Featured Description", name: "featuredDescription", widget: "markdown", hint: 'Detailed description of the collection displayed prominently on the collection page.' }
+          - { label: "Featured Image", name: "featuredImage", widget: "image", hint: 'Image accompanying the featured description section.' }
+          - { label: "Featured Image Alt Text", name: "featuredImageAlt", widget: "string", hint: 'Describe the featured image for accessibility.' }
+          - { label: "Gallery Images", name: "galleryImages", widget: "list", fields: [
+                { label: "Image", name: "image", widget: "image" },
+                { label: "Alt Text", name: "alt", widget: "string" }
+            ], hint: 'Add multiple images to create a gallery for this collection.' }
+          - { label: "Order", name: "order", widget: "number", default: 100, hint: 'Controls the display order on the main collections page. Lower numbers appear first.' }
+          - { label: "Featured", name: "featured", widget: "boolean", default: false, hint: 'Mark as featured to highlight this collection.' }

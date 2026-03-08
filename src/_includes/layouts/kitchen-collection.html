@@ -1,0 +1,310 @@
+{% extends "layouts/base.html" %}
+
+{% block head %}
+    <link rel="stylesheet" href="/assets/css/kitchen-collection.css">
+    <script src="/assets/js/kitchen-collections.js" defer></script>
+
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "Product",
+            {% if title %}"name": "{{ title }} Kitchen Collection",{% endif %}
+            {% if metaDescription %}"description": "{{ metaDescription | escape }}",{% endif %}
+            {% if headerImage %}
+                "image": {
+                    "@type": "ImageObject",
+                    "url": "{{ client.domain }}{{ headerImage }}",
+                    "width": 1200,
+                    "height": 630
+                },
+            {% endif %}
+            {% if client.name %}
+                "brand": {
+                    "@type": "Brand",
+                    "name": "{{ client.name }}"
+                },
+            {% endif %}
+            {% if client.domain and page.url %}"url": "{{ client.domain }}{{ page.url }}"{% endif %}
+        }
+    </script>
+{% endblock %}
+
+{% block body %}
+    <!-- ============================================ -->
+    <!--              Banner Slideshow                -->
+    <!-- ============================================ -->
+
+    <div id="banner-slideshow-2285">
+        <div class="cs-container">
+            <div class="cs-text-wrapper">
+                <h1 class="cs-int-title sl-fade-in-down">{{ title }}</h1>
+                <p class="cs-text sl-fade-in-down">{{ description }}</p>
+            </div>
+            <div class="cs-breadcrumbs">
+                <a href="/" class="cs-link">home</a>
+                <a href="/kitchen-collections/" class="cs-link">kitchen collections</a>
+                <a href="{{ page.url }}" class="cs-link cs-active">{{ title | lower }}</a>
+            </div>
+        </div>
+        <!--Background Image Slideshow-->
+        <div class="cs-banner-slideshow">
+            <div class="cs-slide">
+                <img src="{{ headerImage }}" alt="{{ headerImageAlt }}" loading="eager">
+            </div>
+            <div class="cs-slide">
+                <img src="{{ cardImageSecondary }}" alt="{{ cardImageSecondaryAlt }}" loading="lazy">
+            </div>
+        </div>
+    </div>
+    <script>
+        // Banner Slideshow Script
+        document.addEventListener('DOMContentLoaded', function() {
+            const slides = document.querySelectorAll('.cs-slide');
+            let currentSlide = 0;
+            const slideInterval = 5000; // 5 seconds
+            
+            function showSlide(index) {
+                slides.forEach((slide, i) => {
+                    if (i === index) {
+                        slide.classList.add('active');
+                    } else {
+                        slide.classList.remove('active');
+                    }
+                });
+            }
+            
+            function nextSlide() {
+                currentSlide = (currentSlide + 1) % slides.length;
+                showSlide(currentSlide);
+            }
+            
+            // Auto-advance slides
+            setInterval(nextSlide, slideInterval);
+            
+            // Initialize
+            showSlide(currentSlide);
+        });
+
+        // Image Carousel Script
+        document.addEventListener('DOMContentLoaded', function() {
+            const carousel = document.querySelector('.cs-carousel');
+            const items = document.querySelectorAll('.cs-carousel-item');
+            const dots = document.querySelectorAll('.cs-dot');
+            const prevBtn = document.querySelector('.cs-prev');
+            const nextBtn = document.querySelector('.cs-next');
+            
+            let currentSlide = 0;
+            const totalSlides = items.length;
+            
+            function updateCarousel() {
+                items.forEach((item, index) => {
+                    item.classList.remove('active');
+                    if (index === currentSlide) {
+                        item.classList.add('active');
+                    }
+                });
+                
+                dots.forEach((dot, index) => {
+                    dot.classList.toggle('active', index === currentSlide);
+                });
+            }
+            
+            function nextSlide() {
+                currentSlide = (currentSlide + 1) % totalSlides;
+                updateCarousel();
+            }
+            
+            function prevSlide() {
+                currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+                updateCarousel();
+            }
+            
+            function goToSlide(slideIndex) {
+                currentSlide = slideIndex;
+                updateCarousel();
+            }
+            
+            // Event listeners
+            nextBtn.addEventListener('click', nextSlide);
+            prevBtn.addEventListener('click', prevSlide);
+            
+            dots.forEach((dot, index) => {
+                dot.addEventListener('click', () => goToSlide(index));
+            });
+            
+            // Initialize carousel
+            updateCarousel();
+        });
+    </script>
+
+    <!-- ============================================ -->
+    <!--           Featured Description               -->
+    <!-- ============================================ -->
+
+    <section id="collection-featured">
+        <div class="cs-container">
+            <div class="cs-content-wrapper">
+                <div class="cs-text-group">
+                    <span class="cs-topper">Discover {{ title }}</span>
+                    <div class="cs-description">
+                        {{ featuredDescription | markdown | safe }}
+                    </div>
+                </div>
+                <div class="cs-image-group">
+                    <img src="{{ featuredImage }}" alt="{{ featuredImageAlt }}" class="cs-featured-image" loading="lazy" decoding="async">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!--              Gallery Section                 -->
+    <!-- ============================================ -->
+
+    <section id="collection-gallery-section">
+        <div class="cs-container">
+            <div class="cs-content">
+                <span class="cs-topper">Explore the Details</span>
+                <h2 class="cs-title">{{ title }} Gallery</h2>
+                <p class="cs-text">
+                    Browse through our curated selection of {{ title }} kitchen designs. Each image showcases the exceptional craftsmanship and attention to detail that defines this collection.
+                </p>
+            </div>
+
+            {% if galleryImages.length > 0 %}
+            <div class="cs-image-gallery">
+                {% for item in galleryImages %}
+                <div class="cs-gallery-item">
+                    <img src="{{ item.image }}" alt="{{ item.alt }}" loading="lazy" decoding="async">
+                </div>
+                {% endfor %}
+            </div>
+            {% else %}
+            <p class="cs-no-images">Gallery images coming soon...</p>
+            {% endif %}
+        </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!--              Related Collections             -->
+    <!-- ============================================ -->
+
+    <section id="related-collections">
+        <div class="cs-container">
+            <div class="cs-content">
+                <span class="cs-topper">More Options</span>
+                <h2 class="cs-title">Explore Other Collections</h2>
+                <a href="/kitchen-collections/" class="cs-button-solid">View All Collections</a>
+            </div>
+        </div>
+    </section>
+
+    {% include 'sections/cta.html' %}
+
+    <!-- ============================================ -->
+    <!--          Gallery Lightbox Modal              -->
+    <!-- ============================================ -->
+    
+    <div id="gallery-lightbox" class="cs-lightbox" style="display: none;">
+        <div class="cs-lightbox-overlay"></div>
+        <div class="cs-lightbox-content">
+            <button class="cs-lightbox-close" aria-label="Close gallery">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+            </button>
+            
+            <div class="cs-lightbox-image-wrapper">
+                <img class="cs-lightbox-image" src="" alt="">
+                <div class="cs-controls-wrapper">
+                    <button class="cs-lightbox-nav cs-prev" aria-label="Previous image">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="15 18 9 12 15 6"></polyline>
+                        </svg>
+                    </button>
+                    <div class="cs-image-counter">
+                        <span class="cs-current">1</span> / <span class="cs-total">1</span>
+                    </div>
+                    <button class="cs-lightbox-nav cs-next" aria-label="Next image">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="9 18 15 12 9 6"></polyline>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Gallery lightbox functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const galleryItems = document.querySelectorAll('.cs-gallery-item img');
+            const lightbox = document.getElementById('gallery-lightbox');
+            const lightboxImage = lightbox.querySelector('.cs-lightbox-image');
+            const closeBtn = lightbox.querySelector('.cs-lightbox-close');
+            const prevBtn = lightbox.querySelector('.cs-prev');
+            const nextBtn = lightbox.querySelector('.cs-next');
+            const currentCounter = lightbox.querySelector('.cs-current');
+            const totalCounter = lightbox.querySelector('.cs-total');
+            const overlay = lightbox.querySelector('.cs-lightbox-overlay');
+            
+            let currentIndex = 0;
+            const images = Array.from(galleryItems);
+            
+            if (images.length > 0) {
+                totalCounter.textContent = images.length;
+                
+                images.forEach((img, index) => {
+                    img.addEventListener('click', () => {
+                        openLightbox(index);
+                    });
+                    img.style.cursor = 'pointer';
+                });
+                
+                function openLightbox(index) {
+                    currentIndex = index;
+                    updateLightboxImage();
+                    lightbox.style.display = 'flex';
+                    document.body.style.overflow = 'hidden';
+                }
+                
+                function closeLightbox() {
+                    lightbox.style.display = 'none';
+                    document.body.style.overflow = '';
+                }
+                
+                function updateLightboxImage() {
+                    const img = images[currentIndex];
+                    lightboxImage.src = img.src;
+                    lightboxImage.alt = img.alt;
+                    currentCounter.textContent = currentIndex + 1;
+                }
+                
+                function nextImage() {
+                    currentIndex = (currentIndex + 1) % images.length;
+                    updateLightboxImage();
+                }
+                
+                function prevImage() {
+                    currentIndex = (currentIndex - 1 + images.length) % images.length;
+                    updateLightboxImage();
+                }
+                
+                closeBtn.addEventListener('click', closeLightbox);
+                overlay.addEventListener('click', closeLightbox);
+                nextBtn.addEventListener('click', nextImage);
+                prevBtn.addEventListener('click', prevImage);
+                
+                document.addEventListener('keydown', (e) => {
+                    if (lightbox.style.display === 'flex') {
+                        if (e.key === 'Escape') closeLightbox();
+                        if (e.key === 'ArrowRight') nextImage();
+                        if (e.key === 'ArrowLeft') prevImage();
+                    }
+                });
+            }
+        });
+    </script>
+
+{% endblock %}

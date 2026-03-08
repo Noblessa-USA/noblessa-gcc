@@ -33,7 +33,7 @@ document.addEventListener('DOMContentLoaded', function() {
     var showrooms = [
         {
             name: 'Dubai',
-            address: 'Sheikh Zayed Road – Al Safa, Dubai, UAE',
+            address: 'Al Safa, Dubai, UAE',
             lat: 25.2048,
             lng: 55.2708,
             phone: '',
@@ -49,7 +49,7 @@ document.addEventListener('DOMContentLoaded', function() {
         },
         {
             name: 'Riyadh',
-            address: 'Prince Mohammed Bin Abdulaziz Rd, Tahlia Street – Olaya, Riyadh, KSA',
+            address: 'Olaya, Riyadh, KSA',
             lat: 24.7136,
             lng: 46.6753,
             phone: '',
@@ -65,7 +65,7 @@ document.addEventListener('DOMContentLoaded', function() {
         },
         {
             name: 'Jeddah',
-            address: 'Sari Br Rd, As Salamah, Jeddah, KSA',
+            address: 'Jeddah, KSA',
             lat: 21.5433,
             lng: 39.1728,
             phone: '',
@@ -81,7 +81,7 @@ document.addEventListener('DOMContentLoaded', function() {
         },
         {
             name: 'Al Ahsa',
-            address: 'Al Salam 2nd, Al Mubarraz, Al Ahsa, KSA',
+            address: 'Al Ahsa, KSA',
             lat: 25.3616,
             lng: 49.5966,
             phone: '',
@@ -97,7 +97,7 @@ document.addEventListener('DOMContentLoaded', function() {
         },
         {
             name: 'Al Qassim',
-            address: 'Umar ibn Al khatab Rd, Ar Rayan, Al Qassim, KSA',
+            address: 'Al Qassim, KSA',
             lat: 26.3273,
             lng: 43.9750,
             phone: '',
@@ -113,7 +113,7 @@ document.addEventListener('DOMContentLoaded', function() {
         },
         {
             name: 'Kuwait City',
-            address: '28 St, Shuwaikh Industrial 70030, Kuwait',
+            address: 'Kuwait City, Kuwait',
             lat: 29.3759,
             lng: 47.9774,
             phone: '',

@@ -25,6 +25,7 @@ const javascript = require("./src/config/processors/javascript");
 const filterPostDate = require("./src/config/filters/postDate");
 const filterIsoDate = require("./src/config/filters/isoDate");
 const filterGetCurrentDate = require("./src/config/filters/getCurrentDate");
+const filterMarkdown = require("./src/config/filters/markdown");
 const isProduction = process.env.ELEVENTY_ENV === "PROD";
 
 module.exports = async function (eleventyConfig) {
@@ -138,6 +139,14 @@ module.exports = async function (eleventyConfig) {
      * Used to filter out future-dated posts from collections
      */
     eleventyConfig.addFilter("getCurrentDate", filterGetCurrentDate);
+
+    /*
+     * 📝 Markdown to HTML Filter
+     * Converts markdown text to HTML
+     * Usage: {{ content | markdown | safe }}
+     * Processes markdown strings (e.g., from frontmatter) into HTML
+     */
+    eleventyConfig.addFilter("markdown", filterMarkdown);
 
     // ═════════════════════════════════════════════════════════════════════════
     // SHORTCODES

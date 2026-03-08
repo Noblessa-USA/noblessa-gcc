@@ -1,9 +1,9 @@
 // ─────────────────────────────────────────────────────────────────────────────
-// KITCHEN COLLECTIONS PAGE STYLES
+// MAIN KITCHEN COLLECTIONS GALLERY PAGE STYLES
 // ─────────────────────────────────────────────────────────────────────────────
 
 /*-- -------------------------- -->
-<---    Kitchen Collections      -->
+<---    Kitchen Collections Gallery -->
 <--- -------------------------- -*/
 
 /* Mobile - 360px */
@@ -14,12 +14,13 @@
         
         .cs-container {
             width: 100%;
-            max-width: (1280/16rem);
+            max-width: (2000/16rem);
             margin: auto;
             display: flex;
             flex-direction: column;
             align-items: center;
             gap: (48/16rem);
+            padding: 0 (16/16rem);
         }
 
         .cs-content {
@@ -28,8 +29,7 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            gap: (16/16rem);
-            max-width: (800/16rem);
+            max-width: (640/16rem);
         }
 
         .cs-topper {
@@ -40,19 +40,27 @@
             letter-spacing: .1em;
             font-weight: 700;
             color: var(--primary);
-            margin-bottom: (8/16rem);
             display: block;
         }
 
         .cs-title {
-            font-size: clamp(2rem, 5vw, 3rem);
+            font-size: clamp(2.5rem, 5vw, 3rem);
             font-weight: 900;
             line-height: 1.2em;
             text-align: center;
-            max-width: (700/16rem);
-            margin: 0 0 (16/16rem) 0;
+            max-width: 20ch;
+            margin: 0;
             color: var(--headerColor);
             position: relative;
+        }
+
+        .cs-divider {
+            width: 100%;
+            height: 1px;
+            background: #D2D8DF;
+            margin: (20/16rem) 0;
+            opacity: 1;
+            display: block;
         }
 
         .cs-text {
@@ -60,7 +68,6 @@
             line-height: 1.6em;
             text-align: center;
             width: 100%;
-            max-width: (650/16rem);
             margin: 0;
             color: var(--bodyTextColor);
         }
@@ -69,94 +76,87 @@
             width: 100%;
             display: grid;
             grid-template-columns: 1fr;
-            gap: (24/16rem);
-            margin-top: (32/16rem);
+            gap: (32/16rem);
+            margin-top: (48/16rem);
         }
 
         .cs-collection-card {
             width: 100%;
-            display: flex;
-            flex-direction: column;
-            border-radius: (8/16rem);
-            background-color: #fff;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            overflow: hidden;
-            
-            &:hover {
-                transform: translateY(-8px);
-                box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
-
-                img {
-                    transform: scale(1.08);
-                }
-
-                .cs-learn-more {
-                    background-color: var(--primary);
-                    color: #fff;
-                }
-            }
-        }
-
-        .cs-image-wrapper {
-            width: 100%;
-            height: (300/16rem);
+            height: (500/16rem);
             position: relative;
             overflow: hidden;
-            background-color: #f5f5f5;
+            border-radius: (8/16rem);
+            cursor: pointer;
+            isolation: isolate;
             
-            img {
+            &::after {
+                content: '';
+                position: absolute;
+                bottom: 0;
+                left: 0;
                 width: 100%;
-                height: 100%;
-                object-fit: cover;
-                display: block;
-                transition: transform 0.5s ease;
+                height: 50%;
+                background: linear-gradient(to top, rgba(0, 0, 0, 0.7) 0%, transparent 100%);
+                z-index: 3;
+                pointer-events: none;
+            }
+            
+            &:hover {
+                .cs-card-image-secondary {
+                    opacity: 1;
+                }
+
+                .cs-collection-name {
+                    transform: translateY(-12px) scale(1.2);
+                }
             }
         }
 
-        .cs-card-content {
-            padding: (24/16rem);
+        .cs-card-image-primary,
+        .cs-card-image-secondary {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        .cs-card-image-primary {
+            z-index: 1;
+        }
+
+        .cs-card-image-secondary {
+            z-index: 2;
+            opacity: 0;
+            transition: opacity 0.6s ease;
+        }
+
+        .cs-card-overlay {
+            position: absolute;
+            bottom: (32/16rem);
+            left: (32/16rem);
+            z-index: 4;
             display: flex;
             flex-direction: column;
-            gap: (12/16rem);
-            flex-grow: 1;
+            gap: (16/16rem);
+            align-items: flex-start;        
         }
 
         .cs-collection-name {
-            font-size: (24/16rem);
+            font-size: clamp(3rem, 5vw, 3.5rem);
             font-family: var(--headerFont);
             font-weight: 700;
-            line-height: 1.2em;
+            line-height: 1.1em;
             margin: 0;
-            color: var(--headerColor);
+            color: #fff;
             text-transform: lowercase;
+            transition: transform 0.5s ease;
+            transform-origin: left bottom;
         }
 
-        .cs-collection-description {
-            font-size: (14/16rem);
-            line-height: 1.6em;
-            margin: 0;
-            color: var(--bodyTextColor);
-            flex-grow: 1;
-        }
-
-        .cs-learn-more {
-            display: inline-block;
-            font-size: (14/16rem);
-            font-weight: 700;
-            text-align: center;
-            text-decoration: none;
-            color: var(--primary);
-            border: 2px solid var(--primary);
-            padding: (10/16rem) (24/16rem);
-            border-radius: (4/16rem);
-            transition: all 0.3s ease;
-            align-self: flex-start;
-            
-            &:hover {
-                background-color: var(--primary);
-                color: #fff;
-            }
+        .cs-button-nodeco-white img {
+            filter: brightness(0) invert(1);
         }
     }
 }
@@ -169,20 +169,8 @@
             gap: (32/16rem);
         }
 
-        .cs-image-wrapper {
-            height: (320/16rem);
-        }
-
-        .cs-card-content {
-            padding: (28/16rem);
-        }
-
-        .cs-collection-name {
-            font-size: (28/16rem);
-        }
-
-        .cs-collection-description {
-            font-size: (15/16rem);
+        .cs-collection-card {
+            height: (350/16rem);
         }
     }
 }
@@ -192,25 +180,23 @@
     #kitchen-collections-gallery {
         padding: (100/16rem) 0;
 
+        .cs-container {
+            padding: 0 (32/16rem);
+        }
+
         .cs-gallery {
-            grid-template-columns: repeat(2, 1fr);
-            gap: (40/16rem);
+            gap: (32/16rem);
+            margin-top: (64/16rem);
         }
 
-        .cs-image-wrapper {
-            height: (380/16rem);
+        .cs-collection-card {
+            height: (500/16rem);
         }
 
-        .cs-card-content {
-            padding: (32/16rem);
-        }
-
-        .cs-collection-name {
-            font-size: (32/16rem);
-        }
-
-        .cs-collection-description {
-            font-size: (16/16rem);
+        .cs-card-overlay {
+            bottom: (48/16rem);
+            left: (48/16rem);
+            gap: (20/16rem);
         }
     }
 }
@@ -219,327 +205,16 @@
 @media only screen and (min-width: 90rem) {
     #kitchen-collections-gallery {
         .cs-gallery {
-            grid-template-columns: repeat(2, 1fr);
-            gap: (48/16rem);
+            gap: (32/16rem);
         }
 
-        .cs-image-wrapper {
-            height: (420/16rem);
+        .cs-collection-card {
+            height: (650/16rem);
         }
 
-        .cs-card-content {
-            padding: (36/16rem);
+        .cs-card-overlay {
+            bottom: (56/16rem);
+            left: (56/16rem);
         }
-
-        .cs-collection-name {
-            font-size: (36/16rem);
-        }
-    }
-}
-
-/*-- -------------------------- -->
-<---     Gallery Modal Popup      -->
-<--- -------------------------- -*/
-
-/* Mobile - 360px */
-@media only screen and (min-width: 0rem) {
-    .cs-modal {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        z-index: 9999;
-        display: none;
-        align-items: center;
-        justify-content: center;
-        opacity: 0;
-        transition: opacity 0.3s ease;
-        
-        &.active {
-            display: flex;
-            opacity: 1;
-        }
-    }
-
-    .cs-modal-overlay {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(0, 0, 0, 0.4);
-        backdrop-filter: blur(20px);
-        -webkit-backdrop-filter: blur(20px);
-        z-index: 1;
-    }
-
-    .cs-modal-content {
-        position: relative;
-        width: 95%;
-        max-width: (1400/16rem);
-        height: 90vh;
-        z-index: 2;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding: (20/16rem);
-    }
-
-    .cs-modal-close {
-        position: absolute;
-        top: (10/16rem);
-        right: (10/16rem);
-        background: rgba(255, 255, 255, 0.1);
-        border: 2px solid rgba(255, 255, 255, 0.3);
-        color: #fff;
-        font-size: (40/16rem);
-        width: (50/16rem);
-        height: (50/16rem);
-        border-radius: 50%;
-        cursor: pointer;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        transition: all 0.3s ease;
-        z-index: 10;
-        line-height: 1;
-        
-        &:hover {
-            background: rgba(255, 255, 255, 0.2);
-            transform: rotate(90deg);
-        }
-    }
-
-    .cs-collection-title-wrapper {
-        width: 100%;
-        text-align: center;
-        margin-bottom: (20/16rem);
-        min-height: (60/16rem);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .cs-modal-collection-name {
-        color: #fff;
-        font-size: clamp(1.5rem, 4vw, 2.5rem);
-        font-weight: 700;
-        margin: 0;
-        text-transform: lowercase;
-        font-family: var(--headerFont);
-        text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
-    }
-
-    .cs-gallery-container {
-        position: relative;
-        width: 100%;
-        flex: 1;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin-bottom: (20/16rem);
-    }
-
-    .cs-main-image-wrapper {
-        position: relative;
-        width: 100%;
-        height: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .cs-main-image {
-        max-width: 100%;
-        max-height: 100%;
-        object-fit: contain;
-        border-radius: (8/16rem);
-        box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
-    }
-
-    .cs-image-counter {
-        position: absolute;
-        bottom: (20/16rem);
-        left: 50%;
-        transform: translateX(-50%);
-        background: rgba(0, 0, 0, 0.7);
-        color: #fff;
-        padding: (8/16rem) (16/16rem);
-        border-radius: (20/16rem);
-        font-size: (14/16rem);
-        font-weight: 600;
-        backdrop-filter: blur(10px);
-        -webkit-backdrop-filter: blur(10px);
-    }
-
-    .cs-gallery-nav {
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        background: rgba(255, 255, 255, 0.15);
-        backdrop-filter: blur(10px);
-        -webkit-backdrop-filter: blur(10px);
-        border: 2px solid rgba(255, 255, 255, 0.3);
-        color: #fff;
-        width: (60/16rem);
-        height: (60/16rem);
-        border-radius: 50%;
-        cursor: pointer;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        transition: all 0.3s ease;
-        z-index: 5;
-        
-        svg {
-            width: (28/16rem);
-            height: (28/16rem);
-        }
-        
-        &:hover {
-            background: rgba(255, 255, 255, 0.25);
-            transform: translateY(-50%) scale(1.1);
-            box-shadow: 0 4px 20px rgba(255, 255, 255, 0.2);
-        }
-        
-        &.cs-prev {
-            left: (10/16rem);
-        }
-        
-        &.cs-next {
-            right: (10/16rem);
-        }
-    }
-
-    .cs-thumbnails-wrapper {
-        width: 100%;
-        overflow-x: auto;
-        overflow-y: hidden;
-        scrollbar-width: thin;
-        scrollbar-color: rgba(255, 255, 255, 0.3) rgba(0, 0, 0, 0.3);
-        
-        &::-webkit-scrollbar {
-            height: (8/16rem);
-        }
-        
-        &::-webkit-scrollbar-track {
-            background: rgba(0, 0, 0, 0.3);
-            border-radius: (4/16rem);
-        }
-        
-        &::-webkit-scrollbar-thumb {
-            background: rgba(255, 255, 255, 0.3);
-            border-radius: (4/16rem);
-            
-            &:hover {
-                background: rgba(255, 255, 255, 0.5);
-            }
-        }
-    }
-
-    .cs-thumbnails {
-        display: flex;
-        gap: (10/16rem);
-        padding: (10/16rem) 0;
-        min-width: min-content;
-    }
-
-    .cs-thumbnail {
-        width: (80/16rem);
-        height: (60/16rem);
-        border-radius: (4/16rem);
-        overflow: hidden;
-        cursor: pointer;
-        border: 3px solid transparent;
-        transition: all 0.3s ease;
-        flex-shrink: 0;
-        
-        img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            display: block;
-        }
-        
-        &:hover {
-            border-color: rgba(255, 255, 255, 0.5);
-            transform: scale(1.05);
-        }
-        
-        &.active {
-            border-color: var(--primary);
-            box-shadow: 0 4px 15px rgba(255, 255, 255, 0.2);
-        }
-    }
-}
-
-/* Tablet - 768px */
-@media only screen and (min-width: 48rem) {
-    .cs-modal-content {
-        width: 90%;
-        padding: (40/16rem);
-    }
-
-    .cs-modal-close {
-        top: (20/16rem);
-        right: (20/16rem);
-        width: (60/16rem);
-        height: (60/16rem);
-        font-size: (50/16rem);
-    }
-
-    .cs-collection-title-wrapper {
-        min-height: (70/16rem);
-        margin-bottom: (25/16rem);
-    }
-
-    .cs-gallery-nav {
-        width: (70/16rem);
-        height: (70/16rem);
-        
-        svg {
-            width: (32/16rem);
-            height: (32/16rem);
-        }
-        
-        &.cs-prev {
-            left: (-90/16rem);
-        }
-        
-        &.cs-next {
-            right: (-90/16rem);
-        }
-    }
-
-    .cs-thumbnail {
-        width: (100/16rem);
-        height: (75/16rem);
-    }
-}
-
-/* Desktop - 1024px */
-@media only screen and (min-width: 64rem) {
-    .cs-gallery-nav {
-        width: (80/16rem);
-        height: (80/16rem);
-        
-        svg {
-            width: (36/16rem);
-            height: (36/16rem);
-        }
-        
-        &.cs-prev {
-            left: (-110/16rem);
-        }
-        
-        &.cs-next {
-            right: (-110/16rem);
-        }
-    }
-
-    .cs-thumbnail {
-        width: (120/16rem);
-        height: (90/16rem);
     }
 }

@@ -1,0 +1,8 @@
+{
+    "layout": "layouts/kitchen-collection.html",
+    "tags": "kitchen-collections",
+    "eleventyComputed": {
+        "preloadImg": "{{ headerImage }}",
+        "permalink": "/kitchen-collections/{{ url | slugify }}/index.html"
+    }
+}
