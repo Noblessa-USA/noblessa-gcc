@@ -698,7 +698,23 @@
                 transform: translateX(0);
             }
             100% {
-                transform: translateX(calc(-280px * 7 - 30px * 7));
+                transform: translateX(calc(-280px * 7 - 30px * 6));
+            }
+        }
+    }
+
+    // RTL Support for Arabic
+    html[dir="rtl"] #about-awards {
+        .cs-carousel {
+            animation: scrollRTL 30s linear infinite;
+        }
+
+        @keyframes scrollRTL {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(calc(280px * 7 + 30px * 6));
             }
         }
     }
@@ -735,7 +751,23 @@
                 transform: translateX(0);
             }
             100% {
-                transform: translateX(calc(-320px * 7 - 30px * 7));
+                transform: translateX(calc(-320px * 7 - 30px * 6));
+            }
+        }
+    }
+
+    // RTL Support for Arabic
+    html[dir="rtl"] #about-awards {
+        .cs-carousel {
+            animation: scrollRTL 30s linear infinite;
+        }
+
+        @keyframes scrollRTL {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(calc(320px * 7 + 30px * 6));
             }
         }
     }
@@ -784,7 +816,23 @@
                 transform: translateX(0);
             }
             100% {
-                transform: translateX(calc(-350px * 7 - 30px * 7));
+                transform: translateX(calc(-350px * 7 - 30px * 6));
+            }
+        }
+    }
+
+    // RTL Support for Arabic
+    html[dir="rtl"] #about-awards {
+        .cs-carousel {
+            animation: scrollRTL 30s linear infinite;
+        }
+
+        @keyframes scrollRTL {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(calc(350px * 7 + 30px * 6));
             }
         }
     }

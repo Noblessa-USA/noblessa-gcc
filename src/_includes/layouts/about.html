@@ -75,46 +75,75 @@
                 <div class="cs-carousel" id="awards-carousel">
                     <div class="cs-award-card">
                         <div class="cs-award-image"><img src="/assets/images/awards/blueangleseal.webp" alt="Blue Angel Environmental Seal" width="80" height="80"></div>
-                        <h3 class="cs-award-title">{{ award1_title }}</h3>
+                        <h3 class="cs-award-title">{{ award1_name }}</h3>
                         <p class="cs-award-text">{{ award1_text }}</p>
                     </div>
                     <div class="cs-award-card">
                         <div class="cs-award-image"><img src="/assets/images/awards/gs_seal.webp" alt="GS Certification" width="80" height="80"></div>
-                        <h3 class="cs-award-title">{{ award2_title }}</h3>
+                        <h3 class="cs-award-title">{{ award2_name }}</h3>
                         <p class="cs-award-text">{{ award2_text }}</p>
                     </div>
                     <div class="cs-award-card">
                         <div class="cs-award-image"><img src="/assets/images/awards/PEFC_logo.webp" alt="PEFC Certification" width="80" height="80"></div>
-                        <h3 class="cs-award-title">{{ award3_title }}</h3>
+                        <h3 class="cs-award-title">{{ award3_name }}</h3>
                         <p class="cs-award-text">{{ award3_text }}</p>
                     </div>
                     <div class="cs-award-card">
                         <div class="cs-award-image"><img src="/assets/images/awards/goldenm.webp" alt="Golden M Award" width="80" height="80"></div>
-                        <h3 class="cs-award-title">{{ award4_title }}</h3>
+                        <h3 class="cs-award-title">{{ award4_name }}</h3>
                         <p class="cs-award-text">{{ award4_text }}</p>
                     </div>
                     <div class="cs-award-card">
                         <div class="cs-award-image"><img src="/assets/images/awards/ISO-14001.webp" alt="ISO 14001 Certification" width="80" height="80"></div>
-                        <h3 class="cs-award-title">{{ award5_title }}</h3>
+                        <h3 class="cs-award-title">{{ award5_name }}</h3>
                         <p class="cs-award-text">{{ award5_text }}</p>
                     </div>
                     <div class="cs-award-card">
                         <div class="cs-award-image"><img src="/assets/images/awards/ISO-9001.webp" alt="ISO 9001 Certification" width="80" height="80"></div>
-                        <h3 class="cs-award-title">{{ award6_title }}</h3>
+                        <h3 class="cs-award-title">{{ award6_name }}</h3>
                         <p class="cs-award-text">{{ award6_text }}</p>
                     </div>
                     <div class="cs-award-card">
                         <div class="cs-award-image"><img src="/assets/images/awards/ISO-50001.webp" alt="ISO 50001 Certification" width="80" height="80"></div>
-                        <h3 class="cs-award-title">{{ award7_title }}</h3>
+                        <h3 class="cs-award-title">{{ award7_name }}</h3>
                         <p class="cs-award-text">{{ award7_text }}</p>
                     </div>
-                    {% for i in range(7) %}
+                    <!-- Duplicate cards for seamless infinite scroll -->
                     <div class="cs-award-card">
-                        <div class="cs-award-image"><img src="/assets/images/awards/{{ ['blueangleseal.webp', 'gs_seal.webp', 'PEFC_logo.webp', 'goldenm.webp', 'ISO-14001.webp', 'ISO-9001.webp', 'ISO-50001.webp'][loop.index0] }}" alt="Award" width="80" height="80"></div>
-                        <h3 class="cs-award-title">{{ ['award1_title', 'award2_title', 'award3_title', 'award4_title', 'award5_title', 'award6_title', 'award7_title'][loop.index0] }}</h3>
-                        <p class="cs-award-text">{{ ['award1_text', 'award2_text', 'award3_text', 'award4_text', 'award5_text', 'award6_text', 'award7_text'][loop.index0] }}</p>
+                        <div class="cs-award-image"><img src="/assets/images/awards/blueangleseal.webp" alt="Blue Angel Environmental Seal" width="80" height="80"></div>
+                        <h3 class="cs-award-title">{{ award1_name }}</h3>
+                        <p class="cs-award-text">{{ award1_text }}</p>
                     </div>
-                    {% endfor %}
+                    <div class="cs-award-card">
+                        <div class="cs-award-image"><img src="/assets/images/awards/gs_seal.webp" alt="GS Certification" width="80" height="80"></div>
+                        <h3 class="cs-award-title">{{ award2_name }}</h3>
+                        <p class="cs-award-text">{{ award2_text }}</p>
+                    </div>
+                    <div class="cs-award-card">
+                        <div class="cs-award-image"><img src="/assets/images/awards/PEFC_logo.webp" alt="PEFC Certification" width="80" height="80"></div>
+                        <h3 class="cs-award-title">{{ award3_name }}</h3>
+                        <p class="cs-award-text">{{ award3_text }}</p>
+                    </div>
+                    <div class="cs-award-card">
+                        <div class="cs-award-image"><img src="/assets/images/awards/goldenm.webp" alt="Golden M Award" width="80" height="80"></div>
+                        <h3 class="cs-award-title">{{ award4_name }}</h3>
+                        <p class="cs-award-text">{{ award4_text }}</p>
+                    </div>
+                    <div class="cs-award-card">
+                        <div class="cs-award-image"><img src="/assets/images/awards/ISO-14001.webp" alt="ISO 14001 Certification" width="80" height="80"></div>
+                        <h3 class="cs-award-title">{{ award5_name }}</h3>
+                        <p class="cs-award-text">{{ award5_text }}</p>
+                    </div>
+                    <div class="cs-award-card">
+                        <div class="cs-award-image"><img src="/assets/images/awards/ISO-9001.webp" alt="ISO 9001 Certification" width="80" height="80"></div>
+                        <h3 class="cs-award-title">{{ award6_name }}</h3>
+                        <p class="cs-award-text">{{ award6_text }}</p>
+                    </div>
+                    <div class="cs-award-card">
+                        <div class="cs-award-image"><img src="/assets/images/awards/ISO-50001.webp" alt="ISO 50001 Certification" width="80" height="80"></div>
+                        <h3 class="cs-award-title">{{ award7_name }}</h3>
+                        <p class="cs-award-text">{{ award7_text }}</p>
+                    </div>
                 </div>
             </div>
         </div>
