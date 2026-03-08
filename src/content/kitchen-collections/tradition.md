@@ -1,8 +1,8 @@
 ---
 title: "Tradition"
 url: "tradition"
-description: "Classic elegance with meticulous attention to detail. Timeless beauty rooted in heritage."
-metaDescription: "Explore the Tradition kitchen collection by Noblessa - classic elegance featuring meticulous craftsmanship, traditional design elements, and timeless beauty rooted in heritage and German excellence."
+description: "Cozy charm with subtle cornice and pilaster detailing. Asymmetrical glass grilles offer a contemporary twist on classic style with washed ivory details."
+metaDescription: "Explore the Tradition kitchen collection by Noblessa - cozy charm featuring subtle detailing on cornices, pilasters, and crown molding, asymmetrical glass cabinet grilles, washed ivory finish, spacious shelves with adjustable doors for endless storage, creating the heart of your home."
 headerImage: "/assets/images/kitchen/Collections Grid/Tradition/K_02_05_31033_22_Tradition_224_M.webp"
 headerImageAlt: "Tradition kitchen collection featuring classic elegance and meticulous traditional craftsmanship"
 cardImage: "/assets/images/kitchen/Collections Grid/Tradition/K_02_05_31033_22_Tradition_224_M.webp"
@@ -11,67 +11,11 @@ cardImageSecondary: "/assets/images/kitchen/Collections Grid/Tradition/K_02_05_3
 cardImageSecondaryAlt: "Tradition Kitchen Collection secondary view with classic details"
 featuredTitle: "Timeless Heritage Design"
 featuredDescription: |
-  The Tradition collection honors the rich heritage of classic kitchen design while incorporating modern functionality and German engineering excellence. With meticulous attention to detail, traditional design elements, and timeless elegance, Tradition creates kitchens that feel both comfortable and refined—spaces that honor the past while serving present-day needs.
+  The Tradition Collection revives precious memories of days spent under the sun. Featuring spacious shelves and adjustable cabinet doors for endless storage options, everything from kitchenware to recipe books has its own place. 
   
-  ### Classic Features
+  Each washed ivory detail is meticulously orchestrated in form and function for a flawless cooking experience to let you recreate the best moments. There's no place like home, and the kitchen is the heart of your home. 
   
-  - **Traditional Design Elements**: Frame-and-panel doors, classic proportions, refined details
-  - **Meticulous Craftsmanship**: Hand-finished details and precision joinery
-  - **Quality Materials**: Solid construction and premium finishes
-  - **Timeless Aesthetics**: Design that remains beautiful for decades
-  - **Modern Functionality**: Traditional looks with contemporary convenience
-  
-  ### Collection Models
-  
-  Tradition offers several classic styles:
-  - **Model 224**: Traditional elegance with refined frame details
-  - **Model 390**: Classic wood styling with authentic character
-  - **Multiple Finish Options**: From painted finishes to natural wood tones
-  - **Hardware Choices**: Traditional handles and knobs to complement the style
-  
-  ### Design Heritage
-  
-  Tradition draws inspiration from classic European kitchen design, where attention to detail and quality craftsmanship were paramount. Each element—from the frame profiles to the cabinet construction—honors these traditional values while incorporating modern innovations that enhance functionality and durability.
-  
-  ### Classic Elegance
-  
-  What sets Tradition apart is its commitment to authentic traditional design:
-  - Proper proportions that create visual harmony
-  - Frame-and-panel door construction with refined details
-  - Traditional crown molding and architectural elements
-  - Classic hardware placement and styling
-  - Finish quality that reveals the hand of skilled craftsmen
-  
-  ### Perfect for Traditional Homes
-  
-  Tradition excels in:
-  - Classic homes with period architecture
-  - Transitional interiors blending old and new
-  - Homes where traditional aesthetics are valued
-  - Spaces seeking warmth and timeless appeal
-  - Kitchens designed to last generations
-  
-  ### Modern Convenience
-  
-  While Tradition honors classic design, it fully embraces modern functionality:
-  - Soft-close mechanisms for quiet operation
-  - Integrated appliances for seamless appearance
-  - Smart storage solutions within traditional cabinetry
-  - Contemporary lighting options
-  - Ergonomic layouts based on modern kitchen science
-  
-  ### Attention to Detail
-  
-  Every Tradition kitchen showcases meticulous craftsmanship:
-  - Hand-applied finishes for authentic character
-  - Precision joinery in traditional methods
-  - Quality hardware built to last
-  - Authentic design details carefully executed
-  - Premium materials throughout
-  
-  ### Creating Warmth
-  
-  Tradition kitchens feel inherently comfortable and inviting. The classic design elements create a sense of familiarity and warmth, while the quality construction and materials ensure the space feels substantial and well-crafted. These are kitchens that become the heart of the home—spaces where families gather and memories are made.
+  The subtle detailing on the pilasters, cornices, and crown molding add those little touches that truly make this a stunning and inviting kitchen. 
 featuredImage: "/assets/images/kitchen/Collections Grid/Tradition/K_02_05_31032_22_Tradition_224_M.webp"
 featuredImageAlt: "Tradition kitchen showcasing classic design and refined traditional details"
 galleryImages:

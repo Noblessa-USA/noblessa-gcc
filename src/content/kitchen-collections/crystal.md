@@ -1,8 +1,8 @@
 ---
 title: "Crystal"
 url: "crystal"
-description: "Sleek glass-effect surfaces with a luxurious metallic sheen. Contemporary elegance at its finest."
-metaDescription: "Explore the Crystal kitchen collection by Noblessa - featuring sleek glass-appearance surfaces with luxurious metallic sheen in Titanio Matt, representing contemporary elegance and sophisticated design."
+description: "Bright glass appearance with smoked glass inset cabinets and integrated LED lighting. Modern luxury balanced with wood floating storage."
+metaDescription: "Explore the Crystal kitchen collection by Noblessa - featuring smoked glass inset wall cabinets with integrated LED lighting, seamlessly integrated appliances, flush-mounted cooktop, and wood floating storage for contemporary luxury balanced with natural warmth."
 headerImage: "/assets/images/kitchen/Collections Grid/Crystal/K_30384_21_Cristal_938_M.webp"
 headerImageAlt: "Crystal kitchen collection featuring glass-effect Titanio matt finish with metallic sheen"
 cardImage: "/assets/images/kitchen/Collections Grid/Crystal/K_30384_21_Cristal_938_M.webp"
@@ -11,41 +11,9 @@ cardImageSecondary: "/assets/images/kitchen/Collections Grid/Crystal/K_01_03_311
 cardImageSecondaryAlt: "Crystal Kitchen Collection secondary view with glass-effect surfaces"
 featuredTitle: "Glass-Effect Luxury"
 featuredDescription: |
-  The Crystal collection (Cristal) redefines modern luxury with its distinctive glass-appearance surfaces that capture and reflect light beautifully. The signature Titanio Matt finish creates a sophisticated metallic sheen that adds depth and dimension to your kitchen space, making it truly distinctive.
+  Crystal is bright and modern, with all the built-in conveniences you need. The inset grey smoked glass shelves store and illuminate all of your most beautiful decor with integrated LEDs, without compromising the clean overall appearance. Appliances are seamlessly integrated into the countertops and cabinets for a functional space that looks beautiful. 
   
-  ### Defining Features
-  
-  - **Glass-Appearance Finish**: Unique surface treatment creates a luminous, reflective quality
-  - **Titanio Matt (937-938)**: Sophisticated grey with subtle metallic undertones
-  - **Light-Reflective Properties**: Surfaces interact beautifully with natural and artificial light
-  - **Contemporary Aesthetic**: Ultra-modern styling perfect for design-forward homes
-  - **Easy-Care Surface**: Practical glass-effect laminate that's easy to maintain
-  
-  ### The Crystal Effect
-  
-  What sets Crystal apart is its distinctive surface treatment that mimics the depth and luminosity of glass while maintaining the practicality of engineered materials. The Titanio Matt finish features a subtle metallic sheen that changes appearance throughout the day as light conditions shift, creating a dynamic, living surface.
-  
-  ### Design Applications
-  
-  Crystal works exceptionally well in:
-  - Open-plan living spaces where light flow is important
-  - Contemporary apartments and urban lofts
-  - Kitchens with abundant natural light
-  - Spaces seeking a sophisticated, upscale aesthetic
-  - Modern homes with industrial or minimalist design themes
-  
-  ### Perfect Combinations
-  
-  The Crystal collection pairs beautifully with:
-  - High-gloss or matte black countertops
-  - Stainless steel appliances and fixtures
-  - Chrome or brushed metal hardware
-  - LED strip lighting to enhance the reflective qualities
-  - Concrete or stone tile backsplashes
-  
-  ### Sophistication in Every Detail
-  
-  Each Crystal kitchen is engineered with precision, featuring seamless joints, perfectly aligned surfaces, and handle-less options that enhance the sleek, contemporary aesthetic. The glass-effect finish is both beautiful and practical, resistant to everyday kitchen demands while maintaining its stunning appearance.
+  The bright glass appearance provides an air of brightness and contemporary luxury without sacrificing warmth and comfort. Wood reproduction floating storage and paneling adds a natural touch to perfectly balance the clean lines, while our exclusive flush-mounted electric cooktop provides a beautifully sharp profile.
 featuredImage: "/assets/images/kitchen/Collections Grid/Crystal/K_01_03_31185_22_Cristal_938_M.webp"
 featuredImageAlt: "Crystal kitchen in Titanio matt showcasing glass-effect surfaces and modern design"
 galleryImages:

@@ -1,8 +1,8 @@
 ---
 title: "Divine"
 url: "divine"
-description: "Rich lacquered finishes in vibrant colors. Express your personality with bold hues and ultra-matt surfaces."
-metaDescription: "Discover the Divine kitchen collection by Noblessa - featuring rich lacquered finishes in vibrant colors with ultra-matt surfaces that express your unique style and personality."
+description: "Industrial meets contemporary design with warm colors and bold geometric shapes. Eight vibrant matte colors with fingerprint reduction coating."
+metaDescription: "Discover the Divine kitchen collection by Noblessa - industrial meets contemporary design with eight vibrant matte colors, fingerprint reduction coating for easy cleanup, and elegant streamlined silhouettes."
 headerImage: "/assets/images/kitchen/Collections Grid/Divine/K_30656_21_Divine_966_M.webp"
 headerImageAlt: "Divine kitchen collection featuring vibrant lacquered finishes in Fjord blue"
 cardImage: "/assets/images/kitchen/Collections Grid/Divine/K_30656_21_Divine_966_M.webp"
@@ -11,7 +11,9 @@ cardImageSecondary: "/assets/images/kitchen/Collections Grid/Divine/K_30544_22_D
 cardImageSecondaryAlt: "Divine Kitchen Collection secondary view with graphite black finish"
 featuredTitle: "Bold Colors, Exceptional Design"
 featuredDescription: |
-  The Divine collection is for those who aren't afraid to make a statement. With its rich, vibrant lacquered finishes and ultra-matt surfaces, Divine brings personality and drama to your kitchen space. Choose from an inspiring palette of bold colors including Fjord Blue, Mineral Green, Rust Red, and Graphite Black.
+  Industrial meets contemporary design with its mix of warm colors and bold geometric shapes. The Divine cabinet collection comes in eight vibrant matte colors, featuring an elegant and streamlined silhouette that makes a powerful statement in any home. 
+  
+  All cabinetry in the Divine kitchen collection features a fingerprint reduction coating, making cleanup of stains and smudges a breeze. This practical yet beautiful finish ensures your kitchen maintains its stunning appearance with minimal effort, combining bold design with everyday functionality.
 featuredImage: "/assets/images/kitchen/Collections Grid/Divine/K_30527_21_Divine_966_M_R1.webp"
 featuredImageAlt: "Divine kitchen in Fjord blue showcasing ultra-matt finish and contemporary design"
 galleryImages:

@@ -1,8 +1,8 @@
 ---
 title: "Grace"
 url: "grace"
-description: "Elegant and refined with delicate proportions. The epitome of understated luxury."
-metaDescription: "Explore the Grace kitchen collection by Noblessa - elegant, refined German-crafted cabinetry with delicate proportions representing the epitome of understated luxury."
+description: "Subtle sophistication with glass-front cabinets and contemporary farmhouse style. Elegant design meets warm, inviting comfort."
+metaDescription: "Explore the Grace kitchen collection by Noblessa - featuring subtle sophistication with glass-front cabinets, contemporary farmhouse style, and elegant design with warm wood or deep gray countertop options."
 headerImage: "/assets/images/kitchen/Collections Grid/Grace/K_01_21_31153_22_Grace_881_M.webp"
 headerImageAlt: "Grace kitchen collection featuring elegant cabinetry with refined details and sophisticated finishes"
 cardImage: "/assets/images/kitchen/Collections Grid/Grace/K_01_21_31153_22_Grace_881_M.webp"
@@ -11,21 +11,9 @@ cardImageSecondary: "/assets/images/kitchen/Collections Grid/Grace/K_01_21_31154
 cardImageSecondaryAlt: "Grace Kitchen Collection secondary view with elegant proportions"
 featuredTitle: "Elegance Redefined"
 featuredDescription: |
-  The Grace collection is the embodiment of timeless elegance and sophisticated design. With its delicate proportions and refined details, Grace transforms your kitchen into a space of understated luxury that never goes out of style.
+  The Grace Collection lives up to its name by exuding subtle sophistication. A subtle but graceful sophistication flows from the tops of your cabinets, while glass-front cabinets add farmhouse comfort to your kitchen's design.
   
-  ### Distinctive Features
-  
-  - **Refined Aesthetics**: Carefully crafted proportions create a sense of visual lightness and elegance
-  - **Premium Surface Finishes**: Available in a curated selection of sophisticated colors and textures
-  - **Attention to Detail**: Every element, from the frame profiles to the hardware options, is meticulously designed
-  - **Flexible Design Options**: Numerous configuration possibilities to suit various architectural styles
-  - **Quality Craftsmanship**: Hand-finished elements and precision engineering ensure lasting beauty
-  
-  ### Design Excellence
-  
-  Grace embodies the principle that true luxury doesn't need to shout. The collection's refined aesthetic is characterized by subtle details and impeccable craftsmanship. The delicate frame profiles and carefully considered proportions create a kitchen that feels both contemporary and timeless.
-  
-  Perfect for those who appreciate the finer things in life, Grace offers a sophisticated palette of finishes and an uncompromising commitment to quality. Each kitchen is a testament to German engineering excellence and design sophistication.
+  Whether you prefer warm dark wood or a deep comforting gray for your countertops, both lend themselves to enhancing the dignified contemporary farmhouse style of a Grace Collection kitchen. This collection seamlessly blends elegant design with inviting warmth, creating a space that feels both refined and welcoming for everyday living.
 featuredImage: "/assets/images/kitchen/Collections Grid/Grace/K_01_21_31154_22_Grace_881_M.webp"
 featuredImageAlt: "Grace kitchen interior showcasing refined details and premium craftsmanship"
 galleryImages:

@@ -1,8 +1,8 @@
 ---
 title: "Shape"
 url: "shape"
-description: "Sculptural forms and innovative materials. Where artistry meets functionality."
-metaDescription: "Discover the Shape kitchen collection by Noblessa - featuring sculptural forms, innovative materials like Fjord Blue lacquer, and artistic design where form and function unite in perfect harmony."
+description: "Eclectic mix of modern and vintage with mixed textures. Center island with open storage and custom splashback shelving with integrated lighting."
+metaDescription: "Discover the Shape kitchen collection by Noblessa - eclectic blend of modern and vintage featuring Quarrystone backsplash, smooth matte cabinets, center island with integrated open storage, custom splashback shelving with optional lighting for elegant space optimization."
 headerImage: "/assets/images/kitchen/Collections Grid/Shape/K_01_15_31283_22_Shape_778_M.webp"
 headerImageAlt: "Shape kitchen collection featuring sculptural forms and innovative Fjord blue finish"
 cardImage: "/assets/images/kitchen/Collections Grid/Shape/K_01_15_31283_22_Shape_778_M.webp"
@@ -11,63 +11,9 @@ cardImageSecondary: "/assets/images/kitchen/Collections Grid/Shape/K_01_15_31282
 cardImageSecondaryAlt: "Shape Kitchen Collection secondary view with sculptural forms"
 featuredTitle: "Sculptural Design Excellence"
 featuredDescription: |
-  The Shape collection represents the perfect union of artistry and functionality. With sculptural forms, innovative materials, and design elements that challenge conventional thinking, Shape creates kitchens that are both stunning to look at and exceptionally practical to use. This is where German engineering meets artistic expression.
+  A little modern, a little vintage, the Shape collection is eclectic in all the right ways. Mixed textures with the Quarrystone backsplash and smooth matte cabinets are a fun detail. The open shelving with optional custom lighting is practical and functional. But the real highlight? The open and functional flow of the workspace created by the center island with integrated open storage. 
   
-  ### Defining Characteristics
-  
-  - **Sculptural Forms**: Three-dimensional design elements create visual drama
-  - **Innovative Materials**: Unique finishes including distinctive Fjord Blue lacquer
-  - **Artistic Detailing**: Every element considered for both form and function
-  - **Contemporary Aesthetics**: Forward-thinking design for modern homes
-  - **German Precision**: Engineered excellence in every detail
-  
-  ### Color & Finish Options
-  
-  Shape offers a curated palette of distinctive finishes:
-  - **Fjord Blue (778)**: Striking blue lacquered laminate for bold statements
-  - **Model 772**: Alternative finish with unique aesthetic
-  - **Model 774**: Contemporary styling option
-  - **Model 776**: Versatile design for various applications
-  
-  ### Sculptural Elements
-  
-  What makes Shape truly distinctive is its three-dimensional approach to kitchen design:
-  - Cabinets with varying depths creating shadow play
-  - Integrated handle solutions that become design features
-  - Open shelving sculptically integrated into the design
-  - Varied materials and finishes creating textural interest
-  - Architectural elements that serve both aesthetic and functional purposes
-  
-  ### Design Innovation
-  
-  Shape pushes the boundaries of what a kitchen can be:
-  - Unconventional configurations that maximize both beauty and utility
-  - Materials used in unexpected ways
-  - Storage solutions hidden within sculptural elements
-  - Integration of technology seamlessly into the design
-  - Lighting that enhances the three-dimensional qualities
-  
-  ### For the Design Enthusiast
-  
-  Shape appeals to homeowners who:
-  - Appreciate contemporary art and design
-  - Want a kitchen that's a focal point of their home
-  - Value innovation and creative thinking
-  - Desire both beauty and exceptional functionality
-  - See their home as a reflection of their sophisticated taste
-  
-  ### Artistic Functionality
-  
-  While Shape is undeniably artistic, it never sacrifices functionality. Every sculptural element serves a purpose, every design choice enhances usability. The result is a kitchen that's as practical as it is beautiful—a space where you'll love spending time both for its functionality and its aesthetic impact.
-  
-  ### Creating Visual Interest
-  
-  Shape creates depth and interest through:
-  - Varying cabinet depths and heights
-  - Play of light and shadow across surfaces
-  - Contrasting materials and finishes
-  - Open and closed storage artfully balanced
-  - Color used strategically for maximum impact
+  Noblessa offers custom storage in the creation of splashback shelving over the main worktop. This space-saving solution is maximized by openly displaying your dishware so it's easy to access, making your kitchen even easier to use. The shelving can also be fitted with integrated lighting that adds to its elegance.
 featuredImage: "/assets/images/kitchen/Collections Grid/Shape/K_01_15_31282_22_Shape_778_M.webp"
 featuredImageAlt: "Shape kitchen showcasing sculptural design and Fjord blue finish"
 galleryImages:

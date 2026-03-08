@@ -1,8 +1,8 @@
 ---
 title: "Attitude"
 url: "attitude"
-description: "Bold and contemporary design with clean lines and striking finishes. Perfect for modern living spaces."
-metaDescription: "Explore the Attitude kitchen collection by Noblessa - bold contemporary design with clean lines, striking lacquer finishes, and modern aesthetics for sophisticated living spaces."
+description: "Timeless shaker-style cabinetry in slate grey or alpine white. Classic yet contemporary cottage style with glass-sided drawers and premium details."
+metaDescription: "Explore the Attitude kitchen collection by Noblessa - timeless shaker-style cabinetry in slate grey or alpine white, featuring glass-sided drawers, soft-closure mechanisms, and Sierra Oak Xtra Ceramic worktops for a cozy cottage style."
 headerImage: "/assets/images/kitchen/Collections Grid/Attitude/K_30823_21_Attitude_786_M.webp"
 headerImageAlt: "Attitude kitchen collection featuring bold contemporary design with slate grey lacquer finish"
 cardImage: "/assets/images/kitchen/Collections Grid/Attitude/K_30823_21_Attitude_786_M.webp"
@@ -11,26 +11,9 @@ cardImageSecondary: "/assets/images/kitchen/Collections Grid/Attitude/K_30689_21
 cardImageSecondaryAlt: "Attitude Kitchen Collection secondary view with slate grey finish"
 featuredTitle: "Bold Contemporary Living"
 featuredDescription: |
-  The Attitude collection makes a powerful statement with its bold, contemporary design language. Characterized by clean lines, striking finishes, and a confident aesthetic, Attitude is perfect for those who embrace modern living without compromise.
+  The Attitude Collection is a timeless design complete with classic shaker-style cabinetry, available in slate grey or alpine white. It's classic, yet contemporary, cottage style makes this kitchen the perfect place to not only prepare meals, but to gather. 
   
-  ### Distinctive Characteristics
-  
-  - **Modern Lacquer Finishes**: Available in sophisticated colors including Slate Grey Matt and Sand Matt
-  - **Clean Lines**: Minimalist design philosophy with handle-less options for ultimate sleekness
-  - **Contemporary Aesthetics**: Sharp geometric forms and precise proportions
-  - **Versatile Configurations**: Adaptable to various kitchen layouts and architectural styles
-  - **Premium Build Quality**: German engineered precision in every detail
-  
-  ### Design Features
-  
-  - **Slate Grey Matt (786)**: A sophisticated neutral with urban appeal
-  - **Sand Matt (788)**: Warm, earthy tones for a softer contemporary look
-  - **Handle-less Options**: Push-to-open mechanisms for seamless surfaces
-  - **Integrated Lighting**: Optional LED systems to enhance the modern aesthetic
-  
-  ### Perfect For
-  
-  Attitude is ideal for homeowners who appreciate contemporary design with a bold edge. Whether you're creating a minimalist urban kitchen or a statement-making culinary space, Attitude delivers the confidence and style to match your vision. The collection's versatile color options ensure it complements both neutral and dramatic interior schemes.
+  The quality of a noblessa kitchen can be seen in the finest details - open the drawers and you'll see sophisticated glass siding that lets you easily see everything at a glance. Close them and you'll experience the premium soft-closure. The Attitude Collection creates a warm and inviting space to work or host from.
 featuredImage: "/assets/images/kitchen/Collections Grid/Attitude/K_30686_21_Attitude_786_M_B704173.webp"
 featuredImageAlt: "Attitude kitchen with slate grey finish showcasing modern design and clean lines"
 galleryImages:

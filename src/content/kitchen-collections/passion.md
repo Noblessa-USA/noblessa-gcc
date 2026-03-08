@@ -1,8 +1,8 @@
 ---
 title: "Passion"
 url: "passion"
-description: "Expressive design with rich textures and dynamic forms. For those who dare to be different."
-metaDescription: "Explore the Passion kitchen collection by Noblessa - expressive design featuring rich textures, dynamic forms, and bold aesthetics for those who dare to create unique, personalized kitchen spaces."
+description: "Understated beauty with glass-front wall climber unit and integrated wood breakfast bar. Practicality meets flair with subtle lighting and glossy details."
+metaDescription: "Explore the Passion kitchen collection by Noblessa - epitome of understated beauty featuring glass-front wall climber unit with slatted glass partition, integrated wood reproduction breakfast bar, cleverly disguised appliances, optional LED lighting, and sensible opulence with glossy details."
 headerImage: "/assets/images/kitchen/Collections Grid/Passion/K_02_04_31027_22_Passion_814_M.webp"
 headerImageAlt: "Passion kitchen collection featuring expressive design with rich textures and bold elements"
 cardImage: "/assets/images/kitchen/Collections Grid/Passion/K_02_04_31027_22_Passion_814_M.webp"
@@ -11,58 +11,9 @@ cardImageSecondary: "/assets/images/kitchen/Collections Grid/Passion/K_02_04_310
 cardImageSecondaryAlt: "Passion Kitchen Collection secondary view with rich textures"
 featuredTitle: "Express Your Passion"
 featuredDescription: |
-  The Passion collection is for those who see their kitchen as an expression of personality and creativity. With rich textures, dynamic forms, and bold design choices, Passion creates spaces that are uniquely yours. This collection celebrates individuality and encourages you to create a kitchen that truly reflects who you are.
+  The Passion Collection is the epitome of understated beauty. Clear glass features in the cupboards and wall climber unit make cooking preparations effortless. The design combines practicality and flair by incorporating a breakfast bar with cleverly disguised integrated appliances and subtle lighting elements. 
   
-  ### Expressive Features
-  
-  - **Rich Textures**: Varied surface treatments create tactile and visual interest
-  - **Dynamic Forms**: Unconventional proportions and shapes add drama
-  - **Bold Design Choices**: Distinctive elements that make a statement
-  - **Creative Freedom**: Extensive customization for personalized spaces
-  - **Artistic Detailing**: Design elements that elevate the kitchen to art
-  
-  ### Finish Variations
-  
-  The Passion collection offers multiple distinctive finishes:
-  - **Model 814**: Contemporary finish with sophisticated appeal
-  - **Model 816**: Alternative styling for different aesthetic preferences
-  - **Model 817**: Unique texture and color combination
-  - **Model 819**: Bold expression of the Passion design philosophy
-  
-  ### Design Philosophy
-  
-  Passion embraces the idea that your kitchen should be as unique as you are. The collection provides the tools—distinctive designs, varied textures, bold colors—and invites you to create something personal. Whether you lean toward contemporary drama or artistic expression, Passion offers the flexibility to bring your vision to life.
-  
-  ### For Creative Spirits
-  
-  Passion appeals to those who:
-  - View their home as a canvas for self-expression
-  - Appreciate distinctive, unconventional design
-  - Want their kitchen to reflect their personality
-  - Enjoy mixing materials and textures
-  - Aren't afraid of bold design choices
-  
-  ### Creating Drama
-  
-  The Passion collection excels at creating dramatic effect through:
-  - Contrasting materials and finishes
-  - Unexpected proportions and shapes
-  - Bold color applications
-  - Textural variety adding depth and interest
-  - Lighting integration highlighting architectural features
-  
-  ### Beyond Convention
-  
-  A Passion kitchen isn't bound by conventional rules. It's about creating a space that resonates with you personally. Mix wood with lacquer, combine matte and gloss finishes, integrate bold colors—the collection's versatility supports your creative vision while maintaining the practical functionality essential to modern living.
-  
-  ### Personalization Possibilities
-  
-  Work with design professionals to:
-  - Select finishes that reflect your style
-  - Configure unique layouts beyond standard arrangements
-  - Integrate distinctive hardware and fixtures
-  - Choose bold colors or textured surfaces
-  - Create focal points that showcase your personality
+  Glossy details evoke an air of sensible opulence. The glass-front wall climber unit features a slatted glass partition that folds up neatly for easy access to your dinnerware and decor, with optional mechanical or electronic opening mechanisms. Optional LED lights can be integrated into the cabinet bottom to illuminate your workspace or inside the unit to help you find items at a moment's notice.
 featuredImage: "/assets/images/kitchen/Collections Grid/Passion/K_02_15_31077_22_Passion_819_M.webp"
 featuredImageAlt: "Passion kitchen showcasing expressive design and rich textures"
 galleryImages:

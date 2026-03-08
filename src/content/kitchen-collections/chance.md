@@ -1,8 +1,8 @@
 ---
 title: "Chance"
 url: "chance"
-description: "Natural wood finishes combined with modern functionality. Warmth meets sophistication."
-metaDescription: "Discover the Chance kitchen collection by Noblessa - featuring natural wood finishes like Como Oak and Milano Walnut, blending organic warmth with modern functionality and German craftsmanship."
+description: "Warm natural wood meets modern urban elegance. Features LED backlit shelving, Line N pulls, and versatile breakfast bar options."
+metaDescription: "Discover the Chance kitchen collection by Noblessa - combining warm natural wood with modern urban elegance, featuring LED backlit pole-mounted shelving, Line N inset cabinet pulls, open shelving, and breakfast bar options for welcoming, multi-functional spaces."
 headerImage: "/assets/images/kitchen/Collections Grid/Chance/K_9344_20_Chance402.webp"
 headerImageAlt: "Chance kitchen collection featuring natural wood finishes and contemporary design"
 cardImage: "/assets/images/kitchen/Collections Grid/Chance/K_9344_20_Chance402.webp"
@@ -11,34 +11,11 @@ cardImageSecondary: "/assets/images/kitchen/Collections Grid/Chance/K_02_12_3131
 cardImageSecondaryAlt: "Chance Kitchen Collection secondary view with natural wood finish"
 featuredTitle: "Natural Elegance Meets Modern Design"
 featuredDescription: |
-  The Chance collection celebrates the beauty of natural wood with contemporary styling. Featuring authentic wood finishes like Como Oak and Milano Walnut, Chance brings warmth and organic texture to modern kitchen design while maintaining the precision and functionality expected from German engineering.
+  The perfect combination of warm natural wood with the modern elegance of urban living. The Chance collection pairs beautifully with our Line N inset cabinet pulls and our LED backlit pole-mounted shelving system to breathe light and life into your home. 
   
-  ### Signature Features
+  Whether you're the outdoorsy type or more of a homebody, you'll feel right at home with this welcoming kitchen collection. Open shelving helps make your kitchen feel more airy while providing additional storage for spices, cookbooks, or kitchen gadgets you reach for frequently. 
   
-  - **Authentic Wood Finishes**: Real wood veneers including Como Oak, Milano Walnut Oak, and more
-  - **Natural Grain Patterns**: Each kitchen is unique with distinctive wood characteristics
-  - **Contemporary Styling**: Modern proportions with traditional material appeal
-  - **Versatile Design Options**: Multiple wood tones to complement any interior
-  - **Complementary Colors**: Pairs beautifully with Sentido Matt finishes in Sky and Olive
-  
-  ### Wood Finish Options
-  
-  - **Como Oak (406)**: Light, natural oak with visible grain for a Scandinavian-inspired aesthetic
-  - **Milano Walnut Oak (407)**: Rich, dark walnut tones for sophisticated warmth
-  - **Multiple Configurations**: Combine wood fronts with contrasting tall units or islands
-  
-  ### Design Philosophy
-  
-  Chance represents the perfect balance between nature and modern living. The collection allows you to bring the organic warmth of wood into a contemporary setting without sacrificing functionality or style. The natural wood finishes create inviting, comfortable spaces while maintaining the sleek lines and practical features of modern kitchen design.
-  
-  ### Perfect Pairings
-  
-  The Chance collection works beautifully with:
-  - Natural stone countertops
-  - Matte metal fixtures in brass or black
-  - Complementary Sentido finishes for contrast
-  - Industrial-style pendant lighting
-  - Minimalist hardware or handle-less systems
+  Perfect for tight spaces, the breakfast bar option creates a relaxed dining area that doubles as prep space, a place for video calls, or homework - bringing everyone together.
 featuredImage: "/assets/images/kitchen/Collections Grid/Chance/K_02_12_31313_22_Chance_402_M.webp"
 featuredImageAlt: "Chance kitchen showcasing natural Como Oak finish with modern design elements"
 galleryImages:

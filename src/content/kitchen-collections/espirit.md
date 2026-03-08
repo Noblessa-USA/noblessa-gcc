@@ -1,8 +1,8 @@
 ---
 title: "Espirit"
 url: "espirit"
-description: "Sophisticated simplicity with refined details. Timeless design that never goes out of style."
-metaDescription: "Discover the Espirit kitchen collection by Noblessa - sophisticated simplicity with refined details and timeless design featuring elegant finishes and German precision craftsmanship."
+description: "Ultra-modern futuristic kitchen with sleek lines, gold backsplash, and backlit pole-mounted shelving with smoked glass panels."
+metaDescription: "Discover the Espirit kitchen collection by Noblessa - ultra-modern futuristic design with flush-mounted cooktop and sink, reflective gold backsplash, backlit pole-mounted shelving system with avant-garde smoked glass panels and integrated lighting for sophisticated luxury."
 headerImage: "/assets/images/kitchen/Collections Grid/Espirit/K_30684_21_Esprit_455_M_B704169.webp"
 headerImageAlt: "Espirit kitchen collection featuring sophisticated simplicity and refined design details"
 cardImage: "/assets/images/kitchen/Collections Grid/Espirit/K_30684_21_Esprit_455_M_B704169.webp"
@@ -11,38 +11,9 @@ cardImageSecondary: "/assets/images/kitchen/Collections Grid/Espirit/K_02_16_311
 cardImageSecondaryAlt: "Espirit Kitchen Collection secondary view with refined details"
 featuredTitle: "Sophisticated Simplicity"
 featuredDescription: |
-  The Espirit collection embodies the philosophy that true elegance lies in simplicity. With refined details, balanced proportions, and a timeless aesthetic, Espirit creates kitchens that remain beautiful and relevant for decades. This collection is perfect for those who appreciate understated sophistication.
+  Espirit has the built-in technology and style one would expect from an ultra-modern, futuristic kitchen with its sleek lines, gold backsplash and appliances that make life simpler. A flush-mounted cooktop and sink creates a clean, industrial silhouette, while the reflective gold backsplash elevates this kitchen to a level of sophisticated luxury. 
   
-  ### Collection Highlights
-  
-  - **Timeless Design**: Classic proportions that transcend passing trends
-  - **Refined Details**: Subtle frame profiles and carefully considered elements
-  - **Versatile Finishes**: Multiple color options to suit various interior styles
-  - **Quality Materials**: Premium surfaces with lasting beauty
-  - **Flexible Configurations**: Adaptable to traditional and contemporary spaces
-  
-  ### Finish Options
-  
-  - **Multiple Color Choices**: From neutral tones to more distinctive hues
-  - **Matte and Semi-Gloss Options**: Choose the sheen level that suits your style
-  - **Frame and Frameless Designs**: Various door styles for different aesthetics
-  - **Handle Options**: Traditional hardware or modern handle-less systems
-  
-  ### Design Philosophy
-  
-  Espirit is guided by the principle that good design doesn't shout for attention. Instead, it creates spaces that feel inherently right—comfortable, functional, and beautiful in equal measure. The collection's refined details add visual interest without overwhelming, while the balanced proportions create harmony in any kitchen space.
-  
-  ### Versatile Aesthetics
-  
-  One of Espirit's greatest strengths is its versatility. Whether your home is traditional, transitional, or contemporary, Espirit adapts beautifully. The collection works equally well in:
-  - Classic homes seeking timeless kitchen design
-  - Contemporary spaces requiring sophisticated simplicity
-  - Transitional interiors bridging traditional and modern styles
-  - Urban apartments and suburban homes alike
-  
-  ### Lasting Value
-  
-  An Espirit kitchen is an investment in lasting beauty. The timeless design ensures your kitchen won't feel dated in five or ten years, while the premium German construction guarantees it will perform beautifully for decades. This combination of aesthetic longevity and structural durability makes Espirit an excellent choice for discerning homeowners.
+  Backlit shelving on our exclusive pole-mounted system reinforces the industrial ambiance. Avant-garde smoked glass panels allow you to express your own unique style, and with in-shelf integrated lighting, your treasures will always be highlighted.
 featuredImage: "/assets/images/kitchen/Collections Grid/Espirit/K_02_16_31107_22_Esprit_455_M.webp"
 featuredImageAlt: "Espirit kitchen showcasing refined simplicity and timeless design"
 galleryImages:
