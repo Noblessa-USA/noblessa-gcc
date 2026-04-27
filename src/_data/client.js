@@ -1,6 +1,6 @@
 module.exports = {
     name: "noblessa",
-    email: "info@noblessa-gcc.com",
+    email: "info@al-essa.me",
     phoneForTel: "123-456-7890",
     phoneFormatted: "(123) 456-7890",
     address: {
@@ -13,11 +13,9 @@ module.exports = {
         mapLink: "https://maps.app.goo.gl/TEdS5KoLC9ZcULuQ6",
     },
     socials: {
-        facebook: "https://www.facebook.com/noblessakitchens/",
-        instagram: "https://www.instagram.com/noblessa.usa/",
-        linkedin: "https://www.linkedin.com/company/noblessa-usa/",
-        pinterest: "https://www.pinterest.com/noblessausa/",
-        houzz: "https://www.houzz.com/pro/noblessausa/__public",
+        facebook: "https://www.facebook.com/noblessakitchensgcc/",
+        instagram: "https://www.instagram.com/noblessa.gcc/",
+        linkedin: "https://www.linkedin.com/company/noblessa-gcc"
     },
     //! Make sure you include the file protocol (e.g. https://) and that NO TRAILING SLASH is included
     domain: "https://noblessa.me",
