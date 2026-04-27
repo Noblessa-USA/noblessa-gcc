@@ -225,52 +225,66 @@
     <!-- ============================================ -->
 
     <section id="consultation-form">
+        <!-- Background Image -->
+        <picture class="cs-background">
+            <source media="(max-width: 600px)" srcset="{% getUrl '/assets/images/whitekitchen.webp' | resize({ width: 640 }) | avif %}" type="image/avif">
+            <source media="(max-width: 600px)" srcset="{% getUrl '/assets/images/whitekitchen.webp' | resize({ width: 640 }) | webp %}" type="image/webp">
+            <source media="(min-width: 601px)" srcset="{% getUrl '/assets/images/whitekitchen.webp' | resize({ width: 1920 }) | avif %}" type="image/avif">
+            <source media="(min-width: 601px)" srcset="{% getUrl '/assets/images/whitekitchen.webp' | resize({ width: 1920 }) | webp %}" type="image/webp">
+            <img src="{% getUrl '/assets/images/whitekitchen.webp' | resize({ width: 1920 }) | webp %}" alt="Background" width="1920" height="1080" loading="lazy" decoding="async">
+        </picture>
+        
         <div class="cs-container">
-            <div class="cs-form-wrapper">
-                <div class="cs-form-header">
+            <div class="cs-left-section">
+                <div class="cs-content">
                     <span class="cs-topper">{{ form_topper }}</span>
                     <h2 class="cs-title">{{ form_title }}</h2>
+                    <span class="cs-divider"></span>
                     <p class="cs-text">{{ form_text }}</p>
                 </div>
-                
-                <form name="consultation" method="POST" data-netlify="true" netlify-honeypot="bot-field">
-                    <input type="hidden" name="form-name" value="consultation">
-                    <input type="hidden" name="bot-field">
+            </div>
+            
+            <div class="cs-right-section">
+                <form id="cs-form-265" name="Explore Form" method="POST" data-netlify="true" netlify-honeypot="select">
+                    <input type="hidden" name="form-name" value="Explore Form">
                     
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label for="fullname">{{ form_name_label }}</label>
-                            <input type="text" id="fullname" name="fullname" placeholder="{{ form_name_placeholder }}" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="email">{{ form_email_label }}</label>
-                            <input type="email" id="email" name="email" placeholder="{{ form_email_placeholder }}" required>
-                        </div>
-                    </div>
+                    <label class="sl-fade-in-up">
+                        {{ form_name_label }}
+                        <input required type="text" id="name" name="name" placeholder="{{ form_name_placeholder }}">
+                    </label>
                     
-                    <div class="form-row">
-                        <div class="form-group">
-                            <label for="phone">{{ form_phone_label }}</label>
-                            <input type="tel" id="phone" name="phone" placeholder="{{ form_phone_placeholder }}" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="zipcode">{{ form_zip_label }}</label>
-                            <input type="text" id="zipcode" name="zipcode" placeholder="{{ form_zip_placeholder }}" required>
-                        </div>
-                    </div>
+                    <label class="sl-fade-in-up">
+                        {{ form_email_label }}
+                        <input required type="email" id="email" name="email" placeholder="{{ form_email_placeholder }}">
+                    </label>
                     
-                    <div class="form-group">
-                        <label for="message">{{ form_message_label }}</label>
-                        <textarea id="message" name="message" rows="4" placeholder="{{ form_message_placeholder }}"></textarea>
-                    </div>
+                    <label class="sl-fade-in-up">
+                        {{ form_country_label }}
+                        <input required type="text" id="country" name="country" placeholder="{{ form_country_placeholder }}">
+                    </label>
                     
-                    <div class="form-actions">
-                        <div class="cs-recaptcha" data-netlify-recaptcha="true"></div>
-                        <button type="submit" class="cs-button-nodeco">
-                            <span class="cs-hover-underline">{{ form_submit }}</span>
-                            <img src="/assets/svgs/horizontal-arrow.svg" alt="arrow" width="30" height="10">
-                        </button>
-                    </div>
+                    <label class="sl-fade-in-up">
+                        {{ form_city_label }}
+                        <input required type="text" id="city" name="city" placeholder="{{ form_city_placeholder }}">
+                        <input class="cs-select" name="select" type="text" placeholder="Select">
+                    </label>
+                    
+                    <label class="sl-fade-in-up">
+                        {{ form_phone_label }}
+                        <input required type="tel" id="phone" name="phone" placeholder="{{ form_phone_placeholder }}">
+                    </label>
+                    
+                    <label class="cs-label-message sl-fade-in-up">
+                        {{ form_message_label }}
+                        <textarea required name="message" id="message" placeholder="{{ form_message_placeholder }}"></textarea>
+                    </label>
+                    
+                    <div data-netlify-recaptcha="true"></div>
+                    
+                    <button class="cs-button-nodeco cs-submit sl-fade-in-up" type="submit">
+                        <span class="cs-hover-underline">{{ form_submit }}</span>
+                        <img src="/assets/svgs/horizontal-arrow.svg" alt="arrow" width="30" height="10">
+                    </button>
                 </form>
             </div>
         </div>

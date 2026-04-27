@@ -114,6 +114,38 @@
                 color: var(--headerColor);
             }
         }
+
+        .cs-update-date {
+            font-size: 0.875rem;
+            color: var(--bodyTextColor);
+            opacity: 0.7;
+            font-style: italic;
+            margin-bottom: 2rem;
+        }
+
+        .cs-contact-info {
+            margin-top: 4rem;
+            padding-top: 2rem;
+            border-top: 1px solid #e0e0e0;
+            text-align: center;
+
+            .cs-title {
+                margin-bottom: 1rem;
+            }
+
+            .cs-email {
+                color: var(--primary);
+                text-decoration: none;
+                font-weight: 600;
+                font-size: 1.125rem;
+                transition: color 0.3s ease;
+
+                &:hover {
+                    color: var(--primaryDark);
+                    text-decoration: underline;
+                }
+            }
+        }
     }
 }
 

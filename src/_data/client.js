@@ -20,7 +20,7 @@ module.exports = {
         houzz: "https://www.houzz.com/pro/noblessausa/__public",
     },
     //! Make sure you include the file protocol (e.g. https://) and that NO TRAILING SLASH is included
-    domain: "https://noblessa-usa.com",
+    domain: "https://noblessa.me",
     // Passing the isProduction variable for use in HTML templates
     isProduction: process.env.ELEVENTY_ENV === "PROD",
 };

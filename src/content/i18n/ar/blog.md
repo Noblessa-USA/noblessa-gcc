@@ -2,12 +2,11 @@
 layout: layouts/blog.html
 permalink: "/{{ lang }}/blog/"
 lang: ar
-title: "مدونة نوبليسا | نصائح وإلهام لتصميم المطابخ"
-description: "اكتشف المشورة من الخبراء واتجاهات التصميم والإلهام لمطبخ أحلامك من فريق نوبليسا."
-
+title: "مدونة نوبليسا | نصائح وأفكار لتصميم المطابخ"
+description: "استكشف عالماً من الحلول المبتكرة مع خبراء نوبليسا؛ تعرف على أحدث التوجهات واطلع على أفكار ملهمة لتصميم مطبخ فريد."
 banner_image: "/assets/images/blog/blog-banner.webp"
-banner_topper: "رؤى وإلهام"
-banner_title: "مجلة نوبليسا"
+banner_topper: "إبداع وإلهام"
+banner_title: "مختارات نوبليسا"
 breadcrumb_home: "الرئيسية"
 breadcrumb_current: "المدونة"
 
@@ -15,13 +14,14 @@ search_label: "البحث في المقالات"
 search_placeholder: "البحث بالكلمة المفتاحية..."
 filter_all: "جميع المواضيع"
 filter_design: "نصائح التصميم"
-filter_trends: "الاتجاهات"
-filter_maintenance: "الصيانة"
-filter_inspiration: "الإلهام"
+filter_trends: "أحدث التوجهات"
+filter_maintenance: "الصيانة والعناية"
+filter_inspiration: "أفكار ملهمة"
 
 no_results_title: "لم يتم العثور على مقالات"
-no_results_text: "حاول تعديل البحث أو الفلاتر للعثور على ما تبحث عنه."
-no_results_cta: "مسح الفلاتر"
+no_results_text: "حاول تعديل كلمات البحث أو عوامل التصفية للعثور على ما تبحث عنه."
+no_results_cta: "مسح عوامل التصفية"
 
-read_more: "اقرأ المزيد"
+read_more: "قراءة المزيد"
 ---
+

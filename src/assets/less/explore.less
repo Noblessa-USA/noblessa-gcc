@@ -963,17 +963,27 @@
         }
 
         #cs-form-265 {
-            .cs-form-row {
-                flex-direction: row;
-                gap: (20/16rem);
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: flex-start;
+            flex-wrap: wrap;
+            gap: (20/16rem);
 
-                label {
-                    flex: 1;
-                }
+            label {
+                width: 48%;
+            }
+
+            .cs-label-message {
+                width: 100%;
             }
 
             div[data-netlify-recaptcha="true"] {
                 justify-content: flex-start;
+                width: 100%;
+            }
+
+            .cs-button-nodeco {
+                margin-top: 0;
             }
         }
     }
