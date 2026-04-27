@@ -7,15 +7,15 @@ description: "Read our privacy policy, terms of service, and cookie policy to un
 
 banner_topper: "Legal Information"
 banner_title: "Privacy & Terms"
-breadcrumb_home: "Home"
-breadcrumb_current: "Legal"
+breadcrumb_home: "home"
+breadcrumb_current: "legal"
 
 tab_privacy: "Privacy Policy"
 tab_terms: "Terms of Service"
 tab_cookies: "Cookie Policy"
 
 privacy_title: "Privacy Policy"
-privacy_updated: "Last Updated: January 2024"
+privacy_updated: "Last Updated: January 2025"
 
 privacy_section1_title: "Introduction"
 privacy_section1_text: "At Noblessa, we are committed to protecting your privacy and ensuring the security of your personal information. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website or engage with our services."
