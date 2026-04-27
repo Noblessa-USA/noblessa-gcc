@@ -11,25 +11,21 @@
     <!--                   Banner                     -->
     <!-- ============================================ -->
 
-    <section id="banner">
+    <div id="banner-slideshow-2285">
         <div class="cs-container">
-            <span class="cs-topper">{{ banner_topper }}</span>
-            <h1 class="cs-title">{{ banner_title }}</h1>
-            <nav aria-label="breadcrumb">
-                <ol class="cs-breadcrumb">
-                    <li><a href="/">{{ breadcrumb_home }}</a></li>
-                    <li>{{ breadcrumb_current }}</li>
-                </ol>
-            </nav>
+            <div class="cs-text-wrapper">
+                <h1 class="cs-int-title sl-fade-in-right">{{ banner_title }}</h1>
+                <p class="cs-text sl-fade-in-right">{{ banner_topper }}</p>
+            </div>
+            <div class="cs-breadcrumbs">
+                <a href="/" class="cs-link">{{ breadcrumb_home }}</a>
+                <a href="{{ '/legal/' | locale_url }}" class="cs-link cs-active">{{ breadcrumb_current }}</a>
+            </div>
         </div>
-        <picture class="cs-background">
-            <source media="(max-width: 600px)" srcset="{% getUrl '/assets/images/collections/serenity/serenityalpinewhite.webp' | resize({ width: 640 }) | avif %}" type="image/avif">
-            <source media="(max-width: 600px)" srcset="{% getUrl '/assets/images/collections/serenity/serenityalpinewhite.webp' | resize({ width: 640 }) | webp %}" type="image/webp">
-            <source media="(min-width: 601px)" srcset="{% getUrl '/assets/images/collections/serenity/serenityalpinewhite.webp' | resize({ width: 1920 }) | avif %}" type="image/avif">
-            <source media="(min-width: 601px)" srcset="{% getUrl '/assets/images/collections/serenity/serenityalpinewhite.webp' | resize({ width: 1920 }) | webp %}" type="image/webp">
-            <img src="{% getUrl '/assets/images/collections/serenity/serenityalpinewhite.webp' | resize({ width: 1920 }) | webp %}" alt="Legal Background" width="1920" height="1080" loading="eager">
-        </picture>
-    </section>
+        <div class="cs-banner-slideshow">
+            <div class="cs-slide active"><img src="/assets/images/collections/serenity/serenityalpinewhite.webp" alt="Legal Background" loading="eager"></div>
+        </div>
+    </div>
 
     <!-- ============================================ -->
     <!--                Legal Content                 -->
