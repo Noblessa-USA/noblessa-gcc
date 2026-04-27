@@ -248,30 +248,34 @@
                 <form id="cs-form-265" name="Explore Form" method="POST" data-netlify="true" netlify-honeypot="select">
                     <input type="hidden" name="form-name" value="Explore Form">
                     
-                    <label class="sl-fade-in-up">
-                        {{ form_name_label }}
-                        <input required type="text" id="name" name="name" placeholder="{{ form_name_placeholder }}">
-                    </label>
+                    <div class="cs-form-row">
+                        <label class="sl-fade-in-up">
+                            {{ form_name_label }}
+                            <input required type="text" id="name" name="name" placeholder="{{ form_name_placeholder }}">
+                        </label>
+                        
+                        <label class="sl-fade-in-up">
+                            {{ form_email_label }}
+                            <input required type="email" id="email" name="email" placeholder="{{ form_email_placeholder }}">
+                        </label>
+                    </div>
                     
-                    <label class="sl-fade-in-up">
-                        {{ form_email_label }}
-                        <input required type="email" id="email" name="email" placeholder="{{ form_email_placeholder }}">
-                    </label>
-                    
-                    <label class="sl-fade-in-up">
-                        {{ form_country_label }}
-                        <input required type="text" id="country" name="country" placeholder="{{ form_country_placeholder }}">
-                    </label>
-                    
-                    <label class="sl-fade-in-up">
-                        {{ form_city_label }}
-                        <input required type="text" id="city" name="city" placeholder="{{ form_city_placeholder }}">
-                        <input class="cs-select" name="select" type="text" placeholder="Select">
-                    </label>
+                    <div class="cs-form-row">
+                        <label class="sl-fade-in-up">
+                            {{ form_country_label }}
+                            <input required type="text" id="country" name="country" placeholder="{{ form_country_placeholder }}">
+                        </label>
+                        
+                        <label class="sl-fade-in-up">
+                            {{ form_city_label }}
+                            <input required type="text" id="city" name="city" placeholder="{{ form_city_placeholder }}">
+                        </label>
+                    </div>
                     
                     <label class="sl-fade-in-up">
                         {{ form_phone_label }}
                         <input required type="tel" id="phone" name="phone" placeholder="{{ form_phone_placeholder }}">
+                        <input class="cs-select" name="select" type="text" placeholder="Select">
                     </label>
                     
                     <label class="cs-label-message sl-fade-in-up">
