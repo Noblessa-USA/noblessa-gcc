@@ -274,7 +274,7 @@
                     
                     <label class="sl-fade-in-up">
                         {{ form_phone_label }}
-                        <input required type="tel" id="phone" name="phone" placeholder="{{ form_phone_placeholder }}">
+                        <input required type="tel" id="phone" name="phone" placeholder="{{ form_phone_placeholder }}" pattern="\d{10,}" title="Please enter at least 10 digits">
                         <input class="cs-select" name="select" type="text" placeholder="Select">
                     </label>
                     

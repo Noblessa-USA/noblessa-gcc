@@ -144,26 +144,14 @@
         }
     }
 
-    // Add phone number formatting
-    function initPhoneFormatting() {
+    // Add phone number validation (minimum 10 digits)
+    function initPhoneValidation() {
         const phoneInput = document.querySelector('#phone');
         
         if (phoneInput) {
-            phoneInput.addEventListener('input', function(e) {
-                let value = e.target.value.replace(/\D/g, '');
-                
-                if (value.length > 10) {
-                    value = value.substring(0, 10);
-                }
-                
-                if (value.length >= 6) {
-                    value = `(${value.substring(0, 3)}) ${value.substring(3, 6)}-${value.substring(6)}`;
-                } else if (value.length >= 3) {
-                    value = `(${value.substring(0, 3)}) ${value.substring(3)}`;
-                }
-                
-                e.target.value = value;
-            });
+            phoneInput.setAttribute('pattern', '\\d{10,}');
+            phoneInput.setAttribute('title', 'Please enter at least 10 digits');
+            phoneInput.setAttribute('inputmode', 'tel');
         }
     }
 
@@ -216,7 +204,7 @@
         trackTimeOnPage();
         trackScrollDepth();
         trackImageViews();
-        initPhoneFormatting();
+        initPhoneValidation();
         initZipValidation();
         trackVideoEngagement();
     }
