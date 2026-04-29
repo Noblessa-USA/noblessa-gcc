@@ -7,7 +7,7 @@ module.exports = [
         city: 'Dubai',
         state: 'UAE',
         phone: '',
-        email: 'info@noblessa.me',
+        email: 'info@al-essa.me',
         image: 'https://noblessa.me/wp-content/uploads/2023/02/noblessa_dubai_interior-1024x461.jpeg'
     },
     {
@@ -17,7 +17,7 @@ module.exports = [
         city: 'Riyadh',
         state: 'KSA',
         phone: '',
-        email: 'info@noblessa.me',
+        email: 'info@al-essa.me',
         image: 'https://noblessa.me/wp-content/uploads/2023/02/noblessa_riyadh-1024x768.jpeg'
     },
     {
@@ -27,7 +27,7 @@ module.exports = [
         city: 'Jeddah',
         state: 'KSA',
         phone: '',
-        email: 'info@noblessa.me',
+        email: 'info@al-essa.me',
         image: 'https://noblessa.me/wp-content/uploads/2023/02/noblessa_djeddah-1024x768.jpeg'
     },
     {
@@ -37,7 +37,7 @@ module.exports = [
         city: 'Al Ahsa',
         state: 'KSA',
         phone: '',
-        email: 'info@noblessa.me',
+        email: 'info@al-essa.me',
         image: 'https://noblessa.me/wp-content/uploads/2023/09/Noblessa-PAU-60-scaled-1-1024x683.jpg'
     },
     {
@@ -47,7 +47,7 @@ module.exports = [
         city: 'Al Qassim',
         state: 'KSA',
         phone: '',
-        email: 'info@noblessa.me',
+        email: 'info@al-essa.me',
         image: 'https://noblessa.me/wp-content/uploads/2023/09/Noblessa-BEZIERS-78-scaled-1-1024x683.jpg'
     },
     {
@@ -57,7 +57,7 @@ module.exports = [
         city: 'Kuwait City',
         state: 'Kuwait',
         phone: '',
-        email: 'info@noblessa.me',
+        email: 'info@al-essa.me',
         image: 'https://noblessa.me/wp-content/uploads/2023/01/Grace_881_M_R1-1024x717.jpg'
     }
 ]
