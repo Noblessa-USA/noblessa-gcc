@@ -15,7 +15,8 @@ module.exports = {
     socials: {
         facebook: "https://www.facebook.com/noblessakitchensgcc/",
         instagram: "https://www.instagram.com/noblessa.gcc/",
-        linkedin: "https://www.linkedin.com/company/noblessa-gcc"
+        linkedin: "https://www.linkedin.com/company/noblessa-gcc",
+        tiktok: "https://www.tiktok.com/@noblessa.gcc"
     },
     //! Make sure you include the file protocol (e.g. https://) and that NO TRAILING SLASH is included
     domain: "https://noblessa.me",

@@ -7,7 +7,7 @@ tags: "sitemap"
 lang: ar
 
 # Hero Section
-hero_title: "استمتع بحياة <span class='cs-linebreak'>أكثر جمالًا</span>"
+hero_title: " استمتع بحياة<span class='cs-linebreak'> أكثر جمالاً</span>"
 
 # Philosophy Section
 philosophy_topper: "فلسفتنا"
@@ -33,8 +33,8 @@ video_topper: "معرض الفيديو"
 video_title: "عِش تجربة نوبليسا.. بكل تفاصيلها"
 video_text: "استكشف كيف ترتقي نوبليسا بمساحات المعيشة من خلال مجموعة مختارة من مقاطع الفيديو تبدأ بأفكار التصميم وحتى تفاصيل التنفيذ. وتأمل مستوى الدقة والإبداع في كل مشروع."
 
-video_slide1_title: "الجزء 1: منزل الغابة العصري"
-video_slide2_title: "الجزء 2: منزل جبلي عصري"
-video_slide3_title: "الجزء 3: منزل عصري بلمسة حيوية"
+video_slide1_title: "الجزء الاول"
+video_slide2_title: "الجزء الثاني"
+video_slide3_title: "الجزء الثالث"
 ---
 
