@@ -7,7 +7,7 @@ tags: "sitemap"
 lang: ar
 
 # Hero Section
-hero_title: " استمتع بحياة<span class='cs-linebreak'> أكثر جمالاً</span>"
+hero_title: " عش الحياة الجميلة"
 
 # Philosophy Section
 philosophy_topper: "فلسفتنا"
