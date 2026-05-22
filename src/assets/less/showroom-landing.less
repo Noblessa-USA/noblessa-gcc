@@ -1,0 +1,748 @@
+// ─────────────────────────────────────────────────────────────────────────────
+// SHOWROOM LANDING PAGE STYLES
+// Per-city showroom landing page (e.g. /en/showrooms/dubai/)
+// ─────────────────────────────────────────────────────────────────────────────
+
+@import "_leaflet.less";
+
+/*-- -------------------------- -->
+<---   SECTION 1 — Hero Banner   -->
+<--- -------------------------- -*/
+
+/* Override banner-slideshow on showroom landing pages */
+#banner-slideshow-2285 {
+    min-height: 70vh;
+    /* Override root.less padding-top: 200px — use flexbox centering instead */
+    padding-top: 120px;
+    padding-bottom: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    /* Center the container content */
+    .cs-container {
+        align-items: center;
+        text-align: center;
+    }
+
+    .cs-text-wrapper {
+        align-items: center;
+    }
+
+    /* Center-align headline and subheadline */
+    .cs-int-title,
+    .cs-text {
+        text-align: center;
+    }
+
+    /* Reduce the large bottom margin that normally precedes breadcrumbs */
+    .cs-text {
+        margin-bottom: 1.5rem;
+    }
+
+    /* CTA button: white text to stay visible over the dark overlay */
+    .cs-banner-cta {
+        color: var(--bodyTextColorWhite);
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+
+        .cs-hover-underline {
+            color: var(--bodyTextColorWhite);
+        }
+
+        img {
+            filter: brightness(0) invert(1);
+        }
+    }
+}
+
+/* Override RTL rule from root.less — keep text centered on Arabic showroom pages too */
+[dir="rtl"] #banner-slideshow-2285 {
+    .cs-container {
+        align-items: center !important;
+        text-align: center !important;
+    }
+
+    .cs-text-wrapper {
+        align-items: center !important;
+    }
+
+    .cs-int-title,
+    .cs-text {
+        text-align: center !important;
+    }
+}
+
+/*-- -------------------------- -->
+<---    SECTION 3 — Why Noblessa -->
+<--- -------------------------- -*/
+
+#why-noblessa {
+    padding: 80px 16px;
+    background-color: #f7f5f1;
+
+    .cs-container {
+        width: 100%;
+        max-width: 1280px;
+        margin: 0 auto;
+    }
+
+    .cs-text-content {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 56px;
+
+        .cs-title {
+            font-size: clamp(2rem, 4vw, 3rem);
+            margin: 0 0 16px;
+        }
+
+        .cs-divider {
+            display: inline-block;
+            width: 60px;
+            height: 2px;
+            background-color: #111;
+            margin: 0 auto;
+        }
+    }
+
+    .cs-features-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+
+    .cs-feature-card {
+        padding: 32px 24px;
+        background-color: #fff;
+        border-radius: 4px;
+        box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
+
+        .cs-feature-title {
+            font-size: 1.25rem;
+            line-height: 1.3;
+            margin: 0 0 12px;
+            color: #111;
+        }
+
+        .cs-feature-text {
+            font-size: 0.95rem;
+            line-height: 1.6;
+            margin: 0;
+            color: #555;
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    #why-noblessa .cs-features-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 32px;
+    }
+}
+
+/*-- -------------------------- -->
+<---   SECTION 4 — Experience    -->
+<--- -------------------------- -*/
+
+#showroom-experience {
+    padding: 80px 16px;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)), url('/assets/images/collections/divine/divine1.webp');
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+
+    .cs-container {
+        width: 100%;
+        max-width: 900px;
+        margin: 0 auto;
+        background-color: #fff;
+        padding: clamp(2rem, 5vw, 4rem);
+        border-radius: 4px;
+        box-shadow: 0 4px 32px rgba(0, 0, 0, 0.12);
+    }
+
+    .cs-text-content {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 56px;
+
+        .cs-title {
+            font-size: clamp(2rem, 4vw, 3rem);
+            margin: 0 0 16px;
+        }
+
+        .cs-text {
+            max-width: 640px;
+            margin: 0 auto 16px;
+            line-height: 1.6;
+            color: #555;
+            text-align: center;
+        }
+
+        .cs-divider {
+            display: inline-block;
+            width: 60px;
+            height: 2px;
+            background-color: #111;
+            margin-top: 8px;
+        }
+    }
+
+    .cs-steps {
+        list-style: none;
+        padding: 0;
+        margin: 0 0 48px;
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .cs-step {
+        display: flex;
+        gap: 24px;
+        align-items: flex-start;
+
+        .cs-step-number {
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            font-weight: 700;
+            line-height: 1;
+            color: transparent;
+            -webkit-text-stroke: 1px #111;
+            flex-shrink: 0;
+            min-width: 4rem;
+        }
+
+        .cs-step-body {
+            flex: 1;
+        }
+
+        .cs-step-title {
+            font-size: 1.25rem;
+            line-height: 1.3;
+            margin: 0 0 8px;
+            color: #111;
+        }
+
+        .cs-step-text {
+            font-size: 0.95rem;
+            line-height: 1.6;
+            margin: 0;
+            color: #555;
+        }
+    }
+
+    .cs-experience-cta {
+        text-align: center;
+    }
+}
+
+/*-- -------------------------- -->
+<---   SECTION 6 — Visit (Map)   -->
+<--- -------------------------- -*/
+
+#showroom-visit {
+    padding: 80px 16px;
+    background-color: #fff;
+
+    .cs-container {
+        width: 100%;
+        max-width: 1280px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 40px;
+        align-items: stretch;
+    }
+
+    .cs-visit-content {
+        .cs-title {
+            font-size: clamp(1.75rem, 3.5vw, 2.5rem);
+            margin: 0 0 16px;
+        }
+
+        .cs-divider {
+            display: inline-block;
+            width: 60px;
+            height: 2px;
+            background-color: #111;
+            margin-bottom: 24px;
+        }
+    }
+
+    .cs-visit-info {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        margin-bottom: 24px;
+    }
+
+    .cs-visit-row {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+    }
+
+    .cs-visit-label {
+        font-size: 0.75rem;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        color: #888;
+    }
+
+    .cs-visit-value {
+        font-size: 1rem;
+        line-height: 1.5;
+        color: #111;
+        text-decoration: none;
+    }
+
+    a.cs-visit-value:hover {
+        text-decoration: underline;
+    }
+
+    .cs-visit-photo {
+        margin-top: 32px;
+        overflow: hidden;
+        border-radius: 4px;
+
+        img {
+            width: 100%;
+            height: auto;
+            display: block;
+            object-fit: cover;
+            aspect-ratio: 4 / 3;
+        }
+    }
+
+    .cs-map-container {
+        width: 100%;
+        min-height: 400px;
+        height: 100%;
+        border-radius: 4px;
+        overflow: hidden;
+
+        // Custom map pin marker
+        .custom-marker {
+            background: transparent;
+            border: none;
+        }
+
+        .marker-pin {
+            width: (30/16rem);
+            height: (30/16rem);
+            border-radius: 50% 50% 50% 0;
+            background: var(--secondary);
+            position: absolute;
+            transform: rotate(-45deg);
+            left: 50%;
+            top: 50%;
+            margin: (-15/16rem) 0 0 (-15/16rem);
+            animation: marker-bounce 2s;
+
+            &:after {
+                content: '';
+                width: (14/16rem);
+                height: (14/16rem);
+                margin: (8/16rem) 0 0 (8/16rem);
+                background: #fff;
+                position: absolute;
+                border-radius: 50%;
+            }
+        }
+
+        .marker-inner {
+            width: (14/16rem);
+            height: (14/16rem);
+            background: #fff;
+            border-radius: 50%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) rotate(45deg);
+        }
+    }
+}
+
+@keyframes marker-bounce {
+    0%, 20%, 50%, 80%, 100% { transform: translateY(0) rotate(-45deg); }
+    40% { transform: translateY(-10px) rotate(-45deg); }
+    60% { transform: translateY(-5px) rotate(-45deg); }
+}
+
+@media (min-width: 900px) {
+    #showroom-visit .cs-container {
+        grid-template-columns: 1fr 1fr;
+        gap: 48px;
+    }
+
+    #showroom-visit .cs-map-container {
+        min-height: 500px;
+    }
+}
+
+/*-- -------------------------- -->
+<---   SECTION 7 — CTA Close     -->
+<--- -------------------------- -*/
+
+#showroom-cta-close {
+    padding: 100px 16px;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    text-align: center;
+
+    .cs-container {
+        width: 100%;
+        max-width: 800px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 16px;
+    }
+
+    .cs-cta-support {
+        font-size: 0.75rem;
+        text-transform: uppercase;
+        letter-spacing: 0.2em;
+        color: rgba(255, 255, 255, 0.7);
+    }
+
+    .cs-cta-headline {
+        font-size: clamp(2rem, 5vw, 3.5rem);
+        line-height: 1.1;
+        margin: 0;
+        color: #fff;
+    }
+
+    .cs-cta-subheadline {
+        font-size: 1rem;
+        line-height: 1.6;
+        max-width: 600px;
+        margin: 0;
+        color: rgba(255, 255, 255, 0.85);
+    }
+
+    .cs-button-nodeco {
+        margin-top: 16px;
+        color: #fff;
+
+        .cs-hover-underline {
+            color: #fff;
+        }
+
+        img {
+            filter: brightness(0) invert(1);
+        }
+    }
+}
+
+/*-- -------------------------- -->
+<---       RTL Adjustments       -->
+<--- -------------------------- -*/
+
+[dir="rtl"] {
+    #showroom-experience .cs-step {
+        text-align: right;
+    }
+
+    #showroom-visit .cs-visit-content {
+        text-align: right;
+    }
+
+    #showroom-cta-close {
+        .cs-cta-subheadline {
+            text-align: center !important;
+        }
+    }
+}
+
+/*-- -------------------------- -->
+<---         Contact Modal      -->
+<--- -------------------------- -*/
+
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+    body.modal-open {
+        overflow: hidden;
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+    }
+
+    .modal-overlay {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background: rgba(0, 0, 0, 0.8);
+        z-index: 99999;
+        align-items: center;
+        justify-content: center;
+        padding: (16/16rem);
+        backdrop-filter: blur(4px);
+        -webkit-backdrop-filter: blur(4px);
+        overflow-y: auto;
+    }
+
+    .modal-container {
+        background: #fff;
+        border-radius: (12/16rem);
+        max-width: (480/16rem);
+        width: 100%;
+        max-height: 90vh;
+        overflow-y: auto;
+        box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+        animation: modalSlideIn 0.3s ease-out;
+        position: relative;
+        z-index: 100000;
+        margin: auto;
+        transform: translateZ(0);
+        -webkit-transform: translateZ(0);
+    }
+
+    .modal-close {
+        position: absolute;
+        top: (12/16rem);
+        right: (12/16rem);
+        background: rgba(0, 0, 0, 0.7);
+        border: none;
+        font-size: (18/16rem);
+        cursor: pointer;
+        color: rgba(255, 255, 255, 0.9);
+        transition: all 0.3s ease;
+        padding: 0;
+        width: (32/16rem);
+        height: (32/16rem);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        z-index: 100001;
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+
+        &:hover {
+            background: rgba(197, 152, 82, 0.9);
+            color: #fff;
+            transform: scale(1.1);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+        }
+    }
+
+    .modal-image-header {
+        width: 100%;
+        height: (180/16rem);
+        overflow: hidden;
+        position: relative;
+    }
+
+    .modal-header-img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+        display: block;
+    }
+
+    .modal-header {
+        padding: (12/16rem) (16/16rem);
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        color: #fff;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: 10;
+        backdrop-filter: blur(16px);
+        -webkit-backdrop-filter: blur(16px);
+        background: transparent;
+        pointer-events: auto;
+    }
+
+    .modal-title {
+        font-size: (20/16rem);
+        font-weight: 700;
+        letter-spacing: 1px;
+        margin: 0;
+        color: #fff;
+        font-family: var(--headerFont);
+        text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+        line-height: 1.2;
+    }
+
+    .modal-body {
+        padding: (24/16rem) (16/16rem) (32/16rem) (16/16rem);
+    }
+
+    .contact-form {
+        display: flex;
+        flex-direction: column;
+        gap: (16/16rem);
+    }
+
+    .form-group {
+        display: flex;
+        flex-direction: column;
+        gap: (6/16rem);
+
+        label {
+            font-size: (13/16rem);
+            font-weight: 600;
+            color: var(--headerColor);
+        }
+
+        input,
+        textarea {
+            padding: (10/16rem) (14/16rem);
+            border: 2px solid #d1d5db;
+            border-radius: (6/16rem);
+            font-size: (14/16rem);
+            font-family: var(--bodyFont);
+            transition: all 0.3s ease;
+            background: #fff;
+
+            &:focus {
+                outline: none;
+                border-color: var(--primary);
+                box-shadow: 0 0 0 3px rgba(197, 152, 82, 0.1);
+            }
+
+            &::placeholder {
+                color: #9ca3af;
+            }
+        }
+
+        textarea {
+            resize: vertical;
+            min-height: (80/16rem);
+        }
+
+        .cs-select {
+            display: none;
+        }
+    }
+
+    .cs-hidden {
+        display: none;
+    }
+
+    .form-row {
+        display: flex;
+        flex-direction: column;
+        gap: (16/16rem);
+
+        .form-group {
+            flex: 1;
+        }
+    }
+
+    .form-actions {
+        display: flex;
+        flex-direction: column;
+        gap: (16/16rem);
+        align-items: center;
+        justify-content: center;
+        margin-top: (4/16rem);
+    }
+
+    .cs-recaptcha {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    @keyframes modalSlideIn {
+        from {
+            opacity: 0;
+            transform: translateY(-20px) scale(0.95);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0) scale(1);
+        }
+    }
+}
+
+/* Tablet - 768px */
+@media only screen and (min-width: 48rem) {
+    .modal-overlay {
+        padding: (24/16rem);
+    }
+
+    .modal-container {
+        max-width: (600/16rem);
+        border-radius: (16/16rem);
+    }
+
+    .modal-close {
+        top: (16/16rem);
+        right: (16/16rem);
+        width: (36/16rem);
+        height: (36/16rem);
+        font-size: (20/16rem);
+    }
+
+    .modal-image-header {
+        height: (240/16rem);
+    }
+
+    .modal-header {
+        padding: (16/16rem);
+    }
+
+    .modal-title {
+        font-size: (24/16rem);
+    }
+
+    .modal-body {
+        padding: (40/16rem) (32/16rem);
+    }
+
+    .contact-form {
+        gap: (24/16rem);
+    }
+
+    .form-group {
+        gap: (10/16rem);
+
+        label {
+            font-size: (15/16rem);
+        }
+
+        input,
+        textarea {
+            padding: (14/16rem) (18/16rem);
+            font-size: (15/16rem);
+            border-radius: (8/16rem);
+        }
+
+        textarea {
+            min-height: (100/16rem);
+        }
+    }
+
+    .form-row {
+        flex-direction: row;
+        gap: (20/16rem);
+    }
+
+    .form-actions {
+        margin-top: (8/16rem);
+        gap: (16/16rem);
+    }
+}

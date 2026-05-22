@@ -4,3 +4,5 @@ node_modules
 public
 # Local Netlify folder
 .netlify
+# Raw source images (large files, not for deployment)
+src/assets/images/KSA Showrooms/

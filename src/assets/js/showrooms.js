@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', function() {
         showroomSuffix: translationsEl?.dataset.showroomSuffix || 'Showroom',
         addressLabel: translationsEl?.dataset.addressLabel || 'Address',
         phoneLabel: translationsEl?.dataset.phoneLabel || 'Phone',
-        viewGoogleBtn: translationsEl?.dataset.viewGoogleBtn || 'View on Google',
+        viewGoogleBtn: translationsEl?.dataset.viewGoogleBtn || 'Learn More',
         contactBtn: translationsEl?.dataset.contactBtn || 'Contact',
         getDirectionsBtn: translationsEl?.dataset.getDirectionsBtn || 'Get Directions',
         callNowBtn: translationsEl?.dataset.callNowBtn || 'Call Now',
@@ -232,8 +232,10 @@ document.addEventListener('DOMContentLoaded', function() {
     // Generate showroom cards dynamically
     function generateShowroomCards() {
         const showroomGrid = document.getElementById('showroom-grid');
-        
+        const lang = document.documentElement.lang || 'en';
+
         showrooms.forEach(function(showroom) {
+            const landingUrl = `/${lang}/showrooms/${showroom.location}/`;
             const cardHTML = `
                 <div class="cs-showroom-card" data-location="${showroom.location}">
                     <div class="cs-card-header">
@@ -262,7 +264,7 @@ document.addEventListener('DOMContentLoaded', function() {
                         <div class="cs-card-contact">
                             <div class="cs-card-contact-item">
                                 <span class="cs-contact-label">${t.addressLabel}:</span>
-                                <span class="cs-contact-value">${showroom.address}</span>
+                                <a href="${showroom.mapUrl}" target="_blank" rel="noopener noreferrer" class="cs-contact-value">${showroom.address}</a>
                             </div>
                             <div class="cs-card-contact-item">
                                 <span class="cs-contact-label">${t.phoneLabel}:</span>
@@ -270,7 +272,7 @@ document.addEventListener('DOMContentLoaded', function() {
                             </div>
                         </div>
                         <div class="cs-card-actions">
-                            <a href="${showroom.mapUrl}" target="_blank" class="cs-action-btn cs-secondary">
+                            <a href="${landingUrl}" class="cs-action-btn cs-secondary">
                                 ${t.viewGoogleBtn}
                             </a>
                             <button class="cs-action-btn cs-primary contact-modal-btn" data-showroom="${showroom.name}">
