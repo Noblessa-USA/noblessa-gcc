@@ -49,6 +49,10 @@ class CookieConsent {
     }
 
     setup() {
+        // Make the instance globally available before applyConsent() runs,
+        // so cookie-utils.js can call window.cookieConsent.isAllowed()
+        window.cookieConsent = this;
+
         this.createBanner();
         this.createPreferencesToggle();
         this.bindEvents();
