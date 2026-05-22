@@ -351,10 +351,9 @@ class CookieConsent {
     }
 
     enableAnalytics() {
-        // Enable Google Analytics or other analytics scripts
-        console.log('Analytics cookies enabled');
-        // Example: Load Google Analytics
-        // this.loadGoogleAnalytics();
+        if (typeof loadGoogleAnalytics === 'function') {
+            loadGoogleAnalytics('G-4Q0JLG99TV');
+        }
     }
 
     disableAnalytics() {
@@ -365,8 +364,9 @@ class CookieConsent {
     }
 
     enableMarketing() {
-        // Enable marketing/advertising scripts
-        console.log('Marketing cookies enabled');
+        if (typeof loadFacebookPixel === 'function') {
+            loadFacebookPixel('1892624064482203');
+        }
     }
 
     disableMarketing() {

@@ -41,6 +41,8 @@ function loadGoogleAnalytics(measurementId) {
         return;
     }
 
+    if (window.gtag) return; // Already loaded
+
     // Load gtag script
     const gtagScript = document.createElement('script');
     gtagScript.async = true;

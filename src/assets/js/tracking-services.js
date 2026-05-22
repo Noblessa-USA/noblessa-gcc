@@ -5,7 +5,7 @@
 // Example 1: Google Analytics 4
 // Replace 'GA_MEASUREMENT_ID' with your actual Google Analytics 4 measurement ID
 function initGoogleAnalytics() {
-    const measurementId = 'G-29MGD5D9V5'; // Replace with your GA4 ID
+    const measurementId = 'G-4Q0JLG99TV';
     
     // Only load if analytics consent is given
     loadWithConsent(() => {
@@ -15,7 +15,7 @@ function initGoogleAnalytics() {
 
 // Example 2: Facebook Pixel
 function initFacebookPixel() {
-    const pixelId = 'YOUR_FACEBOOK_PIXEL_ID'; // Replace with your Pixel ID
+    const pixelId = '1892624064482203';
     
     // Only load if marketing consent is given
     loadWithConsent(() => {
@@ -129,18 +129,7 @@ function initChatWidget() {
     }, 'marketing', 'Chat Widget');
 }
 
-// Initialize all services when DOM is ready
-document.addEventListener('DOMContentLoaded', function() {
-    // Uncomment the services you want to use:
-    
-    initGoogleAnalytics();
-    // initFacebookPixel();
-    // initGoogleTagManager();
-    // initHubSpot();
-    // initHotjar();
-    // initCustomAnalytics();
-    // initChatWidget();
-});
+// Services are initialized by cookie-consent.js via enableAnalytics() and enableMarketing()
 
 // You can also initialize services based on specific page conditions
 if (window.location.pathname === '/contact/') {
