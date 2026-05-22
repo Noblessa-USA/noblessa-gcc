@@ -2,6 +2,7 @@
 class CookieConsent {
     constructor() {
         this.consentKey = 'noblessa-cookie-consent';
+        this.consentVersion = '2'; // Bump this number to force all users to re-consent
         this.consentData = this.getStoredConsent();
         this.hasGPC = this.detectGPC();
         this.lang = this.detectLanguage();
@@ -79,7 +80,10 @@ class CookieConsent {
 
     hasValidConsent() {
         if (!this.consentData) return false;
-        
+
+        // Invalidate consent if the version has changed
+        if (this.consentData.version !== this.consentVersion) return false;
+
         // Check if consent is expired (30 days)
         const thirtyDaysAgo = new Date();
         thirtyDaysAgo.setDate(thirtyDaysAgo.getDate() - 30);
@@ -273,6 +277,7 @@ class CookieConsent {
             analytics: true,
             marketing: true,
             timestamp: new Date().toISOString(),
+            version: this.consentVersion,
             gpc: this.hasGPC
         };
         
@@ -288,6 +293,7 @@ class CookieConsent {
             analytics: false,
             marketing: false,
             timestamp: new Date().toISOString(),
+            version: this.consentVersion,
             gpc: this.hasGPC
         };
         
@@ -307,6 +313,7 @@ class CookieConsent {
             analytics: analyticsCheckbox ? analyticsCheckbox.checked : false,
             marketing: marketingCheckbox ? marketingCheckbox.checked : false,
             timestamp: new Date().toISOString(),
+            version: this.consentVersion,
             gpc: this.hasGPC
         };
         
