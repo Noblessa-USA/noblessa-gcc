@@ -9,17 +9,17 @@ description: "تفضل بزيارة معرض نوبليسا في القصيم ب
 hero_headline: "فخامة ألمانية.. في قلب القصيم"
 hero_subheadline: "مطابخ صُممت خصيصًا لتناسب أسلوب حياتك في القصيم."
 hero_cta: "احجز استشارة تصميم شخصية"
-hero_slide_1: "/assets/images/showrooms/alqassim.jpg"
-hero_slide_2: "/assets/images/showrooms/alqassim.jpg"
-hero_slide_3: "/assets/images/showrooms/alqassim.jpg"
-hero_slide_4: "/assets/images/showrooms/alqassim.jpg"
+hero_slide_1: "/assets/images/kitchen/Header/DSC08134-1.webp"
+hero_slide_2: "/assets/images/kitchen/Collections Grid/Iconic/K_Iconic216_S_11462.webp"
+hero_slide_3: "/assets/images/kitchen/Collections Grid/Divine/K_30544_22_Divine_961_M.webp"
+hero_slide_4: "/assets/images/kitchen/Collections Grid/Iconic/K_Iconic216_S_11463.webp"
 
-visual_proof_image_1: "/assets/images/showrooms/alqassim.jpg"
-visual_proof_image_2: "/assets/images/showrooms/alqassim.jpg"
+visual_proof_image_1: "/assets/images/kitchen/Header/DSC08134-1.webp"
+visual_proof_image_2: "/assets/images/kitchen/Collections Grid/Iconic/K_49698_19_Ionic_216_B704107.webp"
 
-inspiration_image_1: "/assets/images/showrooms/alqassim.jpg"
-inspiration_image_2: "/assets/images/showrooms/alqassim.jpg"
-inspiration_image_3: "/assets/images/showrooms/alqassim.jpg"
+inspiration_image_1: "/assets/images/kitchen/Collections Grid/Divine/409221_25_Divine_961_M.webp"
+inspiration_image_2: "/assets/images/kitchen/Collections Grid/Iconic/K_Iconic216_S_11462.webp"
+inspiration_image_3: "/assets/images/kitchen/Collections Grid/Divine/K_30656_21_Divine_966_M.webp"
 
 visit_headline: "تفضل بزيارتنا"
 showroom_address: "7993 Umar Ibn Al Khatab Rd, Ar Rayan, Buraydah 52388, Saudi Arabia"
@@ -27,7 +27,7 @@ showroom_phone: "+966 55 166 5836"
 showroom_map_url: "https://maps.app.goo.gl/fFAtaFcuS2Wv6Sxq8"
 showroom_lat: 26.3273
 showroom_lng: 43.9750
-showroom_photo: "/assets/images/showrooms/alqassim.jpg"
+showroom_photo: "/assets/images/kitchen/Header/DSC08134-1.webp"
 
 form_contact_title: "تواصل معنا"
 form_name_label: "الاسم الكامل"
