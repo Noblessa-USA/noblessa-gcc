@@ -1,8 +1,9 @@
 {
     "layout": "layouts/post.html",
     "tags": "post",
+    "lang": "en",
     "eleventyComputed": {
         "preloadImg": "{{ image }}",
-        "permalink": "/blog/{{ url | slugify }}/index.html"
+        "permalink": "/en/blog/{{ url | slugify }}/index.html"
     }
 }

@@ -1,46 +1,213 @@
 {% extends "layouts/base.html" %}
 
 {% block head %}
-    <link rel="preload" as="image" href="{% getUrl "/assets/images/livingrooms/livingroomstaircase.webp" | resize({ width: 640, height: 600 }) | avif %}"/>
     <link rel="stylesheet" href="/assets/css/blog.css">
     <script src="/assets/js/blog.js" defer></script>
 {% endblock %}
 
 {% block body %}
-    <!-- Banner -->
-    <div id="banner-photo">
+    <!-- ============================================ -->
+    <!--              Banner Slideshow                -->
+    <!-- ============================================ -->
+
+    <div id="banner-slideshow-2285">
         <div class="cs-container">
             <div class="cs-text-wrapper">
                 <h1 class="cs-int-title sl-fade-in-right">{{ banner_title }}</h1>
-                <p class="cs-text sl-fade-in-right">{{ banner_text }}</p>
+                <p class="cs-text sl-fade-in-right">{{ description }}</p>
             </div>
             <div class="cs-breadcrumbs">
-                <a href="{{ '/' | locale_url }}" class="cs-link"><span class="cs-link-text">{{ breadcrumb_home }}</span></a>
-                <a href="{{ '/blog/' | locale_url }}" class="cs-link cs-active"><span class="cs-link-text">{{ breadcrumb_blog }}</span></a>
+                <a href="{{ '/' | locale_url }}" class="cs-link">{{ breadcrumb_home }}</a>
+                <a href="{{ '/blog/' | locale_url }}" class="cs-link cs-active">{{ breadcrumb_current }}</a>
             </div>
         </div>
-        <div class="cs-banner-bg">
-            <div class="cs-bg">
-                <img src="/assets/images/livingrooms/livingroomstaircase.webp" alt="Living room with staircase" loading="eager">
+        <!--Background Image Slideshow-->
+        <div class="cs-banner-slideshow">
+            <div class="cs-slide">
+                <img src="/assets/images/collections/chance/chance1.webp" alt="Noblessa Chance Kitchen" loading="eager">
+            </div>
+            <div class="cs-slide">
+                <img src="/assets/images/collections/serenity/serenityalpinewhite.webp" alt="Noblessa Serenity Kitchen" loading="lazy">
+            </div>
+            <div class="cs-slide">
+                <img src="/assets/images/collections/spirit/spirit1.webp" alt="Noblessa Spirit Kitchen" loading="lazy">
+            </div>
+            <div class="cs-slide">
+                <img src="/assets/images/collections/surf/surf1.webp" alt="Noblessa Surf Kitchen" loading="lazy">
             </div>
         </div>
     </div>
+    <script>
+        // Banner Slideshow Script
+        document.addEventListener('DOMContentLoaded', function() {
+            const slides = document.querySelectorAll('.cs-slide');
+            let currentSlide = 0;
+            const slideInterval = 5000; // 5 seconds
+            
+            function showSlide(index) {
+                slides.forEach((slide, i) => {
+                    slide.classList.remove('active');
+                });
+                
+                // Use requestAnimationFrame to ensure the class removal is processed
+                requestAnimationFrame(() => {
+                    slides[index].classList.add('active');
+                });
+            }
+            
+            function nextSlide() {
+                currentSlide = (currentSlide + 1) % slides.length;
+                showSlide(currentSlide);
+            }
+            
+            // Auto-advance slides
+            setInterval(nextSlide, slideInterval);
+            
+            // Initialize with a slight delay to ensure Ken Burns effect triggers on first image
+            setTimeout(() => {
+                showSlide(currentSlide);
+            }, 100);
+        });
+    </script>
 
-    <!-- Blog Listings -->
+    <!-- ============================================ -->
+    <!--                 Blog Listings                -->
+    <!-- ============================================ -->
+
     <div id="blog-listing">
         <div class="cs-container">
+            <!-- Search and Filter Controls -->
             <div class="cs-controls">
                 <div class="cs-search-wrapper">
-                    <input type="text" id="blog-search" class="cs-search-input" placeholder="{{ search_placeholder }}" aria-label="Search blog posts">
+                    <input type="text" id="blog-search" class="cs-search-input" placeholder="{{ search_placeholder }}" aria-label="{{ search_label }}">
                     <svg class="cs-search-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M9 17C13.4183 17 17 13.4183 17 9C17 4.58172 13.4183 1 9 1C4.58172 1 1 4.58172 1 9C1 13.4183 4.58172 17 9 17Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                         <path d="M19 19L14.65 14.65" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                     </svg>
                 </div>
+
+                <div class="cs-filter-wrapper">
+                    <button class="cs-filter-button" id="filter-toggle" aria-expanded="false" aria-controls="filter-tags">
+                        <span>{{ filter_button_label }}</span>
+                        <svg class="cs-filter-icon" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M4 6L8 10L12 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                    <div class="cs-tags-dropdown" id="filter-tags" aria-hidden="true">
+                        <button class="cs-tag-filter" data-tag="all" aria-pressed="true">{{ filter_all }}</button>
+                        <button class="cs-tag-filter" data-tag="design tips" aria-pressed="false">{{ filter_design }}</button>
+                        <button class="cs-tag-filter" data-tag="kitchens" aria-pressed="false">{{ filter_kitchens }}</button>
+                        <button class="cs-tag-filter" data-tag="trends" aria-pressed="false">{{ filter_trends }}</button>
+                        <button class="cs-tag-filter" data-tag="news" aria-pressed="false">{{ filter_news }}</button>
+                        <button class="cs-tag-filter" data-tag="partners" aria-pressed="false">{{ filter_partners }}</button>
+                        <button class="cs-tag-filter" data-tag="bathrooms" aria-pressed="false">{{ filter_bathrooms }}</button>
+                    </div>
+                </div>
             </div>
-            <div class="cs-blog-grid" id="blog-grid"></div>
-            <div id="no-results" class="cs-no-results" style="display: none;">
-                <p>{{ no_results_text }}</p>
+
+            <!-- Active Filters Display -->
+            <div class="cs-active-filters" id="active-filters" style="display: none;">
+                <span class="cs-active-label">{{ active_filters_label }}</span>
+                <div class="cs-active-tags" id="active-tags"></div>
+                <button class="cs-clear-filters" id="clear-filters">{{ clear_all }}</button>
+            </div>
+
+            <!-- Blog Articles Grid -->
+            <div class="cs-articles-grid" id="articles-grid">
+                {%- set now = "" | getCurrentDate -%}
+                {%- set hasVisiblePosts = false -%}
+                {%- for post in collections.post | reverse -%}
+                    {%- if post.date <= now -%}
+                        {%- set hasVisiblePosts = true -%}
+                        {%- if lang == 'ar' -%}
+                            {%- set postTitle = post.data.title_ar or post.data.title -%}
+                            {%- set postDescription = post.data.description_ar or post.data.description -%}
+                            {%- set postTags = post.data.tags_ar or post.data.tags -%}
+                            {%- set postAlt = post.data.imageAlt_ar or post.data.imageAlt -%}
+                        {%- else -%}
+                            {%- set postTitle = post.data.title -%}
+                            {%- set postDescription = post.data.description -%}
+                            {%- set postTags = post.data.tags -%}
+                            {%- set postAlt = post.data.imageAlt -%}
+                        {%- endif -%}
+                    <article class="cs-article"
+                             data-title="{{ postTitle | lower }}"
+                             data-description="{{ postDescription | lower }}"
+                             data-tags="{% for tag in post.data.tags %}{% if tag != 'post' %}{{ tag | lower }}{% if not loop.last %},{% endif %}{% endif %}{% endfor %}"
+                             data-date="{{ post.date | postDate(lang) }}">
+                        <a href="{% if lang == 'ar' %}{{ post.url | replace('/en/', '/ar/') }}{% else %}{{ post.url }}{% endif %}" class="cs-article-link">
+                            <picture class="cs-article-image">
+                                <!--Mobile Image-->
+                                <source media="(max-width: 600px)" srcset="{% getUrl post.data.image | resize({ width: 576, height: 400 }) | avif %}" type="image/avif">
+                                <source media="(max-width: 600px)" srcset="{% getUrl post.data.image | resize({ width: 576, height: 400 }) | webp %}" type="image/webp">
+                                <source media="(max-width: 600px)" srcset="{% getUrl post.data.image | resize({ width: 576, height: 400 }) | jpeg %}" type="image/jpeg">
+                                <!--Tablet Image-->
+                                <source media="(max-width: 1024px)" srcset="{% getUrl post.data.image | resize({ width: 1142, height: 614 }) | avif %}" type="image/avif">
+                                <source media="(max-width: 1024px)" srcset="{% getUrl post.data.image | resize({ width: 1142, height: 614 }) | webp %}" type="image/webp">
+                                <source media="(max-width: 1024px)" srcset="{% getUrl post.data.image | resize({ width: 1142, height: 614 }) | jpeg %}" type="image/jpeg">
+                                <!--Desktop Image-->
+                                <source media="(min-width: 1024px)" srcset="{% getUrl post.data.image | resize({ width: 1142, height: 614 }) | avif %}" type="image/avif">
+                                <source media="(min-width: 1024px)" srcset="{% getUrl post.data.image | resize({ width: 1142, height: 614 }) | webp %}" type="image/webp">
+                                <source media="(min-width: 1024px)" srcset="{% getUrl post.data.image | resize({ width: 1142, height: 614 }) | jpeg %}" type="image/jpeg">
+                                <img src="{% getUrl post.data.image | resize({ width: 1142, height: 614 }) | jpeg %}" alt="{{ postAlt }}" width="571" height="307" decoding="async" loading="lazy">
+                            </picture>
+                            <div class="cs-article-content">
+                                <h2 class="cs-article-title">{{ postTitle }}</h2>
+                                <div class="cs-article-date">
+                                    <svg class="cs-calendar-icon" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <rect x="2" y="3" width="12" height="11" rx="2" stroke="currentColor" stroke-width="1.5"/>
+                                        <path d="M2 6H14" stroke="currentColor" stroke-width="1.5"/>
+                                        <path d="M5 1V4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                                        <path d="M11 1V4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+                                    </svg>
+                                    <span class="cs-date">{{ post.date | postDate(lang) }}</span>
+                                </div>
+                                <p class="cs-article-desc">{{ postDescription }}</p>
+                                <div class="cs-article-tags">
+                                    {%- for tag in postTags -%}
+                                        {%- if tag != 'post' and tag != 'sitemap' -%}
+                                            <span class="cs-tag">{{ tag }}</span>
+                                        {%- endif -%}
+                                    {%- endfor -%}
+                                </div>
+                                <span class="cs-read-more">
+                                    {{ read_more }}
+                                    <svg class="cs-arrow" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M1 8H15M15 8L8 1M15 8L8 15" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </span>
+                            </div>
+                        </a>
+                    </article>
+                    {%- endif -%}
+                {%- endfor -%}
+
+                {% if not hasVisiblePosts %}
+                    <div class="cs-no-results">
+                        <h2 class="cs-title">{{ no_recent_posts }}</h2>
+                    </div>
+                {% endif %}
+            </div>
+
+            <!-- No Results Message (JS-driven filtering) -->
+            <div class="cs-no-results" id="no-results" style="display: none;">
+                <svg class="cs-no-results-icon" width="64" height="64" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="11" cy="11" r="8" stroke="currentColor" stroke-width="2"/>
+                    <path d="M21 21L16.65 16.65" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                    <path d="M8 11H14M11 8V14" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+                <h2 class="cs-no-results-title">{{ no_results_title }}</h2>
+                <p class="cs-no-results-text">{{ no_results_text }}</p>
+            </div>
+
+            <!-- Load More Button -->
+            <div class="cs-load-more-wrapper" id="load-more-wrapper" style="display: none;">
+                <button class="cs-load-more-button" id="load-more-button">
+                    <span>{{ load_more }}</span>
+                    <svg class="cs-load-more-icon" width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M10 4V16M10 16L16 10M10 16L4 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
             </div>
         </div>
     </div>

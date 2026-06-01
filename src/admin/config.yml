@@ -42,20 +42,30 @@ collections:
       create: true
       slug: "{{slug}}"
       fields:
-          - { label: "Title", name: "title", widget: "string" }
+          # ── Shared fields ──────────────────────────────────────────────────
           - {
                 label: "URL Slug",
                 name: "url",
                 widget: "string",
                 hint: 'Specify where the page will be written to. If you use "Blog Post", the post will be accessible from "blog/blog-post"',
             }
-          - { label: "Description", name: "description", widget: "string", hint: 'Provide a brief summary of the blog post for SEO and preview purposes. This will be used as the Meta Description for SEO.' }
           - { label: "Author", name: "author", widget: "string", hint: 'This is only viewable internally. End users cannot see blog post authors.' }
           - { label: "Date", name: "date", widget: "datetime", hint: 'The date this article is published. If the date is set sometime in the future, the blog post will not appear on the site until that time and date. Make sure this is set to a time in the past to have it appear on the main blog page.' }
-          - { label: "Tags", name: "tags", widget: "list", default: ["post"], hint: 'Add the "post" tag to have this article appear on the main blog page. Tags can be, "Design Tips", "Kitchens", "Bathrooms", "Living Rooms", "Trends", "News", "Partners", "Info", and "Remodel"' }
           - { label: "Featured Image", name: "image", widget: "image", hint: 'This image will be used as the cover image for the blog post. Recommended Minimum dimensions: 1200x630 pixels.' }
-          - { label: "Image Caption", name: "imageAlt", widget: "string", hint: 'Provide a descriptive caption for the featured image for SEO & accessibility purposes.' }
-          - { label: "Body", name: "body", widget: "markdown" }
+
+          # ── English content ────────────────────────────────────────────────
+          - { label: "Title (English)", name: "title", widget: "string" }
+          - { label: "Description (English)", name: "description", widget: "string", hint: 'Brief summary used for SEO meta description and article preview.' }
+          - { label: "Tags (English)", name: "tags", widget: "list", default: ["post"], hint: 'Add "post" to display on the blog listing. Available tags: "Design Tips", "Kitchens", "Bathrooms", "Living Rooms", "Trends", "News", "Partners", "Info", "Remodel".' }
+          - { label: "Image Caption (English)", name: "imageAlt", widget: "string", hint: 'Descriptive alt text for the featured image (SEO & accessibility).' }
+          - { label: "Body (English)", name: "body", widget: "markdown" }
+
+          # ── Arabic content ─────────────────────────────────────────────────
+          - { label: "Title (Arabic)", name: "title_ar", widget: "string", hint: 'العنوان بالعربية' }
+          - { label: "Description (Arabic)", name: "description_ar", widget: "string", hint: 'وصف مختصر يُستخدم في SEO ومعاينة المقال.' }
+          - { label: "Tags (Arabic)", name: "tags_ar", widget: "list", default: ["post"], hint: 'أضف "post" لعرض المقال في قائمة المدونة.' }
+          - { label: "Image Caption (Arabic)", name: "imageAlt_ar", widget: "string", hint: 'نص بديل وصفي للصورة المميزة (SEO وإمكانية الوصول).' }
+          - { label: "Body (Arabic)", name: "body_ar", widget: "markdown", hint: 'محتوى المقال بالعربية.' }
     
     - name: "kitchen-collections"
       label: "Kitchen Collections"

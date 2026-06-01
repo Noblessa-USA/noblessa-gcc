@@ -2,3 +2,6 @@
 
 # Redirect root to English version
 /  /en/  302
+
+# Redirect old /blog/ post URLs to English versions
+/blog/:slug  /en/blog/:slug  301

@@ -1,0 +1,11 @@
+---
+pagination:
+  data: collections.post
+  size: 1
+  alias: post
+permalink: "/ar/blog/{{ post.data.url | slugify }}/index.html"
+lang: ar
+layout: layouts/post.html
+eleventyExcludeFromCollections: true
+---
+{{ post.data.body_ar | markdown | safe }}

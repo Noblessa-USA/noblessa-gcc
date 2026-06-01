@@ -1,38 +1,68 @@
 {% extends "layouts/base.html" %}
 
 {% block head %}
+    {%- if post -%}
+        {%- set _title = post.data.title_ar or post.data.title -%}
+        {%- set _description = post.data.description_ar or post.data.description -%}
+        {%- set _image = post.data.image -%}
+        {%- set _imageAlt = post.data.imageAlt_ar or post.data.imageAlt -%}
+        {%- set _date = post.date -%}
+        {%- set _tags = post.data.tags_ar or post.data.tags -%}
+    {%- else -%}
+        {%- set _title = title -%}
+        {%- set _description = description -%}
+        {%- set _image = image -%}
+        {%- set _imageAlt = imageAlt -%}
+        {%- set _date = date -%}
+        {%- set _tags = tags -%}
+    {%- endif -%}
     <link rel="stylesheet" href="/assets/css/blog.css">
 
     <script type="application/ld+json">
         {
             "@context": "https://schema.org",
             "@type": "Article",
-            {% if title %}"headline": "{{ title }} | Noblessa GCC",{% endif %}
-            {% if description %}"description": "{{ description | escape }}",{% endif %}
-            {% if image %}
+            {% if _title %}"headline": "{{ _title }} | Noblessa GCC",{% endif %}
+            {% if _description %}"description": "{{ _description | escape }}",{% endif %}
+            {% if _image %}
                 "image": {
                     "@type": "ImageObject",
-                    "url": "{{ client.domain }}{{ image }}",
+                    "url": "{{ client.domain }}{{ _image }}",
                     "width": 1200,
                     "height": 630
                 },
             {% endif %}
-            {% if date %}"datePublished": "{{ date | isoDate }}",{% endif %}
-            {% if date %}"dateModified": "{{ date | isoDate }}",{% endif %}
+            {% if _date %}"datePublished": "{{ _date | isoDate }}",{% endif %}
+            {% if _date %}"dateModified": "{{ _date | isoDate }}",{% endif %}
             {% if client.name %}
                 "publisher": {
                     "@type": "Organization",
                     "name": "{{ client.name }}"
                 },
             {% endif %}
-            {% if description %}"articleBody": "{{ description | safe }}",{% endif %}
+            {% if _description %}"articleBody": "{{ _description | safe }}",{% endif %}
             {% if client.domain and page.url %}"url": "{{ client.domain }}{{ page.url }}",{% endif %}
-            {% if tags %}"articleSection": "{{ tags }}"{% endif %}
+            {% if _tags %}"articleSection": "{{ _tags }}"{% endif %}
         }
     </script>
 {% endblock %}
 
 {% block body %}
+    {%- if post -%}
+        {%- set _title = post.data.title_ar or post.data.title -%}
+        {%- set _description = post.data.description_ar or post.data.description -%}
+        {%- set _image = post.data.image -%}
+        {%- set _imageAlt = post.data.imageAlt_ar or post.data.imageAlt -%}
+        {%- set _date = post.date -%}
+        {%- set _tags = post.data.tags_ar or post.data.tags -%}
+    {%- else -%}
+        {%- set _title = title -%}
+        {%- set _description = description -%}
+        {%- set _image = image -%}
+        {%- set _imageAlt = imageAlt -%}
+        {%- set _date = date -%}
+        {%- set _tags = tags -%}
+    {%- endif -%}
 
     <!-- ============================================ -->
     <!--            Banner Static Photo               -->
@@ -41,18 +71,18 @@
     <div id="blog-banner-photo">
         <div class="cs-container">
             <div class="cs-text-wrapper">
-                <h1 class="cs-int-title sl-fade-in-right">{{ title }}</h1>
-                <p class="cs-text sl-fade-in-right">{{ description }}</p>
+                <h1 class="cs-int-title sl-fade-in-right">{{ _title }}</h1>
+                <p class="cs-text sl-fade-in-right">{{ _description }}</p>
             </div>
             <div class="cs-breadcrumbs">
-                <a href="/" class="cs-link"><span class="cs-link-text">home</span></a>
-                <a href="/blog/" class="cs-link"><span class="cs-link-text">blog</span></a>
-                <a href="{{ page.url }}" class="cs-link cs-active"><span class="cs-link-text">{{ title }}</span></a>
+                <a href="{{ '/' | locale_url }}" class="cs-link"><span class="cs-link-text">{% if lang == 'ar' %}الرئيسية{% else %}Home{% endif %}</span></a>
+                <a href="{{ '/blog/' | locale_url }}" class="cs-link"><span class="cs-link-text">{% if lang == 'ar' %}المدونة{% else %}Blog{% endif %}</span></a>
+                <a href="{{ page.url }}" class="cs-link cs-active"><span class="cs-link-text">{{ _title }}</span></a>
             </div>
         </div>
         <div class="cs-banner-bg">
             <div class="cs-bg">
-                <img src="{{ image }}" alt="{{ imageAlt }}" loading="eager">
+                <img src="{{ _image }}" alt="{{ _imageAlt }}" loading="eager">
             </div>
         </div>
     </div>
@@ -72,10 +102,10 @@
                             <path d="M5 1V4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
                             <path d="M11 1V4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
                         </svg>
-                        <span class="cs-date">{{ date | postDate }}</span>
+                        <span class="cs-date">{{ _date | postDate(lang) }}</span>
                     </div>
-                    {% if tags %}
-                        {% set displayTags = tags | reject("equalto", "post") | reject("equalto", "posts") | reject("equalto", "sitemap") | reject("equalto", "featured") | list %}
+                    {% if _tags %}
+                        {% set displayTags = _tags | reject("equalto", "post") | reject("equalto", "posts") | reject("equalto", "sitemap") | reject("equalto", "featured") | list %}
                         {% if displayTags.length > 0 %}
                             <span class="cs-dot"></span>
                             <div class="cs-tags">
@@ -92,8 +122,5 @@
             </article>
         </div>
 
-        {% include 'components/recent-posts.html' %}
     </div>
-
-    {% include 'sections/cta.html' %}
 {% endblock %}
