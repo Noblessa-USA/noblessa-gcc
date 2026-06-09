@@ -148,7 +148,7 @@ Open plan kitchens work best when the layout is planned around everyday routines
 * Choose finishes that feel cohesive across the open area
 * Plan lighting so the kitchen still feels comfortable at night
 
-If you are exploring options and want to understand how noblessa USA approaches layout planning and design, you can read more[ here](https://noblessa.me/en/about/).
+If you are exploring options and want to understand how noblessa approaches layout planning and design, you can read more[ here](https://noblessa.me/en/about/).
 
 ## See open plan kitchens in person
 
