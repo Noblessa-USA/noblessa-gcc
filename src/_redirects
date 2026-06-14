@@ -3,5 +3,8 @@
 # Redirect root to English version
 /  /en/  302
 
+# Redirect /catalogs/ to English i18n version
+/catalogs/  /en/catalogs/  301
+
 # Redirect old /blog/ post URLs to English versions
 /blog/:slug  /en/blog/:slug  301

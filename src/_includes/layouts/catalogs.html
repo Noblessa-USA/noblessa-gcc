@@ -1,0 +1,170 @@
+{% extends "layouts/base.html" %}
+
+{% block head %}
+    <link rel="stylesheet" href="/assets/css/catalogs.css">
+{% endblock %}
+
+{% block body %}
+
+    <!-- ============================================ -->
+    <!--              Banner Slideshow                -->
+    <!-- ============================================ -->
+
+    <div id="banner-slideshow-2285">
+        <div class="cs-container">
+            <div class="cs-text-wrapper">
+                <h1 class="cs-int-title sl-fade-in-right">{{ banner_title }}</h1>
+                <p class="cs-text sl-fade-in-right">{{ banner_text }}</p>
+            </div>
+            <div class="cs-breadcrumbs">
+                <a href="{{ '/' | locale_url }}" class="cs-link">{{ breadcrumb_home }}</a>
+                <a href="{{ '/catalogs/' | locale_url }}" class="cs-link cs-active">{{ breadcrumb_catalogs }}</a>
+            </div>
+        </div>
+        <div class="cs-banner-slideshow">
+            <div class="cs-slide">
+                <img src="{{ banner_slide1_image }}" alt="{{ banner_slide1_alt }}" loading="eager">
+            </div>
+            <div class="cs-slide">
+                <img src="{{ banner_slide2_image }}" alt="{{ banner_slide2_alt }}" loading="lazy">
+            </div>
+            <div class="cs-slide">
+                <img src="{{ banner_slide3_image }}" alt="{{ banner_slide3_alt }}" loading="lazy">
+            </div>
+        </div>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const slides = document.querySelectorAll('.cs-slide');
+            let currentSlide = 0;
+            const slideInterval = 5000;
+            function showSlide(index) {
+                slides.forEach((slide, i) => { slide.classList.remove('active'); });
+                requestAnimationFrame(() => { slides[index].classList.add('active'); });
+            }
+            function nextSlide() {
+                currentSlide = (currentSlide + 1) % slides.length;
+                showSlide(currentSlide);
+            }
+            setInterval(nextSlide, slideInterval);
+            setTimeout(() => { showSlide(currentSlide); }, 100);
+        });
+    </script>
+
+    <!-- ============================================ -->
+    <!--           Catalog Philosophy                 -->
+    <!-- ============================================ -->
+
+    <section id="transform-gallery">
+        <div class="cs-container">
+            <div class="cs-section-header">
+                <div class="cs-left-column">
+                    <span class="cs-topper sl-fade-in-down">{{ transform_topper }}</span>
+                    <h2 class="cs-title sl-fade-in-up">{{ transform_title }}</h2>
+                </div>
+                <span class="cs-divider"></span>
+                <div class="cs-right-column sl-fade-in-left">
+                    <p class="cs-text">{{ transform_text }}</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!--              Catalogs Gallery                -->
+    <!-- ============================================ -->
+
+    <section id="catalogs-gallery">
+        <picture class="cs-background">
+            <source media="(max-width: 600px)" srcset="{% getUrl '/assets/images/collections/grace/grace1.webp' | resize({ width: 640 }) | avif %}" type="image/avif">
+            <source media="(max-width: 600px)" srcset="{% getUrl '/assets/images/collections/grace/grace1.webp' | resize({ width: 640 }) | webp %}" type="image/webp">
+            <source media="(min-width: 601px)" srcset="{% getUrl '/assets/images/collections/grace/grace1.webp' | resize({ width: 1920 }) | avif %}" type="image/avif">
+            <source media="(min-width: 601px)" srcset="{% getUrl '/assets/images/collections/grace/grace1.webp' | resize({ width: 1920 }) | webp %}" type="image/webp">
+            <img src="{% getUrl '/assets/images/collections/grace/grace1.webp' | resize({ width: 1920 }) | webp %}" alt="Luxury Kitchen Background" width="1920" height="1080" loading="lazy" decoding="async">
+        </picture>
+
+        <div class="cs-container">
+            <div class="cs-catalog-grid">
+
+                <!-- Catalog Card 1 -->
+                <div class="cs-catalog-featured sl-fade-in-up">
+                    <picture class="cs-catalog-picture">
+                        <source media="(max-width: 600px)" srcset="{% getUrl cat1_image | resize({ width: 640 }) | avif %}" type="image/avif">
+                        <source media="(max-width: 600px)" srcset="{% getUrl cat1_image | resize({ width: 640 }) | webp %}" type="image/webp">
+                        <source media="(min-width: 601px)" srcset="{% getUrl cat1_image | resize({ width: 900 }) | avif %}" type="image/avif">
+                        <source media="(min-width: 601px)" srcset="{% getUrl cat1_image | resize({ width: 900 }) | webp %}" type="image/webp">
+                        <img src="{% getUrl cat1_image | resize({ width: 900 }) | webp %}" alt="{{ cat1_alt }}" width="900" height="600" loading="eager">
+                    </picture>
+                    <div class="cs-catalog-info">
+                        <span class="cs-catalog-label">{{ cat1_label }}</span>
+                        <h3 class="cs-catalog-title">{{ cat1_title }}</h3>
+                        <p class="cs-catalog-description">{{ cat1_description }}</p>
+                        <a href="{{ cat1_pdf }}" target="_blank" rel="noopener" class="cs-catalog-btn">
+                            {{ cat1_btn }}
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Catalog Card 2 -->
+                <div class="cs-catalog-featured sl-fade-in-up">
+                    <picture class="cs-catalog-picture">
+                        <source media="(max-width: 600px)" srcset="{% getUrl cat2_image | resize({ width: 640 }) | avif %}" type="image/avif">
+                        <source media="(max-width: 600px)" srcset="{% getUrl cat2_image | resize({ width: 640 }) | webp %}" type="image/webp">
+                        <source media="(min-width: 601px)" srcset="{% getUrl cat2_image | resize({ width: 900 }) | avif %}" type="image/avif">
+                        <source media="(min-width: 601px)" srcset="{% getUrl cat2_image | resize({ width: 900 }) | webp %}" type="image/webp">
+                        <img src="{% getUrl cat2_image | resize({ width: 900 }) | webp %}" alt="{{ cat2_alt }}" width="900" height="600" loading="lazy">
+                    </picture>
+                    <div class="cs-catalog-info">
+                        <span class="cs-catalog-label">{{ cat2_label }}</span>
+                        <h3 class="cs-catalog-title">{{ cat2_title }}</h3>
+                        <p class="cs-catalog-description">{{ cat2_description }}</p>
+                        <a href="{{ cat2_pdf }}" target="_blank" rel="noopener" class="cs-catalog-btn">
+                            {{ cat2_btn }}
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!--           Process & Benefits                 -->
+    <!-- ============================================ -->
+
+    <section id="our-process">
+        <div class="cs-container">
+            <div class="cs-content">
+                <span class="cs-topper sl-fade-in-down">{{ process_topper }}</span>
+                <h2 class="cs-title sl-fade-in-down">{{ process_title }}</h2>
+                <span class="cs-divider"></span>
+                <p class="cs-text sl-fade-in-up">{{ process_text }}</p>
+            </div>
+            <ul class="cs-timeline">
+                <li class="cs-step sl-fade-in-up">
+                    <div class="cs-step-number">01</div>
+                    <h3 class="cs-h3">{{ step1_title }}</h3>
+                    <p class="cs-step-text">{{ step1_text }}</p>
+                </li>
+                <li class="cs-step sl-fade-in-up">
+                    <div class="cs-step-number">02</div>
+                    <h3 class="cs-h3">{{ step2_title }}</h3>
+                    <p class="cs-step-text">{{ step2_text }}</p>
+                </li>
+                <li class="cs-step sl-fade-in-up">
+                    <div class="cs-step-number">03</div>
+                    <h3 class="cs-h3">{{ step3_title }}</h3>
+                    <p class="cs-step-text">{{ step3_text }}</p>
+                </li>
+                <li class="cs-step sl-fade-in-up">
+                    <div class="cs-step-number">04</div>
+                    <h3 class="cs-h3">{{ step4_title }}</h3>
+                    <p class="cs-step-text">{{ step4_text }}</p>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    {% include 'sections/cta.html' %}
+
+{% endblock %}
