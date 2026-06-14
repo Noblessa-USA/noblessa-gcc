@@ -21,7 +21,7 @@ inspiration_image_2: "/assets/images/showrooms/muscat.webp"
 inspiration_image_3: "/assets/images/showrooms/muscat.webp"
 
 visit_headline: "Visit Us"
-showroom_address: "18th November Street, Muscat, Oman"
+showroom_address: "18th November St, Muscat, Oman"
 showroom_phone: "+968 24 138191"
 showroom_map_url: "https://maps.app.goo.gl/zByTD8VXCAsw99r19"
 showroom_lat: 23.5880

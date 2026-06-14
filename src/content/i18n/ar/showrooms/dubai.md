@@ -22,7 +22,7 @@ inspiration_image_2: "/assets/images/showrooms/dubai.jpeg"
 inspiration_image_3: "/assets/images/showrooms/dubai.jpeg"
 
 visit_headline: "تفضل بزيارتنا"
-showroom_address: "Indigo Central 2, Sheikh Zayed Rd, Al Safa 2, Dubai, United Arab Emirates"
+showroom_address: "إنديجو سنترال ٢ - شارع الشيخ زايد - الصفا ٢ - الصفا - دبي - الإمارات العربية المتحدة"
 showroom_phone: "+971 58 143 0055"
 showroom_map_url: "https://maps.app.goo.gl/BazgBe1w6Uy3rwZV9"
 showroom_lat: 25.1544

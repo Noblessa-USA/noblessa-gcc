@@ -22,7 +22,7 @@ inspiration_image_3: "/assets/images/showrooms/riyadh.jpeg"
 
 visit_headline: "Visit Us"
 showroom_address: "2945 7817 Prince Muhammad Ibn Abd Al Aziz, Al Olaya, Riyadh 12313, Saudi Arabia"
-showroom_phone: "+966 11 416 9157"
+showroom_phone: "+966 800 301 7771"
 showroom_map_url: "https://maps.app.goo.gl/Lht16DJC9RdJzceR6"
 showroom_lat: 24.7136
 showroom_lng: 46.6753

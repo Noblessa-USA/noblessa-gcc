@@ -15,14 +15,14 @@
          data-showroom-suffix="{{ showroom_suffix or 'Showroom' }}"
          data-address-label="{{ address_label or 'Address' }}"
          data-phone-label="{{ phone_label or 'Phone' }}"
-         data-view-google-btn="{{ view_on_google_btn or 'Learn More' }}"
+         data-view-google-btn="{{ view_on_google_btn or 'Directions' }}"
          data-contact-btn="{{ contact_btn or 'Contact' }}"
          data-get-directions-btn="{{ get_directions_btn or 'Get Directions' }}"
          data-call-now-btn="{{ call_now_btn or 'Call Now' }}"
          data-dubai-name="{{ showroom_dubai_name or 'Dubai' }}"
          data-dubai-city="{{ showroom_dubai_city or 'Dubai' }}"
          data-dubai-country="{{ showroom_dubai_country or 'UAE' }}"
-         data-dubai-address="{{ showroom_dubai_address or 'Indigo Central 2, Sheikh Zayed Rd, Al Safa 2, Dubai, United Arab Emirates' }}"
+         data-dubai-address="{{ showroom_dubai_address or 'Indigo Central 2 - Sheikh Zayed Rd - Al Safa 2 - Al Safa - Dubai - United Arab Emirates' }}"
          data-riyadh-name="{{ showroom_riyadh_name or 'Riyadh' }}"
          data-riyadh-city="{{ showroom_riyadh_city or 'Riyadh' }}"
          data-riyadh-country="{{ showroom_riyadh_country or 'Saudi Arabia' }}"
@@ -46,7 +46,7 @@
          data-muscat-name="{{ showroom_muscat_name or 'Muscat' }}"
          data-muscat-city="{{ showroom_muscat_city or 'Muscat' }}"
          data-muscat-country="{{ showroom_muscat_country or 'Oman' }}"
-         data-muscat-address="{{ showroom_muscat_address or '18th November Street, Muscat, Oman' }}"
+         data-muscat-address="{{ showroom_muscat_address or '18th November St, Muscat, Oman' }}"
          data-feature-luxury-displays="{{ feature_luxury_displays or 'Luxury Kitchen Displays' }}"
          data-feature-premium-design="{{ feature_premium_design or 'Premium German Design' }}"
          data-feature-expert-consultation="{{ feature_expert_consultation or 'Expert Consultation' }}"
@@ -110,6 +110,58 @@
                 <div class="cs-gallery-grid" id="showroom-grid">
                     <!-- Showroom cards will be dynamically generated here -->
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!--              The Experience                  -->
+    <!-- ============================================ -->
+
+    <section id="showroom-experience">
+        <div class="cs-container">
+            <div class="cs-text-content">
+                <h2 class="cs-title sl-fade-in-down">{{ experience_title or 'Your Design Experience' }}</h2>
+                <p class="cs-text sl-fade-in-up">{{ experience_text or 'A guided, one-on-one consultation designed to bring your vision to life—with clarity, precision, and expert insight.' }}</p>
+                <span class="cs-divider"></span>
+            </div>
+
+            <ol class="cs-steps">
+                <li class="cs-step sl-fade-in-up">
+                    <span class="cs-step-number">01</span>
+                    <div class="cs-step-body">
+                        <h3 class="cs-step-title">{{ experience_step1_title or 'Discover Your Vision' }}</h3>
+                        <p class="cs-step-text">{{ experience_step1_text or 'An in-depth conversation to understand your space, your lifestyle, and what you want your kitchen to feel like—not just how it should look.' }}</p>
+                    </div>
+                </li>
+                <li class="cs-step sl-fade-in-up">
+                    <span class="cs-step-number">02</span>
+                    <div class="cs-step-body">
+                        <h3 class="cs-step-title">{{ experience_step2_title or 'Concept &amp; Design Direction' }}</h3>
+                        <p class="cs-step-text">{{ experience_step2_text or 'Your designer begins shaping a concept tailored to your home, combining layout, materials, and functionality into a cohesive direction.' }}</p>
+                    </div>
+                </li>
+                <li class="cs-step sl-fade-in-up">
+                    <span class="cs-step-number">03</span>
+                    <div class="cs-step-body">
+                        <h3 class="cs-step-title">{{ experience_step3_title or 'Material &amp; Finish Selection' }}</h3>
+                        <p class="cs-step-text">{{ experience_step3_text or 'Explore a curated range of premium finishes, textures, and components—each selected to elevate both form and function.' }}</p>
+                    </div>
+                </li>
+                <li class="cs-step sl-fade-in-up">
+                    <span class="cs-step-number">04</span>
+                    <div class="cs-step-body">
+                        <h3 class="cs-step-title">{{ experience_step4_title or 'Refined Proposal' }}</h3>
+                        <p class="cs-step-text">{{ experience_step4_text or 'Your design is developed into a detailed plan with clarity around layout, materials, and next steps—so you can move forward with confidence.' }}</p>
+                    </div>
+                </li>
+            </ol>
+
+            <div class="cs-experience-cta">
+                <a href="{{ '/contact/' | locale_url }}" class="cs-button-nodeco sl-fade-in-up">
+                    <span class="cs-hover-underline">{{ experience_cta or 'Book Your Private Design Consultation' }}</span>
+                    <img src="/assets/svgs/horizontal-arrow.svg" alt="arrow" width="30" height="10">
+                </a>
             </div>
         </div>
     </section>

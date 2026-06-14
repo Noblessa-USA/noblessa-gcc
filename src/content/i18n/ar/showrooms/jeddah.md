@@ -22,8 +22,8 @@ inspiration_image_2: "/assets/images/showrooms/jeddah.jpeg"
 inspiration_image_3: "/assets/images/showrooms/jeddah.jpeg"
 
 visit_headline: "تفضل بزيارتنا"
-showroom_address: "Sari Br Rd, As Salamah, Jeddah 23436, Saudi Arabia"
-showroom_phone: "+966 9200 11502"
+showroom_address: "طريق صاري الفرعي، السلامة، جدة ٢٣٤٣٦، المملكة العربية السعودية"
+showroom_phone: "+966 800 301 7771"
 showroom_map_url: "https://maps.app.goo.gl/Dx1ZKDCthGMWRRKs6"
 showroom_lat: 21.5433
 showroom_lng: 39.1728

@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', function() {
         showroomSuffix: translationsEl?.dataset.showroomSuffix || 'Showroom',
         addressLabel: translationsEl?.dataset.addressLabel || 'Address',
         phoneLabel: translationsEl?.dataset.phoneLabel || 'Phone',
-        viewGoogleBtn: translationsEl?.dataset.viewGoogleBtn || 'Learn More',
+        viewGoogleBtn: translationsEl?.dataset.viewGoogleBtn || 'Directions',
         contactBtn: translationsEl?.dataset.contactBtn || 'Contact',
         getDirectionsBtn: translationsEl?.dataset.getDirectionsBtn || 'Get Directions',
         callNowBtn: translationsEl?.dataset.callNowBtn || 'Call Now',
@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 name: translationsEl?.dataset.dubaiName || 'Dubai',
                 city: translationsEl?.dataset.dubaiCity || 'Dubai',
                 country: translationsEl?.dataset.dubaiCountry || 'UAE',
-                address: translationsEl?.dataset.dubaiAddress || 'Indigo Central 2, Sheikh Zayed Rd, Al Safa 2, Dubai, United Arab Emirates'
+                address: translationsEl?.dataset.dubaiAddress || 'Indigo Central 2 - Sheikh Zayed Rd - Al Safa 2 - Al Safa - Dubai - United Arab Emirates'
             },
             riyadh: {
                 name: translationsEl?.dataset.riyadhName || 'Riyadh',
@@ -31,29 +31,11 @@ document.addEventListener('DOMContentLoaded', function() {
                 country: translationsEl?.dataset.jeddahCountry || 'Saudi Arabia',
                 address: translationsEl?.dataset.jeddahAddress || 'Sari Br Rd, As Salamah, Jeddah 23436, Saudi Arabia'
             },
-            alahsa: {
-                name: translationsEl?.dataset.alahsaName || 'Al Ahsa',
-                city: translationsEl?.dataset.alahsaCity || 'Al Ahsa',
-                country: translationsEl?.dataset.alahsaCountry || 'Saudi Arabia',
-                address: translationsEl?.dataset.alahsaAddress || 'طريق عين نجم, Al Salam 2nd, Al Mubarraz 36422, Saudi Arabia'
-            },
-            alqassim: {
-                name: translationsEl?.dataset.alqassimName || 'Al Qassim',
-                city: translationsEl?.dataset.alqassimCity || 'Buraydah',
-                country: translationsEl?.dataset.alqassimCountry || 'Saudi Arabia',
-                address: translationsEl?.dataset.alqassimAddress || '7993 Umar Ibn Al Khatab Rd, Ar Rayan, Buraydah 52388, Saudi Arabia'
-            },
-            kuwait: {
-                name: translationsEl?.dataset.kuwaitName || 'Kuwait City',
-                city: translationsEl?.dataset.kuwaitCity || 'Kuwait City',
-                country: translationsEl?.dataset.kuwaitCountry || 'Kuwait',
-                address: translationsEl?.dataset.kuwaitAddress || '90 28 St, Shuwaikh Industrial 70030, Kuwait'
-            },
             muscat: {
                 name: translationsEl?.dataset.muscatName || 'Muscat',
                 city: translationsEl?.dataset.muscatCity || 'Muscat',
                 country: translationsEl?.dataset.muscatCountry || 'Oman',
-                address: translationsEl?.dataset.muscatAddress || '18th November Street, Muscat, Oman'
+                address: translationsEl?.dataset.muscatAddress || '18th November St, Muscat, Oman'
             }
         },
         features: {
@@ -132,7 +114,7 @@ document.addEventListener('DOMContentLoaded', function() {
             address: t.locations.riyadh.address,
             lat: 24.7136,
             lng: 46.6753,
-            phone: '+966 11 416 9157',
+            phone: '+966 800 301 7771',
             mapUrl: 'https://maps.app.goo.gl/Lht16DJC9RdJzceR6',
             image: '/assets/images/showrooms/riyadh.jpeg',
             features: [
@@ -149,7 +131,7 @@ document.addEventListener('DOMContentLoaded', function() {
             address: t.locations.jeddah.address,
             lat: 21.5433,
             lng: 39.1728,
-            phone: '+966 9200 11502',
+            phone: '+966 800 301 7771',
             mapUrl: 'https://maps.app.goo.gl/Dx1ZKDCthGMWRRKs6',
             image: '/assets/images/showrooms/jeddah.jpeg',
             features: [
@@ -158,57 +140,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 t.features.designConsultation
             ],
             location: 'jeddah'
-        },
-        {
-            name: t.locations.alahsa.name,
-            city: t.locations.alahsa.city,
-            country: t.locations.alahsa.country,
-            address: t.locations.alahsa.address,
-            lat: 25.3616,
-            lng: 49.5966,
-            phone: '+966 11 416 9157',
-            mapUrl: 'https://maps.app.goo.gl/khn1nKu7Axx1oZpJ9',
-            image: '/assets/images/showrooms/alahsa.jpg',
-            features: [
-                t.features.premiumCollections,
-                t.features.germanEngineering,
-                t.features.customDesignServices
-            ],
-            location: 'alahsa'
-        },
-        {
-            name: t.locations.alqassim.name,
-            city: t.locations.alqassim.city,
-            country: t.locations.alqassim.country,
-            address: t.locations.alqassim.address,
-            lat: 26.3273,
-            lng: 43.9750,
-            phone: '+966 55 166 5836',
-            mapUrl: 'https://maps.app.goo.gl/fFAtaFcuS2Wv6Sxq8',
-            image: '/assets/images/showrooms/alqassim.jpg',
-            features: [
-                t.features.luxuryDisplays,
-                t.features.finestKitchens,
-                t.features.expertDesign
-            ],
-            location: 'alqassim'
-        },
-        {
-            name: t.locations.kuwait.name,
-            city: t.locations.kuwait.city,
-            country: t.locations.kuwait.country,
-            address: t.locations.kuwait.address,
-            lat: 29.3759,
-            lng: 47.9774,
-            phone: '+965 2207 3305',
-            mapUrl: 'https://maps.app.goo.gl/oGgTGvaowYbL2Kc38',
-            image: '/assets/images/showrooms/kuwait.jpg',
-            features: [
-                t.features.modernSolutions,
-                t.features.premiumMaterials,
-                t.features.designServices
-            ],
-            location: 'kuwait'
         },
         {
             name: t.locations.muscat.name,
@@ -268,11 +199,11 @@ document.addEventListener('DOMContentLoaded', function() {
                             </div>
                             <div class="cs-card-contact-item">
                                 <span class="cs-contact-label">${t.phoneLabel}:</span>
-                                <a href="tel:${showroom.phone}" class="cs-contact-value">${showroom.phone}</a>
+                                <a href="tel:${showroom.phone}" class="cs-contact-value" dir="ltr">${showroom.phone}</a>
                             </div>
                         </div>
                         <div class="cs-card-actions">
-                            <a href="${landingUrl}" class="cs-action-btn cs-secondary">
+                            <a href="${showroom.mapUrl}" target="_blank" rel="noopener noreferrer" class="cs-action-btn cs-secondary">
                                 ${t.viewGoogleBtn}
                             </a>
                             <button class="cs-action-btn cs-primary contact-modal-btn" data-showroom="${showroom.name}">
@@ -302,7 +233,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 <h3 class="popup-title">${showroom.name}</h3>
                 <div class="popup-content">
                     <p class="popup-address"><strong>${t.addressLabel}:</strong><br>${showroom.address}</p>
-                    <p class="popup-phone"><strong>📞 ${t.phoneLabel}:</strong><br><a href="tel:${showroom.phone}">${showroom.phone}</a></p>
+                    <p class="popup-phone"><strong>📞 ${t.phoneLabel}:</strong><br><a href="tel:${showroom.phone}" dir="ltr">${showroom.phone}</a></p>
                     <div class="popup-buttons">
                         <a href="${showroom.mapUrl}" target="_blank" class="popup-btn">${t.getDirectionsBtn}</a>
                         <a href="tel:${showroom.phone}" class="popup-btn popup-btn-secondary">${t.callNowBtn}</a>
