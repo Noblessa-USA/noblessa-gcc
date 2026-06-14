@@ -17,7 +17,7 @@ gallery_title: "Step Into Excellence"
 gallery_text: "Our showrooms across the GCC showcase the full range of Noblessa collections in beautifully designed spaces. Experience the quality, German craftsmanship, and attention to detail that sets Noblessa apart."
 
 map_topper: "Find Us"
-map_title: "Showrooms across the Gulf region"
+map_title: "Showrooms Across The Gulf Region"
 map_text: "Visit any of our showrooms in Dubai, Riyadh, Jeddah, Kuwait, Muscat, Al Ahsa, or Al Qassim to explore collections, meet with designers, and start planning your dream kitchen."
 
 cta_visit_label: "Schedule Your Visit"
