@@ -1,7 +1,7 @@
 ---
 url: 7-must-have-features-in-modern-kitchen-and-bathroom-cabinets
 author: Noblessa KSA
-date: 2026-06-17T20:05:00.000-04:00
+date: 2026-06-19T20:05:00.000-04:00
 image: /assets/images/blog/201104_25_look_604_d.jpeg
 title: 7 Must-Have Features in Modern Kitchen and Bathroom Cabinets
 description: Upgrade your space with these must-have features in modern kitchen
@@ -14,9 +14,10 @@ tags:
 imageAlt: Smart and stylish in every corner — the Look vanity combines crisp
   white cabinetry with warm oak surfaces, a backlit mirror, and an open shelving
   niche for effortless storage.
-title_ar: 7 Must-Have Features in Modern Kitchen and Bathroom Cabinets
-description_ar: Upgrade your space with these must-have features in modern
-  kitchen and bathroom cabinets. Click to learn more about your cabinet options.
+title_ar: 7 ميزات أساسية لا غنى عنها في تصميم المطابخ والحمامات الحديث
+description_ar: أضف لمسة من الفخامة العصرية إلى مطبخك وحمامك مع حلول التخزين
+  المبتكرة. وتعرف على أبرز الميزات والتفاصيل التي تصنع الفارق في التصاميم
+  الحديثة، واستكشف الخيارات التي ترتقي بأسلوب حياتك.
 tags_ar:
   - post
   - design tips
