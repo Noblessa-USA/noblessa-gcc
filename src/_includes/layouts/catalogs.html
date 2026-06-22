@@ -2,6 +2,7 @@
 
 {% block head %}
     <link rel="stylesheet" href="/assets/css/catalogs.css">
+    <script defer src="/assets/js/catalogs.js"></script>
 {% endblock %}
 
 {% block body %}
@@ -99,9 +100,9 @@
                         <span class="cs-catalog-label">{{ cat1_label }}</span>
                         <h3 class="cs-catalog-title">{{ cat1_title }}</h3>
                         <p class="cs-catalog-description">{{ cat1_description }}</p>
-                        <a href="{{ cat1_pdf }}" target="_blank" rel="noopener" class="cs-catalog-btn">
+                        <button type="button" class="cs-catalog-btn" data-pdf="{{ cat1_pdf }}">
                             {{ cat1_btn }}
-                        </a>
+                        </button>
                     </div>
                 </div>
 
@@ -118,9 +119,9 @@
                         <span class="cs-catalog-label">{{ cat2_label }}</span>
                         <h3 class="cs-catalog-title">{{ cat2_title }}</h3>
                         <p class="cs-catalog-description">{{ cat2_description }}</p>
-                        <a href="{{ cat2_pdf }}" target="_blank" rel="noopener" class="cs-catalog-btn">
+                        <button type="button" class="cs-catalog-btn" data-pdf="{{ cat2_pdf }}">
                             {{ cat2_btn }}
-                        </a>
+                        </button>
                     </div>
                 </div>
 
@@ -166,5 +167,63 @@
     </section>
 
     {% include 'sections/cta.html' %}
+
+    <!-- ============================================ -->
+    <!--          Catalog Lead Capture Modal          -->
+    <!-- ============================================ -->
+
+    <!-- Hidden form for Netlify build-time detection -->
+    <form name="Catalog Lead" method="POST" data-netlify="true" netlify-honeypot="website" style="display:none">
+        <input type="hidden" name="form-name" value="Catalog Lead">
+        <input type="text" name="website">
+        <input type="text" name="name">
+        <input type="email" name="email">
+        <input type="tel" name="phone">
+        <input type="text" name="country">
+    </form>
+
+    <div id="catalog-lead-modal" role="dialog" aria-modal="true" aria-labelledby="catalog-modal-title">
+        <div class="catalog-lead-container">
+            <button class="catalog-lead-close" aria-label="{{ catalog_modal_close or 'Close' }}">&times;</button>
+            <div class="catalog-lead-header">
+                <h2 id="catalog-modal-title">{{ catalog_modal_title or 'Access Your Free Catalog' }}</h2>
+                <p class="catalog-lead-subtitle">{{ catalog_modal_subtitle or 'Share a few details and we will send the catalog straight to you.' }}</p>
+            </div>
+            <div class="catalog-lead-body">
+                <form id="catalog-lead-form" name="Catalog Lead" method="POST" data-netlify="true" netlify-honeypot="website">
+                    <input type="hidden" name="form-name" value="Catalog Lead">
+                    <input type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true">
+                    <div class="catalog-form-row">
+                        <div class="catalog-form-group">
+                            <label for="lead-name">{{ catalog_form_name or 'Full Name' }}</label>
+                            <input type="text" id="lead-name" name="name" required>
+                        </div>
+                        <div class="catalog-form-group">
+                            <label for="lead-email">{{ catalog_form_email or 'Email Address' }}</label>
+                            <input type="email" id="lead-email" name="email" required>
+                        </div>
+                    </div>
+                    <div class="catalog-form-row">
+                        <div class="catalog-form-group">
+                            <label for="lead-phone">{{ catalog_form_phone or 'Phone Number' }}</label>
+                            <input type="tel" id="lead-phone" name="phone" placeholder="+971 50 000 0000">
+                        </div>
+                        <div class="catalog-form-group">
+                            <label for="lead-country">{{ catalog_form_country or 'Country' }}</label>
+                            <input type="text" id="lead-country" name="country" required>
+                        </div>
+                    </div>
+                    <p id="catalog-lead-error" class="catalog-lead-error" aria-live="polite">{{ catalog_form_error or 'Something went wrong. Please try again.' }}</p>
+                    <div class="catalog-form-actions">
+                        <button id="catalog-lead-submit" type="submit" class="cs-button-nodeco">
+                            <span class="cs-hover-underline">{{ catalog_form_submit or 'Download Catalog' }}</span>
+                            <img src="/assets/svgs/horizontal-arrow.svg" alt="arrow" width="30" height="10">
+                        </button>
+                    </div>
+                    <p class="catalog-lead-privacy">{{ catalog_form_privacy or 'Your information is kept private and used only to improve your experience with Noblessa.' }}</p>
+                </form>
+            </div>
+        </div>
+    </div>
 
 {% endblock %}
