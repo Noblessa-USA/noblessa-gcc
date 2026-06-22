@@ -8,6 +8,7 @@ description: "Visit a Noblessa showroom in Dubai, Riyadh, Jeddah, Kuwait, Muscat
 banner_topper: "Visit Us"
 banner_title: "Experience Noblessa in Person"
 banner_text: "Explore our collections and meet with design experts at one of our showroom locations across the GCC region."
+banner_cta_label: "Book Your Private Design Consultation"
 
 home_label: "home"
 showrooms_label: "showrooms"
@@ -18,7 +19,7 @@ gallery_text: "Our showrooms across the GCC showcase the full range of Noblessa 
 
 map_topper: "Find Us"
 map_title: "Showrooms Across The Gulf Region"
-map_text: "Visit any of our showrooms in Dubai, Riyadh, Jeddah, Kuwait, Muscat, Al Ahsa, or Al Qassim to explore collections, meet with designers, and start planning your dream kitchen."
+map_text: "Visit any of our showrooms in Dubai, Riyadh, Jeddah, or Muscat to explore collections, meet with designers, and start planning your dream kitchen."
 
 cta_visit_label: "Schedule Your Visit"
 cta_explore_label: "Explore Noblessa"

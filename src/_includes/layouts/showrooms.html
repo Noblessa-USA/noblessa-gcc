@@ -78,6 +78,10 @@
             <p class="cs-text sl-fade-in-right">
                 {{ banner_text }}
             </p>
+            <a href="{{ '/contact/' | locale_url }}" class="cs-button-nodeco cs-banner-cta sl-fade-in-right">
+                <span class="cs-hover-underline">{{ banner_cta_label or 'Book Your Private Design Consultation' }}</span>
+                <img src="/assets/svgs/horizontal-arrow.svg" alt="arrow" width="30" height="10">
+            </a>
             <div class="cs-breadcrumbs">
                 <a href="{{ '/' | locale_url }}" class="cs-link">{{ home_label or 'home' }}</a>
                 <a href="{{ '/showrooms/' | locale_url }}" class="cs-link cs-active">{{ showrooms_label or 'showrooms' }}</a>

@@ -8,6 +8,7 @@ description: "اكتشف عالم نوبليسا في دبي، والرياض، 
 banner_topper: "تفضل بزيارتنا"
 banner_title: "اكتشف عالم نوبليسا بنفسك"
 banner_text: "اطلع على مجموعاتنا والتق بخبراء التصميم في أي من معارضنا عبر دول مجلس التعاون الخليجي."
+banner_cta_label: "احجز استشارة التصميم الخاصة بك"
 
 home_label: "الرئيسية"
 showrooms_label: "معارضنا"
@@ -18,13 +19,13 @@ gallery_text: "تقدم معارضنا في دول الخليج مجموعة ت�
 
 map_topper: "مواقعنا"
 map_title: "معارضنا في دول الخليج"
-map_text: "تفضل بزيارة أي من معارضنا في دبي، والرياض، وجدة، والكويت، ومسقط، والأحساء، والقصيم؛ لاستكشاف مجموعاتنا الحصرية والالتقاء بنخبة من خبرائنا لتبدأ رحلة تصميم مطبخ أحلامك."
+map_text: "تفضل بزيارة أي من معارضنا في دبي، والرياض، وجدة، ومسقط؛ لاستكشاف مجموعاتنا الحصرية والالتقاء بنخبة من خبرائنا لتبدأ رحلة تصميم مطبخ أحلامك."
 
 cta_visit_label: "احجز موعد زيارتك"
 cta_explore_label: "استكشف نوبليسا"
 
 # JavaScript labels
-showroom_suffix: "المعرض"
+showroom_suffix: ""
 address_label: "العنوان"
 phone_label: "الهاتف"
 view_on_google_btn: "الحصول على الاتجاهات"
@@ -33,17 +34,17 @@ get_directions_btn: "الحصول على الاتجاهات"
 call_now_btn: "اتصل الآن"
 
 # Showroom locations
-showroom_dubai_name: "دبي"
+showroom_dubai_name: "معرض دبي"
 showroom_dubai_city: "دبي"
 showroom_dubai_country: "الإمارات العربية المتحدة"
 showroom_dubai_address: "إنديجو سنترال ٢ - شارع الشيخ زايد - الصفا ٢ - الصفا - دبي - الإمارات العربية المتحدة"
 
-showroom_riyadh_name: "الرياض"
+showroom_riyadh_name: "معرض الرياض"
 showroom_riyadh_city: "الرياض"
 showroom_riyadh_country: "المملكة العربية السعودية"
 showroom_riyadh_address: "٢٩٤٥ طريق الأمير محمد بن عبدالعزيز، العليا، الرياض ١٢٣١٣، المملكة العربية السعودية"
 
-showroom_jeddah_name: "جدة"
+showroom_jeddah_name: "معرض جده"
 showroom_jeddah_city: "جدة"
 showroom_jeddah_country: "المملكة العربية السعودية"
 showroom_jeddah_address: "طريق صاري الفرعي، السلامة، جدة ٢٣٤٣٦، المملكة العربية السعودية"
@@ -63,7 +64,7 @@ showroom_kuwait_city: "مدينة الكويت"
 showroom_kuwait_country: "الكويت"
 showroom_kuwait_address: "شارع 28 رقم 90، الشويخ الصناعية 70030، الكويت"
 
-showroom_muscat_name: "مسقط"
+showroom_muscat_name: "معرض مسقط"
 showroom_muscat_city: "مسقط"
 showroom_muscat_country: "سلطنة عمان"
 showroom_muscat_address: "شارع ١٨ نوفمبر، مسقط، سلطنة عُمان"
@@ -108,7 +109,7 @@ form_submit: "إرسال"
 experience_title: "رحلة تصميم شاملة"
 experience_text: "حوّل رؤيتك إلى واقع تحت إشراف خبرائنا؛ في استشارةٍ شخصية تتميز بالدقة والوضوح في كل خطوة."
 experience_step1_title: "فهم رؤيتك"
-experience_step1_text: "حوار عميق لاكتشاف مساحتك، ونمط حياتك، وما الذي ترغب أن تشعر به في مطبخك — وليس فقط كيف يبدو مظهره."
+experience_step1_text: "حوار عميق لاكتشاف مساحتك، ونمط حياتك، وما الذي ترغب أن تشعر به في مطبخك."
 experience_step2_title: "تحديد الفكرة واتجاه التصميم"
 experience_step2_text: "يبدأ المصمم بصياغة تصور خاص بمنزلك مع مراعاة توزيع المساحات والخامات الملائمة والجوانب العملية في اتجاه واحد متكامل."
 experience_step3_title: "اختيار المواد والتشطيبات"
