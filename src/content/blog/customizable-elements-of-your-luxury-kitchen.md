@@ -1,6 +1,6 @@
 ---
 url: customizable-elements-of-your-luxury-kitchen
-author: noblessa KSA
+author: noblessa GCC
 date: 2026-06-05T12:25:00.000-04:00
 image: /assets/images/blog/31255_25_senso_483_d.jpeg
 title: Customizable Elements of Your Luxury Kitchen
