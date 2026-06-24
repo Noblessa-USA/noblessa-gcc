@@ -1,6 +1,6 @@
 ---
 url: 7-must-have-features-in-modern-kitchen-and-bathroom-cabinets
-author: Noblessa KSA
+author: Noblessa GCC
 date: 2026-06-19T20:05:00.000-04:00
 image: /assets/images/blog/201104_25_look_604_d.jpeg
 title: 7 Must-Have Features in Modern Kitchen and Bathroom Cabinets
