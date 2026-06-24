@@ -1,6 +1,6 @@
 ---
 url: what-makes-modular-kitchens-unique
-author: noblessa KSA
+author: noblessa GCC
 date: 2026-06-12T11:18:00.000-04:00
 image: /assets/images/blog/30597_25_cascada_778_d.jpeg
 title: What Makes Modular Kitchens Unique?
