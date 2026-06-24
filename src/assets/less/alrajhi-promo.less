@@ -1,0 +1,595 @@
+// ─────────────────────────────────────────────────────────────────────────────
+// ALRAJHI BANK PROMO LANDING PAGE STYLES
+// Dedicated promotional landing page for Alrajhi Bank 40% off campaign
+// ─────────────────────────────────────────────────────────────────────────────
+
+/*-- -------------------------- -->
+<---         Hero Banner         -->
+<---  (mirrors #explore-hero)   -->
+<--- -------------------------- -*/
+
+@media only screen and (min-width: 0rem) {
+    #alrajhi-hero {
+        height: 100vh;
+        min-height: 600px;
+        padding: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        z-index: 1;
+        overflow: hidden;
+
+        &:before {
+            content: "";
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to bottom, rgba(0, 0, 0, 0.55) 0%, rgba(0, 0, 0, 0.35) 100%);
+            position: absolute;
+            display: block;
+            top: 0;
+            left: 0;
+            z-index: 1;
+        }
+
+        .cs-container {
+            width: 100%;
+            max-width: (1280/16rem);
+            margin: auto;
+            padding: 0 1rem;
+            position: relative;
+            z-index: 2;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .cs-content {
+            text-align: center;
+            width: 100%;
+            max-width: (700/16rem);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: rgba(0, 0, 0, 0.72);
+            padding: 3.5rem 2rem;
+            border-radius: 1rem;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .cs-topper {
+            color: var(--secondary);
+            font-size: clamp(0.75rem, 1.5vw, 0.9rem);
+            margin-bottom: 0.5rem;
+        }
+
+        .cs-bank-logo {
+            width: auto;
+            height: clamp(40px, 6vw, 100px);
+            max-width: 300px;
+            object-fit: contain;
+            display: block;
+            margin: 0 auto 1rem;
+            filter: brightness(0) invert(1);
+        }
+
+        .cs-title {
+            font-size: clamp(2rem, 4.5vw, 3.5rem);
+            font-weight: 900;
+            line-height: 1.15em;
+            color: #fff;
+            margin: 0.5rem 0 0 0;
+            text-align: center;
+            max-width: 100%;
+        }
+
+        .cs-divider {
+            width: 60%;
+            height: 1px;
+            background-color: rgba(255, 255, 255, 0.5);
+            margin: 1.25rem 0 1rem 0;
+            display: block;
+        }
+
+        .cs-deadline {
+            font-size: clamp(0.85rem, 1.5vw, 1rem);
+            color: rgba(255, 255, 255, 0.85);
+            margin: 0 0 1.75rem 0;
+            letter-spacing: 0.04em;
+        }
+
+        .cs-background {
+            width: 100%;
+            height: 100%;
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -1;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                position: absolute;
+                top: 0;
+                left: 0;
+            }
+        }
+    }
+}
+
+/*-- -------------------------- -->
+<---         Offer Detail        -->
+<--- -------------------------- -*/
+
+@media only screen and (min-width: 0rem) {
+    #alrajhi-offer {
+        padding: var(--sectionPadding);
+        background-color: #fafbfc;
+        text-align: center;
+
+        .cs-container {
+            width: 100%;
+            max-width: (900/16rem);
+            margin: auto;
+            padding: 0 1rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 2rem;
+        }
+
+        .cs-badge {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 160px;
+            height: 160px;
+            border-radius: 50%;
+            background: var(--blackShineGradient);
+            border: 3px solid var(--secondary);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.18);
+        }
+
+        .cs-badge-percent {
+            font-family: var(--headerFont);
+            font-size: clamp(2.5rem, 5vw, 3.5rem);
+            font-weight: 900;
+            color: var(--secondary);
+            line-height: 1;
+        }
+
+        .cs-badge-label {
+            font-size: 0.7rem;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: rgba(255, 255, 255, 0.85);
+            font-weight: 600;
+        }
+
+        .cs-content {
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .cs-title {
+            font-size: clamp(1.75rem, 3.5vw, 2.75rem);
+            color: var(--headerColor);
+            margin: 0 0 0.5rem 0;
+        }
+
+        .cs-divider {
+            width: 60px;
+            height: 2px;
+            background-color: var(--secondary);
+            margin: 1rem 0;
+            display: block;
+        }
+
+        .cs-text {
+            font-size: clamp(1rem, 1.8vw, 1.15rem);
+            line-height: 1.7;
+            color: var(--bodyTextColor);
+            max-width: 640px;
+            text-align: center !important;
+        }
+    }
+}
+
+/*-- -------------------------- -->
+<---        How It Works         -->
+<--- -------------------------- -*/
+
+@media only screen and (min-width: 0rem) {
+    #alrajhi-steps {
+        padding: var(--sectionPadding);
+        position: relative;
+        overflow: hidden;
+
+        &:before {
+            content: "";
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(
+                180deg,
+                rgba(0, 0, 0, 0.82) 0%,
+                rgba(0, 0, 0, 0.75) 100%
+            );
+            position: absolute;
+            display: block;
+            top: 0;
+            left: 0;
+            z-index: 1;
+        }
+
+        .cs-background {
+            width: 100%;
+            height: 100%;
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 0;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                position: absolute;
+                top: 0;
+                left: 0;
+            }
+        }
+
+        .cs-container {
+            width: 100%;
+            max-width: (900/16rem);
+            margin: auto;
+            padding: 0 1rem;
+            position: relative;
+            z-index: 2;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 3rem;
+        }
+
+        .cs-content {
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .cs-topper {
+            color: var(--secondary);
+        }
+
+        .cs-title {
+            color: #fff;
+            margin: 0;
+        }
+
+        .cs-divider {
+            width: 60px;
+            height: 1px;
+            background-color: rgba(255, 255, 255, 0.5);
+            margin: 1rem 0 0 0;
+            display: block;
+        }
+
+        .cs-steps-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        .cs-step {
+            display: flex;
+            align-items: flex-start;
+            gap: 1.5rem;
+            background: rgba(255, 255, 255, 0.06);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            border-radius: 0.75rem;
+            padding: 1.75rem 2rem;
+            backdrop-filter: blur(8px);
+            transition: background 0.3s;
+
+            &:hover {
+                background: rgba(255, 255, 255, 0.1);
+            }
+        }
+
+        .cs-step-number {
+            font-family: var(--headerFont);
+            font-size: clamp(2rem, 4vw, 3rem);
+            font-weight: 900;
+            color: transparent;
+            -webkit-text-stroke: 1.5px var(--secondary);
+            line-height: 1;
+            flex-shrink: 0;
+            min-width: 3.5rem;
+        }
+
+        .cs-step-body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .cs-step-text {
+            font-size: clamp(0.95rem, 1.8vw, 1.1rem);
+            line-height: 1.65;
+            color: rgba(255, 255, 255, 0.92);
+            margin: 0;
+        }
+
+        .cs-cta-wrapper {
+            display: flex;
+            justify-content: center;
+        }
+    }
+}
+
+/*-- -------------------------- -->
+<---      Consultation Form      -->
+<--- -------------------------- -*/
+
+@media only screen and (min-width: 0rem) {
+    #alrajhi-form {
+        padding: var(--sectionPadding);
+        background-color: #ffffff;
+
+        .cs-container {
+            width: 100%;
+            max-width: (1100/16rem);
+            margin: auto;
+            padding: 0 1rem;
+            display: flex;
+            flex-direction: column;
+            gap: 3rem;
+        }
+
+        .cs-left-section {
+            width: 100%;
+        }
+
+        .cs-content {
+            display: flex;
+            flex-direction: column;
+            text-align: left;
+        }
+
+        .cs-topper {
+            color: var(--secondary);
+        }
+
+        .cs-title {
+            margin: 0 0 0.5rem 0;
+        }
+
+        .cs-divider {
+            width: 60px;
+            height: 2px;
+            background-color: var(--primary);
+            margin: 0.75rem 0 1rem 0;
+            display: block;
+        }
+
+        .cs-text {
+            color: var(--bodyTextColor);
+            line-height: 1.65;
+        }
+
+        .cs-right-section {
+            width: 100%;
+
+            form {
+                display: flex;
+                flex-direction: column;
+                gap: 1.25rem;
+            }
+
+            label {
+                display: flex;
+                flex-direction: column;
+                font-size: 0.85rem;
+                font-weight: 600;
+                text-transform: uppercase;
+                letter-spacing: 0.08em;
+                color: var(--headerColor);
+                gap: 0.5rem;
+            }
+
+            input,
+            textarea {
+                width: 100%;
+                padding: 0.75rem 1rem;
+                font-size: 1rem;
+                font-family: var(--bodyFont);
+                color: var(--bodyTextColor);
+                background-color: #f5f5f5;
+                border: 1px solid #ddd;
+                border-radius: 0.25rem;
+                outline: none;
+                transition: border-color 0.2s, background-color 0.2s;
+
+                &:focus {
+                    border-color: var(--secondary);
+                    background-color: #fff;
+                }
+            }
+
+            textarea {
+                min-height: 120px;
+                resize: vertical;
+            }
+
+            // Honeypot
+            .cs-select {
+                display: none;
+            }
+        }
+
+        .cs-form-row {
+            display: flex;
+            flex-direction: column;
+            gap: 1.25rem;
+        }
+
+        .cs-submit {
+            align-self: flex-start;
+            margin-top: 0.5rem;
+        }
+    }
+}
+
+@media only screen and (min-width: 48rem) {
+    #alrajhi-form {
+        .cs-container {
+            flex-direction: row;
+            align-items: flex-start;
+        }
+
+        .cs-left-section {
+            width: 40%;
+            flex-shrink: 0;
+        }
+
+        .cs-right-section {
+            width: 60%;
+        }
+
+        .cs-form-row {
+            flex-direction: row;
+
+            label {
+                flex: 1;
+            }
+        }
+
+        // RTL adjustments for form
+        html[dir="rtl"] & {
+            .cs-content {
+                text-align: right;
+            }
+        }
+    }
+}
+
+/*-- -------------------------- -->
+<---          Bottom CTA         -->
+<--- -------------------------- -*/
+
+@media only screen and (min-width: 0rem) {
+    #alrajhi-cta {
+        padding: var(--sectionPadding);
+        position: relative;
+        overflow: hidden;
+        text-align: center;
+
+        &:before {
+            content: "";
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.78);
+            position: absolute;
+            display: block;
+            top: 0;
+            left: 0;
+            z-index: 1;
+        }
+
+        .cs-background {
+            width: 100%;
+            height: 100%;
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 0;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                position: absolute;
+                top: 0;
+                left: 0;
+            }
+        }
+
+        .cs-container {
+            width: 100%;
+            max-width: (800/16rem);
+            margin: auto;
+            padding: 0 1rem;
+            position: relative;
+            z-index: 2;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .cs-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 2rem;
+        }
+
+        .cs-title {
+            color: #fff;
+            font-size: clamp(1.75rem, 3.5vw, 3rem);
+            margin: 0;
+            text-align: center;
+        }
+
+        .cs-tandc {
+            font-size: 0.8rem;
+            color: rgba(255, 255, 255, 0.55);
+            letter-spacing: 0.03em;
+            margin: 0;
+        }
+    }
+}
+
+/*-- -------------------------- -->
+<---      RTL Support (Arabic)   -->
+<--- -------------------------- -*/
+
+html[dir="rtl"] {
+    #alrajhi-hero,
+    #alrajhi-offer,
+    #alrajhi-steps,
+    #alrajhi-cta {
+        .cs-content {
+            text-align: center;
+        }
+    }
+
+    #alrajhi-form {
+        .cs-content {
+            text-align: right;
+        }
+    }
+
+    #alrajhi-steps {
+        .cs-step {
+            flex-direction: row-reverse;
+
+            .cs-step-text {
+                text-align: right;
+            }
+        }
+    }
+}
