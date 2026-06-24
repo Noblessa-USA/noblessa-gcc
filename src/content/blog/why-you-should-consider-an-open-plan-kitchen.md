@@ -1,6 +1,6 @@
 ---
 url: why-get-an-open-plan-kitchen
-author: noblessa KSA
+author: noblessa GCC
 date: 2026-05-15T13:25:00.000+08:00
 image: /assets/images/blog/30464_21_nordic_789_m_r1_b705297.jpeg
 title: Why You Should Consider an Open Plan Kitchen
