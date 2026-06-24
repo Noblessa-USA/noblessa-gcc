@@ -1,6 +1,6 @@
 ---
 url: the-many-types-of-kitchen-cabinets
-author: noblessa KSA
+author: noblessa GCC
 date: 2026-05-22T15:45:00.000-04:00
 image: /assets/images/blog/30877_22_riva_843_d_r1.jpeg
 title: "A Standout Design and Layout: The Many Types of Kitchen Cabinets"

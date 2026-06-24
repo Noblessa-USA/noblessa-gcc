@@ -1,6 +1,6 @@
 ---
 url: custom-kitchen-the-family-can-enjoy
-author: noblessa KSA
+author: noblessa GCC
 date: 2026-05-29T11:52:00.000-04:00
 image: /assets/images/blog/31234_25_senso_483_p.jpeg
 title: A Custom Kitchen the Whole Family Can Enjoy
