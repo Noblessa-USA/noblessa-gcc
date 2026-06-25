@@ -3,6 +3,10 @@
 # Redirect root to English version
 /  /en/  302
 
+# Redirect /en/uae-ar/ to home page
+/en/uae-ar  /en/  301
+/en/uae-ar/  /en/  301
+
 # Redirect /catalogs/ to English i18n version
 /catalogs/  /en/catalogs/  301
 
