@@ -12,7 +12,7 @@ tags:
   - info
   - remodel
   - design
-  - Tip
+  - tip
 imageAlt: A renovation done right — this walnut and white kitchen shows what's
   possible when you find the right contractor for the job.
 title_ar: كيف تختار المقاول المناسب لتجديد مطبخك؟
