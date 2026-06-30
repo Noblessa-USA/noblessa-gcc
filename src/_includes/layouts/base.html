@@ -89,6 +89,25 @@
             snaptr('init', '6ceabce4-1643-41c5-aba7-44cb0f116f0f', {});
             snaptr('track', 'PAGE_VIEW');
         </script>
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                var formSelectors = [
+                    '#cs-form-265[name="Main Contact Form"]',
+                    '#contact-form[name="Showrooms Form"]',
+                    '#cs-form-265[name="Explore Form"]',
+                    '#catalog-lead-form'
+                ];
+                formSelectors.forEach(function (selector) {
+                    var form = document.querySelector(selector);
+                    if (!form) return;
+                    form.addEventListener('submit', function () {
+                        if (typeof snaptr === 'function') {
+                            snaptr('track', 'SIGN_UP', { 'success': 1 });
+                        }
+                    });
+                });
+            });
+        </script>
         <!-- End Snap Pixel Code -->
 
         {% block head %}{% endblock %}

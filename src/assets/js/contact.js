@@ -137,10 +137,6 @@
                 e.preventDefault();
                 wrapper.classList.add('cs-error');
                 trigger.focus();
-            } else {
-                if (typeof snaptr === 'function') {
-                    snaptr('track', 'LEAD');
-                }
             }
         });
 
