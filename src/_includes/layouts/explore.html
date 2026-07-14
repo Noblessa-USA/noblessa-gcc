@@ -233,36 +233,36 @@
                     <div class="cs-form-row">
                         <label class="sl-fade-in-up">
                             {{ form_name_label }}
-                            <input required type="text" id="name" name="name" placeholder="{{ form_name_placeholder }}">
+                            <input required type="text" id="name" name="name">
                         </label>
                         
                         <label class="sl-fade-in-up">
                             {{ form_email_label }}
-                            <input required type="email" id="email" name="email" placeholder="{{ form_email_placeholder }}">
+                            <input required type="email" id="email" name="email">
                         </label>
                     </div>
                     
                     <div class="cs-form-row">
                         <label class="sl-fade-in-up">
                             {{ form_country_label }}
-                            <input required type="text" id="country" name="country" placeholder="{{ form_country_placeholder }}">
+                            <input required type="text" id="country" name="country">
                         </label>
                         
                         <label class="sl-fade-in-up">
                             {{ form_city_label }}
-                            <input required type="text" id="city" name="city" placeholder="{{ form_city_placeholder }}">
+                            <input required type="text" id="city" name="city">
                         </label>
                     </div>
                     
                     <label class="sl-fade-in-up">
                         {{ form_phone_label }}
-                        <input required type="tel" id="phone" name="phone" placeholder="{{ form_phone_placeholder }}" pattern="\d{10,}" title="Please enter at least 10 digits">
+                        <input required type="tel" id="phone" name="phone" pattern="\d{10,}" title="Please enter at least 10 digits">
                         <input class="cs-select" name="select" type="text" placeholder="Select">
                     </label>
                     
                     <label class="cs-label-message sl-fade-in-up">
                         {{ form_message_label }}
-                        <textarea required name="message" id="message" placeholder="{{ form_message_placeholder }}"></textarea>
+                        <textarea required name="message" id="message"></textarea>
                     </label>
                     
                     <div data-netlify-recaptcha="true"></div>

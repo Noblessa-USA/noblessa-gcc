@@ -3,7 +3,6 @@
 {% block head %}
     <link rel="stylesheet" href="/assets/css/contact.css">
     <link rel="preload" as="image" href="{% getUrl '/assets/videos/showroomsfirstframe.webp' | resize({ width: 1920, height: 1080 }) | webp %}">
-    <script defer src="/assets/js/contact.js"></script>
 {% endblock %}
 
 {% block body %}
@@ -49,8 +48,8 @@
                         <input type="hidden" name="country" id="country-265">
                     </label>
                     <label class="sl-fade-in-up">{{ form_city_label }}<input required type="text" id="city-265" name="city"><input class="cs-select" name="select" type="text" placeholder="Select"></label>
-                    <label class="sl-fade-in-up">{{ form_phone_label }}<input required type="tel" id="phone-265" name="phone" dir="ltr" placeholder="123 456 7890"></label>
-                    <label class="cs-label-message sl-fade-in-up">{{ form_message_label }}<textarea required name="message" id="message-265" placeholder="{{ form_message_placeholder }}"></textarea></label>
+                    <label class="sl-fade-in-up">{{ form_phone_label }}<input required type="tel" id="phone-265" name="phone" dir="ltr"></label>
+                    <label class="cs-label-message sl-fade-in-up">{{ form_message_label }}<textarea required name="message" id="message-265"></textarea></label>
                     <div data-netlify-recaptcha="true"></div>
                     <button class="cs-button-nodeco cs-submit sl-fade-in-up" type="submit">
                         <span class="cs-hover-underline">{{ form_submit }}</span>

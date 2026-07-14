@@ -215,21 +215,21 @@
                     <div class="form-row">
                         <div class="form-group">
                             <label for="country">{{ form_country_label or 'Country' }}</label>
-                            <input type="text" id="country" name="country" placeholder="{{ form_country_placeholder or 'Your Country' }}" required>
+                            <input type="text" id="country" name="country" required>
                         </div>
                         <div class="form-group">
                             <label for="city">{{ form_city_label or 'City' }}</label>
-                            <input type="text" id="city" name="city" placeholder="{{ form_city_placeholder or 'Your City' }}" required>
+                            <input type="text" id="city" name="city" required>
                         </div>
                     </div>
                     <div class="form-group">
                         <label for="phone">{{ form_phone_label or 'Phone Number' }}</label>
-                        <input type="tel" id="phone" name="phone" placeholder="{{ form_phone_placeholder or '+123 456 7890' }}" required>
+                        <input type="tel" id="phone" name="phone" required>
                         <input class="cs-select" name="select" type="text" placeholder="Select">
                     </div>
                     <div class="form-group">
                         <label for="message">{{ form_message_label or 'Message' }}</label>
-                        <textarea id="message" name="message" rows="4" placeholder="{{ form_message_placeholder or 'Your message...' }}"></textarea>
+                        <textarea id="message" name="message" rows="4"></textarea>
                     </div>
                     <input class="cs-hidden" type="hidden" id="showroom" name="showroom">
                     <div class="form-actions">
