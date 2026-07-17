@@ -1,0 +1,131 @@
+{% extends "layouts/base.html" %}
+
+{% block head %}
+    <link rel="preload" href="/assets/css/critical.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="/assets/css/critical.css"></noscript>
+
+    <script defer src="/assets/js/collections-gallery.js"></script>
+    <script defer src="/assets/js/responsive-video.js"></script>
+    <script>
+        // Version B has no English equivalent; keep the global language switcher useful.
+        document.addEventListener('click', function (event) {
+            if (event.target.closest('#language-toggle-btn')) {
+                event.preventDefault();
+                event.stopImmediatePropagation();
+                window.location.href = '/en/';
+            }
+        }, true);
+    </script>
+
+    {% if client.isProduction %}
+        <link rel="preload" href="/assets/css/local.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="/assets/css/local.css"></noscript>
+    {% else %}
+        <link rel="stylesheet" href="/assets/css/local.css">
+    {% endif %}
+
+    <link rel="preload" as="video" type="video/webm" href="/assets/videos/noblessagccheader.webm">
+    <link rel="preload" as="image" href="{% getUrl '/assets/images/collections/sentido/sentidoblacknoir.webp' | resize({ width: 1920, height: 1080 }) | avif %}">
+{% endblock %}
+
+{% block body %}
+    <section id="hero-143">
+        <div class="cs-container">
+            <div class="cs-rigo"></div>
+            <h1 class="cs-title">{{ hero_title | safe }}</h1>
+        </div>
+        <video class="cs-video" autoplay muted playsinline loop preload="metadata" aria-hidden="true">
+            <source src="/assets/videos/noblessagccheader.webm" type="video/webm">
+        </video>
+    </section>
+
+    <section id="transform-gallery">
+        <div class="cs-container">
+            <div class="cs-section-header">
+                <div class="cs-left-column">
+                    <span class="cs-topper sl-fade-in-down">{{ intro_topper }}</span>
+                    <h2 class="cs-title sl-fade-in-up">{{ intro_title }}</h2>
+                </div>
+                <span class="cs-divider"></span>
+                <div class="cs-right-column sl-fade-in-left">
+                    <p class="cs-text">{{ intro_text }}</p>
+                    <a href="{{ '/contact/' | locale_url }}" class="cs-button-nodeco">
+                        <span class="cs-hover-underline">{{ intro_cta }}</span>
+                        <img src="/assets/svgs/horizontal-arrow.svg" alt="" width="30" height="10">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="collections-gallery">
+        <div class="cg-container">
+            <div class="cg-text-overlay">
+                <span class="cs-topper sl-fade-in-down">{{ collections_topper }}</span>
+                <h2 class="cs-title sl-fade-in-down">{{ collections_title }}</h2>
+                <span class="cs-divider"></span>
+                <p class="cs-text sl-fade-in-up">{{ collections_text }}</p>
+                <a href="/ar/kitchen-collections/" class="cs-button-nodeco sl-fade-in-up">
+                    <span class="cs-hover-underline">{{ collections_cta }}</span>
+                    <img src="/assets/svgs/horizontal-arrow.svg" alt="" width="30" height="10">
+                </a>
+                <div class="cg-navigation sl-fade-in-up">
+                    <button class="cg-prev" aria-label="الصورة السابقة">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                            <path d="M15 18L9 12L15 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                    <button class="cg-next" aria-label="الصورة التالية">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                            <path d="M9 18L15 12L9 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            <div class="cg-slider">
+                {% set kitchenSlides = [
+                    { src: '/assets/images/collections/sentido/sentidoblacknoir.webp', alt: 'مطبخ سينتيدو باللون الأسود' },
+                    { src: '/assets/images/collections/serenity/serenityivory.webp', alt: 'مطبخ سيرينيتي باللون العاجي' },
+                    { src: '/assets/images/collections/chance/chance1.webp', alt: 'مطبخ تشانس من نوبليسا' },
+                    { src: '/assets/images/collections/divine/divine1.webp', alt: 'مطبخ ديفاين من نوبليسا' }
+                ] %}
+                {% for slide in kitchenSlides %}
+                    <div class="cg-slide{% if loop.first %} active{% endif %}">
+                        <picture>
+                            <source media="(max-width: 600px)" srcset="{% getUrl slide.src | resize({ width: 640, height: 900 }) | avif %}" type="image/avif">
+                            <source media="(max-width: 600px)" srcset="{% getUrl slide.src | resize({ width: 640, height: 900 }) | webp %}" type="image/webp">
+                            <source media="(max-width: 1024px)" srcset="{% getUrl slide.src | resize({ width: 1024, height: 768 }) | avif %}" type="image/avif">
+                            <source media="(max-width: 1024px)" srcset="{% getUrl slide.src | resize({ width: 1024, height: 768 }) | webp %}" type="image/webp">
+                            <source media="(min-width: 1025px)" srcset="{% getUrl slide.src | resize({ width: 1920, height: 1080 }) | avif %}" type="image/avif">
+                            <source media="(min-width: 1025px)" srcset="{% getUrl slide.src | resize({ width: 2560, height: 1440 }) | webp %}" type="image/webp">
+                            <img src="{% getUrl slide.src | resize({ width: 1920, height: 1080 }) | webp %}" alt="{{ slide.alt }}" width="1920" height="1080" loading="{% if loop.first %}eager{% else %}lazy{% endif %}" decoding="async">
+                        </picture>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+
+    <section id="our-legacy">
+        <div class="cs-container">
+            <div class="cs-image-group">
+                <div class="cs-picture">
+                    <img class="cs-bg-img" loading="lazy" decoding="async" src="/assets/images/walnutkitchen.webp" alt="مطبخ نوبليسا بخامات فاخرة" width="700" height="600">
+                    <img class="cs-fg-img" loading="lazy" decoding="async" src="/assets/images/whitekitchen.webp" alt="تفاصيل مطبخ نوبليسا أبيض" width="700" height="600">
+                </div>
+            </div>
+            <div class="cs-content">
+                <span class="cs-topper sl-fade-in-down">{{ trust_topper }}</span>
+                <h2 class="cs-title sl-fade-in-down">{{ trust_title }}</h2>
+                <span class="cs-divider"></span>
+                <p class="cs-text sl-fade-in-left">{{ trust_text }}</p>
+                <a href="{{ '/contact/' | locale_url }}" class="cs-button-nodeco sl-fade-in-left">
+                    <span class="cs-hover-underline">{{ trust_cta }}</span>
+                    <img src="/assets/svgs/horizontal-arrow.svg" alt="" width="30" height="10">
+                </a>
+            </div>
+        </div>
+    </section>
+
+    {% include 'sections/cta.html' %}
+{% endblock %}

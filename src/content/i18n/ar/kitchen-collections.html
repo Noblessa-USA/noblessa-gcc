@@ -1,0 +1,87 @@
+---
+title: "مجموعات مطابخ نوبليسا | تصميم ألماني فاخر"
+description: "استكشف مجموعات مطابخ نوبليسا المصنوعة بدقة ألمانية، واختر التصميم الذي يعكس ذوقك ويلائم منزلك."
+permalink: "/ar/kitchen-collections/"
+lang: ar
+tags: "sitemap"
+---
+
+{% extends "layouts/base.html" %}
+
+{% block head %}
+    <link rel="stylesheet" href="/assets/css/kitchen-collections.css">
+    <script src="/assets/js/kitchen-collections.js" defer></script>
+{% endblock %}
+
+{% block body %}
+    <div id="banner-slideshow-2285">
+        <div class="cs-container">
+            <div class="cs-text-wrapper">
+                <h1 class="cs-int-title sl-fade-in-right">مجموعات المطابخ</h1>
+                <p class="cs-text sl-fade-in-right">
+                    اكتشف مجموعات نوبليسا التي تجمع بين دقة الحرفية الألمانية، والخامات الفاخرة، والتصميم المصمم خصيصًا لأسلوب حياتك.
+                </p>
+            </div>
+            <div class="cs-breadcrumbs">
+                <a href="/ar/" class="cs-link">الرئيسية</a>
+                <a href="/ar/kitchen-collections/" class="cs-link cs-active">مجموعات المطابخ</a>
+            </div>
+        </div>
+        <div class="cs-banner-slideshow">
+            <div class="cs-slide active"><img src="/assets/images/collections/tempo/tempo1.webp" alt="مطبخ تيمبو من نوبليسا" loading="eager"></div>
+            <div class="cs-slide"><img src="/assets/images/collections/grace/grace1.webp" alt="مطبخ جريس من نوبليسا" loading="lazy"></div>
+            <div class="cs-slide"><img src="/assets/images/collections/divine/divine1.webp" alt="مطبخ ديفاين من نوبليسا" loading="lazy"></div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const slides = document.querySelectorAll('#banner-slideshow-2285 .cs-slide');
+            let currentSlide = 0;
+
+            if (slides.length < 2) return;
+
+            setInterval(function () {
+                slides[currentSlide].classList.remove('active');
+                currentSlide = (currentSlide + 1) % slides.length;
+                slides[currentSlide].classList.add('active');
+            }, 5000);
+        });
+    </script>
+
+    <section id="kitchen-collections-gallery">
+        <div class="cs-container">
+            <div class="cs-content">
+                <span class="cs-topper">حرفية ألمانية</span>
+                <h2 class="cs-title">اختر مطبخك المثالي</h2>
+                <span class="cs-divider"></span>
+                <p class="cs-text">
+                    من الخطوط العصرية إلى التفاصيل الكلاسيكية الخالدة، صُممت كل مجموعة لتمنح منزلك جمالًا استثنائيًا ووظائف تدوم طويلًا.
+                </p>
+            </div>
+
+            <div class="cs-gallery">
+                {% set kitchenCollections = collections["kitchen-collections"] | sort(false, false, 'data.order') %}
+                {% for collection in kitchenCollections %}
+                    {% if collection.data.lang == 'ar' %}
+                        <a href="/ar/kitchen-collections/{{ collection.data.url }}/" class="cs-collection-card">
+                            <img class="cs-card-image-primary" src="{{ collection.data.cardImage }}" alt="{{ collection.data.cardImageAlt }}" loading="lazy" decoding="async">
+                            {% if collection.data.cardImageSecondary %}
+                                <img class="cs-card-image-secondary" src="{{ collection.data.cardImageSecondary }}" alt="{{ collection.data.cardImageSecondaryAlt }}" loading="lazy" decoding="async">
+                            {% endif %}
+                            <div class="cs-card-overlay">
+                                <h3 class="cs-collection-name">{{ collection.data.title }}</h3>
+                                <span class="cs-button-nodeco-white">
+                                    <span class="cs-hover-underline-white">استكشف {{ collection.data.title }}</span>
+                                    <img src="/assets/svgs/horizontal-arrow.svg" alt="" width="30" height="10">
+                                </span>
+                            </div>
+                        </a>
+                    {% endif %}
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+
+    {% include 'sections/cta.html' %}
+{% endblock %}
