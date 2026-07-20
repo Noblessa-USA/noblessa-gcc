@@ -9,6 +9,7 @@
         "bath": "bath",
         "events": "events",
         "blog": "blog",
+        "catalogs": "catalogs",
         "contact": "contact"
     },
     "ar": {
@@ -21,6 +22,7 @@
         "bath": "الحمام",
         "events": "الأحداث",
         "blog": "المدونة",
+        "catalogs": "الكتالوجات",
         "contact": "تواصل معنا"
     }
 }

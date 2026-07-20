@@ -2,6 +2,7 @@
 
 {% block head %}
     <link rel="stylesheet" href="/assets/css/contact.css">
+    <script defer src="/assets/js/contact.js"></script>
     <link rel="preload" as="image" href="{% getUrl '/assets/videos/showroomsfirstframe.webp' | resize({ width: 1920, height: 1080 }) | webp %}">
 {% endblock %}
 
@@ -36,7 +37,7 @@
                     <label class="sl-fade-in-up">{{ form_email_label }}<input required type="email" id="email-265" name="email"></label>
                     <label class="sl-fade-in-up" id="country-label-265">{{ form_country_label }}
                         <div class="cs-country-select" id="country-select-265">
-                            <div class="cs-country-trigger" id="country-trigger-265" tabindex="0" role="combobox" aria-haspopup="listbox" aria-expanded="false" aria-controls="country-options-265" aria-labelledby="country-label-265">
+                            <div class="cs-country-trigger" id="country-trigger-265" tabindex="0" role="combobox" aria-haspopup="listbox" aria-expanded="false" aria-required="true" aria-controls="country-options-265" aria-labelledby="country-label-265">
                                 <span class="cs-country-value cs-placeholder">{{ form_country_placeholder }}</span>
                                 <svg class="cs-dropdown-chevron" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg>
                             </div>
