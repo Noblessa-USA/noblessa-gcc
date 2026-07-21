@@ -7,17 +7,52 @@ export default async (request, context) => {
   }
 
   const cookies = request.headers.get("cookie") || "";
+  const getCookie = (name) => {
+    const cookie = cookies
+      .split(";")
+      .map((value) => value.trim())
+      .find((value) => value.startsWith(`${name}=`));
+
+    return cookie ? cookie.slice(name.length + 1) : null;
+  };
+
+  const assignment = getCookie("ab_variant");
 
   // Existing assignment
-  if (cookies.includes("noblessa_ar_variant=short")) {
+  if (assignment === "short") {
     return Response.redirect(
       new URL("/ar/short/", request.url),
       302
     );
   }
 
-  if (cookies.includes("noblessa_ar_variant=control")) {
+  if (assignment === "control") {
     return context.next();
+  }
+
+  // Preserve assignments made before the cookie name changed.
+  const legacyAssignment = getCookie("noblessa_ar_variant");
+
+  if (legacyAssignment === "short") {
+    return new Response(null, {
+      status: 302,
+      headers: {
+        Location: new URL("/ar/short/", request.url).toString(),
+        "Set-Cookie":
+          "ab_variant=short; Path=/; Max-Age=2592000; SameSite=Lax",
+      },
+    });
+  }
+
+  if (legacyAssignment === "control") {
+    const response = await context.next();
+
+    response.headers.set(
+      "Set-Cookie",
+      "ab_variant=control; Path=/; Max-Age=2592000; SameSite=Lax"
+    );
+
+    return response;
   }
 
   // New assignment
@@ -29,7 +64,7 @@ export default async (request, context) => {
       headers: {
         Location: "/ar/short/",
         "Set-Cookie":
-          "noblessa_ar_variant=short; Path=/; Max-Age=2592000; SameSite=Lax",
+          "ab_variant=short; Path=/; Max-Age=2592000; SameSite=Lax",
       },
     });
   }
@@ -38,7 +73,7 @@ export default async (request, context) => {
 
   response.headers.set(
     "Set-Cookie",
-    "noblessa_ar_variant=control; Path=/; Max-Age=2592000; SameSite=Lax"
+    "ab_variant=control; Path=/; Max-Age=2592000; SameSite=Lax"
   );
 
   return response;
