@@ -1,6 +1,15 @@
 {% extends "layouts/base.html" %}
 
 {% block head %}
+    {% if page.url == '/ar/' %}
+        <script>
+            gtag('event', 'ab_test_view', {
+                experiment: 'arabic_homepage',
+                variant: 'control'
+            });
+        </script>
+    {% endif %}
+
     <!-- Preload and immediately apply critical hero CSS -->
     <link rel="preload" href="/assets/css/critical.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <noscript><link rel="stylesheet" href="/assets/css/critical.css"></noscript>
