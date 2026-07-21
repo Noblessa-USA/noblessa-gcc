@@ -1,6 +1,15 @@
 {% extends "layouts/base.html" %}
 
 {% block head %}
+    {% if page.url == '/ar/short/' %}
+        <script>
+            gtag('event', 'ab_test_view', {
+                experiment: 'arabic_homepage',
+                variant: 'short'
+            });
+        </script>
+    {% endif %}
+
     <link rel="preload" href="/assets/css/critical.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <noscript><link rel="stylesheet" href="/assets/css/critical.css"></noscript>
 
