@@ -7,7 +7,7 @@ tags: "sitemap"
 lang: ar
 
 # Hero Section
-hero_title: " استمتع بحياة أكثر جملاً"
+hero_title: "استمتع بحياة أكثر جمالاً"
 
 # Philosophy Section
 philosophy_topper: "فلسفتنا"
