@@ -176,11 +176,7 @@ These upgrades are not just about beauty; they make everyday tasks easier and mo
 
 Keep reading to explore seven luxury upgrades that will elevate your kitchen, turning it into a space that's as practical as it is beautiful.
 
-
-Open-plan luxury kitchen with full matte black handleless cabinetry, a large island with stone-effect worktop extending into a dining bar, framed glass appliance tower with double ovens, open display shelving, herringbone wood flooring, and a connected living and workspace area.
-
-
-Matte Black Luxury Kitchen — Island Extension, Framed Appliance Wall, and Open Living Zone
+![Open-plan luxury kitchen with full matte black handleless cabinetry, a large island with stone-effect worktop extending into a dining bar, framed glass appliance tower with double ovens, open display shelving, herringbone wood flooring, and a connected living and workspace area.](/assets/images/blog/7-luxury-upgrades-for-a-stunning-high-end-kitchen-1.jpg "Matte Black Luxury Kitchen — Island Extension, Framed Appliance Wall, and Open Living Zone")
 
 ## **Invest in Premium Kitchen Cabinets**
 
@@ -244,9 +240,7 @@ High-quality hardware doesn't just enhance aesthetics; it also improves function
 
 For the best results, consulting with experienced kitchen designers is key. They can help you select fixtures and hardware that align with your overall design vision, ensuring that every detail contributes to a cohesive and stylish kitchen.
 
-Close-up of a black wall-mounted LED-lit utensil rail holding hooks with a mug, strainer, and whisk, set in a concrete-effect grey kitchen with a white worktop, wooden stools, a coffee machine, a laptop, and a city view through the window.
-
-Integrated LED Utensil Rail — A High-End Kitchen Storage Upgrade
+![Close-up of a black wall-mounted LED-lit utensil rail holding hooks with a mug, strainer, and whisk, set in a concrete-effect grey kitchen with a white worktop, wooden stools, a coffee machine, a laptop, and a city view through the window.](/assets/images/blog/7-luxury-upgrades-for-a-stunning-high-end-kitchen-3.jpg "Integrated LED Utensil Rail — A High-End Kitchen Storage Upgrade")
 
 ## **Achieving Your Dream High-End Kitchen**
 
