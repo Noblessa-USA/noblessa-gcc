@@ -893,6 +893,45 @@
                 resize: vertical;
             }
 
+            /* Country dropdown - explore-specific sizing overrides */
+            #country-label-explore {
+                position: relative;
+                z-index: 1;
+            }
+
+            .cs-country-select {
+                margin-top: (8/16rem);
+
+                input.cs-country-search {
+                    height: auto;
+                    margin-top: 0;
+                    padding: (10/16rem) (12/16rem);
+                    border: none;
+                    border-bottom: 1px solid #e5e7eb;
+                    border-radius: 0;
+                    box-shadow: none;
+
+                    &:hover {
+                        border-color: unset;
+                        border-bottom: 1px solid var(--primary);
+                    }
+
+                    &:focus {
+                        outline: none;
+                        border-color: unset;
+                        border-bottom: 1px solid var(--primary);
+                        box-shadow: none;
+                    }
+                }
+            }
+
+            .cs-country-trigger {
+                height: (56/16rem);
+                padding: 0 (20/16rem);
+                border: 2px solid #e5e7eb;
+                border-radius: (6/16rem);
+            }
+
             .cs-select {
                 display: none;
                 position: absolute;

@@ -641,6 +641,47 @@
         display: none;
     }
 
+    /* Country dropdown - showroom-landing-specific sizing overrides */
+    .cs-country-group {
+        position: relative;
+        z-index: 1;
+    }
+
+    .cs-country-group .cs-country-select {
+        .cs-country-trigger {
+            padding: (10/16rem) (14/16rem);
+            border: 2px solid #d1d5db;
+            border-radius: (6/16rem);
+            font-size: (14/16rem);
+
+            &:focus {
+                border-color: var(--primary);
+                box-shadow: 0 0 0 3px rgba(197, 152, 82, 0.1);
+            }
+        }
+
+        input.cs-country-search {
+            height: auto;
+            padding: (8/16rem) (12/16rem);
+            border: none;
+            border-bottom: 1px solid #e5e7eb;
+            border-radius: 0;
+            font-size: (14/16rem);
+
+            &:hover {
+                border: none;
+                border-bottom: 1px solid var(--primary);
+            }
+
+            &:focus {
+                outline: none;
+                border: none;
+                border-bottom: 1px solid var(--primary);
+                box-shadow: none;
+            }
+        }
+    }
+
     .form-row {
         display: flex;
         flex-direction: column;

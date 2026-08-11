@@ -243,9 +243,19 @@
                     </div>
                     
                     <div class="cs-form-row">
-                        <label class="sl-fade-in-up">
+                        <label class="sl-fade-in-up" id="country-label-explore">
                             {{ form_country_label }}
-                            <input required type="text" id="country" name="country">
+                            <div class="cs-country-select" id="country-select-explore">
+                                <div class="cs-country-trigger" id="country-trigger-explore" tabindex="0" role="combobox" aria-haspopup="listbox" aria-expanded="false" aria-controls="country-options-explore" aria-labelledby="country-label-explore">
+                                    <span class="cs-country-value cs-placeholder">{{ form_country_placeholder }}</span>
+                                    <svg class="cs-dropdown-chevron" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                                </div>
+                                <div class="cs-country-panel" id="country-panel-explore">
+                                    <input type="text" class="cs-country-search" id="country-search-explore" autocomplete="off">
+                                    <ul class="cs-country-options" id="country-options-explore" role="listbox" aria-label="{{ form_country_label }}"></ul>
+                                </div>
+                            </div>
+                            <input type="hidden" name="country" id="country-explore">
                         </label>
                         
                         <label class="sl-fade-in-up">
