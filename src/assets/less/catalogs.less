@@ -662,6 +662,49 @@ body.modal-open {
         margin: 0;
     }
 
+    /* Country dropdown - catalog-specific sizing overrides */
+    .catalog-country-group {
+        position: relative;
+        z-index: 1;
+    }
+
+    .catalog-country-group .cs-country-select {
+        .cs-country-trigger {
+            padding: (10/16rem) (14/16rem);
+            border: 2px solid #d1d5db;
+            border-radius: (6/16rem);
+            font-size: (14/16rem);
+
+            &:focus {
+                border-color: var(--secondary);
+                box-shadow: 0 0 0 3px rgba(197, 152, 82, 0.15);
+            }
+        }
+
+        input.cs-country-search {
+            height: auto;
+            padding: (8/16rem) (12/16rem);
+            border: none;
+            border-bottom: 1px solid #e5e7eb;
+            border-radius: 0;
+            font-size: (14/16rem);
+            width: 100%;
+            box-sizing: border-box;
+
+            &:hover {
+                border: none;
+                border-bottom: 1px solid var(--secondary);
+            }
+
+            &:focus {
+                outline: none;
+                border: none;
+                border-bottom: 1px solid var(--secondary);
+                box-shadow: none;
+            }
+        }
+    }
+
     .catalog-form-actions {
         display: flex;
         justify-content: flex-start;
@@ -706,5 +749,17 @@ body.modal-open {
     .catalog-form-group input {
         font-size: (15/16rem);
         padding: (12/16rem) (16/16rem);
+    }
+
+    .catalog-country-group .cs-country-select {
+        .cs-country-trigger {
+            font-size: (15/16rem);
+            padding: (12/16rem) (16/16rem);
+        }
+
+        input.cs-country-search {
+            font-size: (15/16rem);
+            padding: (10/16rem) (14/16rem);
+        }
     }
 }

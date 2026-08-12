@@ -208,9 +208,19 @@
                             <label for="lead-phone">{{ catalog_form_phone or 'Phone Number' }}</label>
                             <input type="tel" id="lead-phone" name="phone">
                         </div>
-                        <div class="catalog-form-group">
-                            <label for="lead-country">{{ catalog_form_country or 'Country' }}</label>
-                            <input type="text" id="lead-country" name="country" required>
+                        <div class="catalog-form-group catalog-country-group">
+                            <label id="country-label-catalog">{{ catalog_form_country or 'Country' }}</label>
+                            <div class="cs-country-select" id="country-select-catalog">
+                                <div class="cs-country-trigger" id="country-trigger-catalog" tabindex="0" role="combobox" aria-haspopup="listbox" aria-expanded="false" aria-controls="country-options-catalog" aria-labelledby="country-label-catalog">
+                                    <span class="cs-country-value cs-placeholder">{{ catalog_form_country_placeholder or 'Select' }}</span>
+                                    <svg class="cs-dropdown-chevron" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                                </div>
+                                <div class="cs-country-panel" id="country-panel-catalog">
+                                    <input type="text" class="cs-country-search" id="country-search-catalog" autocomplete="off">
+                                    <ul class="cs-country-options" id="country-options-catalog" role="listbox" aria-label="{{ catalog_form_country or 'Country' }}"></ul>
+                                </div>
+                            </div>
+                            <input type="hidden" name="country" id="country-catalog">
                         </div>
                     </div>
                     <p id="catalog-lead-error" class="catalog-lead-error" aria-live="polite">{{ catalog_form_error or 'Something went wrong. Please try again.' }}</p>
