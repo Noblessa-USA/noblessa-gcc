@@ -155,8 +155,7 @@ Vertical storage is a common tactic to maximize space in small kitchens in sma
 
 What’s great about this is that you can store the things you don’t need constant access to at the top, like seasonal kitchenware or extra items that won’t fit in the pantry. You can either implement a pull-down shelving system or simply use a step ladder to access the higher shelves.
 
-## 
-The Work Triangle and Your Cabinetry
+## The Work Triangle and Your Cabinetry
 
 The concept of a “[work triangle](https://www.homesandgardens.com/news/kitchen-triangle)” is essential in both professional and private kitchens. It guarantees a level of efficiency and ease while you’re cooking. Many homeowners don’t realize that building your cabinetry around this concept can make your life so much easier.
 
