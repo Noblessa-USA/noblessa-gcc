@@ -23,7 +23,7 @@ inspiration_image_3: "/assets/images/showrooms/dubai.jpeg"
 
 visit_headline: "تفضل بزيارتنا"
 showroom_address: "إنديجو سنترال ٢ - شارع الشيخ زايد - الصفا ٢ - الصفا - دبي - الإمارات العربية المتحدة"
-showroom_phone: "+971 58 143 0055"
+showroom_phone: "+971 04 342 8897"
 showroom_map_url: "https://maps.app.goo.gl/BazgBe1w6Uy3rwZV9"
 showroom_lat: 25.1544
 showroom_lng: 55.2259

@@ -97,7 +97,7 @@ document.addEventListener('DOMContentLoaded', function() {
             address: t.locations.dubai.address,
             lat: 25.2048,
             lng: 55.2708,
-            phone: '+971 58 143 0055',
+            phone: '+971 04 342 8897',
             mapUrl: 'https://maps.app.goo.gl/BazgBe1w6Uy3rwZV9',
             image: '/assets/images/showrooms/dubai.jpeg',
             features: [
