@@ -41,9 +41,18 @@
         });
     }
 
-    // Populate the hidden UTM inputs on any Netlify form with stored values.
+    // Populate the hidden UTM inputs on the contact, explore, showrooms, and
+    // catalog forms. Selected by id/name rather than [data-netlify="true"]
+    // because Netlify strips that attribute from the served HTML.
+    var FORM_SELECTORS = [
+        '#cs-form-265[name="Main Contact Form"]',
+        '#cs-form-265[name="Explore Form"]',
+        '#contact-form[name="Showrooms Form"]',
+        '#catalog-lead-form'
+    ];
+
     function fillUtmFields() {
-        var forms = document.querySelectorAll('form[data-netlify="true"]');
+        var forms = document.querySelectorAll(FORM_SELECTORS.join(', '));
         forms.forEach(function (form) {
             UTM_PARAMS.forEach(function (key) {
                 var field = form.querySelector('input[name="' + key + '"]');
@@ -68,7 +77,7 @@
     // showroom-landing.js call window.NoblessaUTM.fill() themselves right
     // after they reset a form.
     document.addEventListener('reset', function (event) {
-        if (event.target && event.target.matches && event.target.matches('form[data-netlify="true"]')) {
+        if (event.target && event.target.matches && event.target.matches(FORM_SELECTORS.join(', '))) {
             window.setTimeout(fillUtmFields, 0);
         }
     });
