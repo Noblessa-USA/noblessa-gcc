@@ -13,7 +13,7 @@ breadcrumb_home: "home"
 breadcrumb_contact: "contact"
 
 form_title: "live the beautiful life"
-form_text: "Fill out the form below and our team will get back to you within 24 hours."
+form_text: "Fill out the form below and our team will get back to you within 24-48 hours."
 
 form_name_label: "Full Name *"
 form_name_placeholder: "John Smith"
