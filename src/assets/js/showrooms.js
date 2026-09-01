@@ -286,6 +286,7 @@ document.addEventListener('DOMContentLoaded', function() {
         modal.style.display = 'none';
         document.body.classList.remove('modal-open');
         contactForm.reset();
+        if (window.NoblessaUTM) window.NoblessaUTM.fill();
     }
 
     closeModal.addEventListener('click', closeContactModal);

@@ -51,6 +51,7 @@ document.addEventListener('DOMContentLoaded', function () {
         modal.style.display = 'none';
         document.body.classList.remove('modal-open');
         if (contactForm) contactForm.reset();
+        if (window.NoblessaUTM) window.NoblessaUTM.fill();
     }
 
     document.querySelectorAll('.contact-modal-btn').forEach(function (btn) {

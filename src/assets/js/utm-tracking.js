@@ -62,12 +62,16 @@
         fillUtmFields();
     }
 
-    // form.reset() clears the hidden UTM inputs (no default value attribute),
-    // so refill them after any reset (e.g. modal close/reopen on catalog and
-    // showrooms forms).
+    // form.reset() clears the hidden UTM inputs (no default value attribute).
+    // Note: calling form.reset() from JS does NOT fire a native 'reset' event
+    // (only clicking a reset button does), so catalogs.js/showrooms.js/
+    // showroom-landing.js call window.NoblessaUTM.fill() themselves right
+    // after they reset a form.
     document.addEventListener('reset', function (event) {
         if (event.target && event.target.matches && event.target.matches('form[data-netlify="true"]')) {
             window.setTimeout(fillUtmFields, 0);
         }
     });
+
+    window.NoblessaUTM = { fill: fillUtmFields };
 }());

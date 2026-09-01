@@ -38,6 +38,7 @@ document.addEventListener('DOMContentLoaded', function () {
         pendingPdfUrl = pdfUrl;
         errorEl.style.display = 'none';
         leadForm.reset();
+        if (window.NoblessaUTM) window.NoblessaUTM.fill();
         modal.style.display = 'flex';
         document.body.classList.add('modal-open');
         // Focus first input for accessibility
