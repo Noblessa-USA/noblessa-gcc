@@ -1,7 +1,8 @@
 // UTM attribution — captures utm_campaign, utm_medium, utm_source, and utm_id
 // from the landing URL, persists them in cookies so they survive navigation to
 // pages where the params are no longer present, and fills the hidden form
-// fields on the contact, explore, showrooms, and catalog download forms.
+// fields on the contact, explore, showrooms, catalog download, and Saudi
+// National Day lead forms.
 
 (function () {
     'use strict';
@@ -48,7 +49,8 @@
         '#cs-form-265[name="Main Contact Form"]',
         '#cs-form-265[name="Explore Form"]',
         '#contact-form[name="Showrooms Form"]',
-        '#catalog-lead-form'
+        '#catalog-lead-form',
+        '#nd-form[name="Saudi National Day Lead"]'
     ];
 
     function fillUtmFields() {

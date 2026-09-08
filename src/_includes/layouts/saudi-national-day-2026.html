@@ -1,0 +1,449 @@
+{% extends "layouts/base.html" %}
+
+{% block head %}
+    <link rel="stylesheet" href="/assets/css/saudi-national-day-2026.css">
+    <script defer src="/assets/js/saudi-national-day-2026.js"></script>
+    <script defer src="/assets/js/collections-gallery.js"></script>
+    <link rel="preload" as="image" href="{% getUrl hero_slide_1 | resize({ width: 1920 }) | webp %}">
+{% endblock %}
+
+{% block body %}
+
+    <!-- ============================================ -->
+    <!--         SECTION 1 — Hero                     -->
+    <!-- ============================================ -->
+
+    <div id="nd-hero">
+        <div class="nd-hero-slideshow">
+            <div class="nd-slide">
+                <picture>
+                    <source media="(max-width: 600px)" srcset="{% getUrl hero_slide_1 | resize({ width: 800 }) | avif %}" type="image/avif">
+                    <source media="(max-width: 600px)" srcset="{% getUrl hero_slide_1 | resize({ width: 800 }) | webp %}" type="image/webp">
+                    <source media="(min-width: 601px)" srcset="{% getUrl hero_slide_1 | resize({ width: 1920 }) | avif %}" type="image/avif">
+                    <source media="(min-width: 601px)" srcset="{% getUrl hero_slide_1 | resize({ width: 1920 }) | webp %}" type="image/webp">
+                    <img src="{% getUrl hero_slide_1 | resize({ width: 1920 }) | webp %}" alt="{{ hero_headline }}" width="1920" height="900" loading="eager" decoding="async">
+                </picture>
+            </div>
+            <div class="nd-slide">
+                <picture>
+                    <source media="(max-width: 600px)" srcset="{% getUrl hero_slide_2 | resize({ width: 800 }) | avif %}" type="image/avif">
+                    <source media="(max-width: 600px)" srcset="{% getUrl hero_slide_2 | resize({ width: 800 }) | webp %}" type="image/webp">
+                    <source media="(min-width: 601px)" srcset="{% getUrl hero_slide_2 | resize({ width: 1920 }) | avif %}" type="image/avif">
+                    <source media="(min-width: 601px)" srcset="{% getUrl hero_slide_2 | resize({ width: 1920 }) | webp %}" type="image/webp">
+                    <img src="{% getUrl hero_slide_2 | resize({ width: 1920 }) | webp %}" alt="{{ hero_headline }}" width="1920" height="900" loading="lazy" decoding="async">
+                </picture>
+            </div>
+            <div class="nd-slide">
+                <picture>
+                    <source media="(max-width: 600px)" srcset="{% getUrl hero_slide_3 | resize({ width: 800 }) | avif %}" type="image/avif">
+                    <source media="(max-width: 600px)" srcset="{% getUrl hero_slide_3 | resize({ width: 800 }) | webp %}" type="image/webp">
+                    <source media="(min-width: 601px)" srcset="{% getUrl hero_slide_3 | resize({ width: 1920 }) | avif %}" type="image/avif">
+                    <source media="(min-width: 601px)" srcset="{% getUrl hero_slide_3 | resize({ width: 1920 }) | webp %}" type="image/webp">
+                    <img src="{% getUrl hero_slide_3 | resize({ width: 1920 }) | webp %}" alt="{{ hero_headline }}" width="1920" height="900" loading="lazy" decoding="async">
+                </picture>
+            </div>
+            <div class="nd-slide">
+                <picture>
+                    <source media="(max-width: 600px)" srcset="{% getUrl hero_slide_4 | resize({ width: 800 }) | avif %}" type="image/avif">
+                    <source media="(max-width: 600px)" srcset="{% getUrl hero_slide_4 | resize({ width: 800 }) | webp %}" type="image/webp">
+                    <source media="(min-width: 601px)" srcset="{% getUrl hero_slide_4 | resize({ width: 1920 }) | avif %}" type="image/avif">
+                    <source media="(min-width: 601px)" srcset="{% getUrl hero_slide_4 | resize({ width: 1920 }) | webp %}" type="image/webp">
+                    <img src="{% getUrl hero_slide_4 | resize({ width: 1920 }) | webp %}" alt="{{ hero_headline }}" width="1920" height="900" loading="lazy" decoding="async">
+                </picture>
+            </div>
+        </div>
+        <div class="nd-hero-overlay">
+            <img class="nd-hero-emblem" src="/assets/images/events/saudinationalday2026/brand-emblem.png" alt="{{ theme_tag_en }}" width="240" height="96" loading="eager" decoding="async">
+        </div>
+        <div class="cs-container">
+            <div class="nd-hero-content">
+                <h1 class="nd-theme-tag sl-fade-in-down">
+                    <span class="nd-theme-tag-ar">{{ theme_tag_ar }}</span>
+                    <span class="nd-theme-tag-en">{{ theme_tag_en }}</span>
+                </h1>
+                <p class="nd-hero-headline sl-fade-in-up">{{ hero_headline }}</p>
+            </div>
+        </div>
+        <div class="nd-hero-scroll-indicator">
+            <svg width="30" height="50" viewBox="0 0 30 50" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <rect x="1" y="1" width="28" height="48" rx="14" stroke="white" stroke-width="2"/>
+                <circle class="nd-scroll-dot" cx="15" cy="15" r="4" fill="white"/>
+            </svg>
+        </div>
+    </div>
+
+    <!-- ============================================ -->
+    <!--         SECTION 2 — Offer                    -->
+    <!-- ============================================ -->
+
+    <section id="nd-offer">
+        <div class="cs-container">
+            <div class="nd-offer-message sl-fade-in-right">
+                <span class="nd-offer-percent">{{ offer_percent }}</span>
+                <div class="nd-offer-text">
+                    <span class="nd-offer-topper">{{ offer_topper }}</span>
+                    <p class="nd-offer-gift">{{ offer_gift }}</p>
+                    <button type="button" class="nd-offer-terms-btn" id="nd-offer-terms-btn">{{ offer_terms_title }}</button>
+                </div>
+            </div>
+            <div class="nd-offer-actions sl-fade-in-left">
+                <a href="#nd-lead-form" class="cs-button-nodeco-white">
+                    <span class="cs-hover-underline-white">{{ offer_cta }}</span>
+                    <img src="/assets/svgs/horizontal-arrow.svg" alt="arrow" width="30" height="10">
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Offer Terms Modal -->
+    <div id="nd-offer-terms-modal" class="nd-modal-overlay" role="dialog" aria-modal="true" aria-labelledby="nd-offer-terms-title">
+        <div class="nd-modal-container">
+            <button type="button" class="nd-modal-close" id="nd-offer-terms-close" aria-label="{{ offer_modal_close }}">&times;</button>
+            <h2 id="nd-offer-terms-title">{{ offer_terms_title }}</h2>
+            <ul class="nd-modal-terms-list">
+                <li>{{ offer_term_1 }}</li>
+                <li>{{ offer_term_2 }}</li>
+                <li>{{ offer_term_3 }}</li>
+                <li>{{ offer_term_4 }}</li>
+            </ul>
+            <p class="nd-modal-end-date">{{ offer_end_date }}</p>
+        </div>
+    </div>
+
+    <!-- ============================================ -->
+    <!--         SECTION 3 — Cultural Connection      -->
+    <!-- ============================================ -->
+
+    <section id="nd-culture">
+        <div class="cs-container">
+            <div class="nd-culture-image sl-fade-in-right">
+                <picture>
+                    <source media="(max-width: 600px)" srcset="{% getUrl culture_image | resize({ width: 640 }) | avif %}" type="image/avif">
+                    <source media="(max-width: 600px)" srcset="{% getUrl culture_image | resize({ width: 640 }) | webp %}" type="image/webp">
+                    <source media="(min-width: 601px)" srcset="{% getUrl culture_image | resize({ width: 1000 }) | avif %}" type="image/avif">
+                    <source media="(min-width: 601px)" srcset="{% getUrl culture_image | resize({ width: 1000 }) | webp %}" type="image/webp">
+                    <img src="{% getUrl culture_image | resize({ width: 1000 }) | webp %}" alt="{{ culture_title }}" width="1000" height="469" loading="lazy" decoding="async">
+                </picture>
+            </div>
+            <div class="nd-culture-content sl-fade-in-left">
+                <span class="cs-topper">{{ culture_topper }}</span>
+                <h2 class="cs-title">{{ culture_title }}</h2>
+                <span class="cs-divider"></span>
+                <p class="cs-text">{{ culture_text }}</p>
+                <ul class="nd-culture-pillars">
+                    <li class="nd-culture-pillar">
+                        <svg class="nd-pillar-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M3 11.5 12 4l9 7.5"/><path d="M5.5 9.5V20h13V9.5"/><path d="M9.5 20v-6h5v6"/></svg>
+                        <div>
+                            <h3>{{ culture_pillar_1_title }}</h3>
+                            <p>{{ culture_pillar_1_text }}</p>
+                        </div>
+                    </li>
+                    <li class="nd-culture-pillar">
+                        <svg class="nd-pillar-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="8" cy="8" r="3"/><circle cx="17" cy="9" r="2.5"/><path d="M2.5 20c0-3.6 2.5-6 5.5-6s5.5 2.4 5.5 6"/><path d="M14 14.5c2.4.2 4 2.1 4 5.5"/></svg>
+                        <div>
+                            <h3>{{ culture_pillar_2_title }}</h3>
+                            <p>{{ culture_pillar_2_text }}</p>
+                        </div>
+                    </li>
+                    <li class="nd-culture-pillar">
+                        <svg class="nd-pillar-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M6 9V4.5a1.5 1.5 0 0 1 1.5-1.5 1.5 1.5 0 0 1 1.5 1.5V9"/><path d="M4.5 9h11l-1 8a3 3 0 0 1-3 2.5h-3a3 3 0 0 1-3-2.5Z"/><path d="M15.5 10.5c2 0 3.5 1.2 3.5 3s-1.5 2.7-3.5 2.5"/></svg>
+                        <div>
+                            <h3>{{ culture_pillar_3_title }}</h3>
+                            <p>{{ culture_pillar_3_text }}</p>
+                        </div>
+                    </li>
+                    <li class="nd-culture-pillar">
+                        <svg class="nd-pillar-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M6 3v18"/><path d="M6 4h11l-2.5 3.5L17 11H6"/></svg>
+                        <div>
+                            <h3>{{ culture_pillar_4_title }}</h3>
+                            <p>{{ culture_pillar_4_text }}</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!--         SECTION 4 — Kitchen Showcase Gallery -->
+    <!-- ============================================ -->
+
+    <section id="collections-gallery">
+        <div class="cg-container">
+            <div class="cg-text-overlay">
+                <span class="cs-topper sl-fade-in-down">{{ gallery_topper }}</span>
+                <h2 class="cs-title sl-fade-in-down">{{ gallery_title }}</h2>
+                <span class="cs-divider"></span>
+                <p class="cs-text sl-fade-in-up">{{ gallery_text }}</p>
+                <div class="cg-navigation sl-fade-in-up">
+                    <button class="cg-prev" aria-label="Previous slide">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M15 18L9 12L15 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                    <button class="cg-next" aria-label="Next slide">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M9 18L15 12L9 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            <div class="cg-slider">
+                <div class="cg-slide active">
+                    <picture>
+                        <source media="(max-width: 600px)" srcset="{% getUrl gallery_1_image | resize({ width: 640, height: 900 }) | avif %}" type="image/avif">
+                        <source media="(max-width: 600px)" srcset="{% getUrl gallery_1_image | resize({ width: 640, height: 900 }) | webp %}" type="image/webp">
+                        <source media="(max-width: 1024px)" srcset="{% getUrl gallery_1_image | resize({ width: 1024, height: 768 }) | avif %}" type="image/avif">
+                        <source media="(max-width: 1024px)" srcset="{% getUrl gallery_1_image | resize({ width: 1024, height: 768 }) | webp %}" type="image/webp">
+                        <source media="(min-width: 1025px)" srcset="{% getUrl gallery_1_image | resize({ width: 1920, height: 1080 }) | avif %}" type="image/avif">
+                        <source media="(min-width: 1025px)" srcset="{% getUrl gallery_1_image | resize({ width: 2560, height: 1440 }) | webp %}" type="image/webp">
+                        <img src="{% getUrl gallery_1_image | resize({ width: 2560, height: 1440 }) | webp %}" alt="{{ gallery_1_caption }}" width="1920" height="1080" loading="eager" decoding="async">
+                    </picture>
+                </div>
+                <div class="cg-slide">
+                    <picture>
+                        <source media="(max-width: 600px)" srcset="{% getUrl gallery_2_image | resize({ width: 640, height: 900 }) | avif %}" type="image/avif">
+                        <source media="(max-width: 600px)" srcset="{% getUrl gallery_2_image | resize({ width: 640, height: 900 }) | webp %}" type="image/webp">
+                        <source media="(max-width: 1024px)" srcset="{% getUrl gallery_2_image | resize({ width: 1024, height: 768 }) | avif %}" type="image/avif">
+                        <source media="(max-width: 1024px)" srcset="{% getUrl gallery_2_image | resize({ width: 1024, height: 768 }) | webp %}" type="image/webp">
+                        <source media="(min-width: 1025px)" srcset="{% getUrl gallery_2_image | resize({ width: 1920, height: 1080 }) | avif %}" type="image/avif">
+                        <source media="(min-width: 1025px)" srcset="{% getUrl gallery_2_image | resize({ width: 2560, height: 1440 }) | webp %}" type="image/webp">
+                        <img src="{% getUrl gallery_2_image | resize({ width: 2560, height: 1440 }) | webp %}" alt="{{ gallery_2_caption }}" width="1920" height="1080" loading="lazy" decoding="async">
+                    </picture>
+                </div>
+                <div class="cg-slide">
+                    <picture>
+                        <source media="(max-width: 600px)" srcset="{% getUrl gallery_3_image | resize({ width: 640, height: 900 }) | avif %}" type="image/avif">
+                        <source media="(max-width: 600px)" srcset="{% getUrl gallery_3_image | resize({ width: 640, height: 900 }) | webp %}" type="image/webp">
+                        <source media="(max-width: 1024px)" srcset="{% getUrl gallery_3_image | resize({ width: 1024, height: 768 }) | avif %}" type="image/avif">
+                        <source media="(max-width: 1024px)" srcset="{% getUrl gallery_3_image | resize({ width: 1024, height: 768 }) | webp %}" type="image/webp">
+                        <source media="(min-width: 1025px)" srcset="{% getUrl gallery_3_image | resize({ width: 1920, height: 1080 }) | avif %}" type="image/avif">
+                        <source media="(min-width: 1025px)" srcset="{% getUrl gallery_3_image | resize({ width: 2560, height: 1440 }) | webp %}" type="image/webp">
+                        <img src="{% getUrl gallery_3_image | resize({ width: 2560, height: 1440 }) | webp %}" alt="{{ gallery_3_caption }}" width="1920" height="1080" loading="lazy" decoding="async">
+                    </picture>
+                </div>
+                <div class="cg-slide">
+                    <picture>
+                        <source media="(max-width: 600px)" srcset="{% getUrl gallery_4_image | resize({ width: 640, height: 900 }) | avif %}" type="image/avif">
+                        <source media="(max-width: 600px)" srcset="{% getUrl gallery_4_image | resize({ width: 640, height: 900 }) | webp %}" type="image/webp">
+                        <source media="(max-width: 1024px)" srcset="{% getUrl gallery_4_image | resize({ width: 1024, height: 768 }) | avif %}" type="image/avif">
+                        <source media="(max-width: 1024px)" srcset="{% getUrl gallery_4_image | resize({ width: 1024, height: 768 }) | webp %}" type="image/webp">
+                        <source media="(min-width: 1025px)" srcset="{% getUrl gallery_4_image | resize({ width: 1920, height: 1080 }) | avif %}" type="image/avif">
+                        <source media="(min-width: 1025px)" srcset="{% getUrl gallery_4_image | resize({ width: 2560, height: 1440 }) | webp %}" type="image/webp">
+                        <img src="{% getUrl gallery_4_image | resize({ width: 2560, height: 1440 }) | webp %}" alt="{{ gallery_4_caption }}" width="1920" height="1080" loading="lazy" decoding="async">
+                    </picture>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!--         SECTION 5 — Showroom Info            -->
+    <!-- ============================================ -->
+
+    <section id="nd-showrooms">
+        <div class="cs-container">
+            <div class="nd-showrooms-header">
+                <span class="cs-topper sl-fade-in-down">{{ showrooms_topper }}</span>
+                <h2 class="cs-title sl-fade-in-up">{{ showrooms_title }}</h2>
+                <span class="cs-divider"></span>
+            </div>
+            <div class="cs-gallery-grid">
+                <div class="cs-showroom-card sl-fade-in-right">
+                    <div class="cs-card-header">
+                        <h3 class="cs-card-title">{{ riyadh_title }}</h3>
+                        <div class="cs-card-location">
+                            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+                            {{ riyadh_city }}, {{ showroom_country }}
+                        </div>
+                    </div>
+                    <div class="cs-card-image">
+                        <picture>
+                            <source srcset="{% getUrl riyadh_image | resize({ width: 800 }) | avif %}" type="image/avif">
+                            <source srcset="{% getUrl riyadh_image | resize({ width: 800 }) | webp %}" type="image/webp">
+                            <img src="{% getUrl riyadh_image | resize({ width: 800 }) | webp %}" alt="{{ riyadh_title }}" width="800" height="500" loading="lazy" decoding="async">
+                        </picture>
+                    </div>
+                    <div class="cs-card-body">
+                        <div class="nd-event-highlight">
+                            <div class="nd-event-highlight-header">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+                                <span>{{ riyadh_open_house_badge }}</span>
+                            </div>
+                            <p>{{ riyadh_open_house_text }}</p>
+                            <p class="nd-event-highlight-samri">{{ riyadh_samri_note }}</p>
+                        </div>
+                        <div class="cs-card-info">
+                            <div class="cs-info-item">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+                                <span>{{ riyadh_hours_1 }}</span>
+                            </div>
+                            <div class="cs-info-item">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+                                <span>{{ riyadh_hours_2 }}</span>
+                            </div>
+                        </div>
+                        <div class="cs-card-contact">
+                            <div class="cs-card-contact-item">
+                                <span class="cs-contact-label">{{ address_label }}</span>
+                                <a href="{{ riyadh_map_url }}" target="_blank" rel="noopener noreferrer" class="cs-contact-value">{{ riyadh_address }}</a>
+                            </div>
+                            <div class="cs-card-contact-item">
+                                <span class="cs-contact-label">{{ phone_label }}</span>
+                                <a href="tel:{{ riyadh_phone }}" class="cs-contact-value" dir="ltr">{{ riyadh_phone }}</a>
+                            </div>
+                        </div>
+                        <div class="cs-card-actions">
+                            <a href="{{ riyadh_map_url }}" target="_blank" rel="noopener noreferrer" class="cs-action-btn cs-secondary">{{ riyadh_directions }}</a>
+                            <a href="#nd-lead-form" class="cs-action-btn cs-primary">{{ showroom_contact_label }}</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="cs-showroom-card sl-fade-in-left">
+                    <div class="cs-card-header">
+                        <h3 class="cs-card-title">{{ jeddah_title }}</h3>
+                        <div class="cs-card-location">
+                            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+                            {{ jeddah_city }}, {{ showroom_country }}
+                        </div>
+                    </div>
+                    <div class="cs-card-image">
+                        <picture>
+                            <source srcset="{% getUrl jeddah_image | resize({ width: 800 }) | avif %}" type="image/avif">
+                            <source srcset="{% getUrl jeddah_image | resize({ width: 800 }) | webp %}" type="image/webp">
+                            <img src="{% getUrl jeddah_image | resize({ width: 800 }) | webp %}" alt="{{ jeddah_title }}" width="800" height="500" loading="lazy" decoding="async">
+                        </picture>
+                    </div>
+                    <div class="cs-card-body">
+                        <div class="cs-card-info">
+                            <div class="cs-info-item">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+                                <span>{{ jeddah_hours_1 }}</span>
+                            </div>
+                            <div class="cs-info-item">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+                                <span>{{ jeddah_hours_2 }}</span>
+                            </div>
+                        </div>
+                        <div class="cs-card-contact">
+                            <div class="cs-card-contact-item">
+                                <span class="cs-contact-label">{{ address_label }}</span>
+                                <a href="{{ jeddah_map_url }}" target="_blank" rel="noopener noreferrer" class="cs-contact-value">{{ jeddah_address }}</a>
+                            </div>
+                            <div class="cs-card-contact-item">
+                                <span class="cs-contact-label">{{ phone_label }}</span>
+                                <a href="tel:{{ jeddah_phone }}" class="cs-contact-value" dir="ltr">{{ jeddah_phone }}</a>
+                            </div>
+                        </div>
+                        <div class="cs-card-actions">
+                            <a href="{{ jeddah_map_url }}" target="_blank" rel="noopener noreferrer" class="cs-action-btn cs-secondary">{{ jeddah_directions }}</a>
+                            <a href="#nd-lead-form" class="cs-action-btn cs-primary">{{ showroom_contact_label }}</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================ -->
+    <!--         SECTION 6 — Lead Capture Form        -->
+    <!-- ============================================ -->
+
+    <section id="nd-lead-form">
+        <picture class="cs-background">
+            <source media="(max-width: 600px)" srcset="{% getUrl form_bg_image | resize({ width: 640 }) | avif %}" type="image/avif">
+            <source media="(max-width: 600px)" srcset="{% getUrl form_bg_image | resize({ width: 640 }) | webp %}" type="image/webp">
+            <source media="(min-width: 601px)" srcset="{% getUrl form_bg_image | resize({ width: 1920 }) | avif %}" type="image/avif">
+            <source media="(min-width: 601px)" srcset="{% getUrl form_bg_image | resize({ width: 1920 }) | webp %}" type="image/webp">
+            <img src="{% getUrl form_bg_image | resize({ width: 1920 }) | webp %}" alt="Background" width="1920" height="1080" loading="lazy" decoding="async">
+        </picture>
+
+        <div class="cs-container">
+            <div class="cs-left-section">
+                <div class="cs-content">
+                    <span class="cs-topper">{{ form_topper }}</span>
+                    <h2 class="cs-title">{{ form_title }}</h2>
+                    <span class="cs-divider"></span>
+                    <p class="cs-text">{{ form_text }}</p>
+                </div>
+            </div>
+
+            <div class="cs-right-section">
+                <form id="nd-form" name="Saudi National Day Lead" method="POST" data-netlify="true" netlify-honeypot="select" data-netlify-recaptcha="true">
+                    <input type="hidden" name="form-name" value="Saudi National Day Lead">
+                    <input type="hidden" name="campaign" value="Saudi National Day 2026">
+                    <input type="hidden" name="utm_campaign">
+                    <input type="hidden" name="utm_medium">
+                    <input type="hidden" name="utm_source">
+                    <input type="hidden" name="utm_id">
+
+                    <div class="cs-form-row">
+                        <label class="sl-fade-in-up">
+                            {{ form_name_label }}
+                            <input required type="text" id="nd-name" name="name">
+                        </label>
+
+                        <label class="sl-fade-in-up">
+                            {{ form_email_label }}
+                            <input required type="email" id="nd-email" name="email">
+                        </label>
+                    </div>
+
+                    <div class="cs-form-row">
+                        <label class="sl-fade-in-up" id="country-label-ndform">
+                            {{ form_country_label }}
+                            <div class="cs-country-select" id="country-select-ndform">
+                                <div class="cs-country-trigger" id="country-trigger-ndform" tabindex="0" role="combobox" aria-haspopup="listbox" aria-expanded="false" aria-controls="country-options-ndform" aria-labelledby="country-label-ndform">
+                                    <span class="cs-country-value cs-placeholder">{{ form_country_placeholder }}</span>
+                                    <svg class="cs-dropdown-chevron" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                                </div>
+                                <div class="cs-country-panel" id="country-panel-ndform">
+                                    <input type="text" class="cs-country-search" id="country-search-ndform" autocomplete="off">
+                                    <ul class="cs-country-options" id="country-options-ndform" role="listbox" aria-label="{{ form_country_label }}"></ul>
+                                </div>
+                            </div>
+                            <input type="hidden" name="country" id="country-ndform">
+                        </label>
+
+                        <label class="sl-fade-in-up">
+                            {{ form_city_label }}
+                            <input required type="text" id="nd-city" name="city">
+                        </label>
+                    </div>
+
+                    <div class="cs-form-row">
+                        <label class="sl-fade-in-up">
+                            {{ form_showroom_label }}
+                            <select required id="nd-showroom" name="preferred_showroom">
+                                <option value="" disabled selected>{{ form_showroom_placeholder }}</option>
+                                <option value="Riyadh">{{ form_showroom_riyadh }}</option>
+                                <option value="Jeddah">{{ form_showroom_jeddah }}</option>
+                            </select>
+                        </label>
+
+                        <label class="sl-fade-in-up">
+                            {{ form_phone_label }}
+                            <input required type="tel" id="nd-phone" name="phone" dir="ltr">
+                            <input class="cs-select" name="select" type="text" placeholder="Select">
+                        </label>
+                    </div>
+
+                    <label class="cs-label-message sl-fade-in-up">
+                        {{ form_message_label }}
+                        <textarea required name="message" id="nd-message"></textarea>
+                    </label>
+
+                    <div data-netlify-recaptcha="true"></div>
+
+                    <button class="cs-button-nodeco cs-submit sl-fade-in-up" type="submit">
+                        <span class="cs-hover-underline">{{ form_submit }}</span>
+                        <img src="/assets/svgs/horizontal-arrow.svg" alt="arrow" width="30" height="10">
+                    </button>
+
+                    <p class="nd-form-privacy">{{ form_privacy }}</p>
+                </form>
+            </div>
+        </div>
+    </section>
+
+{% endblock %}

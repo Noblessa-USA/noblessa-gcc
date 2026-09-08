@@ -1,16 +1,64 @@
 document.addEventListener('DOMContentLoaded', function () {
+    // ── Smooth Scroll to Lead Form ──────────────────────────────────────────
+    (function () {
+        const target = document.getElementById('nd-lead-form');
+        const links = document.querySelectorAll('a[href="#nd-lead-form"]');
+        if (!target || !links.length) {
+            return;
+        }
+
+        const header = document.getElementById('cs-navigation');
+
+        links.forEach(function (link) {
+            link.addEventListener('click', function (e) {
+                e.preventDefault();
+                const headerHeight = header ? header.getBoundingClientRect().height : 0;
+                const top = target.getBoundingClientRect().top + window.pageYOffset - headerHeight;
+                window.scrollTo({ top: top, behavior: 'smooth' });
+            });
+        });
+    })();
+
+    // ── Hero Slideshow ──────────────────────────────────────────────────────
+    (function () {
+        const slides = document.querySelectorAll('#nd-hero .nd-slide');
+        if (!slides.length) {
+            return;
+        }
+
+        let current = 0;
+        const slideInterval = 5000;
+
+        function showSlide(index) {
+            slides.forEach(function (slide) { slide.classList.remove('active'); });
+            requestAnimationFrame(function () { slides[index].classList.add('active'); });
+        }
+
+        function nextSlide() {
+            current = (current + 1) % slides.length;
+            showSlide(current);
+        }
+
+        setInterval(nextSlide, slideInterval);
+        setTimeout(function () { showSlide(current); }, 100);
+    })();
+
     // ── Country Dropdown ────────────────────────────────────────────────────
     (function () {
+        const form = document.getElementById('nd-form');
         const trigger = document.getElementById('country-trigger-ndform');
         const value = trigger && trigger.querySelector('.cs-country-value');
         const panel = document.getElementById('country-panel-ndform');
         const search = document.getElementById('country-search-ndform');
         const options = document.getElementById('country-options-ndform');
         const input = document.getElementById('country-ndform');
+        const select = document.getElementById('country-select-ndform');
 
-        if (!trigger || !value || !panel || !search || !options || !input) {
+        if (!form || !select || !trigger || !value || !panel || !search || !options || !input) {
             return;
         }
+
+        const placeholderText = value.textContent;
 
         const language = document.documentElement.lang === 'ar' ? 'ar' : 'en';
         const isoCodes = ['SA', 'AE', 'BH', 'KW', 'OM', 'QA'];
@@ -112,67 +160,60 @@ document.addEventListener('DOMContentLoaded', function () {
                 closePanel();
             }
         });
-    })();
 
-    // ── Gallery Arrows ──────────────────────────────────────────────────────
-    (function () {
-        const track = document.getElementById('nd-gallery-track');
-        const prev = document.querySelector('.nd-gallery-prev');
-        const next = document.querySelector('.nd-gallery-next');
-
-        if (!track || !prev || !next) {
-            return;
-        }
-
-        function scrollAmount() {
-            const item = track.querySelector('.nd-gallery-item');
-            return item ? item.getBoundingClientRect().width + 20 : 300;
-        }
-
-        prev.addEventListener('click', function () {
-            track.scrollBy({ left: -scrollAmount(), behavior: 'smooth' });
-        });
-
-        next.addEventListener('click', function () {
-            track.scrollBy({ left: scrollAmount(), behavior: 'smooth' });
-        });
-    })();
-
-    // ── Offer Countdown ─────────────────────────────────────────────────────
-    (function () {
-        const el = document.getElementById('nd-countdown');
-        if (!el) {
-            return;
-        }
-
-        const deadline = new Date(el.getAttribute('data-deadline'));
-        const label = el.getAttribute('data-label') || '';
-        const expiredLabel = el.getAttribute('data-expired-label') || '';
-
-        if (isNaN(deadline.getTime())) {
-            return;
-        }
-
-        const language = document.documentElement.lang === 'ar' ? 'ar' : 'en';
-
-        function render() {
-            const now = new Date();
-            const diffMs = deadline.getTime() - now.getTime();
-
-            if (diffMs <= 0) {
-                el.textContent = expiredLabel;
-                return;
+        form.addEventListener('submit', function (e) {
+            if (!input.value) {
+                e.preventDefault();
+                select.classList.add('cs-error');
+                trigger.setAttribute('aria-invalid', 'true');
+                trigger.focus();
             }
+        });
 
-            const days = Math.ceil(diffMs / (1000 * 60 * 60 * 24));
-            const daysText = days.toLocaleString(language);
-            const suffix = language === 'ar'
-                ? (days === 1 ? 'يوم واحد متبقٍ' : days + ' يومًا متبقيًا')
-                : (days === 1 ? '1 day left' : daysText + ' days left');
+        form.addEventListener('reset', function () {
+            window.setTimeout(function () {
+                value.textContent = placeholderText;
+                value.classList.add('cs-placeholder');
+                select.classList.remove('cs-error');
+                trigger.removeAttribute('aria-invalid');
+                closePanel();
+            }, 0);
+        });
+    })();
 
-            el.textContent = label + ' — ' + suffix;
+    // ── Offer Terms Modal ───────────────────────────────────────────────────
+    (function () {
+        const modal = document.getElementById('nd-offer-terms-modal');
+        const openBtn = document.getElementById('nd-offer-terms-btn');
+        const closeBtn = document.getElementById('nd-offer-terms-close');
+
+        if (!modal || !openBtn || !closeBtn) {
+            return;
         }
 
-        render();
+        function openModal() {
+            modal.classList.add('nd-modal-open');
+            document.body.classList.add('modal-open');
+        }
+
+        function closeModal() {
+            modal.classList.remove('nd-modal-open');
+            document.body.classList.remove('modal-open');
+        }
+
+        openBtn.addEventListener('click', openModal);
+        closeBtn.addEventListener('click', closeModal);
+
+        modal.addEventListener('click', function (e) {
+            if (e.target === modal) {
+                closeModal();
+            }
+        });
+
+        document.addEventListener('keydown', function (e) {
+            if (e.key === 'Escape' && modal.classList.contains('nd-modal-open')) {
+                closeModal();
+            }
+        });
     })();
 });
